@@ -1,0 +1,345 @@
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#rc()
+
+
+""" BASIC SETTINGS
+set smarttab
+set expandtab
+set tabstop=4
+set sw=4                " shift width
+set nocompatible        " use vim defaults (much better!), no vi compatibility
+"set runtimepath=~/.vim,$VIM/vimfiles,$VIMRUNTIME
+set ai                  " always set autoindenting on
+set viminfo='20,\"50    " read/write a .viminfo file, don't store more
+                         " than 50 lines of registers
+set history=1000        " keep 1000 lines of command line history
+set undolevels=1000     " use many muchos levels of undo
+set hlsearch
+set incsearch           " show search matches as you type
+set ruler               " show the cursor position all the time
+set number
+set cursorline
+set cursorcolumn
+set directory=~/.vimswap
+set pastetoggle=<F2>
+set mouse=a
+set autoread            " Reload files when they are changed by another process.
+set tw=0
+set guifont=Inconsolata\ 11
+" set guioptions -=m
+set guioptions-=r
+set guioptions -=T
+
+if v:lang =~ "utf8$" || v:lang =~ "UTF-8$"
+   set fileencodings=utf-8,latin1
+endif
+set wildignore=*.pyc
+syntax on                  " syntax highlighting
+
+let mapleader = ","
+
+
+""" MOVEMENT
+" Move between windows
+map <c-j> <c-w>j
+map <c-k> <c-w>k
+map <c-l> <c-w>l
+map <c-h> <c-w>h
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+nnoremap <Tab> :bnext<CR>
+nnoremap <S-Tab> :bprevious<CR>
+
+
+""" COLOR
+if $COLORTERM == 'gnome-terminal'
+  set t_Co=256
+endif
+colorscheme morning
+" set background=dark
+hi CursorLine cterm=none ctermbg=252 ctermfg=none
+hi CursorColumn cterm=none ctermbg=252 ctermfg=none
+" Color for highlight search
+hi Search cterm=NONE ctermbg=166
+set colorcolumn=120
+"au ColorScheme * highlight ColorColumn ctermbg=2 guibg=#FF00FF
+" guibg for gvim I think
+hi ColorColumn ctermbg=5 guibg=#B28686
+" Highlight trailing whitespace (but not in insert mode).
+" See http://vim.wikia.com/wiki/Highlight_unwanted_spaces
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+augroup extra_whitespace
+  autocmd!
+  autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+  autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+  autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+  autocmd BufWinLeave * call clearmatches()
+augroup END
+
+
+""" SOME CUSTOM HELPERS
+":nnoremap <S-Enter> O<Esc>
+":nnoremap <CR> o<Esc>
+:nmap <silent> <Plug>DoubleQuoteWord ciw""<Esc>P:call repeat#set("\<Plug>DoubleQuoteWord")<CR>
+:nmap <leader>q" <Plug>DoubleQuoteWord
+:nmap <silent> <Plug>SingleQuoteWord ciw''<Esc>P:call repeat#set("\<Plug>DoubleQuoteWord")<CR>
+:nmap <leader>q' <Plug>SingleQuoteWord
+:nnoremap <leader>qd daW"=substitute(@@,"'\\\|\"","","g")<CR>P
+
+:nnoremap <leader>rr :let @*=@" \| let @+=@"<CR>
+:nnoremap <leader>rx :let @"=@*<CR>
+:nnoremap <leader>rv :let @"=@+<CR>
+
+
+""" AUTOCMD
+autocmd BufRead *.txt set tw=78
+autocmd FileType javascript setlocal equalprg=js-beautify\ --stdin
+" When editing a file, always jump to the last cursor position
+autocmd BufReadPost *
+\ if line("'\"") > 0 && line ("'\"") <= line("$") |
+\   exe "normal g'\"" |
+\ endif
+"autocmd FileType python set omnifunc=pythoncomplete#Complete
+"autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+"autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+"autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+"autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
+"autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+"autocmd FileType c set omnifunc=ccomplete#Complete
+
+
+""" PLUGIN SECTION
+
+" Vundle
+Plugin 'gmarik/vundle'
+
+
+" git
+Plugin 'tpope/vim-fugitive'
+
+
+" repeat
+Plugin 'tpope/vim-repeat'
+
+
+" vim-easymotion
+Plugin 'Lokaltog/vim-easymotion'
+
+map <Space> <Plug>(easymotion-prefix)
+
+
+" LaTeX-Box
+Plugin 'LaTeX-Box-Team/LaTeX-Box'
+
+let g:LatexBox_latexmk_options = "-pvc -pdfps"
+let g:LatexBox_latexmk_async = 1
+nnoremap <leader>ll :Latexmk<CR>
+
+
+" surround.vim - quotes, brackets and (html-)tags
+Plugin 'tpope/vim-surround'
+
+
+" abolish - develish good
+Plugin 'tpope/vim-abolish'
+
+
+" NERDCommenter
+Plugin 'scrooloose/nerdcommenter'
+
+map <leader>cc <leader>cl
+
+
+" taglist.vim
+Plugin 'vim-scripts/taglist.vim'
+
+
+" python tagbar
+Plugin 'majutsushi/tagbar'
+
+
+" restructured text
+Plugin 'Rykka/riv.vim'
+
+
+" R
+Plugin 'jcfaria/Vim-R-plugin'
+
+
+" Expand << into <-.
+let vimrplugin_assign_map = '<<'
+
+" Don't line things up with opening braces.
+let r_indent_align_args = 0
+
+" Insert-mode mappings are incredibly annoying.
+let g:vimrplugin_insert_mode_cmds = 0
+
+
+" UltiSnips
+Plugin 'SirVer/ultisnips'
+
+function! g:UltiSnips_Complete()
+    call UltiSnips#ExpandSnippet()
+    if g:ulti_expand_res == 0
+        if pumvisible()
+            return "\<C-n>"
+        else
+            call UltiSnips#JumpForwards()
+            if g:ulti_jump_forwards_res == 0
+               return "\<TAB>"
+            endif
+        endif
+    endif
+    return ""
+endfunction
+
+"au BufEnter * exec 'inoremap <silent> ' . g:UltiSnipsExpandTrigger . ' <C-R>=g:UltiSnips_Complete()<cr>'
+"let g:UltiSnipsJumpForwardTrigger="<c-u>"
+"let g:UltiSnipsListSnippets="<c-e>"
+"" this mapping Enter key to <C-y> to chose the current highlight item
+"" and close the selection list, same as other IDEs.
+"" CONFLICT with some plugins like tpope/Endwise
+"inoremap <expr> <CR> pumvisible() ? '\<C-y>' : '\<C-g>u\<CR>'
+
+
+" vim-snippets
+Plugin 'honza/vim-snippets'
+
+
+" vim-airline
+Plugin 'bling/vim-airline'
+
+let g:airline_theme='badwolf'
+let g:airline#extensions#syntastic#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
+let g:airline_powerline_fonts = 1
+let g:airline_section_x = 'reg:%{v:register}'
+"let g:airline_section_x = ''
+set laststatus=2
+
+
+" CtrlP-Plugin
+Plugin 'kien/ctrlp.vim'
+
+let g:ctrlp_custom_ignore = {
+  \ 'dir': '\v[\/]\.(git|hg|svndoc|.ropeproject|backend.egg-info|node_modules)$',
+  \ 'file': '\v\.(pyc)$',
+  \ }
+
+
+" Python-Mode
+Plugin 'klen/python-mode'
+
+let g:pymode_virtualenv = 1
+let g:pymode_run = 0        " disable run code
+let g:pymode_folding = 0    " disable folding
+let g:pymode_syntax = 1
+let g:pymode_quickfix_minheight = 3
+let g:pymode_quickfix_maxheight = 6
+let g:pymode_motion = 1
+let g:pymode_trim_whitespace = 1
+let g:pymode_lint = 1
+let g:pymode_lint_signs = 1
+"let g:pymode_lint_checkers = ['pylint', 'pyflakes', 'pep8', 'mccabe', 'pep257']
+let g:pymode_lint_checkers = ['pylint', 'pep8']
+let g:pymode_lint_mccabe_complexity = 10
+let g:pymode_lint_ignore = "E501,E127,E126,E265,I,C0110,C0111,D102,D202,D401"
+let g:pymode_lint_maxheight = 5
+let g:pymode_lint_unmodified = 0
+let g:pymode_lint_on_write = 1
+let g:pymode_lint_on_fly = 0
+let g:pymode_lint_cwindow = 1
+let g:pymode_lint_message = 1
+let g:pymode_lint_sort = ['E', 'W', 'C', 'I']
+" disable rope, we use YCM
+let g:pymode_rope = 0
+let ropevim_enable_shortcuts = 0
+let g:pymode_rope_vim_completion = 0
+"let g:pymode_rope_goto_def_newwin = "1"
+let g:pymode_options_max_line_length = 120
+map <leader>p :PymodeLint<CR>
+
+
+" grep
+Plugin 'yegappan/grep'
+
+let Grep_Skip_Files = '*.pyc'
+
+
+" JSHint
+Plugin 'walm/jshint.vim'
+
+autocmd BufWritePost *.js :JSHint
+
+
+" YouCompleteMe
+Plugin 'Valloric/YouCompleteMe'
+
+let g:ycm_goto_same_buffer = 0
+let g:ycm_goto_buffer_command = 'same-buffer'
+let g:ycm_complete_in_comments = 1
+let g:ycm_collect_identifiers_from_comments_and_strings = 0
+let g:ycm_collect_identifiers_from_tags_files = 1
+let g:ycm_seed_identifiers_with_syntax = 1
+let g:ycm_semantic_triggers =  {}
+let g:ycm_filepath_completion_use_working_dir = 1
+let g:ycm_show_diagnostics_ui = 0
+let g:ycm_server_log_level = 'info'
+
+nnoremap <leader>jD :YcmCompleter GoToDefinitionElseDeclaration<CR>
+nnoremap <leader>jd :YcmCompleter GoToDeclaration<CR>
+
+
+" vim-yaml
+Plugin 'stephpy/vim-yaml'
+
+
+" NERD
+Plugin 'scrooloose/nerdtree'
+
+let NERDTreeIgnore = ['\.pyc$']
+map <leader>n :NERDTreeToggle<CR>
+
+
+" dgbPavim - PHP debugger
+Plugin 'brookhong/DBGPavim'
+
+"let g:dbgPavimBreakAtEntry = 0
+let g:dbgPavimPort = 9000
+
+
+" Ack is a grep like feature, just need to figure out how it works
+" nmap <leader>a <Esc>:Ack!
+
+" Tetris
+Plugin 'vim-scripts/TeTrIs.vim'
+
+" vimwiki
+Plugin 'vim-scripts/vimwiki'
+
+" End plugin section
+filetype plugin indent on
+
+
+""" PYTHON
+" Code Folding. Usage: fold, unfold: za
+set foldmethod=indent
+set foldlevel=99
+ " Add the virtualenv's site-packages to vim path
+py << EOF
+import os.path
+import sys
+import vim
+if 'VIRTUAL_ENV' in os.environ:
+    project_base_dir = os.environ['VIRTUAL_ENV']
+    sys.path.insert(0, project_base_dir)
+    activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+    execfile(activate_this, dict(__file__=activate_this))
+EOF
