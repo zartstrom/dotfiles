@@ -1,0 +1,57 @@
+! --- ~/.Xresources ------------------------------------------------------------
+! ------------------------------------------------------------------------------
+! --- generated with 4bit Terminal Color Scheme Designer -----------------------
+! ------------------------------------------------------------------------------
+! --- http://ciembor.github.com/4bit -------------------------------------------
+! ------------------------------------------------------------------------------
+! alles zu blass bei dem
+
+
+urxvt*foreground: white
+urxvt*background: black
+
+*color0:  #2E3436
+*color1:  #a40000
+*color2:  #4E9A06
+*color3:  #C4A000
+*color4:  #3465A4
+*color5:  #75507B
+*color6:  #ce5c00
+*color7:  #babdb9
+*color8:  #555753
+*color9:  #EF2929
+*color10: #8AE234
+*color11: #FCE94F
+*color12: #729FCF
+*color13: #AD7FA8
+*color14: #fcaf3e
+*color15: #EEEEEC
+
+! another example color scheme
+!urxvt.background:  #000000
+!urxvt.foreground:  #EBEBFF
+!! black + red
+!!urxvt*color0:     #3f3f3f
+!urxvt*color0:      #000000
+!urxvt*color1:      #e01010
+!! green + yellow
+!urxvt*color2:      #00AA00
+!urxvt*color3:      #FFFF00
+!! blue + purple
+!urxvt*color4:      #112037
+!urxvt*color5:      #A020F0
+!! cyan + white
+!urxvt*color6:      #5B5BC7
+!urxvt*color7:      #fefefe
+!! bright-black + bright-red
+!urxvt*color8:      #6a6a6a
+!urxvt*color9:      #FF5555
+!! bright-green + bright-yellow
+!urxvt*color10:     #90EE90
+!urxvt*color11:     #ffff2f
+!! bright-blue + bright-purple
+!urxvt*color12:     #5B5BC7
+!urxvt*color13:     #e628ba
+!! bright-cyan + bright-white
+!urxvt*color14:     #7D7DFB
+!urxvt*color15:     #ffffff
