@@ -13,8 +13,8 @@ HISTCONTROL=ignoredups:ignorespace
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=10000
+HISTFILESIZE=20000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -78,18 +78,6 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-# some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-alias lettuce_test='cd ~/workspace/bettermarks.service/ &&export PYTHONPATH=$PWD && export DJANGO_SETTINGS_MODULE=bettermarks.settings && export SETTINGS_FILE=~/bettermarks/configs/settings.ini && export I18N_GATE=ramdisk && export STAGING_SYSTEM=lettuce && workon lettuce'
-alias start_service='cd ~/workspace/service/ &&export PYTHONPATH=$PWD && export DJANGO_SETTINGS_MODULE=bettermarks.settings && export SETTINGS_FILE=~/bettermarks/configs/settings.ini && workon service && python bettermarks/manage.py runserver'
-alias start_payment='cd ~/workspace/bettermarks.payment/ &&export PYTHONPATH=$PWD && export DJANGO_SETTINGS_MODULE=bettermarks.settings && export SETTINGS_FILE=~/bettermarks/configs/settings.ini && workon payment_env && python bettermarks/manage.py runserver 8001'
-alias unittests='cd ~/workspace/service/ &&export PYTHONPATH=$PWD && export DJANGO_SETTINGS_MODULE=bettermarks.settings && export SETTINGS_FILE=~/bettermarks/configs/settings.ini && export STAGING_SYSTEM=test && workon service && export I18N_GATE=ramdisk && for cmd in {stop,create,start,setup}; do sudo ./tools/testdbram/myram.sh $cmd; done'
-alias start_metadata='cd ~/workspace/bm_content_tools/tools/metadata/metadata && python manage.py runserver 8002'
-alias ipython='export PYTHONPATH=/usr/lib/python2.7/dist-packages && /usr/bin/ipython'
-
-
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
@@ -110,18 +98,13 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-PATH=$PATH:/home/phil/scripts
-PATH=$PATH:/home/phil/scala/sbt/bin:/home/phil/scala/play-2.1.1
-PATH=$PATH:/usr/lib/git-annex
-
-export PATH
-export SETTINGS_FILE=/home/philipp/bettermarks/configs/settings.ini
-
-export VIRTUALENVWRAPPER_PYTHON="/usr/bin/python"
-export WORKON_HOME=$HOME/.virtualenvs
-source /usr/local/bin/virtualenvwrapper.sh
+VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+export WORKON_HOME=~/.virtualenvs
+source /usr/bin/virtualenvwrapper.sh
 export PIP_VIRTUALENV_BASE=$WORKON_HOME
 export CHROME_BIN="/usr/bin/chromium-browser"
 
-source ~/git-completion.bash
-# test -r ~/algs4/bin/config.sh && source ~/algs4/bin/config.sh
+PATH=$PATH:/home/phil/scripts
+export PATH
+
+#source ~/git-completion.bash
