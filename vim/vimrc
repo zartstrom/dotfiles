@@ -51,8 +51,8 @@ noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
-nnoremap <Tab> :bnext<CR>
-nnoremap <S-Tab> :bprevious<CR>
+map <A-C-Left>  :bprevious<CR>
+map <A-C-Right> :bnext<CR>
 
 
 """ COLOR
@@ -68,18 +68,7 @@ hi Search cterm=NONE ctermbg=166
 set colorcolumn=120
 "au ColorScheme * highlight ColorColumn ctermbg=2 guibg=#FF00FF
 " guibg for gvim I think
-hi ColorColumn ctermbg=5 guibg=#B28686
-" Highlight trailing whitespace (but not in insert mode).
-" See http://vim.wikia.com/wiki/Highlight_unwanted_spaces
-highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+$/
-augroup extra_whitespace
-  autocmd!
-  autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-  autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-  autocmd InsertLeave * match ExtraWhitespace /\s\+$/
-  autocmd BufWinLeave * call clearmatches()
-augroup END
+hi ColorColumn ctermbg=8 guibg=#B28686
 
 
 """ SOME CUSTOM HELPERS
@@ -90,8 +79,9 @@ augroup END
 :nmap <silent> <Plug>SingleQuoteWord ciw''<Esc>P:call repeat#set("\<Plug>DoubleQuoteWord")<CR>
 :nmap <leader>q' <Plug>SingleQuoteWord
 :nnoremap <leader>qd daW"=substitute(@@,"'\\\|\"","","g")<CR>P
-
-:nnoremap <leader>rr :let @*=@" \| let @+=@"<CR>
+" register stuff
+:nnoremap <leader>rr :let @f=@% \| let @a=@" \| let @+=@" \| let @*=@"<CR>
+:nnoremap <leader>rf :let @"=@%<CR>
 :nnoremap <leader>rx :let @"=@*<CR>
 :nnoremap <leader>rv :let @"=@+<CR>
 
@@ -111,12 +101,19 @@ autocmd BufReadPost *
 "autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 "autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 "autocmd FileType c set omnifunc=ccomplete#Complete
+" automatically close scratch window
+autocmd CursorMovedI *  if pumvisible() == 0|silent! pclose|endif
+autocmd InsertLeave * if pumvisible() == 0|silent! pclose|endif
 
 
 """ PLUGIN SECTION
 
 " Vundle
 Plugin 'gmarik/vundle'
+
+
+" ag aka the_silver_searcher
+Plugin 'rking/ag.vim'
 
 
 " git
@@ -154,13 +151,25 @@ Plugin 'scrooloose/nerdcommenter'
 
 map <leader>cc <leader>cl
 
+" js-beautify
+Plugin 'maksimr/vim-jsbeautify'
+Plugin 'einars/js-beautify'
+
+" autocmd FileType javascript vnoremap <buffer>  <C-f> :call RangeJsBeautify()<cr>
+" autocmd FileType html vnoremap <buffer> <C-f> :call RangeHtmlBeautify()<cr>
+" autocmd FileType css vnoremap <buffer> <C-f> :call RangeCSSBeautify()<cr>
+" for js
+autocmd FileType javascript noremap <leader>b :call JsBeautify()<cr>
+" for html
+autocmd FileType html noremap <leader>b :call HtmlBeautify()<cr>
 
 " taglist.vim
 Plugin 'vim-scripts/taglist.vim'
 
-
 " python tagbar
 Plugin 'majutsushi/tagbar'
+
+nmap <F8> :TagbarToggle<CR>
 
 
 " restructured text
@@ -171,15 +180,8 @@ Plugin 'Rykka/riv.vim'
 Plugin 'jcfaria/Vim-R-plugin'
 
 
-" Expand << into <-.
-let vimrplugin_assign_map = '<<'
-
-" Don't line things up with opening braces.
-let r_indent_align_args = 0
-
-" Insert-mode mappings are incredibly annoying.
-let g:vimrplugin_insert_mode_cmds = 0
-
+" tern_for_vim
+Plugin 'marijnh/tern_for_vim'
 
 " UltiSnips
 Plugin 'SirVer/ultisnips'
@@ -225,6 +227,29 @@ let g:airline_section_x = 'reg:%{v:register}'
 set laststatus=2
 
 
+" vimwiki
+Plugin 'vimwiki/vimwiki'
+
+nnoremap <leader>wa :VimwikiAll2HTML<CR><CR>:e<CR>
+let vimwiki_path='/home/philipp/vimwiki/'
+let vimwiki_export_path='/home/philipp/vimwiki_html/'
+let wiki_settings={
+\ 'template_path': vimwiki_path.'templates/',
+\ 'template_default': 'default',
+\ 'template_ext': '.html',
+\ 'auto_export': 0,
+\ 'nested_syntaxes': {'js': 'javascript', 'python': 'python'}
+\ }
+
+let wiki=copy(wiki_settings)
+let wiki.path = vimwiki_path
+let wiki.path_html = vimwiki_export_path
+let wiki.diary_index = 'index'
+let wiki.diary_rel_path = 'diary/'
+" call add(g:vimwiki_list, wiki)
+let g:vimwiki_list = [wiki]
+
+
 " CtrlP-Plugin
 Plugin 'kien/ctrlp.vim'
 
@@ -237,7 +262,7 @@ let g:ctrlp_custom_ignore = {
 " Python-Mode
 Plugin 'klen/python-mode'
 
-let g:pymode_virtualenv = 1
+let g:pymode_virtualenv = 0
 let g:pymode_run = 0        " disable run code
 let g:pymode_folding = 0    " disable folding
 let g:pymode_syntax = 1
@@ -279,6 +304,10 @@ Plugin 'walm/jshint.vim'
 autocmd BufWritePost *.js :JSHint
 
 
+" virtualenv
+Plugin 'jmcantrell/vim-virtualenv'
+
+
 " YouCompleteMe
 Plugin 'Valloric/YouCompleteMe'
 
@@ -315,31 +344,5 @@ Plugin 'brookhong/DBGPavim'
 let g:dbgPavimPort = 9000
 
 
-" Ack is a grep like feature, just need to figure out how it works
-" nmap <leader>a <Esc>:Ack!
-
-" Tetris
-Plugin 'vim-scripts/TeTrIs.vim'
-
-" vimwiki
-Plugin 'vim-scripts/vimwiki'
-
 " End plugin section
 filetype plugin indent on
-
-
-""" PYTHON
-" Code Folding. Usage: fold, unfold: za
-set foldmethod=indent
-set foldlevel=99
- " Add the virtualenv's site-packages to vim path
-py << EOF
-import os.path
-import sys
-import vim
-if 'VIRTUAL_ENV' in os.environ:
-    project_base_dir = os.environ['VIRTUAL_ENV']
-    sys.path.insert(0, project_base_dir)
-    activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
-    execfile(activate_this, dict(__file__=activate_this))
-EOF
