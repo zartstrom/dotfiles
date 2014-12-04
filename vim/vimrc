@@ -64,16 +64,21 @@ map <A-C-Right> :bnext<CR>
 if $COLORTERM == 'gnome-terminal'
   set t_Co=256
 endif
-colorscheme morning
-" set background=dark
-hi CursorLine cterm=none ctermbg=252 ctermfg=none
-hi CursorColumn cterm=none ctermbg=252 ctermfg=none
+colorscheme darkblue
+set background=dark
+" further settings for colorscheme morning:
+" hi CursorLine cterm=none ctermbg=252 ctermfg=none
+" hi CursorColumn cterm=none ctermbg=252 ctermfg=none
+" hi ColorColumn ctermbg=8 guibg=#B28686
+" further settings for colorscheme darkblue:
+hi CursorLine cterm=none ctermbg=255 ctermfg=none guibg=#041650
+hi CursorColumn cterm=none ctermbg=117 ctermfg=none guibg=#041650
+hi ColorColumn ctermbg=8 guibg=DeepPink4
 " Color for highlight search
 hi Search cterm=NONE ctermbg=166
 set colorcolumn=120
 "au ColorScheme * highlight ColorColumn ctermbg=2 guibg=#FF00FF
 " guibg for gvim I think
-hi ColorColumn ctermbg=8 guibg=#B28686
 
 
 """ SOME CUSTOM HELPERS

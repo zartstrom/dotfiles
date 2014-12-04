@@ -100,7 +100,9 @@ fi
 
 VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 export WORKON_HOME=~/.virtualenvs
-source /usr/bin/virtualenvwrapper.sh
+if [ -x /usr/bin/virtualenvwrapper.sh ]; then
+    source /usr/bin/virtualenvwrapper.sh
+fi
 export PIP_VIRTUALENV_BASE=$WORKON_HOME
 export CHROME_BIN="/usr/bin/chromium-browser"
 
