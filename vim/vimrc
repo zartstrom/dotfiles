@@ -1,6 +1,7 @@
 set nocompatible
 filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
+" set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
 
@@ -28,9 +29,13 @@ set mouse=a
 set autoread            " Reload files when they are changed by another process.
 set tw=0
 set guifont=Inconsolata\ 11
-" set guioptions -=m
-set guioptions-=r
-set guioptions -=T
+
+""" gvim
+set guioptions-=m  "menu bar
+set guioptions-=T  "toolbar
+set guioptions-=r  "scrollbar
+set guioptions-=L  "left scrollbar
+
 
 if v:lang =~ "utf8$" || v:lang =~ "UTF-8$"
    set fileencodings=utf-8,latin1
