@@ -276,7 +276,7 @@ let g:ctrlp_custom_ignore = {
 " Python-Mode
 Plugin 'klen/python-mode'
 
-let g:pymode_virtualenv = 0
+let g:pymode_virtualenv = 1
 let g:pymode_run = 0        " disable run code
 let g:pymode_folding = 0    " disable folding
 let g:pymode_syntax = 1

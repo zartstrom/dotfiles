@@ -53,6 +53,7 @@ export PATH=$HOME/bin:$HOME/scripts:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
+source $HOME/.bash_aliases
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -78,3 +79,30 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+## backend
+#backend_path="${HOME}/devel/backend"  # backend_root
+#alias “='workon backend; cd "$backend_path"; export OAUTHLIB_INSECURE_TRANSPORT=1'  # “ = ALT-GR + b
+#alias ‘='“; ›; “' # ‘ = ALT-GR + SHIFT + b
+
+## frontend
+#frontend_path="${HOME}/devel/frontend"  # frontend_root
+#alias đ='workon frontend2; cd "$frontend_path"'  # đ = ALT-GR + f
+#alias ª='đ; ›; đ' # ª = ALT-GR + SHIFT + f
+
+## glue
+#glue_path="${HOME}/devel/glue_all"
+#alias ŋ='workon glue; cd "$glue_path"'  # ŋ = ALT-GR + g
+#alias Ŋ='ŋ; ›; ŋ'  # Ŋ = ALT-GR + SHIFT + b
+
+## payment_ui
+#payment_path="${HOME}/devel/payment_ui"
+#alias þ='workon payment_ui; cd "$payment_path"'  # þ = ALT-GR + p
+#alias Þ='þ; ›; þ'  # Þ = ALT-GR + SHIFT + p
+
+
+#alias glue_st='glue_status.sh'
+#alias glue_pull='glue_pull.sh'
+#alias glue_push='glue_push.sh'
+#alias glue_dev='glue_develop.sh'
+

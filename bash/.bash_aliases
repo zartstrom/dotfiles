@@ -63,8 +63,8 @@ alias ŋ='workon glue; cd "$glue_path"'  # ŋ = ALT-GR + g
 alias Ŋ='ŋ; ›; ŋ'  # Ŋ = ALT-GR + SHIFT + b
 
 # payment_ui
-path="${HOME}/devel/payment_ui"
-alias þ='workon payment_ui; cd "$path"'  # þ = ALT-GR + p
+payment_path="${HOME}/devel/payment_ui"
+alias þ='workon payment_ui; cd "$payment_path"'  # þ = ALT-GR + p
 alias Þ='þ; ›; þ'  # Þ = ALT-GR + SHIFT + p
 
 
