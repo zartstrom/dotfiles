@@ -11,7 +11,7 @@
 !urxvt*background: black
 *background: #002b36
 *foreground: #839496
-*fading: 25
+*fading: 15
 *fadeColor: #002b36
 *cursorColor: #93a1a1
 

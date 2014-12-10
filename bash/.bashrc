@@ -98,7 +98,7 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
 export WORKON_HOME=~/.virtualenvs
 if [ -x /usr/bin/virtualenvwrapper.sh ]; then
     source /usr/bin/virtualenvwrapper.sh
