@@ -93,10 +93,10 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # switch to workspace
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
+bindsym $mod+1 workspace 1: mail
+bindsym $mod+2 workspace 2: skype
+bindsym $mod+3 workspace 3: www
+bindsym $mod+4 workspace 4: opera
 bindsym $mod+5 workspace 5
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
@@ -157,4 +157,12 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
+        strip_workspace_numbers yes
 }
+
+# assignment stuff
+assign [class="^Thunderbird$"] → mail
+assign [class="^Skype$"] → skype
+assign [class="^Firefox$"] → www
+assign [class="^Opera$"] → opera
+
