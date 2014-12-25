@@ -92,33 +92,44 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
+set $mail "1:mail"
+set $skype "2:skype"
+set $www "3:www"
+set $opera "4:opera"
+set $T5 "5:5"
+set $T6 "6:6"
+set $T7 "7:7"
+set $T8 "8:8"
+set $T9 "9:9"
+set $T10 "10:10"
+
 # switch to workspace
-bindsym $mod+1 workspace 1: mail
-bindsym $mod+2 workspace 2: skype
-bindsym $mod+3 workspace 3: www
-bindsym $mod+4 workspace 4: opera
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
+bindsym $mod+1 workspace $mail
+bindsym $mod+2 workspace $skype
+bindsym $mod+3 workspace $www
+bindsym $mod+4 workspace $opera
+bindsym $mod+5 workspace $T5
+bindsym $mod+6 workspace $T6
+bindsym $mod+7 workspace $T7
+bindsym $mod+8 workspace $T8
+bindsym $mod+9 workspace $T9
+bindsym $mod+0 workspace $T10
 
 # next/previous workspace
 bindsym Control+$mod+Right workspace next
 bindsym Control+$mod+Left workspace prev
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1
-bindsym $mod+Shift+2 move container to workspace 2
-bindsym $mod+Shift+3 move container to workspace 3
-bindsym $mod+Shift+4 move container to workspace 4
-bindsym $mod+Shift+5 move container to workspace 5
-bindsym $mod+Shift+6 move container to workspace 6
-bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
-bindsym $mod+Shift+0 move container to workspace 10
+bindsym $mod+Shift+1 move container to workspace $mail
+bindsym $mod+Shift+2 move container to workspace $skype
+bindsym $mod+Shift+3 move container to workspace $www
+bindsym $mod+Shift+4 move container to workspace $opera
+bindsym $mod+Shift+5 move container to workspace $T5
+bindsym $mod+Shift+6 move container to workspace $T6
+bindsym $mod+Shift+7 move container to workspace $T7
+bindsym $mod+Shift+8 move container to workspace $T8
+bindsym $mod+Shift+9 move container to workspace $T9
+bindsym $mod+Shift+0 move container to workspace $T10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -161,8 +172,8 @@ bar {
 }
 
 # assignment stuff
-assign [class="^Thunderbird$"] → mail
-assign [class="^Skype$"] → skype
-assign [class="^Firefox$"] → www
-assign [class="^Opera$"] → opera
+assign [class="^Thunderbird$"] → $mail
+assign [class="^Skype$"] → $skype
+assign [class="^Firefox$"] → $www
+assign [class="^Opera$"] → $opera
 
