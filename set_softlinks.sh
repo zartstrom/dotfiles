@@ -22,6 +22,7 @@ ln -s $DOTFILES/vim/vimrc .vimrc
 
 # X11
 echo X11
+ln -s $DOTFILES/X11/.xinitrc
 ln -s $DOTFILES/X11/.Xresources
 ln -s $DOTFILES/X11/.Xdefaults
 
