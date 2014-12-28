@@ -96,14 +96,15 @@ set $mail "1:mail"
 set $skype "2:skype"
 set $www "3:www"
 set $opera "4:opera"
-set $T1 "5:1"
-set $T2 "6:2"
-set $T3 "7:3"
-set $T4 "8:4"
-set $T5 "9:5"
-set $T6 "10:6"
-set $T7 "11:7"
-set $T8 "12:8"
+set $T1 "11:1"
+set $T2 "12:2"
+set $T3 "13:3"
+set $T4 "14:4"
+set $T5 "15:5"
+set $T6 "16:6"
+set $T7 "17:7"
+set $T8 "18:8"
+set $music "21:music"
 
 # switch to workspace
 bindsym $mod+1 workspace $T1
@@ -180,4 +181,5 @@ assign [class="^Thunderbird$"] → $mail
 assign [class="^Skype$"] → $skype
 assign [class="^Firefox$"] → $www
 assign [class="^Opera$"] → $opera
+assign [class="^Nightingale$"] → $music
 
