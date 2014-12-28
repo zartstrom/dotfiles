@@ -1,6 +1,7 @@
 #!/bin/bash
 
 DOTFILES=dotfiles
+cd $HOME
 
 # bash
 echo bash
@@ -17,6 +18,7 @@ ln -s $HOME/$DOTFILES/i3/config $HOME/.i3/config
 
 # vim
 echo vim
+mkdir -p .vimswap
 ln -s $HOME/$DOTFILES/vim/vimrc $HOME/.vimrc
 
 # X11
