@@ -183,3 +183,6 @@ assign [class="^Firefox$"] → $www
 assign [class="^Opera$"] → $opera
 assign [class="^Nightingale$"] → $music
 
+
+exec thunderbird
+exec opera
