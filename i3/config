@@ -186,3 +186,5 @@ assign [class="^Nightingale$"] → $music
 
 exec thunderbird
 exec opera
+exec megasync
+
