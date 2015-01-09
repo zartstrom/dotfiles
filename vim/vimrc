@@ -71,7 +71,7 @@ set background=dark
 " hi CursorColumn cterm=none ctermbg=252 ctermfg=none
 " hi ColorColumn ctermbg=8 guibg=#B28686
 " further settings for colorscheme darkblue:
-hi CursorLine cterm=none ctermbg=255 ctermfg=none guibg=#041650
+hi CursorLine cterm=none ctermbg=117 ctermfg=none guibg=#041650
 hi CursorColumn cterm=none ctermbg=117 ctermfg=none guibg=#041650
 hi ColorColumn ctermbg=8 guibg=DeepPink4
 " Color for highlight search
