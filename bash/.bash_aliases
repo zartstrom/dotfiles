@@ -58,7 +58,7 @@ alias đ='workon frontend2; cd "$frontend_path"'  # đ = ALT-GR + f
 alias ª='đ; ›; đ' # ª = ALT-GR + SHIFT + f
 
 # glue
-glue_path="${HOME}/devel/glue_all"
+glue_path="${HOME}/devel/glue_all/bm-glue"
 alias ŋ='workon glue; cd "$glue_path"'  # ŋ = ALT-GR + g
 alias Ŋ='ŋ; ›; ŋ'  # Ŋ = ALT-GR + SHIFT + b
 
