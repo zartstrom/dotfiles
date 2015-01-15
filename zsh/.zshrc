@@ -48,6 +48,7 @@ ZSH_THEME="agnoster"
 plugins=(git gitfast virtualenv virtualenvwrapper pyenv pylint rsync python history ssh-agent bower pip npm zsh-syntax-highlighting per-directory-history)
 
 # User configuration
+setopt interactivecomments
 
 export PATH=$HOME/bin:$HOME/scripts:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
