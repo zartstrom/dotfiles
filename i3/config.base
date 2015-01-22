@@ -137,8 +137,6 @@ bindsym $mod+7 workspace $T7
 bindsym $mod+8 workspace $T8
 bindsym $mod+9 workspace $www
 bindsym $mod+0 workspace $opera
-# bindsym $mod+1 workspace $mail
-# bindsym $mod+2 workspace $skype
 
 # next/previous workspace
 bindsym Control+$mod+Right workspace next
@@ -190,9 +188,12 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # assignment stuff
+# Use xprop to find out class: Start application and a terminal in a workspace.
+# Type "xprop" into the terminal and click on the application window.
 assign [class="^Thunderbird$"] → $mail
 assign [class="^Skype$"] → $skype
 assign [class="^Firefox$"] → $www
+assign [class="Google-chrome-stable"] → $www
 assign [class="^Opera$"] → $opera
 assign [class="^Nightingale$"] → $music
 

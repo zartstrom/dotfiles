@@ -18,9 +18,13 @@ xset -b
 
 xrdb .Xresources
 
+source $HOME/dotfiles/i3/setup_i3_config.sh
+
 # exec gnome-session
 # exec startkde
 # exec startxfce4
 # ...or the Window Manager of your choice
 # exec i3 -V -d all >> ~/.i3/logfile
+
 exec i3
+
