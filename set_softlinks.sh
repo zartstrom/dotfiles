@@ -1,34 +1,37 @@
 #!/bin/bash
 
-DOTFILES=dotfiles
+DOTFILES=$HOME/dotfiles
 cd $HOME
 
 # bash
 echo bash
-ln -s $HOME/$DOTFILES/bash/.bashrc $HOME/.bashrc
+ln -s $DOTFILES/bash/.bashrc $HOME/.bashrc
 
 # git
 echo git
-ln -s $HOME/$DOTFILES/git/.gitconfig $HOME/.gitconfig
+ln -s $DOTFILES/git/.gitconfig $HOME/.gitconfig
 
 # i3
 echo i3
-mkdir -p $HOME/.i3
-ln -s $HOME/$DOTFILES/i3/config $HOME/.i3/config
+mkdir -p $HOME/.config/i3
+# no I do it with setup_i3_config.sh which is sourced in .xinitc
+# ln -s $HOME/$DOTFILES/i3/config $HOME/.config/i3/config
+mkdir -p $HOME/.config/i3status
+ln -s $DOTFILES/i3/i3status.conf $HOME/.config/i3status/config
 
 # vim
 echo vim
 mkdir -p .vimswap
-ln -s $HOME/$DOTFILES/vim/vimrc $HOME/.vimrc
+ln -s $DOTFILES/vim/vimrc $HOME/.vimrc
 
 # X11
 echo X11
-ln -s $HOME/$DOTFILES/X11/.xinitrc $HOME/.xinitrc
-ln -s $HOME/$DOTFILES/X11/.Xresources $HOME/.Xresources
-ln -s $HOME/$DOTFILES/X11/.Xdefaults $HOME/.Xdefaults
+ln -s $DOTFILES/X11/.xinitrc $HOME/.xinitrc
+ln -s $DOTFILES/X11/.Xresources $HOME/.Xresources
+ln -s $DOTFILES/X11/.Xdefaults $HOME/.Xdefaults
 
 # zsh
 echo zsh
-ln -s $HOME/$DOTFILES/zsh/.zshrc $HOME/.zshrc
+ln -s $DOTFILES/zsh/.zshrc $HOME/.zshrc
 
 
