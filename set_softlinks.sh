@@ -6,6 +6,7 @@ cd $HOME
 # bash
 echo bash
 ln -s $DOTFILES/bash/.bashrc $HOME/.bashrc
+ln -s $DOTFILES/bash/.bash_aliases $HOME/.bash_aliases
 
 # git
 echo git
