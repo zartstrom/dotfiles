@@ -16,16 +16,6 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
-# Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-
-# umlet
-alias umlet='bash ~/bin/Umlet/umlet.sh'
-
-# terminal
-alias ›='new_tab.sh'  # › = ALT-GR + SHIFT + y
-
 # git
 alias git_root='cd "$(git rev-parse --show-toplevel)"'
 
@@ -54,7 +44,7 @@ alias ‘='“; ›; “' # ‘ = ALT-GR + SHIFT + b
 
 # frontend
 frontend_path="${HOME}/devel/frontend"  # frontend_root
-alias đ='workon frontend2; cd "$frontend_path"'  # đ = ALT-GR + f
+alias đ='workon frontend; cd "$frontend_path"'  # đ = ALT-GR + f
 alias ª='đ; ›; đ' # ª = ALT-GR + SHIFT + f
 
 # glue
@@ -62,10 +52,14 @@ glue_path="${HOME}/devel/glue_all/bm-glue"
 alias ŋ='workon glue; cd "$glue_path"'  # ŋ = ALT-GR + g
 alias Ŋ='ŋ; ›; ŋ'  # Ŋ = ALT-GR + SHIFT + b
 
+# dwh_nsp
+dwh_nsp_path="${HOME}/devel/dwh_nsp"
+alias ð='cd ${dwh_nsp_path}'
+
 # payment_ui
-payment_path="${HOME}/devel/payment_ui"
-alias þ='workon payment_ui; cd "$payment_path"'  # þ = ALT-GR + p
-alias Þ='þ; ›; þ'  # Þ = ALT-GR + SHIFT + p
+# payment_path="${HOME}/devel/payment_ui"
+# alias þ='workon payment_ui; cd "$payment_path"'  # þ = ALT-GR + p
+# alias Þ='þ; ›; þ'  # Þ = ALT-GR + SHIFT + p
 
 
 alias glue_st='glue_status.sh'

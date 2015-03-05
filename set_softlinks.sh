@@ -8,6 +8,11 @@ echo bash
 ln -s $DOTFILES/bash/.bashrc $HOME/.bashrc
 ln -s $DOTFILES/bash/.bash_aliases $HOME/.bash_aliases
 
+# firefox (no Desktop folder please)
+echo firefox
+mkdir -p $HOME/.config
+ln -s $DOTFILES/firefox/user-dirs.dirs $HOME/.config/user-dirs.dirs
+
 # git
 echo git
 ln -s $DOTFILES/git/.gitconfig $HOME/.gitconfig
