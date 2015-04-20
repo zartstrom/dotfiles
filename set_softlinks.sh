@@ -39,5 +39,6 @@ ln -s $DOTFILES/X11/.Xdefaults $HOME/.Xdefaults
 # zsh
 echo zsh
 ln -s $DOTFILES/zsh/.zshrc $HOME/.zshrc
-
+mkdir -p $HOME/.oh-my-zsh/themes
+ln -s $DOTFILES/zsh/af-magic-light.zsh-theme $HOME/.oh-my-zsh/themes
 
