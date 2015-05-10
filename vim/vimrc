@@ -347,6 +347,10 @@ Plugin 'walm/jshint.vim'
 autocmd BufWritePost *.js :JSHint
 
 
+" vim-scala
+Plugin 'derekwyatt/vim-scala'
+
+
 " virtualenv
 Plugin 'jmcantrell/vim-virtualenv'
 

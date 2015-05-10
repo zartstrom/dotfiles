@@ -1,6 +1,6 @@
 [user]
-  name = phil
-  email = philipp.hitzler@bettermarks.de
+  name = zartstrom
+  email = phj.hitzler@gmail.com
 [core]
   pager = less -FRSX
   whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
