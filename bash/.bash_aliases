@@ -67,3 +67,4 @@ alias glue_pull='glue_pull.sh'
 alias glue_push='glue_push.sh'
 alias glue_dev='glue_develop.sh'
 
+alias dwh_tunnel='ssh -L 3307:localhost:3306 phitzler@dwhdev01.inf00.inf.bm.loc'
