@@ -351,6 +351,10 @@ autocmd BufWritePost *.js :JSHint
 Plugin 'derekwyatt/vim-scala'
 
 
+" vim-xpath
+Plugin 'actionshrimp/vim-xpath'
+
+
 " virtualenv
 Plugin 'jmcantrell/vim-virtualenv'
 
