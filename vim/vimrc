@@ -351,6 +351,13 @@ autocmd BufWritePost *.js :JSHint
 Plugin 'derekwyatt/vim-scala'
 
 
+" vim-scripts/scala.vim - syntax highlighting
+Plugin 'vim-scripts/scala.vim'
+
+au BufRead,BufNewFile *.scala set filetype=scala
+au! Syntax scala source ~/.vim/bundle/scala.vim/syntax/scala.vim
+
+
 " vim-xpath
 Plugin 'actionshrimp/vim-xpath'
 nnoremap <leader>xp :XPathSearchPrompt<CR>
