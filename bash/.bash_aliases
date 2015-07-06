@@ -56,6 +56,10 @@ alias Ŋ='ŋ; ›; ŋ'  # Ŋ = ALT-GR + SHIFT + b
 dwh_nsp_path="${HOME}/devel/dwh_nsp"
 alias ð='cd ${dwh_nsp_path}'
 
+# tf_learning
+tf_learning_path="${HOME}/devel/tf_learning"
+alias ŧ='cd ${tf_learning_path}'
+
 # payment_ui
 # payment_path="${HOME}/devel/payment_ui"
 # alias þ='workon payment_ui; cd "$payment_path"'  # þ = ALT-GR + p
