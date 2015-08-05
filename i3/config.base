@@ -131,7 +131,10 @@ set $T5 "15:5"
 set $T6 "16:6"
 set $T7 "17:7"
 set $T8 "18:8"
-set $music "21:music"
+set $mysql "21:mysql"
+set $spoon "22:spoon"
+set $ireport "23:ireport"
+set $music "31:music"
 
 # switch to workspace
 bindsym $mod+1 workspace $T1
@@ -197,11 +200,15 @@ bindsym $mod+r mode "resize"
 # assignment stuff
 # Use xprop to find out class: Start application and a terminal in a workspace.
 # Type "xprop" into the terminal and click on the application window.
+# Then add the (second?!) value from WM_CLASS here
 assign [class="^Thunderbird$"] → $mail
 assign [class="^Skype$"] → $skype
 assign [class="^Firefox$"] → $firefox
 assign [class="Google-chrome-stable"] → $chrome
 assign [class="^Opera$"] → $opera
+assign [class="^Mysql-workbench-bin$"] → $mysql
+assign [class="^SWT$"] → $spoon  # spoon has a funky WM_CLASS
+assign [class="^java-lang-Thread$"] → $ireport  # ireport has a funky WM_CLASS too
 assign [class="^Nightingale$"] → $music
 
 exec megasync
