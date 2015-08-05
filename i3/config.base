@@ -120,8 +120,9 @@ bindsym $mod+a focus parent
 
 set $mail "1:mail"
 set $skype "2:skype"
-set $www "3:www"
-set $opera "4:opera"
+set $opera "3:opera"
+set $chrome "4:chrome"
+set $firefox "5:firefox"
 set $T1 "11:1"
 set $T2 "12:2"
 set $T3 "13:3"
@@ -141,8 +142,8 @@ bindsym $mod+5 workspace $T5
 bindsym $mod+6 workspace $T6
 bindsym $mod+7 workspace $T7
 bindsym $mod+8 workspace $T8
-bindsym $mod+9 workspace $www
-bindsym $mod+0 workspace $opera
+bindsym $mod+9 workspace $opera
+bindsym $mod+0 workspace $firefox
 
 # next/previous workspace
 bindsym Control+$mod+Right workspace next
@@ -157,8 +158,8 @@ bindsym $mod+Shift+5 move container to workspace $T5
 bindsym $mod+Shift+6 move container to workspace $T6
 bindsym $mod+Shift+7 move container to workspace $T7
 bindsym $mod+Shift+8 move container to workspace $T8
-bindsym $mod+Shift+9 move container to workspace $www
-bindsym $mod+Shift+0 move container to workspace $opera
+bindsym $mod+Shift+9 move container to workspace $opera
+bindsym $mod+Shift+0 move container to workspace $firefox
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -175,16 +176,16 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym h resize shrink width 10 px or 10 ppt
-        bindsym j resize grow height 10 px or 10 ppt
-        bindsym k resize shrink height 10 px or 10 ppt
-        bindsym l resize grow width 10 px or 10 ppt
+        bindsym h resize shrink width 5 px or 5 ppt
+        bindsym j resize grow height 5 px or 5 ppt
+        bindsym k resize shrink height 5 px or 5 ppt
+        bindsym l resize grow width 5 px or 5 ppt
 
         # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+        bindsym Left resize shrink width 5 px or 5 ppt
+        bindsym Down resize grow height 5 px or 5 ppt
+        bindsym Up resize shrink height 5 px or 5 ppt
+        bindsym Right resize grow width 5 px or 5 ppt
 
         # back to normal: Enter or Escape
         bindsym Return mode "default"
@@ -198,8 +199,8 @@ bindsym $mod+r mode "resize"
 # Type "xprop" into the terminal and click on the application window.
 assign [class="^Thunderbird$"] → $mail
 assign [class="^Skype$"] → $skype
-assign [class="^Firefox$"] → $www
-assign [class="Google-chrome-stable"] → $www
+assign [class="^Firefox$"] → $firefox
+assign [class="Google-chrome-stable"] → $chrome
 assign [class="^Opera$"] → $opera
 assign [class="^Nightingale$"] → $music
 
