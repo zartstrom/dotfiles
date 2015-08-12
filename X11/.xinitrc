@@ -16,12 +16,6 @@ fi
 # disable bell
 xset -b
 
-if hash gorandr_do_it_later 2>/dev/null; then
-    gorandr --load ska
-else
-    echo "is ned da"
-fi
-
 xrdb .Xresources
 
 source $HOME/dotfiles/i3/setup_i3_config.sh
