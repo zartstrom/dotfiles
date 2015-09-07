@@ -62,6 +62,8 @@ export LANG=en_US.UTF-8
 # golang
 export GOPATH=$HOME/go
 export PATH=$PATH:~/go/bin
+# panda igs
+export PATH=$PATH:~/mega/panda/GoPanda2
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
