@@ -118,8 +118,8 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
-set $mail "1:mail"
-set $skype "2:skype"
+set $skype "1:skype"
+set $mail "2:mail"
 set $opera "3:opera"
 set $chrome "4:chrome"
 set $firefox "5:firefox"
