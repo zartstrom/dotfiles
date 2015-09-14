@@ -64,6 +64,8 @@ export GOPATH=$HOME/go
 export PATH=$PATH:~/go/bin
 # panda igs
 export PATH=$PATH:~/mega/panda/GoPanda2
+# pentaho
+export PATH=$PATH:~/data-integration_5.4.0.1
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
