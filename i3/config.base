@@ -212,3 +212,4 @@ assign [class="^java-lang-Thread$"] → $ireport  # ireport has a funky WM_CLASS
 assign [class="^Nightingale$"] → $music
 
 exec megasync
+exex nm-applet
