@@ -347,8 +347,16 @@ Plugin 'walm/jshint.vim'
 autocmd BufWritePost *.js :JSHint
 
 
+" rainbow parenthesis
+Plugin 'kien/rainbow_parentheses.vim'
+
+
 " vim-scala
 Plugin 'derekwyatt/vim-scala'
+
+
+" sbt-vim
+Plugin 'ktvoelker/sbt-vim'
 
 
 " vim-scripts/scala.vim - syntax highlighting
