@@ -399,12 +399,12 @@ Plugin 'stephpy/vim-yaml'
 
 " NERD
 Plugin 'scrooloose/nerdtree'
+let NERDTreeIgnore = ['\.pyc$', '\.class$']
+map <leader>n :NERDTreeToggle<CR>
+
 
 " base16 colors
 Plugin 'chriskempson/base16-vim'
-
-let NERDTreeIgnore = ['\.pyc$']
-map <leader>n :NERDTreeToggle<CR>
 
 
 " dgbPavim - PHP debugger
