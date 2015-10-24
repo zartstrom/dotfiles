@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# from https://wiki.archlinux.org/index.php/Touchpad_Synaptics
+# see https://wiki.archlinux.org/index.php/Touchpad_Synaptics
 
 # the name of the touchpad device may vary
 DEVICE_REGEX="GlidePoint"
