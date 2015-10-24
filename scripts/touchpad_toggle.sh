@@ -46,10 +46,32 @@ function toggle_off {
     touchpad_disable $ID
 }
 
+function toggle_on {
+    ID=$(get_touchpad_id)
+    touchpad_enable $ID
+}
+
+function toggle_status {
+    ID=$(get_touchpad_id)
+    STATE=$(get_touchpad_state $ID)
+    if [ $STATE -eq 1 ]
+    then
+        echo "Touchpad is enabled."
+    else
+        echo "Touchpad is disabled."
+    fi
+}
+
 
 case "$1" in
 "off")
     toggle_off
+    ;;
+"on")
+    toggle_on
+    ;;
+"status")
+    toggle_status
     ;;
 *)
     toggle_switch
