@@ -1,8 +1,0 @@
-[Unit]
-Description=megasync client
-
-[Service]
-ExecStart=/usr/bin/megasync
-
-[Install]
-WantedBy=default.target

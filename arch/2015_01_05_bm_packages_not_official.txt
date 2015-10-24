@@ -1,4 +1,0 @@
-aura-bin
-megasync
-neovim-git
-thunderbird-lightning-bin
