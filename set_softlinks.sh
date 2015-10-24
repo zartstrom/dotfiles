@@ -25,9 +25,14 @@ mkdir -p $HOME/.config/i3
 mkdir -p $HOME/.config/i3status
 ln -s $DOTFILES/i3/i3status.conf $HOME/.config/i3status/config
 
+# scripts
+echo scripts
+mkdir -p $HOME/scripts
+ln -s $DOTFILES/scripts/touchpad_toggle.sh $HOME/scripts/touchpad_toggle.sh 
+
 # vim
 echo vim
-mkdir -p .vimswap
+mkdir -p $HOME/.vimswap
 ln -s $DOTFILES/vim/vimrc $HOME/.vimrc
 
 # X11
