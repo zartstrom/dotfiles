@@ -197,6 +197,7 @@ Plugin 'jcfaria/Vim-R-plugin'
 " tern_for_vim
 Plugin 'marijnh/tern_for_vim'
 
+
 " UltiSnips
 Plugin 'SirVer/ultisnips'
 
