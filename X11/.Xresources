@@ -232,7 +232,14 @@ URxvt*scrollBar: false
 ! Compile frills: Associate string with keysym sym. The intervening resource name keysym. cannot be omitted.
 ! URxvt*keysym.sym: string
 
-URxvt*perl-ext-common: font-size,fullscreen,vtwheel
+URxvt*perl-ext-common: font-size,fullscreen,vtwheel,tabbedex
+
+! tabs
+URxvt.tabbed.autohide: true
+URxvt.tabbed.tabbar-fg: 12
+URxvt.tabbed.tabbar-bg: 0
+URxvt.tabbed.tab-fg: 14
+URxvt.tabbed.tab-bg: 15
 
 ! change font-size
 URxvt.keysym.C-Up:     perl:font-size:increase
