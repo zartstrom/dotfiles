@@ -254,6 +254,12 @@ URxvt.iso14755_52: false
 ! fullscreen
 URxvt.keysym.F11: perl:fullscreen:switch
 
+! keys
+URxvt.keysym.Home: \033[1~
+URxvt.keysym.End: \033[4~
+URxvt.keysym.KP_Home: \033[1~
+URxvt.keysym.KP_End:  \033[4~
+
 ! Comma-separated list(s) of perl extension scripts (default: "default") to use in this terminal instance; option -pe.
 ! URxvt*perl-ext: string
 

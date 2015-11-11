@@ -70,6 +70,10 @@ export PATH=$PATH:~/data-integration_5.4.0.1
 export SPLUNK_HOME=/opt/splunk
 export PATH=$SPLUNK_HOME/bin:$PATH
 
+# keys
+bindkey "^[[1~" beginning-of-line
+bindkey "^[[4~" end-of-line
+
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
