@@ -32,6 +32,7 @@ ln -s $DOTFILES/scripts/touchpad_toggle.sh $HOME/scripts/touchpad_toggle.sh
 
 # vim
 echo vim
+mkdir -p $HOME/.vim
 mkdir -p $HOME/.vimswap
 ln -s $DOTFILES/vim/vimrc $HOME/.vimrc
 
