@@ -38,4 +38,4 @@
 [merge]
   tool = meld
 [push]
-  default = simple
+  default = nothing

@@ -1,8 +1,8 @@
 set nocompatible
 filetype off
 " set rtp+=~/.vim/bundle/Vundle.vim
-set rtp+=~/.vim/bundle/vundle
-call vundle#rc()
+" set rtp+=~/.vim/bundle/vundle
+" call vundle#rc()
 
 
 """ BASIC SETTINGS
@@ -28,7 +28,7 @@ set pastetoggle=<F2>
 set mouse=a
 set autoread            " Reload files when they are changed by another process.
 set tw=0
-set guifont=Inconsolata\ for\ Powerline\ 12
+" set guifont=Inconsolata\ for\ Powerline\ 12
 
 """ gvim
 set guioptions-=m  "menu bar
@@ -121,31 +121,32 @@ autocmd InsertLeave * if pumvisible() == 0|silent! pclose|endif
 
 
 """ PLUGIN SECTION
+call plug#begin('~/.vim/plugged')
 
 " Vundle
-Plugin 'gmarik/vundle'
+" Plugin 'gmarik/vundle'
 
 
 " ag aka the_silver_searcher
-Plugin 'rking/ag.vim'
+Plug 'rking/ag.vim'
 
 
 " git
-Plugin 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive'
 
 
 " repeat
-Plugin 'tpope/vim-repeat'
+Plug 'tpope/vim-repeat'
 
 
 " vim-easymotion
-Plugin 'Lokaltog/vim-easymotion'
+Plug 'Lokaltog/vim-easymotion'
 
 map <Space> <Plug>(easymotion-prefix)
 
 
 " LaTeX-Box
-Plugin 'LaTeX-Box-Team/LaTeX-Box'
+Plug 'LaTeX-Box-Team/LaTeX-Box'
 
 let g:LatexBox_latexmk_options = "-pvc -pdfps"
 let g:LatexBox_latexmk_async = 1
@@ -153,21 +154,21 @@ nnoremap <leader>ll :Latexmk<CR>
 
 
 " surround.vim - quotes, brackets and (html-)tags
-Plugin 'tpope/vim-surround'
+Plug 'tpope/vim-surround'
 
 
 " abolish - develish good
-Plugin 'tpope/vim-abolish'
+Plug 'tpope/vim-abolish'
 
 
 " NERDCommenter
-Plugin 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdcommenter'
 
 map <leader>cc <leader>cl
 
 " js-beautify
-Plugin 'maksimr/vim-jsbeautify'
-Plugin 'einars/js-beautify'
+Plug 'maksimr/vim-jsbeautify'
+Plug 'einars/js-beautify'
 
 " autocmd FileType javascript vnoremap <buffer>  <C-f> :call RangeJsBeautify()<cr>
 " autocmd FileType html vnoremap <buffer> <C-f> :call RangeHtmlBeautify()<cr>
@@ -178,28 +179,28 @@ autocmd FileType javascript noremap <leader>b :call JsBeautify()<cr>
 autocmd FileType html noremap <leader>b :call HtmlBeautify()<cr>
 
 " taglist.vim
-Plugin 'vim-scripts/taglist.vim'
+Plug 'vim-scripts/taglist.vim'
 
 " python tagbar
-Plugin 'majutsushi/tagbar'
+Plug 'majutsushi/tagbar'
 
 nmap <F8> :TagbarToggle<CR>
 
 
 " restructured text
-Plugin 'Rykka/riv.vim'
+Plug 'Rykka/riv.vim'
 
 
 " R
-Plugin 'jcfaria/Vim-R-plugin'
+Plug 'jcfaria/Vim-R-plugin'
 
 
 " tern_for_vim
-Plugin 'marijnh/tern_for_vim'
+Plug 'marijnh/tern_for_vim'
 
 
 " UltiSnips
-Plugin 'SirVer/ultisnips'
+Plug 'SirVer/ultisnips'
 
 function! g:UltiSnips_Complete()
     call UltiSnips#ExpandSnippet()
@@ -226,11 +227,11 @@ endfunction
 
 
 " vim-snippets
-Plugin 'honza/vim-snippets'
+Plug 'honza/vim-snippets'
 
 
 " vim-airline
-Plugin 'bling/vim-airline'
+Plug 'bling/vim-airline'
 
 let g:airline_theme='badwolf'
 let g:airline#extensions#syntastic#enabled = 1
@@ -272,7 +273,7 @@ set laststatus=2
 
 
 " vimwiki
-Plugin 'vimwiki/vimwiki'
+Plug 'vimwiki/vimwiki'
 
 nnoremap <leader>wa :VimwikiAll2HTML<CR><CR>:e<CR>
 let vimwiki_path='/home/philipp/vimwiki/'
@@ -295,7 +296,7 @@ let g:vimwiki_list = [wiki]
 
 
 " CtrlP-Plugin
-Plugin 'kien/ctrlp.vim'
+Plug 'kien/ctrlp.vim'
 
 let g:ctrlp_custom_ignore = {
   \ 'dir': '\v[\/]\.(git|hg|svndoc|.ropeproject|backend.egg-info|node_modules)$',
@@ -304,7 +305,7 @@ let g:ctrlp_custom_ignore = {
 
 
 " Python-Mode
-Plugin 'klen/python-mode'
+Plug 'klen/python-mode'
 
 let g:pymode_virtualenv = 1
 let g:pymode_run = 0        " disable run code
@@ -337,47 +338,47 @@ map <leader>p :PymodeLint<CR>
 
 
 " grep
-Plugin 'yegappan/grep'
+Plug 'yegappan/grep'
 
 let Grep_Skip_Files = '*.pyc'
 
 
 " JSHint
-Plugin 'walm/jshint.vim'
+Plug 'walm/jshint.vim'
 
 autocmd BufWritePost *.js :JSHint
 
 
 " rainbow parenthesis
-Plugin 'kien/rainbow_parentheses.vim'
+Plug 'kien/rainbow_parentheses.vim'
 
 
 " vim-scala
-Plugin 'derekwyatt/vim-scala'
+Plug 'derekwyatt/vim-scala'
 
 
 " sbt-vim
-Plugin 'ktvoelker/sbt-vim'
+Plug 'ktvoelker/sbt-vim'
 
 
 " vim-scripts/scala.vim - syntax highlighting
-Plugin 'vim-scripts/scala.vim'
+Plug 'vim-scripts/scala.vim'
 
 au BufRead,BufNewFile *.scala set filetype=scala
 au! Syntax scala source ~/.vim/bundle/scala.vim/syntax/scala.vim
 
 
 " vim-xpath
-Plugin 'actionshrimp/vim-xpath'
+Plug 'actionshrimp/vim-xpath'
 nnoremap <leader>xp :XPathSearchPrompt<CR>
 
 
 " virtualenv
-Plugin 'jmcantrell/vim-virtualenv'
+Plug 'jmcantrell/vim-virtualenv'
 
 
 " YouCompleteMe
-Plugin 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe'
 
 let g:ycm_goto_same_buffer = 0
 let g:ycm_goto_buffer_command = 'same-buffer'
@@ -395,24 +396,27 @@ nnoremap <leader>jd :YcmCompleter GoToDeclaration<CR>
 
 
 " vim-yaml
-Plugin 'stephpy/vim-yaml'
+Plug 'stephpy/vim-yaml'
 
 
 " NERD
-Plugin 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree'
 let NERDTreeIgnore = ['\.pyc$', '\.class$']
 map <leader>n :NERDTreeToggle<CR>
 
 
 " base16 colors
-Plugin 'chriskempson/base16-vim'
+Plug 'chriskempson/base16-vim'
 
 
 " dgbPavim - PHP debugger
-Plugin 'brookhong/DBGPavim'
+Plug 'brookhong/DBGPavim'
 
 "let g:dbgPavimBreakAtEntry = 0
 let g:dbgPavimPort = 9000
+
+" Add plugins to &runtimepath
+call plug#end()
 
 
 " End plugin section
