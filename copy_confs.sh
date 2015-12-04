@@ -4,7 +4,7 @@
 # use with sudo
 
 
-DOTFILES=$HOME/dotfiles
+DOTFILES=/home/phil/dotfiles
 
 
 cp $DOTFILES/conf/pacman.conf /etc/pacman.conf
