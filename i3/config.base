@@ -41,8 +41,8 @@ font pango:DejaVu Sans Mono 8
 bar {
         status_command i3status
         strip_workspace_numbers yes
-        wheel_up_cmd nop
-        wheel_down_cmd nop
+        bindsym button4 nop
+        bindsym button5 nop
 }
 
 # Use Mouse+$mod to drag floating windows to their wanted position
@@ -170,6 +170,8 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+# lock the screen with i3lock. Memo: lock with "b"-lock
+bindsym $mod+Shift+b exec "i3lock"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
