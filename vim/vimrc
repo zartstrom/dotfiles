@@ -95,6 +95,7 @@ autocmd BufReadPost *
 " automatically close scratch window
 autocmd CursorMovedI *  if pumvisible() == 0|silent! pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|silent! pclose|endif
+autocmd BufRead,BufNewFile *.conf setf dosini
 
 
 """ PLUGIN SECTION

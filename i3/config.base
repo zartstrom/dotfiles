@@ -207,6 +207,7 @@ assign [class="^HipChat$"] → $chat
 assign [class="^Firefox$"] → $firefox
 assign [class="Google-chrome-stable"] → $chrome
 assign [class="Google-chrome"] → $chrome
+assign [class="chromium"] → $chrome
 assign [class="^Opera$"] → $opera
 assign [class="^Mysql-workbench-bin$"] → $mysql
 assign [class="^SWT$"] → $spoon  # spoon has a funky WM_CLASS
