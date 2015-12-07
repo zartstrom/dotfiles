@@ -118,7 +118,7 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
-set $skype "1:skype"
+set $chat "1:chat"
 set $mail "2:mail"
 set $opera "3:opera"
 set $chrome "4:chrome"
@@ -202,7 +202,8 @@ bindsym $mod+r mode "resize"
 # Type "xprop" into the terminal and click on the application window.
 # Then add the (second?!) value from WM_CLASS here
 assign [class="^Thunderbird$"] → $mail
-assign [class="^Skype$"] → $skype
+assign [class="^Skype$"] → $chat
+assign [class="^HipChat$"] → $chat
 assign [class="^Firefox$"] → $firefox
 assign [class="Google-chrome-stable"] → $chrome
 assign [class="Google-chrome"] → $chrome

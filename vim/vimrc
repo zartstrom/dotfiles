@@ -405,13 +405,8 @@ if $COLORTERM == 'rxvt'
   set t_Co=256
 endif
 set t_Co=256
-"colorscheme morning
-colorscheme darkblue
+"colorscheme darkblue
 set background=dark
-" further settings for colorscheme morning:
-" hi CursorLine cterm=none ctermbg=252 ctermfg=none
-" hi CursorColumn cterm=none ctermbg=252 ctermfg=none
-" hi ColorColumn ctermbg=8 guibg=#B28686
 " further settings for colorscheme darkblue:
 hi CursorLine cterm=none ctermbg=26 ctermfg=none guibg=#041650
 hi CursorColumn cterm=none ctermbg=26 ctermfg=none guibg=#041650
@@ -421,4 +416,10 @@ hi Search cterm=NONE ctermbg=126
 set colorcolumn=120
 "au ColorScheme * highlight ColorColumn ctermbg=2 guibg=#FF00FF
 " guibg for gvim I think
+"
+colorscheme morning
+" further settings for colorscheme morning:
+" hi CursorLine cterm=none ctermbg=252 ctermfg=none
+" hi CursorColumn cterm=none ctermbg=252 ctermfg=none
+" hi ColorColumn ctermbg=8 guibg=#B28686
 
