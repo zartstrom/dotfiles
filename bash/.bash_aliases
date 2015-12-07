@@ -66,6 +66,10 @@ alias ð='cd ${dwh_nsp_path}'
 tf_learning_path="${HOME}/devel/tf_learning"
 alias ŧ='cd ${tf_learning_path}'
 
+# splunk_etc
+splunk_etc_path="${HOME}/devel/splunk_etc"
+alias ſ='workon splunk_etc; cd ${splunk_etc_path}'
+
 # payment_ui
 # payment_path="${HOME}/devel/payment_ui"
 # alias þ='workon payment_ui; cd "$payment_path"'  # þ = ALT-GR + p
