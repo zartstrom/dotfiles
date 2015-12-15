@@ -68,7 +68,7 @@ export PATH=$PATH:~/mega/panda/GoPanda2
 export PATH=$PATH:~/data-integration_5.4.0.1
 # splunk
 export SPLUNK_HOME=/opt/splunk
-export PATH=$SPLUNK_HOME/bin:$PATH
+export PATH=$PATH$:SPLUNK_HOME/bin
 
 # keys
 bindkey "^[[1~" beginning-of-line

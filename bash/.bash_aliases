@@ -27,6 +27,8 @@ alias git_root='cd "$(git rev-parse --show-toplevel)"'
 
 # export PYTHONPATH=$PWD
 alias pypa='export PYTHONPATH=$PWD; echo set PYTHONPATH to: $PYTHONPATH'
+alias ppwd='export PYTHONPATH=$PWD:${PYTHONPATH}; echo set PYTHONPATH to: $PYTHONPATH'
+alias pp_splunk='export PYTHONPATH=$(splunk_env.sh)'
 
 # bm20 payment
 # export SETTINGS_FILE=/home/philipp/bettermarks/configs/settings.ini
@@ -68,7 +70,8 @@ alias ŧ='cd ${tf_learning_path}'
 
 # splunk_etc
 splunk_etc_path="${HOME}/devel/splunk_etc"
-alias ſ='workon splunk_etc; cd ${splunk_etc_path}'
+alias ſ='workon splunk_etc; splunk_env.sh'
+
 
 # payment_ui
 # payment_path="${HOME}/devel/payment_ui"

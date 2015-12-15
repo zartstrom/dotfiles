@@ -63,16 +63,9 @@ map <A-C-Right> :bnext<CR>
 
 
 """ SOME CUSTOM HELPERS
-":nnoremap <S-Enter> O<Esc>
-":nnoremap <CR> o<Esc>
-:nmap <silent> <Plug>DoubleQuoteWord ciw""<Esc>P:call repeat#set("\<Plug>DoubleQuoteWord")<CR>
-:nmap <leader>q" <Plug>DoubleQuoteWord
-:nmap <silent> <Plug>SingleQuoteWord ciw''<Esc>P:call repeat#set("\<Plug>DoubleQuoteWord")<CR>
-:nmap <leader>q' <Plug>SingleQuoteWord
-:nnoremap <leader>qd daW"=substitute(@@,"'\\\|\"","","g")<CR>P
 " register stuff
 :nnoremap <leader>rr :let @f=@% \| let @a=@" \| let @+=@" \| let @*=@"<CR>
-:nnoremap <leader>rf :let @"=@%<CR>
+:nnoremap <leader>rf :let @"=@% \| let @+=@% \| let @*=@%<CR>
 :nnoremap <leader>rx :let @"=@*<CR>
 :nnoremap <leader>rv :let @"=@+<CR>
 
@@ -96,14 +89,12 @@ autocmd BufReadPost *
 autocmd CursorMovedI *  if pumvisible() == 0|silent! pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|silent! pclose|endif
 autocmd BufRead,BufNewFile *.conf setf dosini
+"hi BadWhitespace ctermbg=red guibg=#FF0000
+"autocmd BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
 
 """ PLUGIN SECTION
 call plug#begin('~/.vim/plugged')
-
-" Vundle
-" Plugin 'gmarik/vundle'
-
 
 " ag aka the_silver_searcher
 Plug 'rking/ag.vim'
@@ -297,6 +288,7 @@ let g:pymode_lint = 1
 let g:pymode_lint_signs = 1
 "let g:pymode_lint_checkers = ['pylint', 'pyflakes', 'pep8', 'mccabe', 'pep257']
 let g:pymode_lint_checkers = ['pylint', 'pep8']
+"let g:pymode_lint_checkers = ['pylint']
 let g:pymode_lint_mccabe_complexity = 10
 let g:pymode_lint_ignore = "E501,E127,E126,E265,I,C0110,C0111,D102,D202,D401"
 let g:pymode_lint_maxheight = 5
@@ -312,6 +304,7 @@ let ropevim_enable_shortcuts = 0
 let g:pymode_rope_vim_completion = 0
 "let g:pymode_rope_goto_def_newwin = "1"
 let g:pymode_options_max_line_length = 120
+let g:pymode_lint_options_pep8 = {'max_line_length': g:pymode_options_max_line_length}
 map <leader>p :PymodeLint<CR>
 
 
@@ -325,10 +318,6 @@ let Grep_Skip_Files = '*.pyc'
 Plug 'walm/jshint.vim'
 
 autocmd BufWritePost *.js :JSHint
-
-
-" rainbow parenthesis
-Plug 'kien/rainbow_parentheses.vim'
 
 
 " vim-scala
@@ -352,7 +341,7 @@ nnoremap <leader>xp :XPathSearchPrompt<CR>
 
 
 " virtualenv
-Plug 'jmcantrell/vim-virtualenv'
+"Plug 'jmcantrell/vim-virtualenv'
 
 
 " YouCompleteMe
