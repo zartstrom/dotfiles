@@ -29,6 +29,10 @@ mkdir -p $HOME/scripts
 ln -s $DOTFILES/i3/i3exit.sh $HOME/scripts/i3exit.sh
 ln -s $DOTFILES/i3/lock.sh $HOME/scripts/lock.sh
 
+# pylint
+echo pylint
+ln -s $DOTFILES/pylint/pylintrc $HOME/.pylintrc
+
 # scripts
 echo scripts
 mkdir -p $HOME/scripts
