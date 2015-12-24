@@ -3,7 +3,10 @@
 # see https://wiki.archlinux.org/index.php/Touchpad_Synaptics
 
 # the name of the touchpad device may vary
-DEVICE_REGEX="GlidePoint"
+DEVICE_NAME_LENOVO="Synaptics Touchpad"
+DEVICE_NAME_DELL="GlidePoint"
+
+DEVICE_REGEX="($DEVICE_NAME_LENOVO|$DEVICE_NAME_DELL)"
 
 
 function get_touchpad_id {
