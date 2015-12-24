@@ -25,6 +25,9 @@ mkdir -p $HOME/.config/i3
 mkdir -p $HOME/.config/i3status
 ln -s $DOTFILES/i3/i3status.conf $HOME/.config/i3status/config
 
+mkdir -p $HOME/scripts
+ln -s $DOTFILES/i3/i3exit.sh $HOME/scripts/i3exit.sh
+
 # scripts
 echo scripts
 mkdir -p $HOME/scripts
