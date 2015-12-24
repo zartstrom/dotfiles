@@ -28,7 +28,7 @@ set pastetoggle=<F2>
 set mouse=a
 set autoread            " Reload files when they are changed by another process.
 set tw=0
-set guifont=Inconsolata\ for\ Powerline\ 12
+set guifont=Inconsolata\ for\ Powerline\ 11
 
 """ gvim
 set guioptions-=m  "menu bar
