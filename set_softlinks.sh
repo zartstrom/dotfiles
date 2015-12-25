@@ -42,6 +42,7 @@ ln -s $DOTFILES/vim/vimrc $HOME/.vimrc
 # X11
 echo X11
 ln -s $DOTFILES/X11/.xinitrc $HOME/.xinitrc
+ln -s $DOTFILES/X11/.xprofile $HOME/.xprofile
 ln -s $DOTFILES/X11/.Xresources $HOME/.Xresources
 ln -s $DOTFILES/X11/.Xdefaults $HOME/.Xdefaults
 
