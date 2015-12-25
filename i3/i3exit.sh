@@ -1,7 +1,9 @@
 #!/bin/sh
 lock() {
-    i3lock
+    #i3lock
+    $HOME/scripts/lock.sh
 }
+
 
 case "$1" in
     lock)

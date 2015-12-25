@@ -27,6 +27,7 @@ ln -s $DOTFILES/i3/i3status.conf $HOME/.config/i3status/config
 
 mkdir -p $HOME/scripts
 ln -s $DOTFILES/i3/i3exit.sh $HOME/scripts/i3exit.sh
+ln -s $DOTFILES/i3/lock.sh $HOME/scripts/lock.sh
 
 # scripts
 echo scripts

@@ -168,19 +168,20 @@ bindsym $mod+Shift+0 move container to workspace $firefox
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
-# exit i3 (logs you out of your X session)
-# bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 # lock the screen with i3lock. Memo: lock with "b"-lock
 # bindsym $mod+Shift+b exec "i3lock"
 
+# use full path $HOME/scripts/i3exit.sh, seems to be more reliable.
+# Look at i3 $PATH: `tr '\0' '\n' </proc/$(pidof i3)/environ | grep PATH`
+# http://permalink.gmane.org/gmane.linux.debian.user/472626
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
-    bindsym l exec --no-startup-id i3exit lock, mode "default"
-    bindsym e exec --no-startup-id i3exit logout, mode "default"
-    bindsym s exec --no-startup-id i3exit suspend, mode "default"
-    bindsym h exec --no-startup-id i3exit hibernate, mode "default"
-    bindsym r exec --no-startup-id i3exit reboot, mode "default"
-    bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"
+    bindsym l exec --no-startup-id $HOME/scripts/i3exit.sh lock, mode "default"
+    bindsym e exec --no-startup-id $HOME/scripts/i3exit.sh logout, mode "default"
+    bindsym s exec --no-startup-id $HOME/scripts/i3exit.sh suspend, mode "default"
+    bindsym h exec --no-startup-id $HOME/scripts/i3exit.sh hibernate, mode "default"
+    bindsym r exec --no-startup-id $HOME/scripts/i3exit.sh reboot, mode "default"
+    bindsym Shift+s exec --no-startup-id $HOME/scripts/i3exit.sh shutdown, mode "default"
 
     # back to normal: Enter or Escape
     bindsym Return mode "default"
@@ -226,6 +227,7 @@ assign [class="^HipChat$"] → $chat
 assign [class="^Firefox$"] → $firefox
 assign [class="Google-chrome-stable"] → $chrome
 assign [class="Google-chrome"] → $chrome
+assign [class="google-chrome"] → $chrome
 assign [class="chromium"] → $chrome
 assign [class="^Opera$"] → $opera
 assign [class="^Mysql-workbench-bin$"] → $mysql
