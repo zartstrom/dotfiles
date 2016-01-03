@@ -1,7 +1,6 @@
 
 
-exec thunderbird
+# exec thunderbird
 exec opera
 
-workspace "11:1" output HDMI-0
-workspace "18:8" output LVDS
+workspace "18:8" output eDP-1
