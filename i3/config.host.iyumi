@@ -4,3 +4,22 @@
 exec opera
 
 workspace "18:8" output eDP-1
+
+
+# use full path $HOME/scripts/i3exit.sh
+# Look at i3 $PATH: `tr '\0' '\n' </proc/$(pidof i3)/environ | grep PATH`
+# http://permalink.gmane.org/gmane.linux.debian.user/472626
+set $mode_click click
+
+mode "$mode_click" {
+    bindsym x exec --no-startup-id $HOME/scripts/clicker.sh 10, mode "default"
+    bindsym l exec --no-startup-id $HOME/scripts/clicker.sh 50, mode "default"
+    # bindsym d exec --no-startup-id $HOME/scripts/clicker.sh 500, mode "default"
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+bindsym $mod+c mode "$mode_click"
+
