@@ -168,8 +168,9 @@ bindsym $mod+Shift+0 move container to workspace $firefox
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
+
 # lock the screen with i3lock. Memo: lock with "b"-lock
-# bindsym $mod+Shift+b exec "i3lock"
+bindsym $mod+Shift+b exec $HOME/scripts/i3exit.sh lock
 
 # use full path $HOME/scripts/i3exit.sh, seems to be more reliable.
 # Look at i3 $PATH: `tr '\0' '\n' </proc/$(pidof i3)/environ | grep PATH`

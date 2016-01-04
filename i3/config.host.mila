@@ -1,5 +1,6 @@
 
 
+exec thunderbird
 exec hipchat
 # exec opera
 
