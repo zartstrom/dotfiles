@@ -1,0 +1,14 @@
+"^Firefox$"
+# Flip between browser tabs
+None, Left, Control_L|Page_Up
+None, Right, Control_L|Page_Down
+
+"^Opera$"
+# Flip between browser tabs
+None, Left, Control_L|Page_Up
+None, Right, Control_L|Page_Down
+
+"^google-chrome$"
+# Flip between browser tabs
+None, Left, Control_L|Page_Up
+None, Right, Control_L|Page_Down
