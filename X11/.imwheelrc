@@ -1,14 +1,27 @@
+# KeySym   IMWheel Input  Real Mouse
+# ------   -------------  ----------
+# Button1  (none)         Left Mouse Button
+# Button2  (none)         Middle Mouse Button
+# Button3  (none)         Right Mouse Button
+# Button4  Up             Mouse Wheel Up
+# Button5  Down           Mouse Wheel Down
+# Button6  Left           Mouse Wheel Left
+# Button7  Right          Mouse Wheel Right
+# Button8  Thumb1         Side Mouse Button 1 (left/up)
+# Button9  Thumb2         Side Mouse Button 2 (right/down)
+
+
 "^Firefox$"
 # Flip between browser tabs
-None, Left, Control_L|Page_Up
-None, Right, Control_L|Page_Down
+None, Thumb1, Control_L|Page_Up
+None, Thumb2, Control_L|Page_Down
 
 "^Opera$"
 # Flip between browser tabs
-None, Left, Control_L|Page_Up
-None, Right, Control_L|Page_Down
+None, Thumb1, Control_L|Page_Up
+None, Thumb2, Control_L|Page_Down
 
 "^google-chrome$"
 # Flip between browser tabs
-None, Left, Control_L|Page_Up
-None, Right, Control_L|Page_Down
+None, Thumb1, Control_L|Page_Up
+None, Thumb2, Control_L|Page_Down
