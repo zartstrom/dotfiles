@@ -368,7 +368,7 @@ Plug 'stephpy/vim-yaml'
 
 " NERD
 Plug 'scrooloose/nerdtree'
-let NERDTreeIgnore = ['\.pyc$', '\.class$']
+let NERDTreeIgnore = ['\.pyc$', '\.class$', '__pycache__']
 map <leader>n :NERDTreeToggle<CR>
 
 
