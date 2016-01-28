@@ -68,6 +68,7 @@ map <A-C-Right> :bnext<CR>
 :nnoremap <leader>rf :let @"=@% \| let @+=@% \| let @*=@%<CR>
 :nnoremap <leader>rx :let @"=@*<CR>
 :nnoremap <leader>rv :let @"=@+<CR>
+:nnoremap <leader>t :%s/\s\+$//g<CR>
 
 
 """ AUTOCMD
