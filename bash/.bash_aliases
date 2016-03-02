@@ -45,3 +45,6 @@ alias samba='idealo_samba.sh'
 alias dwh_tunnel='ssh -L 3307:localhost:3306 phitzler@dwhdev01.inf00.inf.bm.loc'
 
 alias dm_dev='eval $(docker-machine env dev)'
+
+# cts server
+alias cts_server='cts_server.sh'
