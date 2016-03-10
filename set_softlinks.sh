@@ -49,7 +49,9 @@ ln -sv $DOTFILES/scripts/touchpad_toggle.sh $HOME/scripts/touchpad_toggle.sh
 display_header vim
 mkdir -p $HOME/.vim
 mkdir -p $HOME/.vimswap
+mkdir -p $HOME/.config/nvim
 ln -sv $DOTFILES/vim/vimrc $HOME/.vimrc
+ln -sv $DOTFILES/vim/vimrc $HOME/.config/nvim/init.vim
 
 # X11
 display_header X11
