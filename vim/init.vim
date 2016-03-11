@@ -278,7 +278,7 @@ Plug 'kien/ctrlp.vim'
 
 let g:ctrlp_custom_ignore = {
   \ 'dir': '\v[\/]\.(git|hg|svndoc|.ropeproject|backend.egg-info|node_modules)$',
-  \ 'file': '\v\.(pyc)$',
+  \ 'file': '\v\.(pyc|class)$',
   \ }
 
 
@@ -401,11 +401,11 @@ filetype plugin indent on
 
 """ COLOR
 "let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-colorscheme morning
+colorscheme pablo
 " further settings for colorscheme morning:
-hi CursorLine cterm=none ctermbg=248 ctermfg=none
-hi CursorColumn cterm=none ctermbg=248 ctermfg=none
+hi CursorLine cterm=none ctermbg=236 ctermfg=none
+hi CursorColumn cterm=none ctermbg=236 ctermfg=none
 set colorcolumn=120
-hi ColorColumn cterm=none ctermbg=168 ctermfg=none
-hi Search cterm=NONE ctermbg=126
+hi ColorColumn cterm=none ctermbg=89 ctermfg=none
+hi Search cterm=NONE ctermbg=190
 
