@@ -48,3 +48,4 @@ alias dm_dev='eval $(docker-machine env dev)'
 
 # cts server
 alias cts_server='cts_server.sh'
+alias tracker_services='tracker_services.sh'
