@@ -64,8 +64,8 @@ noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
-map <A-C-Left>  :bprevious<CR>
-map <A-C-Right> :bnext<CR>
+map <A-Left>  :bprevious<CR>
+map <A-Right> :bnext<CR>
 
 """ TERMINAL
 :tnoremap <Esc> <C-\><C-n>
@@ -78,6 +78,7 @@ map <A-C-Right> :bnext<CR>
 :nnoremap <leader>rt :let @"=@*<CR>
 :nnoremap <leader>rv :let @"=@+<CR>
 
+:nnoremap <leader>t :%s/\s\+$//g<CR>
 
 """ AUTOCMD
 autocmd BufRead *.txt set tw=78
@@ -209,10 +210,11 @@ Plug 'honza/vim-snippets'
 
 
 " vim-airline
-Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
-let g:airline_theme='badwolf'
-let g:airline#extensions#syntastic#enabled = 1
+let g:airline_theme='dark'
+"let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline_powerline_fonts = 1
@@ -223,24 +225,29 @@ if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
 " unicode symbols
-let g:airline_left_sep = '»'
-let g:airline_left_sep = '▶'
-let g:airline_right_sep = '«'
-let g:airline_right_sep = '◀'
-let g:airline_symbols.linenr = '␊'
-let g:airline_symbols.linenr = '␤'
-let g:airline_symbols.linenr = '¶'
-let g:airline_symbols.branch = '⎇'
-let g:airline_symbols.paste = 'ρ'
-let g:airline_symbols.paste = 'Þ'
-let g:airline_symbols.paste = '∥'
-let g:airline_symbols.whitespace = 'Ξ'
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+"let g:airline_left_sep = '»'
+"let g:airline_left_sep = '▶'
+"let g:airline_right_sep = '«'
+"let g:airline_right_sep = '◀'
+"let g:airline_symbols.linenr = '␊'
+"let g:airline_symbols.linenr = '␤'
+"let g:airline_symbols.linenr = '¶'
+"let g:airline_symbols.branch = '⎇'
+"let g:airline_symbols.paste = 'ρ'
+"let g:airline_symbols.paste = 'Þ'
+"let g:airline_symbols.paste = '∥'
+"let g:airline_symbols.whitespace = 'Ξ'
 
 " powerline symbols
 let g:airline_left_sep = ' ' "''
+"let g:airline_left_sep = ''
 let g:airline_left_alt_sep = ' ' "''
-let g:airline_right_sep = ' ' "''
-let g:airline_right_alt_sep = ' ' "''
+"let g:airline_left_alt_sep = ''
+let g:airline_right_sep = '' "''
+let g:airline_right_alt_sep = '' "''
+
 let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
@@ -316,6 +323,8 @@ let g:pymode_options_max_line_length = 120
 let g:pymode_lint_options_pep8 = {'max_line_length': g:pymode_options_max_line_length}
 map <leader>p :PymodeLint<CR>
 
+" neomake
+Plug 'benekastah/neomake'
 
 " grep
 Plug 'yegappan/grep'
@@ -405,7 +414,8 @@ colorscheme pablo
 " further settings for colorscheme morning:
 hi CursorLine cterm=none ctermbg=236 ctermfg=none
 hi CursorColumn cterm=none ctermbg=236 ctermfg=none
-set colorcolumn=120
+"set colorcolumn=120
 hi ColorColumn cterm=none ctermbg=89 ctermfg=none
 hi Search cterm=NONE ctermbg=190
 
+au BufRead,BufNewFile *.py set colorcolumn=120
