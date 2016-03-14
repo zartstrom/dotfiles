@@ -64,8 +64,8 @@ noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
-map <A-Left>  :bprevious<CR>
-map <A-Right> :bnext<CR>
+map <A-C-Left>  :bprevious<CR>
+map <A-C-Right> :bnext<CR>
 
 """ TERMINAL
 :tnoremap <Esc> <C-\><C-n>
@@ -78,7 +78,9 @@ map <A-Right> :bnext<CR>
 :nnoremap <leader>rt :let @"=@*<CR>
 :nnoremap <leader>rv :let @"=@+<CR>
 
-:nnoremap <leader>t :%s/\s\+$//g<CR>
+" remove trailing whitespace
+:nnoremap <leader>tr :%s/\s\+$//g<CR>
+
 
 """ AUTOCMD
 autocmd BufRead *.txt set tw=78
