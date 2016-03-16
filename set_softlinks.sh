@@ -43,6 +43,7 @@ softlink $DOTFILES/i3/i3status.conf $HOME/.config/i3status/config
 mkdir -p $HOME/scripts
 softlink $DOTFILES/i3/i3exit.sh $HOME/scripts/i3exit.sh
 softlink $DOTFILES/i3/lock.sh $HOME/scripts/lock.sh
+softlink $DOTFILES/i3/from_here.sh $HOME/scripts/from_here.sh
 
 # pylint
 display_header pylint
