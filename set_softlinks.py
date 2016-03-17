@@ -13,7 +13,7 @@ def mkdir_p(path):
             raise
 
 
-def softlink(source, target):
+def create_softlink(source, target):
     try:
         os.symlink(source, target)
         msg = "Created symlink"
@@ -27,6 +27,12 @@ def softlink(source, target):
             print "%-20s: %s" % (msg, exc)
 
 
+def softlink_dotfiles_home(path_from_dotfiles, path_from_home):
+    source = os.path.join(DOTFILES, path_from_dotfiles)
+    target = os.path.join(HOME, path_from_home)
+    create_softlink(source, target)
+
+
 def display_header(section):
     print
     print "--- %s ---" % section
@@ -38,58 +44,57 @@ DOTFILES = os.path.join(HOME, "dotfiles")
 
 # bash
 display_header("bash")
-softlink(os.path.join(DOTFILES, "bash/.bashrc"), os.path.join(HOME, ".bashrc"))
-softlink(os.path.join(DOTFILES, "bash/.bash_aliases"), os.path.join(HOME, ".bash_aliases"))
+softlink_dotfiles_home("bash/.bashrc", ".bashrc")
+softlink_dotfiles_home("bash/.bash_aliases", ".bash_aliases")
 
 # firefox (no Desktop folder please)
 display_header("firefox")
 mkdir_p(os.path.join(HOME, ".config"))
-softlink(os.path.join(DOTFILES, "firefox/user-dirs.dirs"), os.path.join(HOME, ".config/user-dirs.dirs"))
+softlink_dotfiles_home("firefox/user-dirs.dirs", ".config/user-dirs.dirs")
 
 # git
 display_header("git")
-softlink(os.path.join(DOTFILES, "git/.gitconfig"), os.path.join(HOME, ".gitconfig"))
+softlink_dotfiles_home("git/.gitconfig", ".gitconfig")
 
 # i3
 display_header("i3")
 mkdir_p(os.path.join(HOME, ".config/i3"))
-# no I do it with setup_i3_config.sh which is sourced in .xinitc
-# softlink $HOME/os.path.join(DOTFILES, "i3/config") $HOME/.config/i3/config
 mkdir_p(os.path.join(HOME, ".config/i3status"))
-softlink(os.path.join(DOTFILES, "i3/i3status.conf"), os.path.join(HOME, ".config/i3status/config"))
+softlink_dotfiles_home("i3/i3status.conf", ".config/i3status/config")
 
 mkdir_p(os.path.join(HOME, "scripts"))
-softlink(os.path.join(DOTFILES, "i3/i3exit.sh"), os.path.join(HOME, "scripts/i3exit.sh"))
-softlink(os.path.join(DOTFILES, "i3/lock.sh"), os.path.join(HOME, "scripts/lock.sh"))
+softlink_dotfiles_home("i3/i3exit.sh", "scripts/i3exit.sh")
+softlink_dotfiles_home("i3/lock.sh", "scripts/lock.sh")
+softlink_dotfiles_home("i3/from_here.sh", "scripts/from_here.sh")
 
 # pylint
 display_header("pylint")
-softlink(os.path.join(DOTFILES, "pylint/pylintrc"), os.path.join(HOME, ".pylintrc"))
+softlink_dotfiles_home("pylint/pylintrc", ".pylintrc")
 
 # scripts
 display_header("scripts")
 mkdir_p(os.path.join(HOME, "scripts"))
-softlink(os.path.join(DOTFILES, "scripts/touchpad_toggle.sh"), os.path.join(HOME, "scripts/touchpad_toggle.sh"))
+softlink_dotfiles_home("scripts/touchpad_toggle.sh", "scripts/touchpad_toggle.sh")
 
 # vim
 display_header("vim")
 mkdir_p(os.path.join(HOME, ".vim"))
 mkdir_p(os.path.join(HOME, ".vimswap"))
 mkdir_p(os.path.join(HOME, ".config/nvim"))
-softlink(os.path.join(DOTFILES, "vim/vimrc"), os.path.join(HOME, ".vimrc"))
-softlink(os.path.join(DOTFILES, "vim/init.vim"), os.path.join(HOME, ".config/nvim/init.vim"))
+softlink_dotfiles_home("vim/vimrc", ".vimrc")
+softlink_dotfiles_home("vim/init.vim", ".config/nvim/init.vim")
 
 # X11
 display_header("X11")
-softlink(os.path.join(DOTFILES, "X11/.xinitrc"), os.path.join(HOME, ".xinitrc"))
-softlink(os.path.join(DOTFILES, "X11/.xprofile"), os.path.join(HOME, ".xprofile"))
-softlink(os.path.join(DOTFILES, "X11/.Xresources"), os.path.join(HOME, ".Xresources"))
-softlink(os.path.join(DOTFILES, "X11/.Xdefaults"), os.path.join(HOME, ".Xdefaults"))
+softlink_dotfiles_home("X11/.xinitrc", ".xinitrc")
+softlink_dotfiles_home("X11/.xprofile", ".xprofile")
+softlink_dotfiles_home("X11/.Xresources", ".Xresources")
+softlink_dotfiles_home("X11/.Xdefaults", ".Xdefaults")
 # mouse config:
-softlink(os.path.join(DOTFILES, "X11/.imwheelrc"), os.path.join(HOME, ".imwheelrc"))
+softlink_dotfiles_home("X11/.imwheelrc", ".imwheelrc")
 
 # zsh
 display_header("zsh")
-softlink(os.path.join(DOTFILES, "zsh/.zshrc"), os.path.join(HOME, ".zshrc"))
 mkdir_p(os.path.join(HOME, ".oh-my-zsh/themes"))
-softlink(os.path.join(DOTFILES, "zsh/af-magic-light.zsh-theme"), os.path.join(HOME, ".oh-my-zsh/themes"))
+softlink_dotfiles_home("zsh/.zshrc", ".zshrc")
+softlink_dotfiles_home("zsh/af-magic-light.zsh-theme", ".oh-my-zsh/themes")

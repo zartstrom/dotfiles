@@ -52,7 +52,7 @@ softlink $DOTFILES/pylint/pylintrc $HOME/.pylintrc
 # scripts
 display_header scripts
 mkdir -p $HOME/scripts
-softlink $DOTFILES/scripts/touchpad_toggle.sh $HOME/scripts/touchpad_toggle.sh 
+softlink $DOTFILES/scripts/touchpad_toggle.sh $HOME/scripts/touchpad_toggle.sh
 
 # vim
 display_header vim
