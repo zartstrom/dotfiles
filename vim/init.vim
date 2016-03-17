@@ -403,6 +403,10 @@ Plug 'brookhong/DBGPavim'
 let g:dbgPavimPort = 9000
 
 
+" cycle colorschemes
+Plug 'vim-scripts/CycleColor'
+
+
 " Add plugins to &runtimepath
 call plug#end()
 
@@ -413,7 +417,7 @@ filetype plugin indent on
 
 """ COLOR
 "let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-colorscheme pablo
+colorscheme ron
 " further settings for colorscheme morning:
 hi CursorLine cterm=none ctermbg=236 ctermfg=none
 hi CursorColumn cterm=none ctermbg=236 ctermfg=none
