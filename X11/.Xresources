@@ -69,11 +69,11 @@ URxvt*foreground: #FFFFFF
 
 ! Select the fonts to be used. This is a comma separated list of font names that are checked in order when trying to find glyphs for characters. The first font defines the cell size for characters; other fonts
 !URxvt*font: xft:Monospace:size=12,xft:Inconsolata for Powerline:size=12:antialias=true:hinting=true
-URxvt*font: xft:Inconsolata for Powerline:size=12:antialias=true:hinting=true
-!URxvt*font: xft:Monospace:size=11,xft:Inconsolata for Powerline:pixelsize=20
+!URxvt*font: xft:Inconsolata for Powerline:size=12:antialias=true:hinting=true
+URxvt*font: xft:DejaVu Sans Mono for Powerline:size=11:antialias=true:hinting=true
+!URxvt*font: xft:Droid Sans Mono for Powerline Nerd Font Complete:size=11:antialias=true:hinting=true
 
 ! URxvt*boldFont: fontlist
-
 !
 ! URxvt*italicFont: fontlist
 

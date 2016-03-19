@@ -33,6 +33,16 @@ def softlink_dotfiles_home(path_from_dotfiles, path_from_home):
     create_softlink(source, target)
 
 
+def softlink_pattern(source_path_dotfiles, target_path_home, extension="txt"):
+    source_path = os.path.join(DOTFILES, source_path_dotfiles)
+    target_path = os.path.join(HOME, target_path_home)
+    files = [f for f in os.listdir(source_path) if f.endswith(extension)]
+    for file_ in files:
+        source = os.path.join(source_path, file_)
+        target = os.path.join(target_path, file_)
+        create_softlink(source, target)
+
+
 def display_header(section):
     print
     print "--- %s ---" % section
@@ -52,9 +62,21 @@ display_header("firefox")
 mkdir_p(os.path.join(HOME, ".config"))
 softlink_dotfiles_home("firefox/user-dirs.dirs", ".config/user-dirs.dirs")
 
+# fonts
+display_header("fonts")
+mkdir_p(os.path.join(HOME, ".local/share/fonts"))
+softlink_pattern("fonts", ".local/share/fonts", "ttf")
+
 # git
 display_header("git")
 softlink_dotfiles_home("git/.gitconfig", ".gitconfig")
+
+# gtk
+display_header("gtk")
+mkdir_p(os.path.join(HOME, ".config/gtk-2.0"))
+mkdir_p(os.path.join(HOME, ".config/gtk-3.0"))
+softlink_dotfiles_home("gtk/gtkrc", ".config/gtk-2.0/gtkrc")
+softlink_dotfiles_home("gtk/settings.ini", ".config/gtk-3.0/settings.ini")
 
 # i3
 display_header("i3")

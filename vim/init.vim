@@ -26,7 +26,7 @@ set pastetoggle=<F2>
 set mouse=a
 set autoread            " Reload files when they are changed by another process.
 set tw=0
-set guifont=Inconsolata\ for\ Powerline\ 11
+"set guifont=Inconsolata\ for\ Powerline\ 11
 
 """ gvim
 set guioptions-=m  "menu bar
@@ -227,28 +227,27 @@ if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
 " unicode symbols
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline#extensions#tabline#left_sep = ''
+let g:airline#extensions#tabline#left_alt_sep = ''
 "let g:airline_left_sep = '»'
 "let g:airline_left_sep = '▶'
 "let g:airline_right_sep = '«'
 "let g:airline_right_sep = '◀'
-"let g:airline_symbols.linenr = '␊'
-"let g:airline_symbols.linenr = '␤'
-"let g:airline_symbols.linenr = '¶'
-"let g:airline_symbols.branch = '⎇'
 "let g:airline_symbols.paste = 'ρ'
 "let g:airline_symbols.paste = 'Þ'
 "let g:airline_symbols.paste = '∥'
 "let g:airline_symbols.whitespace = 'Ξ'
 
 " powerline symbols
-let g:airline_left_sep = ' ' "''
-"let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ' ' "''
-"let g:airline_left_alt_sep = ''
-let g:airline_right_sep = '' "''
-let g:airline_right_alt_sep = '' "''
+"let g:airline_left_sep = ' '
+"let g:airline_left_alt_sep = ' '
+"let g:airline_right_sep = ' '
+"let g:airline_right_alt_sep = ' '
+
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
 
 let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
