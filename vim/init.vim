@@ -1,8 +1,4 @@
 filetype off
-" set rtp+=~/.vim/bundle/Vundle.vim
-" set rtp+=~/.vim/bundle/vundle
-" call vundle#rc()
-
 
 """ BASIC SETTINGS
 set smarttab
@@ -26,13 +22,6 @@ set pastetoggle=<F2>
 set mouse=a
 set autoread            " Reload files when they are changed by another process.
 set tw=0
-"set guifont=Inconsolata\ for\ Powerline\ 11
-
-""" gvim
-set guioptions-=m  "menu bar
-set guioptions-=T  "toolbar
-set guioptions-=r  "scrollbar
-set guioptions-=L  "left scrollbar
 
 
 if v:lang =~ "utf8$" || v:lang =~ "UTF-8$"
@@ -227,27 +216,21 @@ if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
 " unicode symbols
-let g:airline#extensions#tabline#left_sep = ''
-let g:airline#extensions#tabline#left_alt_sep = ''
-"let g:airline_left_sep = '»'
-"let g:airline_left_sep = '▶'
-"let g:airline_right_sep = '«'
-"let g:airline_right_sep = '◀'
-"let g:airline_symbols.paste = 'ρ'
-"let g:airline_symbols.paste = 'Þ'
-"let g:airline_symbols.paste = '∥'
-"let g:airline_symbols.whitespace = 'Ξ'
 
 " powerline symbols
-"let g:airline_left_sep = ' '
-"let g:airline_left_alt_sep = ' '
-"let g:airline_right_sep = ' '
-"let g:airline_right_alt_sep = ' '
+let g:airline_left_sep = ' '
+let g:airline_left_alt_sep = ' '
+let g:airline_right_sep = ' '
+let g:airline_right_alt_sep = ' '
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
 
-let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_right_alt_sep = ''
+"let g:airline_left_sep = ''
+"let g:airline_left_alt_sep = ''
+"let g:airline_right_sep = ''
+"let g:airline_right_alt_sep = ''
+"let g:airline#extensions#tabline#left_sep = ''
+"let g:airline#extensions#tabline#left_alt_sep = ''
 
 let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
@@ -351,7 +334,7 @@ Plug 'ktvoelker/sbt-vim'
 Plug 'vim-scripts/scala.vim'
 
 au BufRead,BufNewFile *.scala set filetype=scala
-au! Syntax scala source ~/.vim/bundle/scala.vim/syntax/scala.vim
+au! Syntax scala source ~/.vim/plugged/scala.vim/syntax/scala.vim
 
 
 " vim-xpath
