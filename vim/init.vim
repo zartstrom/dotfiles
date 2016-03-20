@@ -169,31 +169,22 @@ Plug 'jcfaria/Vim-R-plugin'
 Plug 'marijnh/tern_for_vim'
 
 
+" supertab
+Plug 'ervandew/supertab'
+
+
 " UltiSnips
 Plug 'SirVer/ultisnips'
 
-function! g:UltiSnips_Complete()
-    call UltiSnips#ExpandSnippet()
-    if g:ulti_expand_res == 0
-        if pumvisible()
-            return "\<C-n>"
-        else
-            call UltiSnips#JumpForwards()
-            if g:ulti_jump_forwards_res == 0
-               return "\<TAB>"
-            endif
-        endif
-    endif
-    return ""
-endfunction
+" make YCM compatible with UltiSnips (using supertab)
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-n>'
 
-"au BufEnter * exec 'inoremap <silent> ' . g:UltiSnipsExpandTrigger . ' <C-R>=g:UltiSnips_Complete()<cr>'
-"let g:UltiSnipsJumpForwardTrigger="<c-u>"
-"let g:UltiSnipsListSnippets="<c-e>"
-"" this mapping Enter key to <C-y> to chose the current highlight item
-"" and close the selection list, same as other IDEs.
-"" CONFLICT with some plugins like tpope/Endwise
-"inoremap <expr> <CR> pumvisible() ? '\<C-y>' : '\<C-g>u\<CR>'
+" better key bindings for UltiSnipsExpandTrigger
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
 
 " vim-snippets
@@ -401,10 +392,10 @@ filetype plugin indent on
 "let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 colorscheme ron
 " further settings for colorscheme morning:
-hi CursorLine cterm=none ctermbg=236 ctermfg=none
-hi CursorColumn cterm=none ctermbg=236 ctermfg=none
+hi CursorLine cterm=none ctermbg=234 ctermfg=none
+hi CursorColumn cterm=none ctermbg=234 ctermfg=none
 "set colorcolumn=120
-hi ColorColumn cterm=none ctermbg=89 ctermfg=none
+hi ColorColumn cterm=none ctermbg=53 ctermfg=none
 hi Search cterm=NONE ctermbg=190
 
 au BufRead,BufNewFile *.py set colorcolumn=120
