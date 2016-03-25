@@ -13,12 +13,17 @@ def mkdir_p(path):
             raise
 
 
+def mkdir_p_from_home(path):
+    mkdir_p(os.path.join(HOME, path))
+
+
 def create_softlink(source, target):
     try:
         os.symlink(source, target)
         msg = "Created symlink"
         print "%-20s: %s -> %s" % (msg, target, source)
     except OSError, exc:
+        # TODO: check if file is the desired softlink or file in file system
         if "File exists" in exc:
             msg = "File already exists"
             print "%-20s: %s" % (msg, target)
@@ -59,12 +64,12 @@ softlink_dotfiles_home("bash/.bash_aliases", ".bash_aliases")
 
 # firefox (no Desktop folder please)
 display_header("firefox")
-mkdir_p(os.path.join(HOME, ".config"))
+mkdir_p_from_home(".config")
 softlink_dotfiles_home("firefox/user-dirs.dirs", ".config/user-dirs.dirs")
 
 # fonts
 display_header("fonts")
-mkdir_p(os.path.join(HOME, ".local/share/fonts"))
+mkdir_p_from_home(".local/share/fonts")
 softlink_pattern("fonts", ".local/share/fonts", "ttf")
 
 # git
@@ -73,18 +78,18 @@ softlink_dotfiles_home("git/.gitconfig", ".gitconfig")
 
 # gtk
 display_header("gtk")
-mkdir_p(os.path.join(HOME, ".config/gtk-2.0"))
-mkdir_p(os.path.join(HOME, ".config/gtk-3.0"))
+mkdir_p_from_home(".config/gtk-2.0")
+mkdir_p_from_home(".config/gtk-3.0")
 softlink_dotfiles_home("gtk/gtkrc", ".config/gtk-2.0/gtkrc")
 softlink_dotfiles_home("gtk/settings.ini", ".config/gtk-3.0/settings.ini")
 
 # i3
 display_header("i3")
-mkdir_p(os.path.join(HOME, ".config/i3"))
-mkdir_p(os.path.join(HOME, ".config/i3status"))
+mkdir_p_from_home(".config/i3")
+mkdir_p_from_home(".config/i3status")
 softlink_dotfiles_home("i3/i3status.conf", ".config/i3status/config")
 
-mkdir_p(os.path.join(HOME, "scripts"))
+mkdir_p_from_home("scripts")
 softlink_dotfiles_home("i3/i3exit.sh", "scripts/i3exit.sh")
 softlink_dotfiles_home("i3/lock.sh", "scripts/lock.sh")
 softlink_dotfiles_home("i3/from_here.sh", "scripts/from_here.sh")
@@ -95,14 +100,14 @@ softlink_dotfiles_home("pylint/pylintrc", ".pylintrc")
 
 # scripts
 display_header("scripts")
-mkdir_p(os.path.join(HOME, "scripts"))
+mkdir_p_from_home("scripts")
 softlink_dotfiles_home("scripts/touchpad_toggle.sh", "scripts/touchpad_toggle.sh")
 
 # vim
 display_header("vim")
-mkdir_p(os.path.join(HOME, ".vim"))
-mkdir_p(os.path.join(HOME, ".vimswap"))
-mkdir_p(os.path.join(HOME, ".config/nvim"))
+mkdir_p_from_home(".vim")
+mkdir_p_from_home(".vimswap")
+mkdir_p_from_home(".config/nvim")
 softlink_dotfiles_home("vim/vimrc", ".vimrc")
 softlink_dotfiles_home("vim/init.vim", ".config/nvim/init.vim")
 
@@ -115,8 +120,13 @@ softlink_dotfiles_home("X11/.Xdefaults", ".Xdefaults")
 # mouse config:
 softlink_dotfiles_home("X11/.imwheelrc", ".imwheelrc")
 
+# xfce4
+display_header("xfce4")
+mkdir_p_from_home(".config/xfce4/terminal")
+softlink_dotfiles_home("xfce4/terminalrc", ".config/xfce4/terminal/terminalrc")
+
 # zsh
 display_header("zsh")
-mkdir_p(os.path.join(HOME, ".oh-my-zsh/themes"))
+mkdir_p_from_home(".oh-my-zsh/themes")
 softlink_dotfiles_home("zsh/.zshrc", ".zshrc")
 softlink_dotfiles_home("zsh/af-magic-light.zsh-theme", ".oh-my-zsh/themes")

@@ -1,0 +1,24 @@
+[Configuration]
+FontName=Inconsolata for Powerline Medium 12
+MiscAlwaysShowTabs=FALSE
+MiscBell=FALSE
+MiscBordersDefault=TRUE
+MiscCursorBlinks=FALSE
+MiscCursorShape=TERMINAL_CURSOR_SHAPE_BLOCK
+MiscDefaultGeometry=80x24
+MiscInheritGeometry=FALSE
+MiscMenubarDefault=FALSE
+MiscMouseAutohide=FALSE
+MiscToolbarDefault=FALSE
+MiscConfirmClose=TRUE
+MiscCycleTabs=TRUE
+MiscTabCloseButtons=TRUE
+MiscTabCloseMiddleClick=TRUE
+MiscTabPosition=GTK_POS_TOP
+MiscHighlightUrls=TRUE
+BackgroundMode=TERMINAL_BACKGROUND_TRANSPARENT
+TitleMode=TERMINAL_TITLE_REPLACE
+ScrollingBar=TERMINAL_SCROLLBAR_NONE
+BackgroundDarkness=0.560000
+ColorCursor=#d8d8eeeed8d8
+
