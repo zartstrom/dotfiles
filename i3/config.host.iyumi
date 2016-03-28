@@ -13,7 +13,7 @@ set $mode_click click
 
 mode "$mode_click" {
     bindsym x exec --no-startup-id $HOME/scripts/clicker.sh 10, mode "default"
-    bindsym l exec --no-startup-id $HOME/scripts/clicker.sh 50, mode "default"
+    bindsym l exec --no-startup-id $HOME/scripts/clicker.sh 30, mode "default"
     # bindsym d exec --no-startup-id $HOME/scripts/clicker.sh 500, mode "default"
 
     # back to normal: Enter or Escape

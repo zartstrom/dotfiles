@@ -18,6 +18,7 @@ xset -b
 
 xrdb .Xresources
 
+source $HOME/.profile
 source $HOME/dotfiles/i3/setup_i3_config.sh
 
 # exec gnome-session

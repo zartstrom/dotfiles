@@ -62,13 +62,6 @@ export LANG=en_US.UTF-8
 # golang
 export GOPATH=$HOME/go
 export PATH=$PATH:~/go/bin
-# panda igs
-export PATH=$PATH:~/mega/panda/GoPanda2
-# pentaho
-export PATH=$PATH:~/data-integration_5.4.0.1
-# splunk
-export SPLUNK_HOME=/opt/splunk
-export PATH=$PATH:$SPLUNK_HOME/bin
 
 # keys
 bindkey "^[[1~" beginning-of-line

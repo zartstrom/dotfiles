@@ -23,7 +23,7 @@ def create_softlink(source, target):
         msg = "Created symlink"
         print "%-20s: %s -> %s" % (msg, target, source)
     except OSError, exc:
-        # TODO: check if file is the desired softlink or file in file system
+        # TODO: check if file is the desired softlink or some other file
         if "File exists" in exc:
             msg = "File already exists"
             print "%-20s: %s" % (msg, target)
