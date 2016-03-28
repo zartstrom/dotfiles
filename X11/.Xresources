@@ -69,10 +69,10 @@ URxvt*foreground: #FFFFFF
 
 ! Select the fonts to be used. This is a comma separated list of font names that are checked in order when trying to find glyphs for characters. The first font defines the cell size for characters; other fonts
 !URxvt*font: xft:Inconsolata for Powerline:size=12:antialias=true:hinting=true
-URxvt.font:                 xft:Inconsolata for Powerline:size=12:antialias=true:hinting=true,xft:DejaVu Sans Mono:pixelsize=16,FontAwesome:pixelsize=11
-URxvt.boldFont:             xft:Inconsolata for Powerline:size=12:antialias=true:hinting=true,xft:DejaVu Sans Mono:pixelsize=16,FontAwesome:pixelsize=11
-URxvt.italicFont:           xft:Inconsolata for Powerline:size=12:antialias=true:hinting=true,xft:DejaVu Sans Mono:pixelsize=16,FontAwesome:pixelsize=11
-URxvt.boldItalicFont:       xft:Inconsolata for Powerline:size=12:antialias=true:hinting=true,xft:DejaVu Sans Mono:pixelsize=16,FontAwesome:pixelsize=11
+URxvt.font:                 xft:Inconsolata for Powerline:size=12:antialias=true:hinting=true,xft:DejaVu Sans Mono:size=12,xft:FontAwesome:size=12
+URxvt.boldFont:             xft:Inconsolata for Powerline:size=12:antialias=true:hinting=true,xft:DejaVu Sans Mono:size=12,xft:FontAwesome:size=12
+URxvt.italicFont:           xft:Inconsolata for Powerline:size=12:antialias=true:hinting=true,xft:DejaVu Sans Mono:size=12,xft:FontAwesome:size=12
+URxvt.boldItalicFont:       xft:Inconsolata for Powerline:size=12:antialias=true:hinting=true,xft:DejaVu Sans Mono:size=12,xft:FontAwesome:size=12
 
 
 ! URxvt*boldFont: fontlist
@@ -235,7 +235,7 @@ URxvt*skipBuiltinGlyphs: true
 ! Compile frills: Associate string with keysym sym. The intervening resource name keysym. cannot be omitted.
 ! URxvt*keysym.sym: string
 
-URxvt*perl-ext-common: font-size,fullscreen,vtwheel,tabbedex
+URxvt*perl-ext-common: resize-font,fullscreen,vtwheel,tabbedex
 
 ! tabs
 URxvt.tabbed.autohide: true
@@ -244,11 +244,10 @@ URxvt.tabbed.tabbar-bg: 0
 URxvt.tabbed.tab-fg: 14
 URxvt.tabbed.tab-bg: 15
 
-! change font-size
-URxvt.keysym.C-Up:     perl:font-size:increase
-URxvt.keysym.C-Down:   perl:font-size:decrease
-URxvt.keysym.C-S-Up:   perl:font-size:incglobal
-URxvt.keysym.C-S-Down: perl:font-size:decglobal
+! resize font
+! https://wiki.archlinux.org/index.php/rxvt-unicode#Changing_font_size_on_the_fly
+URxvt.resize-font.smaller: C-Down
+URxvt.resize-font.bigger: C-Up
 ! For the suggested Ctrl+Shift bindings to work, a default binding needs to be disabled
 ! Discussion here: http://wilmer.gaa.st/blog/archives/36-rxvt-unicode-and-ISO-14755-mode.html
 URxvt.iso14755: false

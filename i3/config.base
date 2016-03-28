@@ -146,8 +146,8 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 set $chat "1:chat "
-set $mail "2:mail "
-set $opera "3:opera "
+set $mail "2:mail "
+set $opera "3:opera "
 set $chrome "4:chrome "
 set $firefox "5:firefox "
 set $T1 "11:1 "
@@ -158,10 +158,8 @@ set $T5 "15:5 "
 set $T6 "16:6 "
 set $T7 "17:7 "
 set $T8 "18:8 "
-set $mysql "21:mysql"
-set $spoon "22:spoon"
-set $ireport "23:ireport"
-set $music "31:music"
+set $mysql "21:mysql "
+set $music "31:music "
 
 # switch to workspace
 bindsym $mod+1 workspace $T1
@@ -259,8 +257,8 @@ assign [class="google-chrome"] → $chrome
 assign [class="chromium"] → $chrome
 assign [class="^Opera$"] → $opera
 assign [class="^Mysql-workbench-bin$"] → $mysql
-assign [class="^SWT$"] → $spoon  # spoon has a funky WM_CLASS
-assign [class="^java-lang-Thread$"] → $ireport  # ireport has a funky WM_CLASS too
+#assign [class="^SWT$"] → $spoon  # spoon has a funky WM_CLASS
+#assign [class="^java-lang-Thread$"] → $ireport  # ireport has a funky WM_CLASS too
 assign [class="^Nightingale$"] → $music
 
 exec megasync
