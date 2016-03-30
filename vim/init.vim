@@ -1,10 +1,10 @@
-"                           _           
-"     _ __   ___  _____   _(_)_ __ ___  
-"    | '_ \ / _ \/ _ \ \ / / | '_ ` _ \ 
+"                           _
+"     _ __   ___  _____   _(_)_ __ ___
+"    | '_ \ / _ \/ _ \ \ / / | '_ ` _ \
 "    | | | |  __/ (_) \ V /| | | | | | |
 "    |_| |_|\___|\___/ \_/ |_|_| |_| |_|
 "
-                                   
+
 filetype off
 
 """ BASIC SETTINGS
@@ -40,6 +40,10 @@ set wildignore=*.pyc
 syntax on                  " syntax highlighting
 
 let mapleader = ","
+
+
+""" PYTHON
+let g:python_host_prog = "/usr/bin/python2"
 
 
 """ MOVEMENT
@@ -99,6 +103,7 @@ autocmd InsertLeave * if pumvisible() == 0|silent! pclose|endif
 autocmd BufRead,BufNewFile *.conf setf dosini
 "hi BadWhitespace ctermbg=red guibg=#FF0000
 "autocmd BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+autocmd BufNewFile,BufRead *.js.vm   set syntax=python
 
 
 """ PLUGIN SECTION
