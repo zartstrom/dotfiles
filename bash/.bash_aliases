@@ -17,13 +17,14 @@ alias la='ls -A'
 alias l='ls -CF'
 
 # toggle touchpad
-alias ttp="bash $HOME/scripts/touchpad_toggle.sh" 
+alias ttp="bash $HOME/scripts/touchpad_toggle.sh"
 
 # alsamixer
 alias amx="alsamixer"
 
 # git
 alias git_root='cd "$(git rev-parse --show-toplevel)"'
+alias gitroot='cd "$(git rev-parse --show-toplevel)"'
 
 # export PYTHONPATH=$PWD
 alias pypa='export PYTHONPATH=$PWD; echo set PYTHONPATH to: $PYTHONPATH'
