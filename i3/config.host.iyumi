@@ -3,7 +3,7 @@
 # exec thunderbird
 exec opera
 
-workspace "18:8" output eDP-1
+workspace "18:8 " output eDP-1
 
 
 # use full path $HOME/scripts/i3exit.sh
