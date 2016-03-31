@@ -41,6 +41,9 @@ syntax on                  " syntax highlighting
 
 let mapleader = ","
 
+""" PYTHON
+let g:python_host_prog = '/usr/bin/python2'
+
 
 """ PYTHON
 let g:python_host_prog = "/usr/bin/python2"
@@ -108,6 +111,9 @@ autocmd BufNewFile,BufRead *.js.vm   set syntax=python
 
 """ PLUGIN SECTION
 call plug#begin('~/.vim/plugged')
+
+
+Plug 'jacobsimpson/nvim-example-python-plugin'
 
 " ag aka the_silver_searcher
 Plug 'rking/ag.vim'
