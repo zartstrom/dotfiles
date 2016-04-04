@@ -1,7 +1,7 @@
 
 
 exec thunderbird
-exec hipchat
+exec HipChat4
 # exec opera
 
 exec imwheel
