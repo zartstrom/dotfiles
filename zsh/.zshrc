@@ -68,6 +68,8 @@ export PATH=$PATH:/usr/lib/hadoop/bin
 
 # java
 export JAVA_HOME=/usr/lib/jvm/default
+# ruby
+export PATH=$PATH:~/.gem/ruby/2.3.0
 
 # keys
 bindkey "^[[1~" beginning-of-line
@@ -94,5 +96,3 @@ bindkey "^[[4~" end-of-line
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
