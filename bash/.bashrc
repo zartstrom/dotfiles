@@ -110,3 +110,5 @@ PATH=$PATH:/home/phil/scripts
 export PATH
 
 #source ~/git-completion.bash
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

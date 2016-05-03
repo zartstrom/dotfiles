@@ -29,7 +29,8 @@ set pastetoggle=<F2>
 set mouse=a
 set autoread            " Reload files when they are changed by another process.
 set tw=0
-
+set clipboard+=unnamedplus
+set guioptions+=a
 
 if v:lang =~ "utf8$" || v:lang =~ "UTF-8$"
    set fileencodings=utf-8,latin1
@@ -282,6 +283,10 @@ let g:ctrlp_custom_ignore = {
   \ }
 
 
+" Fuzzy Finder
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+
+
 " Python-Mode
 Plug 'klen/python-mode'
 
@@ -395,7 +400,7 @@ let g:dbgPavimPort = 9000
 
 
 " cycle colorschemes
-Plug 'vim-scripts/CycleColor'
+" Plug 'vim-scripts/CycleColor'
 
 
 " Add plugins to &runtimepath
