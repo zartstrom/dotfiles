@@ -63,6 +63,12 @@ export LANG=en_US.UTF-8
 export GOPATH=$HOME/go
 export PATH=$PATH:~/go/bin
 
+# hdfs
+export PATH=$PATH:/usr/lib/hadoop/bin
+
+# java
+export JAVA_HOME=/usr/lib/jvm/default
+
 # keys
 bindkey "^[[1~" beginning-of-line
 bindkey "^[[4~" end-of-line
