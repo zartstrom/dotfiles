@@ -336,6 +336,10 @@ Plug 'walm/jshint.vim'
 autocmd BufWritePost *.js :JSHint
 
 
+" pony vim syntax
+Plug 'dleonard0/pony-vim-syntax'
+
+
 " vim-scala
 Plug 'derekwyatt/vim-scala'
 
