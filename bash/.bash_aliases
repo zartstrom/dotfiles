@@ -51,4 +51,12 @@ alias dm_dev='eval $(docker-machine env dev)'
 alias cts_server='cts_server.sh'
 alias tracker_services='tracker_services.sh'
 
-alias bpyvenv='$VIRTUAL_ENV/bin/bpython'
+alias dwhtv='ssh dwhtv@172.29.0.52'
+
+alias sh01='ssh splunk@sh01.splunk.lvl.bln'
+alias sh02='ssh splunk@sh02.splunk.lvl.bln'
+alias sh03='ssh splunk@sh03.ipx'
+alias sh-test01='ssh splunk@sh-test01.splunk.lvl.bln'
+alias sh-test02='ssh splunk@sh-test02.splunk.lvl.bln'
+
+alias bpyvenv='$VIRTUAL_ENV/bin/bpython'  # wrap it in script for error messages

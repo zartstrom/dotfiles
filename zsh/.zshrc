@@ -75,6 +75,18 @@ export PATH=$PATH:~/.gem/ruby/2.3.0
 bindkey "^[[1~" beginning-of-line
 bindkey "^[[4~" end-of-line
 
+# HISTORY
+#set history size
+export HISTSIZE=10000
+#save history after logout
+export SAVEHIST=10000
+#append into history file
+setopt INC_APPEND_HISTORY
+#save only one command if 2 common are same and consistent
+setopt HIST_IGNORE_DUPS
+#add timestamp for each entry
+setopt EXTENDED_HISTORY
+
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
