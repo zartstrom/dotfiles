@@ -71,6 +71,9 @@ export JAVA_HOME=/usr/lib/jvm/default
 # ruby
 export PATH=$PATH:~/.gem/ruby/2.3.0
 
+# mesos
+export PATH=$PATH:/home/phil/.minimesos/bin
+
 # keys
 bindkey "^[[1~" beginning-of-line
 bindkey "^[[4~" end-of-line
