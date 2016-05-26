@@ -302,4 +302,4 @@ URxvt.letterSpace: -1
 ! Native transparency
 URxvt*.transparent: true
 ! URxvt*.shading: 0 to 99 darkens, 101 to 200 lightens
-URxvt*.shading: 28
+URxvt*.shading: 60
