@@ -114,7 +114,8 @@ autocmd BufNewFile,BufRead *.js.vm   set syntax=python
 call plug#begin('~/.vim/plugged')
 
 
-Plug 'jacobsimpson/nvim-example-python-plugin'
+" learn to write nvim plugins
+"Plug 'jacobsimpson/nvim-example-python-plugin'
 
 " ag aka the_silver_searcher
 Plug 'rking/ag.vim'
