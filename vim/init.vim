@@ -108,6 +108,7 @@ autocmd BufRead,BufNewFile *.conf setf dosini
 "hi BadWhitespace ctermbg=red guibg=#FF0000
 "autocmd BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 autocmd BufNewFile,BufRead *.js.vm   set syntax=python
+autocmd FileType pony setlocal shiftwidth=2 tabstop=2
 
 
 """ PLUGIN SECTION
@@ -407,6 +408,9 @@ let g:dbgPavimPort = 9000
 " cycle colorschemes
 " Plug 'vim-scripts/CycleColor'
 
+" solarized
+Plug 'altercation/vim-colors-solarized'
+
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -418,8 +422,10 @@ filetype plugin indent on
 
 """ COLOR
 "let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+"set background=light
+"colorscheme solarized
 colorscheme ron
-" further settings for colorscheme morning:
+ "further settings for colorscheme ron:
 hi CursorLine cterm=none ctermbg=234 ctermfg=none
 hi CursorColumn cterm=none ctermbg=234 ctermfg=none
 "set colorcolumn=120
