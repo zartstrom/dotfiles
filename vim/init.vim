@@ -230,19 +230,19 @@ endif
 " unicode symbols
 
 " powerline symbols
-let g:airline_left_sep = ' '
-let g:airline_left_alt_sep = ' '
-let g:airline_right_sep = ' '
-let g:airline_right_alt_sep = ' '
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
+"let g:airline_left_sep = ' '
+"let g:airline_left_alt_sep = ' '
+"let g:airline_right_sep = ' '
+"let g:airline_right_alt_sep = ' '
+"let g:airline#extensions#tabline#left_sep = ' '
+"let g:airline#extensions#tabline#left_alt_sep = '|'
 
-"let g:airline_left_sep = ''
-"let g:airline_left_alt_sep = ''
-"let g:airline_right_sep = ''
-"let g:airline_right_alt_sep = ''
-"let g:airline#extensions#tabline#left_sep = ''
-"let g:airline#extensions#tabline#left_alt_sep = ''
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline#extensions#tabline#left_sep = ''
+let g:airline#extensions#tabline#left_alt_sep = ''
 
 let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
@@ -408,8 +408,11 @@ let g:dbgPavimPort = 9000
 " cycle colorschemes
 " Plug 'vim-scripts/CycleColor'
 
-" solarized
+" solarized colorscheme
 Plug 'altercation/vim-colors-solarized'
+
+" oceanic-next colorscheme
+Plug 'mhartington/oceanic-next'
 
 
 " Add plugins to &runtimepath
@@ -421,9 +424,10 @@ filetype plugin indent on
 
 
 """ COLOR
+"syntax enable
 "let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-"set background=light
-"colorscheme solarized
+"colorscheme OceanicNext
+"set background=dark
 colorscheme ron
  "further settings for colorscheme ron:
 hi CursorLine cterm=none ctermbg=234 ctermfg=none
