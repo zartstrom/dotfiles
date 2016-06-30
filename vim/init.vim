@@ -207,6 +207,8 @@ let g:UltiSnipsExpandTrigger = "<c-e>"
 let g:UltiSnipsJumpForwardTrigger = "<c-n>"
 let g:UltiSnipsJumpBackwardTrigger = "<c-p>"
 
+let g:UltiSnipsSnippetsDir = "~/.config/nvim/UltiSnips"
+
 
 " vim-snippets
 Plug 'honza/vim-snippets'
