@@ -56,6 +56,7 @@ alias dwhtv='ssh dwhtv@172.29.0.52'
 alias sh01='ssh splunk@sh01.splunk.lvl.bln'
 alias sh02='ssh splunk@sh02.splunk.lvl.bln'
 alias sh03='ssh splunk@sh03.ipx'
+alias sh04='ssh splunk@sh04.ipx'
 alias sh-test01='ssh splunk@sh-test01.splunk.lvl.bln'
 alias sh-test02='ssh splunk@sh-test02.splunk.lvl.bln'
 
