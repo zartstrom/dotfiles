@@ -74,6 +74,9 @@ export PATH=$PATH:~/.gem/ruby/2.3.0
 # mesos
 export PATH=$PATH:/home/phil/.minimesos/bin
 
+# spark
+export PATH=$PATH:/home/phil/spark/bin
+
 # keys
 bindkey "^[[1~" beginning-of-line
 bindkey "^[[4~" end-of-line
