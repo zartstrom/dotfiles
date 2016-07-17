@@ -61,3 +61,5 @@ alias sh-test01='ssh splunk@sh-test01.splunk.lvl.bln'
 alias sh-test02='ssh splunk@sh-test02.splunk.lvl.bln'
 
 alias bpyvenv='$VIRTUAL_ENV/bin/bpython'  # wrap it in script for error messages
+
+alias mark='cd ~/mega/docs/wohnung/markgrafendamm'
