@@ -218,7 +218,7 @@ Plug 'honza/vim-snippets'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-let g:airline_theme='dark'
+let g:airline_theme='kalisi'
 "let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
@@ -416,6 +416,9 @@ Plug 'altercation/vim-colors-solarized'
 " oceanic-next colorscheme
 Plug 'mhartington/oceanic-next'
 
+" vim-kalisi colorscheme
+Plug 'freeo/vim-kalisi'
+
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -427,14 +430,18 @@ filetype plugin indent on
 
 """ COLOR
 "syntax enable
-"let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+" let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 "colorscheme OceanicNext
 "set background=dark
-colorscheme ron
+set background=light
+colorscheme kalisi
+
+"colorscheme ron
  "further settings for colorscheme ron:
-hi CursorLine cterm=none ctermbg=234 ctermfg=none
-hi CursorColumn cterm=none ctermbg=234 ctermfg=none
-"set colorcolumn=120
+"hi CursorLine cterm=none ctermbg=234 ctermfg=none
+"hi CursorColumn cterm=none ctermbg=234 ctermfg=none
+""set colorcolumn=120
+
 hi ColorColumn cterm=none ctermbg=53 ctermfg=none
 hi Search cterm=NONE ctermbg=190
 
