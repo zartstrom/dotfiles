@@ -419,6 +419,9 @@ Plug 'mhartington/oceanic-next'
 " vim-kalisi colorscheme
 Plug 'freeo/vim-kalisi'
 
+" splunk
+" Plug 'yorokobi/vim-splunk'
+
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -442,7 +445,7 @@ colorscheme kalisi
 "hi CursorColumn cterm=none ctermbg=234 ctermfg=none
 ""set colorcolumn=120
 
-hi ColorColumn cterm=none ctermbg=53 ctermfg=none
+hi ColorColumn cterm=none ctermbg=168 ctermfg=none
 hi Search cterm=NONE ctermbg=190
 
 au BufRead,BufNewFile *.py set colorcolumn=120
