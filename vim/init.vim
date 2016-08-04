@@ -348,15 +348,25 @@ Plug 'dleonard0/pony-vim-syntax'
 Plug 'derekwyatt/vim-scala'
 
 
+" ensime
+Plug 'ensime/ensime-vim'
+autocmd BufWritePost *.scala :EnTypeCheck
+nnoremap <localleader>t :EnTypeCheck<CR>
+" for installation
+" > pip2 install websocket-client sexpdata
+" in nvim:
+" :UpdateRemotePlugins
+
+
 " sbt-vim
 Plug 'ktvoelker/sbt-vim'
 
 
 " vim-scripts/scala.vim - syntax highlighting
-Plug 'vim-scripts/scala.vim'
+"Plug 'vim-scripts/scala.vim'
 
 au BufRead,BufNewFile *.scala set filetype=scala
-au! Syntax scala source ~/.vim/plugged/scala.vim/syntax/scala.vim
+"au! Syntax scala source ~/.vim/plugged/scala.vim/syntax/scala.vim
 
 
 " vim-xpath
