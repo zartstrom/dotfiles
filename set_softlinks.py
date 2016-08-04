@@ -117,6 +117,7 @@ softlink_dotfiles_home("X11/.xinitrc", ".xinitrc")
 softlink_dotfiles_home("X11/.xprofile", ".xprofile")
 softlink_dotfiles_home("X11/.Xresources", ".Xresources")
 softlink_dotfiles_home("X11/.Xdefaults", ".Xdefaults")
+softlink_dotfiles_home("X11/.Xmodmap", ".Xmodmap")
 # mouse config:
 softlink_dotfiles_home("X11/.imwheelrc", ".imwheelrc")
 
