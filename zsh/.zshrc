@@ -63,6 +63,9 @@ export LANG=en_US.UTF-8
 export GOPATH=$HOME/go
 export PATH=$PATH:~/go/bin
 
+# haskell stack
+export PATH=$PATH:~/.local/bin
+
 # hdfs
 export PATH=$PATH:/usr/lib/hadoop/bin
 
