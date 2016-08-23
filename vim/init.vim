@@ -350,12 +350,12 @@ Plug 'derekwyatt/vim-scala'
 
 " ensime
 Plug 'ensime/ensime-vim'
-autocmd BufWritePost *.scala :EnTypeCheck
-nnoremap <localleader>t :EnTypeCheck<CR>
-" for installation
-" > pip2 install websocket-client sexpdata
+" install instructions:
+" ~ » pip2 install websocket-client sexpdata
 " in nvim:
 " :UpdateRemotePlugins
+autocmd BufWritePost *.scala :EnTypeCheck
+nnoremap <localleader>t :EnTypeCheck<CR>
 
 
 " sbt-vim
