@@ -169,6 +169,9 @@ autocmd FileType javascript noremap <leader>b :call JsBeautify()<cr>
 " for html
 autocmd FileType html noremap <leader>b :call HtmlBeautify()<cr>
 
+" delimitMate
+Plug 'Raimondi/delimitMate'
+
 " taglist.vim
 Plug 'vim-scripts/taglist.vim'
 
