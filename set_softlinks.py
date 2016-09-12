@@ -98,6 +98,11 @@ softlink_dotfiles_home("i3/from_here.sh", "scripts/from_here.sh")
 display_header("pylint")
 softlink_dotfiles_home("pylint/pylintrc", ".pylintrc")
 
+# sbt
+display_header("sbt")
+mkdir_p_from_home(".sbt/0.13/plugins")
+softlink_dotfiles_home("sbt/plugins.sbt", ".sbt/0.13/plugins/plugins.sbt")
+
 # scripts
 display_header("scripts")
 mkdir_p_from_home("scripts")
