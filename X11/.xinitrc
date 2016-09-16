@@ -17,6 +17,7 @@ sh ~/.fehbg &
 xset -b
 
 xrdb .Xresources
+xmodmap ~/.Xmodmap
 
 source $HOME/.profile
 source $HOME/dotfiles/i3/setup_i3_config.sh
