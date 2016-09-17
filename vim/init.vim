@@ -382,7 +382,7 @@ nnoremap <leader>xp :XPathSearchPrompt<CR>
 
 
 " YouCompleteMe
-Plug 'Valloric/YouCompleteMe', , { 'do': './install.py' }
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 
 let g:ycm_goto_same_buffer = 0
 let g:ycm_goto_buffer_command = 'same-buffer'
