@@ -32,6 +32,8 @@ set tw=0
 set clipboard+=unnamedplus
 set guioptions+=a
 
+let g:did_install_default_menus = 1  " avoid stupid menu.vim (saves ~100ms)
+
 if v:lang =~ "utf8$" || v:lang =~ "UTF-8$"
    set fileencodings=utf-8,latin1
 endif
@@ -434,9 +436,8 @@ Plug 'mhartington/oceanic-next'
 " vim-kalisi colorscheme
 Plug 'freeo/vim-kalisi'
 
-" splunk
-" Plug 'yorokobi/vim-splunk'
-
+" startify
+Plug 'mhinz/vim-startify'
 
 " Add plugins to &runtimepath
 call plug#end()
