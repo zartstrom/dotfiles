@@ -48,6 +48,7 @@ alias dwh_tunnel='ssh -L 3307:localhost:3306 phitzler@dwhdev01.inf00.inf.bm.loc'
 alias dm_dev='eval $(docker-machine env dev)'
 
 # cts server
+# use .bash_aliases_local
 alias cts_server='cts_server.sh'
 alias tracker_services='tracker_services.sh'
 
@@ -59,7 +60,9 @@ alias sh03='ssh splunk@sh03.ipx'
 alias sh04='ssh splunk@sh04.ipx'
 alias sh-test01='ssh splunk@sh-test01.splunk.lvl.bln'
 alias sh-test02='ssh splunk@sh-test02.splunk.lvl.bln'
+alias rec='cd ~/devel/splunk_etc/apps/idealo_traffic_jobs/bin/isg_recalculation && source venv_recalc/bin/activate'
 
 alias bpyvenv='$VIRTUAL_ENV/bin/bpython'  # wrap it in script for error messages
 
 alias mark='cd ~/mega/docs/wohnung/markgrafendamm'
+
