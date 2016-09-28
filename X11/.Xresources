@@ -1,7 +1,9 @@
 ! Compile xft: Attempt to find a visual with the given bit depth; option -depth.
 URxvt*depth: 24
 
-! Compile xft: Turn on/off double-buffering for xft (default enabled).  On some card/driver combination enabling it slightly decreases performance, on most it greatly helps it. The slowdown is small, so it
+! Compile xft: Turn on/off double-buffering for xft (default enabled).  On some
+! card/driver combination enabling it slightly decreases performance, on most
+! it greatly helps it. The slowdown is small, so it
 URxvt*buffered: false
 
 ! Create the window with the specified X window geometry [default 80x24]; option -geometry.
@@ -16,10 +18,14 @@ URxvt*foreground: #FFFFFF
 ! If set, use the specified colour as the background for highlighted characters. If unset, use reverse video.
 ! URxvt*highlightColor: colour
 !URxvt.font:                 xft:Hack:size=10:antialias=true:hinting=true,xft:DejaVu Sans Mono:size=12,xft:FontAwesome:size=12
-URxvt.font:                 xft:Hack:size=10:antialias=true:hinting=true,xft:Symbola,xft:UbuntuMonoDerivativePowerline Nerd Font
-URxvt.boldFont:             xft:Hack:style=Bold:size=10:antialias=true:hinting=true,xft:DejaVu Sans Mono:size=12,xft:FontAwesome:size=12
-URxvt.italicFont:           xft:Hack:style=Italic:size=10:antialias=true:hinting=true,xft:DejaVu Sans Mono:size=12,xft:FontAwesome:size=12
-URxvt.boldItalicFont:       xft:Hack:style=Bold Italic:size=10:antialias=true:hinting=true,xft:DejaVu Sans Mono:size=12,xft:FontAwesome:size=12
+!URxvt.font:                 xft:Hack:size=10:antialias=true:hinting=true,xft:Symbola,xft:UbuntuMonoDerivativePowerline Nerd Font
+
+URxvt.font:                 xft:Hack:size=10
+!URxvt.font: xft:UbuntuMonoDerivativePowerline Nerd Font:size=8,xft:DejaVu Sans Mono,xft:monospace,xft:Symbola
+
+!URxvt.boldFont:             xft:Hack:style=Bold:size=10:antialias=true:hinting=true
+!URxvt.italicFont:           xft:Hack:style=Italic:size=10:antialias=true:hinting=true,xft:DejaVu Sans Mono:size=12,xft:FontAwesome:size=12
+!URxvt.boldItalicFont:       xft:Hack:style=Bold Italic:size=10:antialias=true:hinting=true,xft:DejaVu Sans Mono:size=12,xft:FontAwesome:size=12
 
 ! Set scrollbar style to rxvt, plain, next or xterm. plain is the authors favourite.
 URxvt*scrollstyle: rxvt
@@ -27,9 +33,10 @@ URxvt*scrollstyle: rxvt
 ! True: enable the scrollbar [default]; option -sb. False: disable the scrollbar; option +sb.
 URxvt*scrollBar: false
 
-! Compile frills: Disable the usage of the built-in block graphics/line drawing characters and just rely on what the specified fonts provide. Use this if you have a good font and want to use its block graphic
-!URxvt*skipBuiltinGlyphs: true
-URxvt*skipBuiltinGlyphs: false
+! Compile frills: Disable the usage of the built-in block graphics/line drawing
+! characters and just rely on what the specified fonts provide. Use this if you
+! have a good font and want to use its block graphic
+!URxvt*skipBuiltinGlyphs: false
 
 ! Compile frills: Associate string with keysym sym. The intervening resource name keysym. cannot be omitted.
 ! URxvt*keysym.sym: string
