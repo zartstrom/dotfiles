@@ -1,8 +1,11 @@
 
 
+exec --no-startup-id $HOME/.screenlayout/work_docking.sh
+
 exec thunderbird
 exec hipchat4
 # exec opera
 
 exec imwheel
+
 
