@@ -19,6 +19,9 @@ alias l='ls -CF'
 # toggle touchpad
 alias ttp="bash $HOME/scripts/touchpad_toggle.sh"
 
+# convert svg files to png
+alias svg2png="bash $HOME/scripts/svg2png.sh"
+
 # alsamixer
 alias amx="alsamixer"
 
