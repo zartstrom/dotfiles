@@ -68,4 +68,5 @@ alias rec='cd ~/devel/splunk_etc/apps/idealo_traffic_jobs/bin/isg_recalculation 
 alias bpyvenv='$VIRTUAL_ENV/bin/bpython'  # wrap it in script for error messages
 
 alias mark='cd ~/mega/docs/wohnung/markgrafendamm'
+alias r2492='cd ~/devel/services/researches/DWH-2492'
 
