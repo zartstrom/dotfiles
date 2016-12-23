@@ -86,6 +86,8 @@ map <A-C-Right> :bnext<CR>
 
 " remove trailing whitespace
 :nnoremap <leader>tr :%s/\s\+$//g<CR>
+" convert tabs to four spaces
+:nnoremap <leader>ts :%s/\t/    /g<CR>
 
 
 """ AUTOCMD
