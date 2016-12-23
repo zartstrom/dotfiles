@@ -103,6 +103,11 @@ display_header("sbt")
 mkdir_p_from_home(".sbt/0.13/plugins")
 softlink_dotfiles_home("sbt/plugins.sbt", ".sbt/0.13/plugins/plugins.sbt")
 
+# scala
+display_header("scala")
+mkdir_p_from_home(".config/scalafmt")
+softlink_dotfiles_home("scala/.scalafmt.conf", ".config/scalafmt/.scalafmt.conf")
+
 # scripts
 display_header("scripts")
 mkdir_p_from_home("scripts")

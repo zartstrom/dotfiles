@@ -355,6 +355,13 @@ Plug 'dleonard0/pony-vim-syntax'
 Plug 'derekwyatt/vim-scala'
 
 
+" vim-autoformat
+Plug 'Chiel92/vim-autoformat'
+noremap <F5> :Autoformat<CR>
+let g:formatdef_scalafmt = "'scalafmt --config ~/.config/scalafmt/.scalafmt.conf --stdin'"
+let g:formatters_scala = ['scalafmt']
+
+
 " ensime
 Plug 'ensime/ensime-vim'
 " install instructions:
@@ -418,10 +425,10 @@ map <leader>n :NERDTreeToggle<CR>
 
 
 " dgbPavim - PHP debugger
-Plug 'brookhong/DBGPavim'
+"Plug brookhong/DBGPavim'
 
 "let g:dbgPavimBreakAtEntry = 0
-let g:dbgPavimPort = 9000
+"let g:dbgPavimPort = 9000
 
 
 " cycle colorschemes
