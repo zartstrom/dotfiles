@@ -48,10 +48,6 @@ let mapleader = ","
 let g:python_host_prog = '/usr/bin/python2'
 
 
-""" PYTHON
-let g:python_host_prog = "/usr/bin/python2"
-
-
 """ MOVEMENT
 " Move between windows
 :tnoremap <C-h> <C-\><C-n><C-w>h
