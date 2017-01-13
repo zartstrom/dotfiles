@@ -170,7 +170,8 @@ autocmd FileType javascript noremap <leader>b :call JsBeautify()<cr>
 autocmd FileType html noremap <leader>b :call HtmlBeautify()<cr>
 
 " delimitMate
-Plug 'Raimondi/delimitMate'
+"Plug 'Raimondi/delimitMate'
+" I don't like it
 
 " taglist.vim
 Plug 'vim-scripts/taglist.vim'
@@ -331,7 +332,49 @@ let g:pymode_lint_options_pep8 = {'max_line_length': g:pymode_options_max_line_l
 map <leader>p :PymodeLint<CR>
 
 " neomake
-Plug 'benekastah/neomake'
+Plug 'neomake/neomake'
+" {{{
+    " neomake is async => it doesn't block the editor
+    "let g:neomake_python_enabled_makers = ['pep8', 'pylint']
+    let g:neomake_python_enabled_makers = ['pylint']
+    let g:neomake_python_pylint_maker = {
+        \ 'exe': '/home/phil/.virtualenvs/lint/bin/pylint',
+        \ 'args': [
+            \ '--rcfile=/home/phil/.pylintrc',
+            \ '--output-format=text',
+            \ '--msg-template="{path}:{line}:{column}:{C}: [{symbol}] {msg}"',
+            \ '--reports=no'
+        \ ],
+        \ 'errorformat':
+            \ '%A%f:%l:%c:%t: %m,' .
+            \ '%A%f:%l: %m,' .
+            \ '%A%f:(%l): %m,' .
+            \ '%-Z%p^%.%#,' .
+            \ '%-G%.%#',
+        \ 'postprocess': function('neomake#makers#ft#python#PylintEntryProcess')
+        \ }
+    let g:neomake_python_pep8_maker = {
+        \ 'exe': '/home/phil/.virtualenvs/lint/bin/pep8',
+        \ 'args': ['--max-line-length=120', '--ignore=E115,E266']
+        \ }
+    let g:neomake_verbose = 0
+
+    let g:neomake_warning_sign={'text': 'W>', 'texthl': 'NeomakeWarningMsg'}
+    let g:neomake_error_sign={'text': 'E>', 'texthl': 'NeomakeErrorMsg'}
+ 
+    " run neomake on the current file on every write:
+    autocmd! BufWritePost * Neomake
+" }}}
+"function SetPython2()
+"    let g:syntastic_python_flake8_exec = 'python2'
+"    let g:syntastic_python_flake8_args = ['-m', 'flake8']
+"endfunction
+"function SetPython3()
+"    let g:syntastic_python_flake8_exec = 'python3'
+"    let g:syntastic_python_flake8_args = ['-m', 'flake8']
+"endfunction
+"call SetPython2()
+
 
 " grep
 Plug 'yegappan/grep'
@@ -466,7 +509,9 @@ colorscheme kalisi
 "hi CursorColumn cterm=none ctermbg=234 ctermfg=none
 ""set colorcolumn=120
 
-hi ColorColumn cterm=none ctermbg=168 ctermfg=none
+hi ColorColumn cterm=NONE ctermbg=168 ctermfg=NONE
 hi Search cterm=NONE ctermbg=190
+hi NeomakeErrorMsg cterm=NONE ctermbg=168
+hi NeomakeWarningMsg cterm=NONE ctermbg=148
 
 au BufRead,BufNewFile *.py set colorcolumn=120

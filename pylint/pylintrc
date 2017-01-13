@@ -1,3 +1,9 @@
+[MASTER]
+init-hook="import os, sys; sys.path.append(os.environ['VIRTUAL_ENV'] + '/lib/python2.7/site-packages'); print(sys.path)"
+
+[BASIC]
+docstring-min-length=50
+
 [FORMAT]
 # Maximum number of characters on a single line.
 max-line-length=120
@@ -6,4 +12,4 @@ max-line-length=120
 ignored-classes=pytest
 
 [MESSAGES CONTROL]
-disable=R0922
+disable=missing-docstring,locally-disabled
