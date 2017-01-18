@@ -80,6 +80,11 @@ export PATH=$PATH:/home/phil/.minimesos/bin
 # spark
 export PATH=$PATH:/home/phil/spark/bin
 
+# stuff for work
+if [ -f ~/devel/tracking_service/src/main/bash/.bashrc_local_tracking_service ]; then
+    . ~/devel/tracking_service/src/main/bash/.bashrc_local_tracking_service
+fi
+
 # keys
 bindkey "^[[1~" beginning-of-line
 bindkey "^[[4~" end-of-line
