@@ -101,6 +101,7 @@ softlink_dotfiles_home("i3/from_here.sh", "scripts/from_here.sh")
 
 # python / myrandr
 display_header("myrandr")
+# TODO: create venv_myrandr and do "pip install --editable ." to create myrandr executable.
 create_softlink(os.path.join(HOME, "repos/myrandr/venv_myrandr/bin/myrandr"), os.path.join(HOME, "scripts/myrandr"))
 
 # pylint
