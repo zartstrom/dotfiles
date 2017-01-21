@@ -76,6 +76,11 @@ softlink_pattern("fonts", ".local/share/fonts", "ttf")
 display_header("git")
 softlink_dotfiles_home("git/.gitconfig", ".gitconfig")
 
+# golang
+display_header("golang")
+mkdir_p_from_home("go")
+create_softlink(os.path.join(HOME, "mega/go/src"), os.path.join(HOME, "go/src"))
+
 # gtk
 display_header("gtk")
 mkdir_p_from_home(".config/gtk-2.0")
@@ -113,6 +118,7 @@ display_header("scripts")
 mkdir_p_from_home("scripts")
 softlink_dotfiles_home("scripts/touchpad_toggle.sh", "scripts/touchpad_toggle.sh")
 softlink_dotfiles_home("scripts/svg2png.sh", "scripts/svg2png.sh")
+softlink_dotfiles_home("scripts/autorandr", "scripts/autorandr")
 
 # vim
 display_header("vim")
