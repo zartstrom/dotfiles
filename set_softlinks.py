@@ -99,6 +99,10 @@ softlink_dotfiles_home("i3/i3exit.sh", "scripts/i3exit.sh")
 softlink_dotfiles_home("i3/lock.sh", "scripts/lock.sh")
 softlink_dotfiles_home("i3/from_here.sh", "scripts/from_here.sh")
 
+# python / myrandr
+display_header("myrandr")
+create_softlink(os.path.join(HOME, "repos/myrandr/venv_myrandr/bin/myrandr"), os.path.join(HOME, "scripts/myrandr"))
+
 # pylint
 display_header("pylint")
 softlink_dotfiles_home("pylint/pylintrc", ".pylintrc")
