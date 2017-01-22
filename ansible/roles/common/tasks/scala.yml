@@ -1,0 +1,24 @@
+---
+- name: create scalafmt config folder
+  file:
+    path: "{{ home }}/.config/scalafmt"
+    state: directory
+    mode: 0755
+
+- name: softlink scalafmt.conf
+  file:
+    src: "{{ dotfiles }}/scala/.scalafmt.conf"
+    dest: "{{ home }}/.config/scalafmt/.scalafmt.conf"
+    state: link
+
+- name: create sbt plugin config folder
+  file:
+    path: "{{ home }}/.sbt/0.13/plugins"
+    state: directory
+    mode: 0755
+
+- name: softlink sbt plugin conf
+  file:
+    src: "{{ dotfiles }}/sbt/plugins.sbt"
+    dest: "{{ home }}/.sbt/0.13/plugins/plugins.sbt"
+    state: link

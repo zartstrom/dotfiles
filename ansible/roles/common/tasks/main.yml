@@ -1,0 +1,9 @@
+---
+- include: myrandr.yml
+- include: python.yml
+- include: scala.yml
+- include: scripts.yml
+- include: vim.yml
+- include: X11.yml
+- include: zsh.yml
+

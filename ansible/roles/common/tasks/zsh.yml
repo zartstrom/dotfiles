@@ -1,0 +1,19 @@
+---
+- name: softlink .zshrc
+  file:
+    src: "{{ dotfiles }}/zsh/.zshrc"
+    dest: "{{ home }}/.zshrc"
+    state: link
+
+- name: create oh-my-zsh themes folder
+  file:
+    path: "{{ home }}/.oh-my-zsh/themes"
+    state: directory
+    mode: 0755
+
+- name: softlink zsh theme
+  file:
+    src: "{{ dotfiles }}/zsh/af-magic-light.zsh-theme"
+    dest: "{{ home }}/.oh-my-zsh/themes/af-magic-light.zsh-theme"
+    state: link
+

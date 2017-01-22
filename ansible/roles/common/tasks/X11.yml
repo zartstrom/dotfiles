@@ -1,0 +1,13 @@
+---
+- name: softlink X11 files
+  file:
+    src: "{{ dotfiles }}/X11/{{ item }}"
+    dest: "{{ home }}/{{ item }}"
+    state: link
+  with_items:
+    - .xinitrc
+    - .xprofile
+    - .Xresources
+    - .Xdefaults
+    - .Xmodmap
+    - .imwheelrc

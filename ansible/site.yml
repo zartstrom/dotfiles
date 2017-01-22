@@ -1,0 +1,12 @@
+---
+- hosts: localhost
+  roles:
+    - common
+  remote_user: phil
+
+  # tasks:
+  #  - name: created test file
+  #    copy:
+  #      src: br.txt
+  #      dest: /home/phil/files/hello_you.txt
+

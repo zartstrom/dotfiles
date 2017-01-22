@@ -1,0 +1,9 @@
+---
+- name: softlink scripts
+  file:
+    src: "{{ dotfiles }}/scripts/{{ item }}"
+    dest: "{{ home }}/scripts/{{ item }}"
+    state: link
+  with_items:
+    - touchpad_toggle.sh
+    - svg2png.sh

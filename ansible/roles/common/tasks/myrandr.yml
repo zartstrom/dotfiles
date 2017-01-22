@@ -1,0 +1,19 @@
+---
+- name: create repos folder
+  file:
+    path: "{{ home }}/repos"
+    state: directory
+    mode: 0755
+
+- name: create venv_myrandr
+  pip:
+    name: "{{ home }}/repos/myrandr"
+    extra_args: "-e"
+    virtualenv: "{{ home }}/repos/myrandr/venv_myrandr"
+    virtualenv_python: python3
+
+- name: softlink myrandr
+  file:
+    src: "{{ home }}/repos/myrandr/venv_myrandr/bin/myrandr"
+    dest: "{{ home }}/scripts/myrandr"
+    state: link

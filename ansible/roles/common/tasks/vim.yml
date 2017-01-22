@@ -1,0 +1,22 @@
+---
+- name: create vim/neovim related folder
+  file:
+    path: "{{ item }}"
+    state: directory
+    mode: 0755
+  with_items:
+    - .vim
+    - .vimswap
+    - .config/nvim
+
+- name: softlink .vimrc
+  file:
+    src: "{{ dotfiles }}/vim/vimrc"
+    dest: "{{ home }}/.vimrc"
+    state: link
+
+- name: softlink init.vim
+  file:
+    src: "{{ dotfiles }}/vim/init.vim"
+    dest: "{{ home }}/.config/nvim/init.vim"
+    state: link

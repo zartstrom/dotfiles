@@ -1,0 +1,6 @@
+---
+- name: softlink .pylintrc
+  file:
+    src: "{{ dotfiles }}/pylint/pylintrc"
+    dest: "{{ home }}/.pylintrc"
+    state: link

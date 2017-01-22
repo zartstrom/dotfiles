@@ -1,0 +1,6 @@
+
+
+username: "phil"
+home: "/home/{{ username }}"
+dotfiles: "{{ home }}/dotfiles"
+
