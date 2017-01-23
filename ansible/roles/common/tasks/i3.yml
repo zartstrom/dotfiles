@@ -1,0 +1,25 @@
+---
+- name: create i3 config folders
+  file:
+    path: "{{ config }}/{{ item }}"
+    state: directory
+    mode: 0755
+  with_items:
+    - i3
+    - i3status
+
+- name: softlink i3status.conf
+  file:
+    src: "{{ dotfiles }}/i3/i3status.conf"
+    dest: "{{ config }}/i3status/config"
+    state: link
+      
+- name: softlink i3 scripts
+  file:
+    src: "{{ dotfiles }}/i3/{{ item }}"
+    dest: "{{ scripts }}/{{ item }}"
+    state: link
+  with_items:
+    - i3exit.sh
+    - lock.sh
+    - from_here.sh

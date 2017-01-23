@@ -1,0 +1,9 @@
+---
+- name: softlink bash dotfiles
+  file:
+    src: "{{ dotfiles }}/bash/{{ item }}"
+    dest: "{{ home }}/{{ item }}"
+    state: link
+  with_items:
+    - .bashrc
+    - .bash_aliases

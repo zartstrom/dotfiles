@@ -1,0 +1,6 @@
+---
+- name: golang source directory from mega
+  file:
+    src: "{{ home }}/mega/go/src"
+    dest: "{{ home }}/go/src"
+    state: link

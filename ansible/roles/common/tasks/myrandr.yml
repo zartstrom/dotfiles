@@ -5,6 +5,12 @@
     state: directory
     mode: 0755
 
+- name: checkout myrandr
+  git:
+    repo: https://github.com/zartstrom/myrandr.git
+    dest: "{{ home }}/repos/myrandr"
+    version: master
+
 - name: create venv_myrandr
   pip:
     name: "{{ home }}/repos/myrandr"
@@ -17,3 +23,13 @@
     src: "{{ home }}/repos/myrandr/venv_myrandr/bin/myrandr"
     dest: "{{ home }}/scripts/myrandr"
     state: link
+
+- name: create udev monitor hotplug rule
+  become: yes
+  template:
+    src: "95-monitor-hotplug.rules.template"
+    dest: "/etc/udev/rules.d/95-monitor-hotplug.rules"
+    owner: root
+    group: root
+    mode: 0644
+

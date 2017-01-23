@@ -1,4 +1,16 @@
 ---
+- name: config folder is present
+  file:
+    path: "{{ config }}"
+    state: directory
+    mode: 0755
+
+- include: bash.yml
+- include: firefox.yml
+- include: fonts.yml
+- include: golang.yml
+- include: gtk.yml
+- include: i3.yml
 - include: myrandr.yml
 - include: python.yml
 - include: scala.yml

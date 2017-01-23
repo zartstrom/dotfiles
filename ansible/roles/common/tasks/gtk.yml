@@ -1,0 +1,21 @@
+---
+- name: gtk config folders
+  file:
+    path: "{{ home }}/.config/{{ item }}"
+    state: directory
+    mode: 0755
+  with_items:
+    - "gtk-2.0"
+    - "gtk-3.0"
+
+- name: softlink gtk2 config
+  file:
+    src: "{{ dotfiles }}/gtk/gtkrc"
+    dest: "{{ home }}/.config/gtk-2.0/gtkrc"
+    state: link
+
+- name: softlink gtk3 config
+  file:
+    src: "{{ dotfiles }}/gtk/settings.ini"
+    dest: "{{ home }}/.config/gtk-3.0/settings.ini"
+    state: link

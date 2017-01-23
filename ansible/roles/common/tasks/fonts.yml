@@ -1,0 +1,17 @@
+---
+- name: create fonts directory
+  file:
+    path: "{{ home }}/.local/share/fonts"
+    state: directory
+    mode: 0755
+
+- name: softlink fonts
+  file:
+    src: "{{ dotfiles }}/fonts/{{ item }}"
+    dest: "{{ home }}/.local/share/fonts/{{ item }}"
+    state: link
+  with_items:
+    - "System San Francisco Display Bold.ttf"
+    - "System San Francisco Display Regular.ttf"
+    - "System San Francisco Display Thin.ttf"
+    - "System San Francisco Display Ultralight.ttf"

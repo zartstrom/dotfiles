@@ -1,0 +1,5 @@
+---
+- name: softlink firefox user-dirs
+  file:
+    src: "{{ dotfiles }}/firefox/user-dirs.dirs"
+    dest: "{{ config }}/user-dirs.dirs"
