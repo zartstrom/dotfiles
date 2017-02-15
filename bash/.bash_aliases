@@ -69,3 +69,6 @@ alias bpyvenv='$VIRTUAL_ENV/bin/bpython'  # wrap it in script for error messages
 
 alias mark='cd ~/mega/docs/wohnung/markgrafendamm'
 alias r2492='cd ~/devel/services/researches/DWH-2492'
+alias ts-ci01='ssh idealo@tracking-01.dwh01.tst06.eu.idealo.com'
+alias ts-pro01='ssh idealo@tracking-01.dwh01.pro06.eu.idealo.com'
+alias ts-pro02='ssh idealo@tracking-02.dwh01.pro06.eu.idealo.com'
