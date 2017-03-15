@@ -63,6 +63,8 @@ alias sh03='ssh splunk@sh03.ipx'
 alias sh04='ssh splunk@sh04.ipx'
 alias sh-test01='ssh splunk@sh-test01.splunk.lvl.bln'
 alias sh-test02='ssh splunk@sh-test02.splunk.lvl.bln'
+alias sh-test03='ssh splunk@search-01.dwh01.tst05.eu.idealo.com'
+alias sh-test04='ssh splunk@search-02.dwh01.tst05.eu.idealo.com'
 alias rec='cd ~/devel/splunk_etc/apps/idealo_recalc/bin && source venv_recalc/bin/activate'
 
 alias bpyvenv='$VIRTUAL_ENV/bin/bpython'  # wrap it in script for error messages
