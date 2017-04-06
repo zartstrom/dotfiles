@@ -382,6 +382,10 @@ Plug 'yegappan/grep'
 let Grep_Skip_Files = '*.pyc'
 
 
+" idris
+Plug 'idris-hackers/idris-vim'
+
+
 " JSHint
 Plug 'walm/jshint.vim'
 
