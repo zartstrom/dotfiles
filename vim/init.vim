@@ -43,6 +43,7 @@ set wildignore=*.pyc
 syntax on                  " syntax highlighting
 
 let mapleader = ","
+let maplocalleader = "-"
 
 """ PYTHON
 let g:python_host_prog = '/usr/bin/python2'
@@ -414,7 +415,7 @@ Plug 'ensime/ensime-vim'
 " in nvim:
 " :UpdateRemotePlugins
 autocmd BufWritePost *.scala :EnTypeCheck
-nnoremap <localleader>t :EnTypeCheck<CR>
+"nnoremap <localleader>t :EnTypeCheck<CR>
 
 
 " sbt-vim
