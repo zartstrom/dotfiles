@@ -393,6 +393,13 @@ Plug 'walm/jshint.vim'
 autocmd BufWritePost *.js :JSHint
 
 
+" Markdown
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+
+let g:vim_markdown_folding_disabled = 1
+
+
 " pony vim syntax
 Plug 'dleonard0/pony-vim-syntax'
 
