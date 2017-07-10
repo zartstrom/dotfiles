@@ -73,6 +73,7 @@ export PATH=$PATH:/usr/lib/hadoop/bin
 export JAVA_HOME=/usr/lib/jvm/default
 # ruby
 export PATH=$PATH:~/.gem/ruby/2.3.0/bin
+export PATH=$PATH:~/.gem/ruby/2.4.0/bin
 
 # mesos
 export PATH=$PATH:/home/phil/.minimesos/bin
