@@ -56,6 +56,9 @@ export PATH=$HOME/bin:$HOME/scripts:/usr/local/bin:$PATH
 source $ZSH/oh-my-zsh.sh
 source $HOME/.bash_aliases
 
+# set default editor to nvim, some applications use this envvar
+export EDITOR=nvim
+
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 
