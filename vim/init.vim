@@ -362,7 +362,7 @@ Plug 'neomake/neomake'
 
     let g:neomake_warning_sign={'text': 'W>', 'texthl': 'NeomakeWarningMsg'}
     let g:neomake_error_sign={'text': 'E>', 'texthl': 'NeomakeErrorMsg'}
- 
+
     " run neomake on the current file on every write:
     autocmd! BufWritePost * Neomake
 " }}}
@@ -492,6 +492,11 @@ Plug 'altercation/vim-colors-solarized'
 
 " oceanic-next colorscheme
 Plug 'mhartington/oceanic-next'
+
+
+" vim-gitgutter
+Plug 'airblade/vim-gitgutter'
+
 
 " vim-kalisi colorscheme
 Plug 'freeo/vim-kalisi'
