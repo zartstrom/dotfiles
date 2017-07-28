@@ -1,1 +1,1 @@
-KERNEL=="card0", SUBSYSTEM=="drm", ENV{LC_ALL}="en_US.utf-8", ENV{LANG}="en_US.utf-8", ENV{DISPLAY}=":0", ENV{XAUTHORITY}="/home/phil/.Xauthority", RUN+="/home/phil/scripts/myrandr"
+KERNEL=="card0", SUBSYSTEM=="drm", ENV{LC_ALL}="en_US.utf-8", ENV{LANG}="en_US.utf-8", ENV{DISPLAY}=":0", ENV{XAUTHORITY}="/home/phil/.Xauthority", RUN+="/home/phil/scripts/myrandr load"
