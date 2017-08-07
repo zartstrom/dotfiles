@@ -50,24 +50,4 @@ alias samba='idealo_samba.sh'
 
 alias dm_dev='eval $(docker-machine env dev)'
 
-# cts server
-# use .bash_aliases_local
-alias cts_server='cts_server.sh'
-alias tracker_services='tracker_services.sh'
-
-alias sh01p='ssh search-01.dwh01.pro06.eu.idealo.com'
-alias sh02p='ssh search-02.dwh01.pro06.eu.idealo.com'
-alias sh03p='ssh search-03.dwh01.pro06.eu.idealo.com'
-alias sh04p='ssh search-04.dwh01.pro06.eu.idealo.com'
-alias sh05p='ssh search-05.dwh01.pro06.eu.idealo.com'
-alias sh01='ssh search-01.dwh01.tst06.eu.idealo.com'
-alias sh02='ssh search-02.dwh01.tst06.eu.idealo.com'
-
-alias ts01p='ssh tracking-01.dwh01.pro06.eu.idealo.com'
-alias ts02p='ssh tracking-02.dwh01.pro06.eu.idealo.com'
-alias ts01='ssh tracking-01.dwh01.tst06.eu.idealo.com'
-
-# random stuff
-alias rec='cd ~/devel/splunk_etc/apps/idealo_recalc/bin && source venv_recalc/bin/activate'
-alias mark='cd ~/mega/docs/wohnung/markgrafendamm'
-alias r2492='cd ~/devel/services/researches/DWH-2492'
+source ~/.bash_aliases_local
