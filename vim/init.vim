@@ -416,12 +416,12 @@ let g:formatters_scala = ['scalafmt']
 
 
 " ensime
-Plug 'ensime/ensime-vim'
+" Plug 'ensime/ensime-vim'
 " install instructions:
 " ~ » pip2 install websocket-client sexpdata
 " in nvim:
 " :UpdateRemotePlugins
-autocmd BufWritePost *.scala :EnTypeCheck
+" autocmd BufWritePost *.scala :EnTypeCheck
 "nnoremap <localleader>t :EnTypeCheck<CR>
 
 
