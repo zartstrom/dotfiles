@@ -405,14 +405,14 @@ Plug 'dleonard0/pony-vim-syntax'
 
 
 " vim-scala
-Plug 'derekwyatt/vim-scala'
+" Plug 'derekwyatt/vim-scala'
 
 
 " vim-autoformat
-Plug 'Chiel92/vim-autoformat'
-noremap <F5> :Autoformat<CR>
-let g:formatdef_scalafmt = "'scalafmt --config ~/.config/scalafmt/.scalafmt.conf --stdin'"
-let g:formatters_scala = ['scalafmt']
+"Plug 'Chiel92/vim-autoformat'
+"noremap <F5> :Autoformat<CR>
+"let g:formatdef_scalafmt = "'scalafmt --config ~/.config/scalafmt/.scalafmt.conf --stdin'"
+"let g:formatters_scala = ['scalafmt']
 
 
 " ensime
@@ -426,13 +426,13 @@ let g:formatters_scala = ['scalafmt']
 
 
 " sbt-vim
-Plug 'ktvoelker/sbt-vim'
+" Plug 'ktvoelker/sbt-vim'
 
 
 " vim-scripts/scala.vim - syntax highlighting
 "Plug 'vim-scripts/scala.vim'
 
-au BufRead,BufNewFile *.scala set filetype=scala
+" au BufRead,BufNewFile *.scala set filetype=scala
 "au! Syntax scala source ~/.vim/plugged/scala.vim/syntax/scala.vim
 
 
