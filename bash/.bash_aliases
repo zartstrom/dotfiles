@@ -29,21 +29,15 @@ alias amx="alsamixer"
 alias git_root='cd "$(git rev-parse --show-toplevel)"'
 alias gitroot='cd "$(git rev-parse --show-toplevel)"'
 
+# tmux-cssh
+alias tx="tmux-cssh -cs"
+
 # export PYTHONPATH=$PWD
 alias pypa='export PYTHONPATH=$PWD; echo set PYTHONPATH to: $PYTHONPATH'
 alias ppwd='export PYTHONPATH=$PWD:${PYTHONPATH}; echo set PYTHONPATH to: $PYTHONPATH'
 alias pp_splunk='export PYTHONPATH=$(splunk_env.sh); echo "exported PYTHONPATH =\n$PYTHONPATH" | sed -e "s/:/:\n/g"'
 
 alias bpyvenv='$VIRTUAL_ENV/bin/bpython'  # wrap it in script for error messages
-
-# backend
-backend_path="${HOME}/devel/backend"  # backend_root
-alias “='workon backend; cd "$backend_path"; export OAUTHLIB_INSECURE_TRANSPORT=1'  # “ = ALT-GR + b
-alias ‘='“; ›; “' # ‘ = ALT-GR + SHIFT + b
-
-# splunk_etc
-splunk_etc_path="${HOME}/devel/splunk_etc"
-alias ſ='workon splunk_etc; splunk_env.sh'
 
 # idealo samba
 alias samba='idealo_samba.sh'
