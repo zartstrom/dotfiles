@@ -99,6 +99,10 @@ softlink_dotfiles_home("i3/i3exit.sh", "scripts/i3exit.sh")
 softlink_dotfiles_home("i3/lock.sh", "scripts/lock.sh")
 softlink_dotfiles_home("i3/from_here.sh", "scripts/from_here.sh")
 
+# kitty
+mkdir_p_from_home(".config/kitty")
+softlink_dotfiles_home("kitty/kitty.conf", ".config/kitty/kitty.conf")
+
 # python / myrandr
 display_header("myrandr")
 # TODO: create venv_myrandr and do "pip install --editable ." to create myrandr executable.
