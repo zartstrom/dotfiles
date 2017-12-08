@@ -12,4 +12,5 @@ cp $DOTFILES/conf/slim.conf /etc/slim.conf
 cp $DOTFILES/conf/locale.conf /etc/locale.conf
 cp $DOTFILES/conf/10-keyboard.conf /etc/X11/xorg.conf.d/10-keyboard.conf
 cp $DOTFILES/conf/vconsole.conf /etc/vconsole.conf
+cp $DOTFILES/conf/main.conf /etc/bluetooth/main.conf
 
