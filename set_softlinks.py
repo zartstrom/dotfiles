@@ -100,8 +100,14 @@ softlink_dotfiles_home("i3/lock.sh", "scripts/lock.sh")
 softlink_dotfiles_home("i3/from_here.sh", "scripts/from_here.sh")
 
 # kitty
+display_header("kitty")
 mkdir_p_from_home(".config/kitty")
 softlink_dotfiles_home("kitty/kitty.conf", ".config/kitty/kitty.conf")
+
+# pulse
+display_header("pulse")
+mkdir_p_from_home(".config/pulse")
+softlink_dotfiles_home("pulse/default.pa", ".config/pulse/default.pa")
 
 # python / myrandr
 display_header("myrandr")
