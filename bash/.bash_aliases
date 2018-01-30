@@ -30,7 +30,7 @@ alias git_root='cd "$(git rev-parse --show-toplevel)"'
 alias gitroot='cd "$(git rev-parse --show-toplevel)"'
 
 # tmux-cssh
-alias tx="tmux-cssh -cs"
+alias tx="~/scripts/tmux-cssh.sh"
 
 # export PYTHONPATH=$PWD
 alias pypa='export PYTHONPATH=$PWD; echo set PYTHONPATH to: $PYTHONPATH'
