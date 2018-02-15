@@ -504,6 +504,9 @@ Plug 'freeo/vim-kalisi'
 " startify
 Plug 'mhinz/vim-startify'
 
+" terraform
+Plug 'hashivim/vim-terraform'
+
 " Add plugins to &runtimepath
 call plug#end()
 
