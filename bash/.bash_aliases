@@ -44,4 +44,6 @@ alias samba='idealo_samba.sh'
 
 alias dm_dev='eval $(docker-machine env dev)'
 
+alias ipinfo="$HOME/scripts/what_is_my_ip.sh"
+
 source ~/.bash_aliases_local
