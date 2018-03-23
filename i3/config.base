@@ -164,7 +164,7 @@ set $T5 "15:5 "
 set $T6 "16:6 "
 set $T7 "17:7 "
 set $T8 "18:8 "
-set $mysql "21:mysql "
+set $sql "21:sql "
 set $music "31:music "
 
 # switch to workspace
@@ -262,7 +262,8 @@ assign [class="Google-chrome"] → $chrome
 assign [class="google-chrome"] → $chrome
 assign [class="chromium"] → $chrome
 assign [class="^Opera$"] → $opera
-assign [class="^Mysql-workbench-bin$"] → $mysql
+assign [class="^Mysql-workbench-bin$"] → $sql
+assign [class="^DBeaver$"] → $sql
 #assign [class="^SWT$"] → $spoon  # spoon has a funky WM_CLASS
 #assign [class="^java-lang-Thread$"] → $ireport  # ireport has a funky WM_CLASS too
 assign [class="^Nightingale$"] → $music
