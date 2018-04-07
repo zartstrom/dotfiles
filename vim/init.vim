@@ -394,10 +394,10 @@ autocmd BufWritePost *.js :JSHint
 
 
 " Markdown
-Plug 'godlygeek/tabular'
-Plug 'plasticboy/vim-markdown'
+"Plug 'godlygeek/tabular'
+"Plug 'plasticboy/vim-markdown'
 
-let g:vim_markdown_folding_disabled = 1
+"let g:vim_markdown_folding_disabled = 1
 
 
 " pony vim syntax
@@ -495,7 +495,7 @@ Plug 'mhartington/oceanic-next'
 
 
 " vim-gitgutter
-Plug 'airblade/vim-gitgutter'
+"Plug 'airblade/vim-gitgutter'
 
 
 " vim-kalisi colorscheme
@@ -504,8 +504,14 @@ Plug 'freeo/vim-kalisi'
 " startify
 Plug 'mhinz/vim-startify'
 
+
 " terraform
 Plug 'hashivim/vim-terraform'
+
+" vial-http
+Plug 'baverman/vial'
+Plug 'baverman/vial-http'
+
 
 " Add plugins to &runtimepath
 call plug#end()
