@@ -299,7 +299,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 
 " Python-Mode
-Plug 'klen/python-mode'
+Plug 'python-mode/python-mode'
 
 let g:pymode_virtualenv = 1
 let g:pymode_run = 0        " disable run code
@@ -332,40 +332,45 @@ let g:pymode_options_max_line_length = 120
 let g:pymode_lint_options_pep8 = {'max_line_length': g:pymode_options_max_line_length}
 map <leader>p :PymodeLint<CR>
 
+
+" Asynchronous Lint Engine
+Plug 'w0rp/ale'
+
+
 " neomake
-Plug 'neomake/neomake'
-" {{{
-    " neomake is async => it doesn't block the editor
-    "let g:neomake_python_enabled_makers = ['pep8', 'pylint']
-    let g:neomake_python_enabled_makers = ['pylint']
-    let g:neomake_python_pylint_maker = {
-        \ 'exe': '/home/phil/.virtualenvs/lint/bin/pylint',
-        \ 'args': [
-            \ '--rcfile=/home/phil/.pylintrc',
-            \ '--output-format=text',
-            \ '--msg-template="{path}:{line}:{column}:{C}: [{symbol}] {msg}"',
-            \ '--reports=no'
-        \ ],
-        \ 'errorformat':
-            \ '%A%f:%l:%c:%t: %m,' .
-            \ '%A%f:%l: %m,' .
-            \ '%A%f:(%l): %m,' .
-            \ '%-Z%p^%.%#,' .
-            \ '%-G%.%#',
-        \ 'postprocess': function('neomake#makers#ft#python#PylintEntryProcess')
-        \ }
-    let g:neomake_python_pep8_maker = {
-        \ 'exe': '/home/phil/.virtualenvs/lint/bin/pep8',
-        \ 'args': ['--max-line-length=120', '--ignore=E115,E266']
-        \ }
-    let g:neomake_verbose = 0
+"Plug 'neomake/neomake'
+"" {{{
+"    " neomake is async => it doesn't block the editor
+"    "let g:neomake_python_enabled_makers = ['pep8', 'pylint']
+"    let g:neomake_python_enabled_makers = ['pylint']
+"    let g:neomake_python_pylint_maker = {
+"        \ 'exe': '/home/phil/.virtualenvs/lint/bin/pylint',
+"        \ 'args': [
+"            \ '--rcfile=/home/phil/.pylintrc',
+"            \ '--output-format=text',
+"            \ '--msg-template="{path}:{line}:{column}:{C}: [{symbol}] {msg}"',
+"            \ '--reports=no'
+"        \ ],
+"        \ 'errorformat':
+"            \ '%A%f:%l:%c:%t: %m,' .
+"            \ '%A%f:%l: %m,' .
+"            \ '%A%f:(%l): %m,' .
+"            \ '%-Z%p^%.%#,' .
+"            \ '%-G%.%#',
+"        \ 'postprocess': function('neomake#makers#ft#python#PylintEntryProcess')
+"        \ }
+"    let g:neomake_python_pep8_maker = {
+"        \ 'exe': '/home/phil/.virtualenvs/lint/bin/pep8',
+"        \ 'args': ['--max-line-length=120', '--ignore=E115,E266']
+"        \ }
+"    let g:neomake_verbose = 0
 
-    let g:neomake_warning_sign={'text': 'W>', 'texthl': 'NeomakeWarningMsg'}
-    let g:neomake_error_sign={'text': 'E>', 'texthl': 'NeomakeErrorMsg'}
+"    let g:neomake_warning_sign={'text': 'W>', 'texthl': 'NeomakeWarningMsg'}
+"    let g:neomake_error_sign={'text': 'E>', 'texthl': 'NeomakeErrorMsg'}
 
-    " run neomake on the current file on every write:
-    autocmd! BufWritePost * Neomake
-" }}}
+"    " run neomake on the current file on every write:
+"    autocmd! BufWritePost * Neomake
+"" }}}
 "function SetPython2()
 "    let g:syntastic_python_flake8_exec = 'python2'
 "    let g:syntastic_python_flake8_args = ['-m', 'flake8']
@@ -442,7 +447,7 @@ nnoremap <leader>xp :XPathSearchPrompt<CR>
 
 
 " virtualenv
-"Plug 'jmcantrell/vim-virtualenv'
+Plug 'plytophogy/vim-virtualenv'
 
 
 " YouCompleteMe
@@ -489,6 +494,9 @@ map <leader>n :NERDTreeToggle<CR>
 
 " solarized colorscheme
 Plug 'altercation/vim-colors-solarized'
+
+" LineDiff
+Plug 'AndrewRadev/linediff.vim'
 
 " oceanic-next colorscheme
 Plug 'mhartington/oceanic-next'
