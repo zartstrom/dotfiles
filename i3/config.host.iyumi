@@ -1,7 +1,7 @@
 
 
 # exec thunderbird
-exec opera
+exec firefox
 
 workspace "18:8 " output eDP-1
 
