@@ -135,6 +135,7 @@ softlink_dotfiles_home("scripts/touchpad_toggle.sh", "scripts/touchpad_toggle.sh
 softlink_dotfiles_home("scripts/svg2png.sh", "scripts/svg2png.sh")
 softlink_dotfiles_home("scripts/autorandr", "scripts/autorandr")
 softlink_dotfiles_home("scripts/what_is_my_ip.sh", "scripts/what_is_my_ip.sh")
+softlink_dotfiles_home("scripts/bluetoothctl.exp", "scripts/bluetoothctl.exp")
 
 # vim
 display_header("vim")
