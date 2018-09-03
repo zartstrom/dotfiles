@@ -323,9 +323,9 @@ let g:pymode_lint = 1
 let g:pymode_lint_signs = 1
 
 "let g:pymode_lint_checkers = ['pylint', 'pyflakes', 'pep8', 'mccabe', 'pep257']
-let g:pymode_lint_checkers = ['pylint', 'pep8']
-"let g:pymode_lint_checkers = ['pylint']
-let g:pymode_lint_mccabe_complexity = 10
+"let g:pymode_lint_checkers = ['pylint', 'pep8']
+let g:pymode_lint_checkers = ['pylint', 'pyflakes']
+let g:pymode_lint_mccabe_complexity = 7
 let g:pymode_lint_ignore = "E501,E127,E126,E265,I,C0110,C0111,D102,D202,D401"
 let g:pymode_lint_maxheight = 5
 let g:pymode_lint_unmodified = 0
