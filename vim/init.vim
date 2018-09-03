@@ -294,6 +294,16 @@ let g:ctrlp_custom_ignore = {
   \ }
 
 
+" Easy Align
+Plug 'junegunn/vim-easy-align'
+
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
+
+
 " Fuzzy Finder
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
@@ -311,6 +321,7 @@ let g:pymode_motion = 1
 let g:pymode_trim_whitespace = 1
 let g:pymode_lint = 1
 let g:pymode_lint_signs = 1
+
 "let g:pymode_lint_checkers = ['pylint', 'pyflakes', 'pep8', 'mccabe', 'pep257']
 let g:pymode_lint_checkers = ['pylint', 'pep8']
 "let g:pymode_lint_checkers = ['pylint']
