@@ -138,11 +138,11 @@ map <Space> <Plug>(easymotion-prefix)
 
 
 " LaTeX-Box
-Plug 'LaTeX-Box-Team/LaTeX-Box'
+"Plug 'LaTeX-Box-Team/LaTeX-Box'
 
-let g:LatexBox_latexmk_options = "-pvc -pdfps"
-let g:LatexBox_latexmk_async = 1
-nnoremap <leader>ll :Latexmk<CR>
+"let g:LatexBox_latexmk_options = "-pvc -pdfps"
+"let g:LatexBox_latexmk_async = 1
+"nnoremap <leader>ll :Latexmk<CR>
 
 
 " surround.vim - quotes, brackets and (html-)tags
@@ -200,19 +200,19 @@ Plug 'ervandew/supertab'
 
 
 " UltiSnips
-Plug 'SirVer/ultisnips'
+"Plug 'SirVer/ultisnips'
 
-"" make YCM compatible with UltiSnips (using supertab)
-let g:ycm_key_list_select_completion = ['<tab>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<s-tab>', '<Up>']
-let g:SuperTabDefaultCompletionType = '<C-n>'
+""" make YCM compatible with UltiSnips (using supertab)
+"let g:ycm_key_list_select_completion = ['<tab>', '<Down>']
+"let g:ycm_key_list_previous_completion = ['<s-tab>', '<Up>']
+"let g:SuperTabDefaultCompletionType = '<C-n>'
 
-"" better key bindings for UltiSnipsExpandTrigger
-let g:UltiSnipsExpandTrigger = "<c-e>"
-let g:UltiSnipsJumpForwardTrigger = "<c-n>"
-let g:UltiSnipsJumpBackwardTrigger = "<c-p>"
+""" better key bindings for UltiSnipsExpandTrigger
+"let g:UltiSnipsExpandTrigger = "<c-e>"
+"let g:UltiSnipsJumpForwardTrigger = "<c-n>"
+"let g:UltiSnipsJumpBackwardTrigger = "<c-p>"
 
-let g:UltiSnipsSnippetsDir = "~/.config/nvim/UltiSnips"
+"let g:UltiSnipsSnippetsDir = "~/.config/nvim/UltiSnips"
 
 
 " vim-snippets
@@ -260,29 +260,6 @@ let g:airline_symbols.maxlinenr = '≡'
 "let g:airline_symbols.space = "\ua0"
 "let g:airline_symbols.space = " "
 set laststatus=2
-
-
-" vimwiki
-Plug 'vimwiki/vimwiki'
-
-nnoremap <leader>wa :VimwikiAll2HTML<CR><CR>:e<CR>
-let vimwiki_path='/home/philipp/vimwiki/'
-let vimwiki_export_path='/home/philipp/vimwiki_html/'
-let wiki_settings={
-\ 'template_path': vimwiki_path.'templates/',
-\ 'template_default': 'default',
-\ 'template_ext': '.html',
-\ 'auto_export': 0,
-\ 'nested_syntaxes': {'js': 'javascript', 'python': 'python'}
-\ }
-
-let wiki=copy(wiki_settings)
-let wiki.path = vimwiki_path
-let wiki.path_html = vimwiki_export_path
-let wiki.diary_index = 'index'
-let wiki.diary_rel_path = 'diary/'
-" call add(g:vimwiki_list, wiki)
-let g:vimwiki_list = [wiki]
 
 
 " CtrlP-Plugin
@@ -421,8 +398,20 @@ Plug 'dleonard0/pony-vim-syntax'
 
 
 " vim-scala
-" Plug 'derekwyatt/vim-scala'
+Plug 'derekwyatt/vim-scala'
 
+au BufRead,BufNewFile *.sbt set filetype=scala
+
+" vim language server protocol
+Plug 'natebosch/vim-lsc'
+
+let g:lsc_enable_autocomplete = v:false
+let g:lsc_server_commands = {
+  \ 'scala': 'metals-vim'
+  \}
+let g:lsc_auto_map = {
+    \ 'GoToDefinition': 'gd',
+    \}
 
 " vim-autoformat
 "Plug 'Chiel92/vim-autoformat'
@@ -462,21 +451,21 @@ Plug 'plytophogy/vim-virtualenv'
 
 
 " YouCompleteMe
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+"Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 
-let g:ycm_goto_same_buffer = 0
-let g:ycm_goto_buffer_command = 'same-buffer'
-let g:ycm_complete_in_comments = 1
-let g:ycm_collect_identifiers_from_comments_and_strings = 0
-let g:ycm_collect_identifiers_from_tags_files = 1
-let g:ycm_seed_identifiers_with_syntax = 1
-let g:ycm_semantic_triggers =  {}
-let g:ycm_filepath_completion_use_working_dir = 1
-let g:ycm_show_diagnostics_ui = 0
-let g:ycm_server_log_level = 'info'
+"let g:ycm_goto_same_buffer = 0
+"let g:ycm_goto_buffer_command = 'same-buffer'
+"let g:ycm_complete_in_comments = 1
+"let g:ycm_collect_identifiers_from_comments_and_strings = 0
+"let g:ycm_collect_identifiers_from_tags_files = 1
+"let g:ycm_seed_identifiers_with_syntax = 1
+"let g:ycm_semantic_triggers =  {}
+"let g:ycm_filepath_completion_use_working_dir = 1
+"let g:ycm_show_diagnostics_ui = 0
+"let g:ycm_server_log_level = 'info'
 
-nnoremap <leader>jD :YcmCompleter GoToDefinitionElseDeclaration<CR>
-nnoremap <leader>jd :YcmCompleter GoToDeclaration<CR>
+"nnoremap <leader>jD :YcmCompleter GoToDefinitionElseDeclaration<CR>
+"nnoremap <leader>jd :YcmCompleter GoToDeclaration<CR>
 
 
 " vim-yaml
