@@ -13,7 +13,8 @@ set $menu dmenu_run
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-# output eDP-1 resolution 1600x900 position 0,0
+output eDP-1 resolution 1600x900 position 0,0
+output DP-4 resolution 1920x1080 position 1600,0
 output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 #
 # Example configuration:
@@ -107,11 +108,11 @@ set $base0F #fcc09e
 set $base10 #ff0000
 
 # Window Colors
-#                       border     background     text       indicator
-client.focused          $base01    $base01        $base07    $base03
-client.focused_inactive $base02    $base02        $base03    $base03
-client.unfocused        $base02    $base02        $base03    $base03
-client.urgent           $base10    $base10        $base07    $base03
+#                       border     background     text       indicator  child_border
+client.focused          $base01    $base01        $base07    $base03    $base01
+client.focused_inactive $base02    $base02        $base03    $base03    $base02
+client.unfocused        $base02    $base02        $base03    $base03    $base02
+client.urgent           $base10    $base10        $base07    $base03    $base10
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
