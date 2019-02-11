@@ -110,6 +110,7 @@ mkdir_p_from_home(".config/pulse")
 softlink_dotfiles_home("pulse/default.pa", ".config/pulse/default.pa")
 
 # python / myrandr
+# TODO: not needed in sway
 display_header("myrandr")
 # TODO: create venv_myrandr and do "pip install --editable ." to create myrandr executable.
 create_softlink(os.path.join(HOME, "repos/myrandr/venv_myrandr/bin/myrandr"), os.path.join(HOME, "scripts/myrandr"))
@@ -136,6 +137,11 @@ softlink_dotfiles_home("scripts/svg2png.sh", "scripts/svg2png.sh")
 softlink_dotfiles_home("scripts/autorandr", "scripts/autorandr")
 softlink_dotfiles_home("scripts/what_is_my_ip.sh", "scripts/what_is_my_ip.sh")
 softlink_dotfiles_home("scripts/bluetoothctl.exp", "scripts/bluetoothctl.exp")
+
+# sway
+display_header("sway")
+mkdir_p_from_home(".config/sway")
+softlink_dotfiles_home("sway/config", ".config/sway/config")
 
 # vim
 display_header("vim")
