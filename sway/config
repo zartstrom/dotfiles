@@ -339,7 +339,7 @@ assign [class="^jetbrains-datagrip$"] → $sql
 assign [class="^Nightingale$"] → $music
 
 exec megasync
-exec nm-applet
+exec --no-startup-id nm-applet --sm-disable
 
 
 # exec thunderbird
