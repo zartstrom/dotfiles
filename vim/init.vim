@@ -414,10 +414,11 @@ let g:lsc_auto_map = {
     \}
 
 " vim-autoformat
-"Plug 'Chiel92/vim-autoformat'
-"noremap <F5> :Autoformat<CR>
+Plug 'Chiel92/vim-autoformat'
+noremap <F5> :Autoformat<CR>
 "let g:formatdef_scalafmt = "'scalafmt --config ~/.config/scalafmt/.scalafmt.conf --stdin'"
-"let g:formatters_scala = ['scalafmt']
+let g:formatdef_scalafmt = "'scalafmt --stdin'"
+let g:formatters_scala = ['scalafmt']
 
 
 " ensime
