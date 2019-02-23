@@ -25,8 +25,9 @@ def create_softlink(source, target):
     except OSError, exc:
         # TODO: check if file is the desired softlink or some other file
         if "File exists" in exc:
-            msg = "File already exists"
-            print "%-20s: %s" % (msg, target)
+            pass
+            # msg = "File already exists"
+            # print "%-20s: %s" % (msg, target)
         else:
             msg = "Unexpected error"
             print "%-20s: %s" % (msg, exc)
@@ -49,7 +50,6 @@ def softlink_pattern(source_path_dotfiles, target_path_home, extension="txt"):
 
 
 def display_header(section):
-    print
     print "--- %s ---" % section
 
 
@@ -142,6 +142,11 @@ softlink_dotfiles_home("scripts/bluetoothctl.exp", "scripts/bluetoothctl.exp")
 display_header("sway")
 mkdir_p_from_home(".config/sway")
 softlink_dotfiles_home("sway/config", ".config/sway/config")
+
+# termite
+display_header("termite")
+mkdir_p_from_home(".config/termite")
+softlink_dotfiles_home("termite/config", ".config/termite/config")
 
 # vim
 display_header("vim")
