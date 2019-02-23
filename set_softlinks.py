@@ -1,6 +1,7 @@
 #!/usr/bin/python2
 import errno
 import os
+import subprocess
 
 
 def mkdir_p(path):
@@ -47,6 +48,11 @@ def softlink_pattern(source_path_dotfiles, target_path_home, extension="txt"):
         source = os.path.join(source_path, file_)
         target = os.path.join(target_path, file_)
         create_softlink(source, target)
+
+
+def run(script):
+    # script is string containing some "folder/to/my.sh"
+    subprocess.call(script, shell=True)
 
 
 def display_header(section):
@@ -146,7 +152,10 @@ softlink_dotfiles_home("sway/config", ".config/sway/config")
 # termite
 display_header("termite")
 mkdir_p_from_home(".config/termite")
-softlink_dotfiles_home("termite/config", ".config/termite/config")
+softlink_dotfiles_home("termite/option", ".config/termite/option")
+mkdir_p_from_home(".config/termite/color")
+softlink_dotfiles_home("termite/color_default", ".config/termite/color/default")
+run("termite/color_switcher_setup.sh")
 
 # vim
 display_header("vim")
