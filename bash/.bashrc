@@ -115,7 +115,3 @@ export PATH
 
 complete -C /usr/bin/vault vault
 
-# java stuff
-export _JAVA_AWT_WM_NONREPARENTING=1
-export JAVA_FONTS=/usr/share/fonts/TTF
-
