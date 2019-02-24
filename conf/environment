@@ -1,0 +1,9 @@
+#
+# This file is parsed by pam_env module
+#
+# Syntax: simple "KEY=VAL" pairs on separate lines
+#
+
+# java stuff
+export _JAVA_AWT_WM_NONREPARENTING=1
+export JAVA_FONTS=/usr/share/fonts/TTF

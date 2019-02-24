@@ -88,7 +88,7 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
 if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+    source "$HOME/.bash_aliases"
 fi
 
 # enable programmable completion features (you don't need to enable
@@ -114,3 +114,8 @@ export PATH
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 complete -C /usr/bin/vault vault
+
+# java stuff
+export _JAVA_AWT_WM_NONREPARENTING=1
+export JAVA_FONTS=/usr/share/fonts/TTF
+

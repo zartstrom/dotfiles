@@ -74,6 +74,9 @@ export PATH=$PATH:/usr/lib/hadoop/bin
 
 # java
 export JAVA_HOME=/usr/lib/jvm/default
+export JAVA_FONTS=/usr/share/fonts/TTF
+export _JAVA_AWT_WM_NONREPARENTING=1
+
 # ruby
 export PATH=$PATH:~/.gem/ruby/2.3.0/bin
 export PATH=$PATH:~/.gem/ruby/2.4.0/bin
