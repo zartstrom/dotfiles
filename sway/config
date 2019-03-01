@@ -15,6 +15,11 @@ set $menu dmenu_run
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 output eDP-1 resolution 1600x900 position 0,0
 output DP-4 resolution 1920x1080 position 1600,0
+
+output LVDS-1 resolution 1366x786 position 0,0
+output HDMI-A-2 resolution 1920x1080 position 1366,0
+output HDMI-A-3 resolution 1920x1080 position 3286,0
+
 output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 #
 # Example configuration:

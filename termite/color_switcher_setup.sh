@@ -8,9 +8,11 @@ TERMITE_COLOR_SWITCHER_DIR="termite-color-switcher"
 if [ ! -d "$TERMITE_COLOR_SWITCHER_DIR" ]; then
     git clone https://github.com/NearHuscarl/termite-color-switcher.git
 fi
+pwd
 cd "$TERMITE_COLOR_SWITCHER_DIR" || exit
 git pull --rebase
 
+pwd
 cp "color/*" "$HOME/.config/termite/color/"
 
 # ~/scripts is in $PATH
