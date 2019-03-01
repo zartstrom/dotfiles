@@ -517,6 +517,9 @@ Plug 'mhinz/vim-startify'
 " terraform
 Plug 'hashivim/vim-terraform'
 
+" unicode vim
+Plug 'chrisbra/unicode.vim'
+
 " vial-http
 Plug 'baverman/vial'
 Plug 'baverman/vial-http'
