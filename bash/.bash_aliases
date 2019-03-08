@@ -46,5 +46,7 @@ alias dm_dev='eval $(docker-machine env dev)'
 
 alias ipinfo="$HOME/scripts/what_is_my_ip.sh"
 
+alias cat="bat -p"
+
 source "$HOME/.bash_aliases_local"
 
