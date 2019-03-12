@@ -50,3 +50,5 @@ alias cat="bat -p"
 
 source "$HOME/.bash_aliases_local"
 
+alias cat="bat -p"
+

@@ -148,6 +148,7 @@ softlink_dotfiles_home("scripts/bluetoothctl.exp", "scripts/bluetoothctl.exp")
 display_header("sway")
 mkdir_p_from_home(".config/sway")
 softlink_dotfiles_home("sway/config", ".config/sway/config")
+softlink_dotfiles_home("sway/swayexit.sh", "scripts/swayexit.sh")
 
 # termite
 display_header("termite")

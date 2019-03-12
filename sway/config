@@ -13,8 +13,8 @@ set $menu dmenu_run
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output eDP-1 resolution 1600x900 position 0,0
-output DP-4 resolution 1920x1080 position 1600,0
+# output eDP-1 resolution 1600x900 position 0,0
+# output DP-4 resolution 1920x1080 position 1600,0
 
 output LVDS-1 resolution 1366x786 position 0,0
 output HDMI-A-2 resolution 1920x1080 position 1366,0
@@ -74,10 +74,10 @@ input "6058:20564:ThinkPad_Extra_B" {
 }
 
 exec swayidle -w \
-        timeout 10800 'swaylock -f -c 000000' \
+        timeout 1800 'swaylock-blur' \
         timeout 12000 'swaymsg "output * dpms off"' \
         resume 'swaymsg "output * dpms on"' \
-        before-sleep 'swaylock -f -c 000000'
+        before-sleep 'swaylock-blur'
 
 # i3 config file (v4)
 #
@@ -279,7 +279,7 @@ bindsym $mod+Shift+r restart
 
 # lock the screen with i3lock. Memo: lock with "b"-lock
 # TODO: check for sway alternative
-bindsym $mod+Shift+b exec $HOME/scripts/i3exit.sh lock
+bindsym $mod+Shift+b exec swaylock-blur
 
 # use full path $HOME/scripts/i3exit.sh, seems to be more reliable.
 # Look at i3 $PATH: `tr '\0' '\n' </proc/$(pidof i3)/environ | grep PATH`
