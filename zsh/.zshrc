@@ -46,7 +46,7 @@ ZSH_THEME="af-magic-light"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(autojump git gitfast virtualenv virtualenvwrapper pyenv pylint rsync python history ssh-agent bower pip npm zsh-syntax-highlighting per-directory-history)
+plugins=(autojump git gitfast virtualenv virtualenvwrapper pyenv pylint rsync python history ssh-agent bower pip npm per-directory-history)
 
 # User configuration
 setopt interactivecomments
