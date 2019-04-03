@@ -55,6 +55,9 @@ export PATH=$HOME/bin:$HOME/scripts:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 source $ZSH/oh-my-zsh.sh
 source $HOME/.bash_aliases
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 # set default editor to nvim, some applications use this envvar
 export EDITOR=nvim
