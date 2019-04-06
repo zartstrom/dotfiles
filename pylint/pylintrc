@@ -1,5 +1,5 @@
 [MASTER]
-init-hook="import os, sys; sys.path.append(os.environ['VIRTUAL_ENV'] + '/lib/python2.7/site-packages'); print(sys.path)"
+init-hook="import os, sys; venv = os.environ['VIRTUAL_ENV']; sys.path.extend(['%s/lib/python2.7/site-packages' % venv, '%s/lib/python3.7/site-packages' % venv]); print(sys.path)"
 
 [BASIC]
 docstring-min-length=50

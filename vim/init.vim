@@ -47,6 +47,7 @@ let maplocalleader = "-"
 
 """ PYTHON
 let g:python_host_prog = '/usr/bin/python2'
+let g:python3_host_prog = '/usr/bin/python'
 
 
 """ MOVEMENT
@@ -510,6 +511,9 @@ Plug 'mhartington/oceanic-next'
 " vim-kalisi colorscheme
 Plug 'freeo/vim-kalisi'
 
+" vim-scripts/peaksea colorscheme
+Plug 'vim-scripts/peaksea'
+
 " startify
 Plug 'mhinz/vim-startify'
 
@@ -540,6 +544,7 @@ filetype plugin indent on
 "set background=dark
 set background=light
 colorscheme kalisi
+"colorscheme peaksea
 
 "colorscheme ron
  "further settings for colorscheme ron:
