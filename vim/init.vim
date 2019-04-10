@@ -507,6 +507,9 @@ Plug 'mhartington/oceanic-next'
 " vim-gitgutter
 "Plug 'airblade/vim-gitgutter'
 
+" 'vmchale/just-vim' Syntax highlighting for justfiles
+Plug 'vmchale/just-vim'
+
 
 " vim-kalisi colorscheme
 Plug 'freeo/vim-kalisi'
