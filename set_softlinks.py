@@ -176,11 +176,6 @@ softlink_dotfiles_home("X11/.Xmodmap", ".Xmodmap")
 # mouse config:
 softlink_dotfiles_home("X11/.imwheelrc", ".imwheelrc")
 
-# xfce4
-display_header("xfce4")
-mkdir_p_from_home(".config/xfce4/terminal")
-softlink_dotfiles_home("xfce4/terminalrc", ".config/xfce4/terminal/terminalrc")
-
 # zsh
 display_header("zsh")
 mkdir_p_from_home(".oh-my-zsh/themes")
