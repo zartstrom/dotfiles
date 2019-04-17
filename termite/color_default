@@ -1,7 +1,7 @@
 [colors]
 # If both of these are unset, cursor falls back to the foreground color,
 # and cursor_foreground falls back to the background color.
-#cursor = #dcdccc
+cursor = #16A085
 #cursor_foreground = #dcdccc
 
 #foreground = #dcdccc
@@ -31,4 +31,5 @@ color11 = #f0dfaf
 color12 = #94bff3
 color13 = #ec93d3
 color14 = #93e0e3
+# color14 = #2AA198
 color15 = #ffffff
