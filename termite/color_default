@@ -2,6 +2,7 @@
 # If both of these are unset, cursor falls back to the foreground color,
 # and cursor_foreground falls back to the background color.
 cursor = #16A085
+cursor_foreground = #ECF0F1
 #cursor_foreground = #dcdccc
 
 #foreground = #dcdccc
@@ -13,7 +14,7 @@ cursor = #16A085
 background        = rgba(39, 40, 34, 0.9)
 
 # If unset, will reverse foreground and background
-highlight = #2f2f2f
+#highlight = #2980B9
 
 # black
 color0  = #272822
