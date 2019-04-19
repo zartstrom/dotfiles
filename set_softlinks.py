@@ -27,8 +27,6 @@ def create_softlink(source, target):
         # TODO: check if file is the desired softlink or some other file
         if "File exists" in exc:
             pass
-            # msg = "File already exists"
-            # print "%-20s: %s" % (msg, target)
         else:
             msg = "Unexpected error"
             print "%-20s: %s" % (msg, exc)
@@ -61,7 +59,6 @@ def display_header(section):
 
 HOME = os.environ["HOME"]
 DOTFILES = os.path.join(HOME, "dotfiles")
-
 
 # bash
 display_header("bash")

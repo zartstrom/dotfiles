@@ -110,59 +110,48 @@ autocmd BufRead,BufNewFile *.conf setf dosini
 "hi BadWhitespace ctermbg=red guibg=#FF0000
 "autocmd BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 autocmd BufNewFile,BufRead *.js.vm   set syntax=python
+autocmd BufNewFile,BufRead *Jenkinsfile*   set syntax=groovy
 autocmd FileType pony setlocal shiftwidth=2 tabstop=2
 
 
 """ PLUGIN SECTION
 call plug#begin('~/.vim/plugged')
 
-
-" learn to write nvim plugins
-"Plug 'jacobsimpson/nvim-example-python-plugin'
-
 " ag aka the_silver_searcher
 Plug 'rking/ag.vim'
 
+" neoclide/coc.nvim
+Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+" 'pumvisible' read: popup menu visible
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+" Adds file type glyphs/icons to popular Vim plugins: NERDTree, vim-airline, Powerline, Unite, vim-startify and more
+Plug 'ryanoasis/vim-devicons'
 
 " git
 Plug 'tpope/vim-fugitive'
 
-
 " repeat
 Plug 'tpope/vim-repeat'
 
-
 " vim-easymotion
 Plug 'Lokaltog/vim-easymotion'
-
 map <Space> <Plug>(easymotion-prefix)
-
-
-" LaTeX-Box
-"Plug 'LaTeX-Box-Team/LaTeX-Box'
-
-"let g:LatexBox_latexmk_options = "-pvc -pdfps"
-"let g:LatexBox_latexmk_async = 1
-"nnoremap <leader>ll :Latexmk<CR>
-
 
 " surround.vim - quotes, brackets and (html-)tags
 Plug 'tpope/vim-surround'
 
-
 " abolish - develish good
 Plug 'tpope/vim-abolish'
 
-
 " NERDCommenter
 Plug 'scrooloose/nerdcommenter'
-
 map <leader>cc <leader>cl
 
 " js-beautify
 Plug 'maksimr/vim-jsbeautify'
 Plug 'einars/js-beautify'
-
 " autocmd FileType javascript vnoremap <buffer>  <C-f> :call RangeJsBeautify()<cr>
 " autocmd FileType html vnoremap <buffer> <C-f> :call RangeHtmlBeautify()<cr>
 " autocmd FileType css vnoremap <buffer> <C-f> :call RangeCSSBeautify()<cr>
@@ -171,34 +160,18 @@ autocmd FileType javascript noremap <leader>b :call JsBeautify()<cr>
 " for html
 autocmd FileType html noremap <leader>b :call HtmlBeautify()<cr>
 
-" delimitMate
-"Plug 'Raimondi/delimitMate'
-" I don't like it
-
 " taglist.vim
 Plug 'vim-scripts/taglist.vim'
 
 " python tagbar
 Plug 'majutsushi/tagbar'
-
 nmap <F8> :TagbarToggle<CR>
-
 
 " restructured text
 Plug 'Rykka/riv.vim'
 
-
 " R
 Plug 'jcfaria/Vim-R-plugin'
-
-
-" tern_for_vim
-Plug 'marijnh/tern_for_vim'
-
-
-" supertab
-Plug 'ervandew/supertab'
-
 
 " UltiSnips
 "Plug 'SirVer/ultisnips'
@@ -214,11 +187,6 @@ Plug 'ervandew/supertab'
 "let g:UltiSnipsJumpBackwardTrigger = "<c-p>"
 
 "let g:UltiSnipsSnippetsDir = "~/.config/nvim/UltiSnips"
-
-
-" vim-snippets
-Plug 'honza/vim-snippets'
-
 
 " vim-airline
 Plug 'vim-airline/vim-airline'
@@ -262,7 +230,6 @@ let g:airline_symbols.maxlinenr = '≡'
 "let g:airline_symbols.space = " "
 set laststatus=2
 
-
 " CtrlP-Plugin
 Plug 'kien/ctrlp.vim'
 
@@ -270,7 +237,6 @@ let g:ctrlp_custom_ignore = {
   \ 'dir': '\v[\/]\.(git|hg|svndoc|.ropeproject|backend.egg-info|node_modules)$',
   \ 'file': '\v\.(pyc|class)$',
   \ }
-
 
 " Easy Align
 Plug 'junegunn/vim-easy-align'
@@ -281,10 +247,8 @@ xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
 
-
 " Fuzzy Finder
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-
 
 " Python-Mode
 Plug 'python-mode/python-mode'
@@ -301,10 +265,9 @@ let g:pymode_lint = 1
 let g:pymode_lint_signs = 1
 
 "let g:pymode_lint_checkers = ['pylint', 'pyflakes', 'pep8', 'mccabe', 'pep257']
-"let g:pymode_lint_checkers = ['pylint', 'pep8']
-let g:pymode_lint_checkers = ['pylint', 'pyflakes']
-let g:pymode_lint_mccabe_complexity = 7
-let g:pymode_lint_ignore = "E501,E127,E126,E265,I,C0110,C0111,D102,D202,D401"
+let g:pymode_lint_checkers = ['pylint', 'pyflakes', 'mccabe']
+let g:pymode_lint_options_mccabe = { 'complexity': 5 }
+"let g:pymode_lint_ignore = "E501,E127,E126,E265,I,C0110,C0111,D102,D202,D401"
 let g:pymode_lint_maxheight = 5
 let g:pymode_lint_unmodified = 0
 let g:pymode_lint_on_write = 1
@@ -317,69 +280,11 @@ let g:pymode_rope = 0
 let ropevim_enable_shortcuts = 0
 let g:pymode_rope_vim_completion = 0
 "let g:pymode_rope_goto_def_newwin = "1"
-let g:pymode_options_max_line_length = 120
-let g:pymode_lint_options_pep8 = {'max_line_length': g:pymode_options_max_line_length}
+let g:pymode_lint_options_pep8 = {'max_line_length': 120}
 map <leader>p :PymodeLint<CR>
-
-
-" Asynchronous Lint Engine
-Plug 'w0rp/ale'
-
-
-" neomake
-"Plug 'neomake/neomake'
-"" {{{
-"    " neomake is async => it doesn't block the editor
-"    "let g:neomake_python_enabled_makers = ['pep8', 'pylint']
-"    let g:neomake_python_enabled_makers = ['pylint']
-"    let g:neomake_python_pylint_maker = {
-"        \ 'exe': '/home/phil/.virtualenvs/lint/bin/pylint',
-"        \ 'args': [
-"            \ '--rcfile=/home/phil/.pylintrc',
-"            \ '--output-format=text',
-"            \ '--msg-template="{path}:{line}:{column}:{C}: [{symbol}] {msg}"',
-"            \ '--reports=no'
-"        \ ],
-"        \ 'errorformat':
-"            \ '%A%f:%l:%c:%t: %m,' .
-"            \ '%A%f:%l: %m,' .
-"            \ '%A%f:(%l): %m,' .
-"            \ '%-Z%p^%.%#,' .
-"            \ '%-G%.%#',
-"        \ 'postprocess': function('neomake#makers#ft#python#PylintEntryProcess')
-"        \ }
-"    let g:neomake_python_pep8_maker = {
-"        \ 'exe': '/home/phil/.virtualenvs/lint/bin/pep8',
-"        \ 'args': ['--max-line-length=120', '--ignore=E115,E266']
-"        \ }
-"    let g:neomake_verbose = 0
-
-"    let g:neomake_warning_sign={'text': 'W>', 'texthl': 'NeomakeWarningMsg'}
-"    let g:neomake_error_sign={'text': 'E>', 'texthl': 'NeomakeErrorMsg'}
-
-"    " run neomake on the current file on every write:
-"    autocmd! BufWritePost * Neomake
-"" }}}
-"function SetPython2()
-"    let g:syntastic_python_flake8_exec = 'python2'
-"    let g:syntastic_python_flake8_args = ['-m', 'flake8']
-"endfunction
-"function SetPython3()
-"    let g:syntastic_python_flake8_exec = 'python3'
-"    let g:syntastic_python_flake8_args = ['-m', 'flake8']
-"endfunction
-"call SetPython2()
-
-
-" grep
-Plug 'yegappan/grep'
-
-let Grep_Skip_Files = '*.pyc'
-
 
 " idris
 Plug 'idris-hackers/idris-vim'
-
 
 " JSHint
 Plug 'walm/jshint.vim'
@@ -387,16 +292,8 @@ Plug 'walm/jshint.vim'
 autocmd BufWritePost *.js :JSHint
 
 
-" Markdown
-"Plug 'godlygeek/tabular'
-"Plug 'plasticboy/vim-markdown'
-
-"let g:vim_markdown_folding_disabled = 1
-
-
 " pony vim syntax
 Plug 'dleonard0/pony-vim-syntax'
-
 
 " vim-scala
 Plug 'derekwyatt/vim-scala'
@@ -421,98 +318,29 @@ noremap <F5> :Autoformat<CR>
 let g:formatdef_scalafmt = "'scalafmt --stdin'"
 let g:formatters_scala = ['scalafmt']
 
-
-" ensime
-" Plug 'ensime/ensime-vim'
-" install instructions:
-" ~ » pip2 install websocket-client sexpdata
-" in nvim:
-" :UpdateRemotePlugins
-" autocmd BufWritePost *.scala :EnTypeCheck
-"nnoremap <localleader>t :EnTypeCheck<CR>
-
-
-" sbt-vim
-" Plug 'ktvoelker/sbt-vim'
-
-
-" vim-scripts/scala.vim - syntax highlighting
-"Plug 'vim-scripts/scala.vim'
-
-" au BufRead,BufNewFile *.scala set filetype=scala
-"au! Syntax scala source ~/.vim/plugged/scala.vim/syntax/scala.vim
-
-
-" vim-xpath
-Plug 'actionshrimp/vim-xpath'
-nnoremap <leader>xp :XPathSearchPrompt<CR>
-
-
-" virtualenv
-Plug 'plytophogy/vim-virtualenv'
-
-
-" YouCompleteMe
-"Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
-
-"let g:ycm_goto_same_buffer = 0
-"let g:ycm_goto_buffer_command = 'same-buffer'
-"let g:ycm_complete_in_comments = 1
-"let g:ycm_collect_identifiers_from_comments_and_strings = 0
-"let g:ycm_collect_identifiers_from_tags_files = 1
-"let g:ycm_seed_identifiers_with_syntax = 1
-"let g:ycm_semantic_triggers =  {}
-"let g:ycm_filepath_completion_use_working_dir = 1
-"let g:ycm_show_diagnostics_ui = 0
-"let g:ycm_server_log_level = 'info'
-
-"nnoremap <leader>jD :YcmCompleter GoToDefinitionElseDeclaration<CR>
-"nnoremap <leader>jd :YcmCompleter GoToDeclaration<CR>
-
-
 " vim-yaml
 Plug 'stephpy/vim-yaml'
-
 
 " NERD
 Plug 'scrooloose/nerdtree'
 let NERDTreeIgnore = ['\.pyc$', '\.class$']
 map <leader>n :NERDTreeToggle<CR>
 
-
-" base16 colors
-"Plug 'chriskempson/base16-vim'
-
-
-" dgbPavim - PHP debugger
-"Plug brookhong/DBGPavim'
-
-"let g:dbgPavimBreakAtEntry = 0
-"let g:dbgPavimPort = 9000
-
-
-" cycle colorschemes
-" Plug 'vim-scripts/CycleColor'
-
+" Colorschemes
 " solarized colorscheme
 Plug 'altercation/vim-colors-solarized'
-
-" LineDiff
-Plug 'AndrewRadev/linediff.vim'
 
 " oceanic-next colorscheme
 Plug 'mhartington/oceanic-next'
 
+" vim-kalisi colorscheme
+Plug 'freeo/vim-kalisi'
 
-" vim-gitgutter
-"Plug 'airblade/vim-gitgutter'
+" LineDiff
+Plug 'AndrewRadev/linediff.vim'
 
 " 'vmchale/just-vim' Syntax highlighting for justfiles
 Plug 'vmchale/just-vim'
-
-
-" vim-kalisi colorscheme
-Plug 'freeo/vim-kalisi'
 
 " vim-scripts/peaksea colorscheme
 Plug 'vim-scripts/peaksea'
@@ -520,25 +348,17 @@ Plug 'vim-scripts/peaksea'
 " startify
 Plug 'mhinz/vim-startify'
 
-
 " terraform
 Plug 'hashivim/vim-terraform'
 
 " unicode vim
 Plug 'chrisbra/unicode.vim'
 
-" vial-http
-Plug 'baverman/vial'
-Plug 'baverman/vial-http'
-
-
-" Add plugins to &runtimepath
+" End plugins
 call plug#end()
-
 
 " End plugin section
 filetype plugin indent on
-
 
 """ COLOR
 "syntax enable
