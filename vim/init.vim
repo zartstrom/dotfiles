@@ -253,34 +253,41 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 " Python-Mode
 Plug 'python-mode/python-mode'
 
+let g:pymode_python = 'python3'
+
+" linting
+let g:pymode_lint = 1
+let g:pymode_lint_unmodified = 1
+let g:pymode_lint_on_fly = 0
+let g:pymode_lint_message = 1
+" Values may be chosen from: `pylint`, `pep8`, `mccabe`, `pep257`, `pyflakes`.
+let g:pymode_lint_checkers = ['pylint', 'mccabe', 'pyflakes']
+"let g:pymode_lint_ignore = 'E501,E127,E126,E265,I,C0110,C0111,D102,D202,D401'
+let g:pymode_lint_sort = ['E', 'W', 'C', 'I']
+let g:pymode_lint_signs = 1
+
+" linter options
+let g:pymode_lint_options_mccabe = { 'complexity': 5 }
+"let g:pymode_lint_options_pep8 = {'max_line_length': 120}
+let g:pymode_lint_options_pylint = {'max-line-length': 120}
+
 let g:pymode_virtualenv = 1
 let g:pymode_run = 0        " disable run code
 let g:pymode_folding = 0    " disable folding
 let g:pymode_syntax = 1
 let g:pymode_quickfix_minheight = 3
-let g:pymode_quickfix_maxheight = 6
+let g:pymode_quickfix_maxheight = 10
 let g:pymode_motion = 1
 let g:pymode_trim_whitespace = 1
-let g:pymode_lint = 1
-let g:pymode_lint_signs = 1
 
-"let g:pymode_lint_checkers = ['pylint', 'pyflakes', 'pep8', 'mccabe', 'pep257']
-let g:pymode_lint_checkers = ['pylint', 'pyflakes', 'mccabe']
-let g:pymode_lint_options_mccabe = { 'complexity': 5 }
-"let g:pymode_lint_ignore = "E501,E127,E126,E265,I,C0110,C0111,D102,D202,D401"
 let g:pymode_lint_maxheight = 5
-let g:pymode_lint_unmodified = 0
 let g:pymode_lint_on_write = 1
-let g:pymode_lint_on_fly = 0
 let g:pymode_lint_cwindow = 1
-let g:pymode_lint_message = 1
-let g:pymode_lint_sort = ['E', 'W', 'C', 'I']
 " disable rope, we use YCM
-let g:pymode_rope = 0
-let ropevim_enable_shortcuts = 0
-let g:pymode_rope_vim_completion = 0
+let g:pymode_rope = 1
+let ropevim_enable_shortcuts = 1
+let g:pymode_rope_vim_completion = 1
 "let g:pymode_rope_goto_def_newwin = "1"
-let g:pymode_lint_options_pep8 = {'max_line_length': 120}
 map <leader>p :PymodeLint<CR>
 
 " idris
