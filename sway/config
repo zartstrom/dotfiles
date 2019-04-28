@@ -75,10 +75,10 @@ input "6058:20564:ThinkPad_Extra_B" {
 }
 
 exec swayidle -w \
-        timeout 1800 'swaylock-blur' \
-        timeout 12000 'swaymsg "output * dpms off"' \
+        #timeout 1800 'swaylock-blur' \
+        timeout 300 'swaymsg "output * dpms off"' \
         resume 'swaymsg "output * dpms on"' \
-        before-sleep 'swaylock-blur'
+        #before-sleep 'swaylock-blur'
 
 # i3 config file (v4)
 #
@@ -234,16 +234,19 @@ set $mail "2:mail "
 set $opera "3:opera "
 set $chrome "4:chrome "
 set $firefox "5:firefox "
-set $T1 "11:1 🗔"
-set $T2 "12:2 🗔"
-set $T3 "13:3 🗔"
-set $T4 "14:4 🗔"
-set $T5 "15:5 🗔"
-set $T6 "16:6 🗔"
-set $T7 "17:7 🗔"
-set $T8 "18:8 🗔"
+set $T1 "11:1 "
+set $T2 "12:2 "
+set $T3 "13:3 "
+set $T4 "14:4 "
+set $T5 "15:5 "
+set $T6 "16:6 "
+set $T7 "17:7 "
+set $T8 "18:8 "
 set $sql "21:sql "
 set $music "31:music "
+
+workspace "18:8 " output eDP-1
+workspace "5:firefox " output DP-4
 
 # switch to workspace
 bindsym $mod+1 workspace $T1
@@ -335,7 +338,6 @@ bindsym $mod+r mode "resize"
 # Then add the (second?!) value from WM_CLASS here
 assign [class="^Thunderbird$"] → $mail
 assign [class="^Skype$"] → $chat
-assign [class="^HipChat$"] → $chat
 assign [class="^Firefox$"] → $firefox
 assign [class="Google-chrome-stable"] → $chrome
 assign [class="Google-chrome"] → $chrome
@@ -344,7 +346,7 @@ assign [class="google-chat-linux"] → $chat
 assign [class="chromium"] → $chrome
 assign [class="^Opera$"] → $opera
 assign [class="^Mysql-workbench-bin$"] → $sql
-assign [class="^DBeaver$"] → $sql
+assign [app_id="^DBeaver$"] → $sql
 assign [class="^jetbrains-datagrip$"] → $sql
 #assign [class="^SWT$"] → $spoon  # spoon has a funky WM_CLASS
 #assign [class="^java-lang-Thread$"] → $ireport  # ireport has a funky WM_CLASS too
@@ -356,8 +358,6 @@ exec --no-startup-id nm-applet --sm-disable
 
 # exec thunderbird
 exec firefox
-
-workspace "18:8 " output eDP-1
 
 
 # use full path $HOME/scripts/i3exit.sh
