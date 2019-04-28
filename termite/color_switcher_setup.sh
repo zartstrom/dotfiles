@@ -8,15 +8,15 @@ TERMITE_COLOR_SWITCHER_DIR="termite-color-switcher"
 if [ ! -d "$TERMITE_COLOR_SWITCHER_DIR" ]; then
     git clone https://github.com/NearHuscarl/termite-color-switcher.git
 fi
-pwd
+#pwd
 cd "$TERMITE_COLOR_SWITCHER_DIR" || exit
-git pull --rebase
+git pull --rebase > /dev/null
 
-pwd
-cp "color/*" "$HOME/.config/termite/color/"
+#pwd
+cp "color"/* "$HOME/.config/termite/color/"
 
 # ~/scripts is in $PATH
 FOLDER_IN_PATH="$HOME/scripts"
 cd "$FOLDER_IN_PATH" || exit
-ln -s "$REPO_FOLDER/termite-color-switcher/bin/color"
+ln -s "$REPO_FOLDER/termite-color-switcher/bin/color" 2> /dev/null
 
