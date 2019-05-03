@@ -333,9 +333,8 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # assignment stuff
-# Use xprop to find out class: Start application and a terminal in a workspace.
-# Type "xprop" into the terminal and click on the application window.
-# Then add the (second?!) value from WM_CLASS here
+# Start appliction and run `swaymsg -t get_tree`
+# Look up criteria in `man 5 sway`
 assign [class="^Thunderbird$"] → $mail
 assign [class="^Skype$"] → $chat
 assign [class="^Firefox$"] → $firefox
@@ -346,7 +345,7 @@ assign [class="google-chat-linux"] → $chat
 assign [class="chromium"] → $chrome
 assign [class="^Opera$"] → $opera
 assign [class="^Mysql-workbench-bin$"] → $sql
-assign [app_id="^DBeaver$"] → $sql
+assign [app_id="DBeaver"] → $sql
 assign [class="^jetbrains-datagrip$"] → $sql
 #assign [class="^SWT$"] → $spoon  # spoon has a funky WM_CLASS
 #assign [class="^java-lang-Thread$"] → $ireport  # ireport has a funky WM_CLASS too
