@@ -322,7 +322,7 @@ nmap ga <Plug>(EasyAlign)
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 " Python-Mode
-Plug 'python-mode/python-mode'
+Plug 'python-mode/python-mode', { 'branch': 'develop' }
 
 let g:pymode_python = 'python3'
 
