@@ -155,8 +155,9 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec dmenu_run -nb '$base01' -nf '$base03' -sb '$base0D' -sf '$base07' -fn 'Monoid'
 #bindsym $mod+x exec BEMENU_BACKEND=wayland bemenu
 
-for_window [class="fuzzy"] floating enable
-bindsym $mod+x exec termite --class fuzzy
+for_window [app_id="fuzzy"] floating enable
+#bindsym $mod+x exec termite --name=fuzzy "zsh -c 'compgen -c | fzf'"
+bindsym $mod+g exec termite -e gotop
 
 #bindsym $mod+x exec rofi -show run
 #bindsym $mod+y exec rofi -show window
