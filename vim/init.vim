@@ -403,6 +403,8 @@ Plug 'scrooloose/nerdtree'
 let NERDTreeIgnore = ['\.pyc$', '\.class$']
 map <leader>n :NERDTreeToggle<CR>
 
+Plug 'Xuyuanp/nerdtree-git-plugin'
+
 " Colorschemes
 " solarized colorscheme
 Plug 'altercation/vim-colors-solarized'
