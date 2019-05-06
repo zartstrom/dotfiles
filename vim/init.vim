@@ -406,23 +406,26 @@ map <leader>n :NERDTreeToggle<CR>
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Colorschemes
-" solarized colorscheme
-Plug 'altercation/vim-colors-solarized'
+"" solarized colorscheme
+"Plug 'altercation/vim-colors-solarized'
 
-" oceanic-next colorscheme
-Plug 'mhartington/oceanic-next'
+"" oceanic-next colorscheme
+"Plug 'mhartington/oceanic-next'
 
-" vim-kalisi colorscheme
-Plug 'freeo/vim-kalisi'
+"" vim-kalisi colorscheme
+"Plug 'freeo/vim-kalisi'
+
+"" vim-scripts/peaksea colorscheme
+"Plug 'vim-scripts/peaksea'
+
+" colorschemes
+Plug 'flazz/vim-colorschemes'
 
 " LineDiff
 Plug 'AndrewRadev/linediff.vim'
 
 " 'vmchale/just-vim' Syntax highlighting for justfiles
 Plug 'vmchale/just-vim'
-
-" vim-scripts/peaksea colorscheme
-Plug 'vim-scripts/peaksea'
 
 " startify
 Plug 'mhinz/vim-startify'
@@ -447,12 +450,6 @@ filetype plugin indent on
 set background=light
 colorscheme kalisi
 "colorscheme peaksea
-
-"colorscheme ron
- "further settings for colorscheme ron:
-"hi CursorLine cterm=none ctermbg=234 ctermfg=none
-"hi CursorColumn cterm=none ctermbg=234 ctermfg=none
-""set colorcolumn=120
 
 hi ColorColumn cterm=NONE ctermbg=168 ctermfg=NONE
 hi Search cterm=NONE ctermbg=190
