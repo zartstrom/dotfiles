@@ -156,7 +156,7 @@ bindsym $mod+d exec dmenu_run -nb '$base01' -nf '$base03' -sb '$base0D' -sf '$ba
 #bindsym $mod+x exec BEMENU_BACKEND=wayland bemenu
 
 for_window [app_id="fuzzy"] floating enable
-bindsym $mod+x exec termite --name=fuzzy --hold -t menu -e /home/phil/scripts/menu
+bindsym $mod+x exec termite --name=fuzzy -t menu -e /home/phil/scripts/menu
 #bindsym $mod+x exec termite --name=fuzzy 
 bindsym $mod+g exec termite -e gotop
 
