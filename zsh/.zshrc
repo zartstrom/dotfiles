@@ -135,3 +135,16 @@ setopt EXTENDED_HISTORY
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/bin/vault vault
+
+NNN_TMPFILE="/tmp/nnn"
+
+n()
+{
+        nnn "$@"
+
+        if [ -f $NNN_TMPFILE ]; then
+                . $NNN_TMPFILE
+                rm $NNN_TMPFILE
+        fi
+}
+
