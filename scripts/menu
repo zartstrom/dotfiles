@@ -1,0 +1,6 @@
+#!/bin/bash
+
+compgen -c | sort -u | /usr/bin/fzf | xargs /home/phil/go/bin/lnch
+
+exit
+
