@@ -5,7 +5,7 @@ scripts_path = "${HOME}/scripts"
 
 # set softlinks for all dotfiles
 @setup:
-    python2 set_softlinks.py
+    python3 set_softlinks.py
 
 # install metals-vim
 @metals:

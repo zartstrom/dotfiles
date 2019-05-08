@@ -1,4 +1,4 @@
-#!/usr/bin/python2
+#!/usr/bin/python3
 import errno
 import os
 import subprocess
@@ -22,14 +22,14 @@ def create_softlink(source, target):
     try:
         os.symlink(source, target)
         msg = "Created symlink"
-        print "%-20s: %s -> %s" % (msg, target, source)
-    except OSError, exc:
+        print("%-20s: %s -> %s" % (msg, target, source))
+    except OSError as exc:
         # TODO: check if file is the desired softlink or some other file
-        if "File exists" in exc:
+        if "File exists" in str(exc):
             pass
         else:
             msg = "Unexpected error"
-            print "%-20s: %s" % (msg, exc)
+            print("%-20s: %s" % (msg, exc))
 
 
 def softlink_dotfiles_home(path_from_dotfiles, path_from_home):
@@ -54,7 +54,7 @@ def run(script):
 
 
 def display_header(section):
-    print "--- %s ---" % section
+    print("--- %s ---" % section)
 
 
 HOME = os.environ["HOME"]
@@ -101,6 +101,7 @@ mkdir_p_from_home("scripts")
 softlink_dotfiles_home("i3/i3exit.sh", "scripts/i3exit.sh")
 softlink_dotfiles_home("i3/lock.sh", "scripts/lock.sh")
 softlink_dotfiles_home("i3/from_here.sh", "scripts/from_here.sh")
+softlink_dotfiles_home("scripts/menu", "scripts/menu")
 
 # kitty
 display_header("kitty")
