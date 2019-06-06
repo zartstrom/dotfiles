@@ -121,7 +121,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'rking/ag.vim'
 
 " neoclide/coc.nvim
-Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
 " 'pumvisible' read: popup menu visible
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
@@ -322,7 +322,7 @@ nmap ga <Plug>(EasyAlign)
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 " Python-Mode
-Plug 'python-mode/python-mode', { 'branch': 'develop' }
+Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 
 let g:pymode_python = 'python3'
 
