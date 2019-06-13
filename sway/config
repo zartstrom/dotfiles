@@ -240,6 +240,7 @@ set $T6 "16:6 "
 set $T7 "17:7 "
 set $T8 "18:8 "
 set $sql "21:sql "
+set $cherrytree "22:🍒🍒🍒"
 set $music "31:music "
 
 workspace "18:8 " output eDP-1
@@ -345,6 +346,7 @@ assign [class="^Opera$"] → $opera
 assign [class="^Mysql-workbench-bin$"] → $sql
 assign [app_id="DBeaver"] → $sql
 assign [class="^jetbrains-datagrip$"] → $sql
+assign [class="^Cherrytree$"] → $cherrytree
 #assign [class="^SWT$"] → $spoon  # spoon has a funky WM_CLASS
 #assign [class="^java-lang-Thread$"] → $ireport  # ireport has a funky WM_CLASS too
 assign [class="^Nightingale$"] → $music
