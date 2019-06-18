@@ -102,6 +102,7 @@ softlink_dotfiles_home("i3/i3exit.sh", "scripts/i3exit.sh")
 softlink_dotfiles_home("i3/lock.sh", "scripts/lock.sh")
 softlink_dotfiles_home("i3/from_here.sh", "scripts/from_here.sh")
 softlink_dotfiles_home("scripts/menu", "scripts/menu")
+softlink_dotfiles_home("scripts/screenshot.sh", "scripts/screenshot.sh")
 
 # kitty
 display_header("kitty")
