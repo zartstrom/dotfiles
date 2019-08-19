@@ -324,7 +324,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 " Python-Mode
 Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 
-let g:pymode_python = 'python3'
+" let g:pymode_python = 'python3'
 
 " linting
 let g:pymode_lint = 1
