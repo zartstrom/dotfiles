@@ -148,3 +148,5 @@ n()
         fi
 }
 
+eval "$(starship init zsh)"
+
