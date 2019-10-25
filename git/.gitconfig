@@ -13,6 +13,7 @@
   lol = log --oneline --graph --decorate
   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   lh = "!sh -c 'git lg | head'"
+  la = log --all --graph --oneline --decorate
 [color]
   diff = auto
   status = auto
