@@ -60,6 +60,10 @@ def display_header(section):
 HOME = os.environ["HOME"]
 DOTFILES = os.path.join(HOME, "dotfiles")
 
+# alacritty
+display_header("alacritty")
+softlink_dotfiles_home("alacritty/alacritty.yml", ".config/alacritty/alacritty.yml")
+
 # bash
 display_header("bash")
 softlink_dotfiles_home("bash/.bashrc", ".bashrc")
@@ -142,6 +146,9 @@ softlink_dotfiles_home("scripts/svg2png.sh", "scripts/svg2png.sh")
 softlink_dotfiles_home("scripts/autorandr", "scripts/autorandr")
 softlink_dotfiles_home("scripts/what_is_my_ip.sh", "scripts/what_is_my_ip.sh")
 softlink_dotfiles_home("scripts/bluetoothctl.exp", "scripts/bluetoothctl.exp")
+
+# starship
+softlink_dotfiles_home("starship/starship.toml", ".config/starship.toml")
 
 # sway
 display_header("sway")
