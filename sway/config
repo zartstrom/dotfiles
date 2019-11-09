@@ -336,7 +336,7 @@ bindsym $mod+r mode "resize"
 # assignment stuff
 # Start appliction and run `swaymsg -t get_tree`
 # Look up criteria in `man 5 sway`
-assign [class="^Thunderbird$"] → $mail
+assign [app_id="thunderbird"] → $mail
 assign [class="^Skype$"] → $chat
 assign [class="^Firefox$"] → $firefox
 assign [app_id="firefox"] → $firefox
