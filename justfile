@@ -1,6 +1,6 @@
 
-metals_version = "0.5.1"
-scripts_path = "${HOME}/scripts"
+metals_version := "0.7.6"
+scripts_path := "${HOME}/scripts"
 
 
 # set softlinks for all dotfiles
