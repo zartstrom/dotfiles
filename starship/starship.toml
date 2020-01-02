@@ -1,12 +1,35 @@
 # Don't print a new line at the start of the prompt
 add_newline = false
 
+[aws]
+disabled = true
+
+[character]      # The name of the module we are configuring is "character"
+symbol = "»"     # The "symbol" segment is being set to "➜"
+
+[directory]
+truncation_length = 8
+
+[git_status]
+conflicted = "🏳"
+ahead = "🏎💨"
+behind = "😰"
+diverged = "😵"
+untracked = "🤷‍"
+stashed = "📦"
+modified = "📝"
+staged.value = "++"
+staged.style = "green"
+staged_count.enabled = true
+staged_count.style = "green"
+renamed = "👅"
+deleted = "🗑"
+
 [line_break]
 disabled = true
 
-# Replace the "❯" symbol in the prompt with "»"
-[character]      # The name of the module we are configuring is "character"
-symbol = "»"     # The "symbol" segment is being set to "➜"
+[nodejs]
+disabled = true
 
 # Disable the package module, hiding it from the prompt completely
 [package]
