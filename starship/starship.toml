@@ -9,6 +9,7 @@ symbol = "»"     # The "symbol" segment is being set to "➜"
 
 [directory]
 truncation_length = 8
+#fish_style_pwd_dir_length = 1
 
 [git_status]
 conflicted = "🏳"
