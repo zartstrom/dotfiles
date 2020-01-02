@@ -12,10 +12,10 @@ truncation_length = 8
 
 [git_status]
 conflicted = "🏳"
-ahead = "🏎💨"
+ahead = "💨"
 behind = "😰"
 diverged = "😵"
-untracked = "🤷‍"
+untracked = "🤷"
 stashed = "📦"
 modified = "📝"
 staged.value = "++"
