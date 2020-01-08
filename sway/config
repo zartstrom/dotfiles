@@ -23,8 +23,8 @@ output DP-4 resolution 1920x1080 position 1600 0
 # Wallpaper
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-# output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-output * bg /home/phil/pictures/two_mindsets.jpg center
+output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+# output * bg /home/phil/dotfiles/assets/two_mindsets.jpg center
 
 
 #
@@ -248,7 +248,7 @@ set $T6 "16:6 "
 set $T7 "17:7 "
 set $T8 "18:8 "
 set $sql "21:sql "
-set $inkdrop"23:inkdrop 🖋"
+set $inkdrop "23:inkdrop 🌢"
 #set $cherrytree "22:🍒🍒🍒"
 #set $music "31:music "
 
