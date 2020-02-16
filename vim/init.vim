@@ -405,6 +405,9 @@ map <leader>n :NERDTreeToggle<CR>
 
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
+" vim orgmode
+Plug 'jceb/vim-orgmode'
+
 " Colorschemes
 "" solarized colorscheme
 "Plug 'altercation/vim-colors-solarized'
