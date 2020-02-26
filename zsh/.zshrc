@@ -136,6 +136,10 @@ setopt EXTENDED_HISTORY
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/bin/vault vault
 
+# kubectl autocomplete
+if [ $commands[kubectl] ]; then source <(kubectl completion zsh); fi
+alias k=kubectl
+
 NNN_TMPFILE="/tmp/nnn"
 
 n()
