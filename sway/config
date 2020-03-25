@@ -249,6 +249,7 @@ set $T7 "17:7 "
 set $T8 "18:8 "
 set $sql "21:sql "
 set $inkdrop "23:inkdrop 🌢"
+set $gotop "24:top"
 #set $cherrytree "22:🍒🍒🍒"
 #set $music "31:music "
 
@@ -345,6 +346,7 @@ bindsym $mod+r mode "resize"
 assign [app_id="thunderbird"] → $mail
 assign [class="^Skype$"] → $chat
 assign [class="^Firefox$"] → $firefox
+assign [class="^firefox$"] → $firefox
 assign [app_id="firefox"] → $firefox
 assign [class="Google-chrome-stable"] → $chrome
 assign [class="Google-chrome"] → $chrome
@@ -357,6 +359,7 @@ assign [app_id="DBeaver"] → $sql
 assign [class="^jetbrains-datagrip$"] → $sql
 assign [class="^Cherrytree$"] → $cherrytree
 assign [class="^inkdrop$"] → $inkdrop
+# assign [name="^gotop$"] → $gotop
 #assign [class="^SWT$"] → $spoon  # spoon has a funky WM_CLASS
 #assign [class="^java-lang-Thread$"] → $ireport  # ireport has a funky WM_CLASS too
 #assign [class="^Nightingale$"] → $music
