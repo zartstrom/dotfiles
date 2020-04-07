@@ -99,9 +99,9 @@ bindkey "^[[4~" end-of-line
 
 # HISTORY
 #set history size
-export HISTSIZE=10000
+export HISTSIZE=1000000
 #save history after logout
-export SAVEHIST=10000
+export SAVEHIST=1000000
 #append into history file
 setopt INC_APPEND_HISTORY
 #save only one command if 2 common are same and consistent
