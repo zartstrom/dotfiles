@@ -171,6 +171,7 @@ mkdir_p_from_home(".vimswap")
 mkdir_p_from_home(".config/nvim")
 softlink_dotfiles_home("vim/vimrc", ".vimrc")
 softlink_dotfiles_home("vim/init.vim", ".config/nvim/init.vim")
+softlink_dotfiles_home("vim/vscode_init.vim", ".config/nvim/vscode_init.vim")
 softlink_dotfiles_home("vim/coc-settings.json", ".config/nvim/coc-settings.json")
 
 # X11
