@@ -5,9 +5,15 @@
 "    |_| |_|\___|\___/ \_/ |_|_| |_| |_|
 "
 
-
-
 call plug#begin('~/.vim/plugged')
+
+" fork of easymotion plugin for vscode
+" actual plugin is in repository 'asvetliakov/vim-easymotion', but this does
+" not work in neovim, so I renamed it in `~/.vim`.
+" cd ~/.vim/plugged
+" git clone https://github.com/asvetliakov/vim-easymotion.git vim-easymotion-vscode
+Plug 'asvetliakov/vim-easymotion-vscode'
+map <Space> <Plug>(easymotion-prefix)
 
 " abolish - develish good
 Plug 'tpope/vim-abolish'
@@ -18,20 +24,8 @@ Plug 'tpope/vim-repeat'
 " surround.vim - quotes, brackets and (html-)tags
 Plug 'tpope/vim-surround'
 
-" cd ~/.vim/plugged
-" git clone https://github.com/asvetliakov/vim-easymotion.git vim-easymotion-vscode
-Plug 'asvetliakov/vim-easymotion-vscode'
-map <Space> <Plug>(easymotion-prefix)
+" Easy Align
+Plug 'junegunn/vim-easy-align'
 
-" End plugins
 call plug#end()
-
-
-
-hi ColorColumn cterm=NONE ctermbg=168 ctermfg=NONE
-hi Search cterm=NONE ctermbg=190
-hi NeomakeErrorMsg cterm=NONE ctermbg=168
-hi NeomakeWarningMsg cterm=NONE ctermbg=148
-
-au BufRead,BufNewFile *.py set colorcolumn=120
 
