@@ -7,9 +7,25 @@
 
 
 
+call plug#begin('~/.vim/plugged')
 
 " abolish - develish good
 Plug 'tpope/vim-abolish'
+
+" repeat
+Plug 'tpope/vim-repeat'
+
+" surround.vim - quotes, brackets and (html-)tags
+Plug 'tpope/vim-surround'
+
+" cd ~/.vim/plugged
+" git clone https://github.com/asvetliakov/vim-easymotion.git vim-easymotion-vscode
+Plug 'asvetliakov/vim-easymotion-vscode'
+map <Space> <Plug>(easymotion-prefix)
+
+" End plugins
+call plug#end()
+
 
 
 hi ColorColumn cterm=NONE ctermbg=168 ctermfg=NONE
