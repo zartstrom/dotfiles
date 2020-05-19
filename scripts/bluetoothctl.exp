@@ -21,7 +21,7 @@ expect -re $prompt
 #sleep 2
 #send "0000\r"
 #sleep 3
-send "connect 00:02:3C:4D:24:CD\r"
+send "connect 40:06:A0:68:E5:72\r"
 sleep 1
 expect -re $prompt
 #send_user "\nShould be paired now.\r"

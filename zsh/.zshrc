@@ -78,6 +78,9 @@ export PATH=$PATH:/usr/lib/hadoop/bin
 # java
 export JAVA_HOME=/usr/lib/jvm/default
 
+# kubernetes
+export PATH="${PATH}:${HOME}/.krew/bin"
+
 # ruby
 export PATH=$PATH:~/.gem/ruby/2.3.0/bin
 export PATH=$PATH:~/.gem/ruby/2.4.0/bin
