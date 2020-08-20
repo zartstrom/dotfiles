@@ -101,7 +101,8 @@ set $base03 #7780a1
 set $base04 #C0C5CE
 set $base05 #d1d4e0
 set $base06 #C9CCDB
-set $base07 #ffffff
+# set $base07 #ffffff
+set $base07 #ff6600
 set $base08 #ee829f
 set $base09 #f99170
 set $base0A #ffefcc
@@ -164,7 +165,7 @@ bindsym $mod+d exec dmenu_run -nb '$base01' -nf '$base03' -sb '$base0D' -sf '$ba
 for_window [app_id="fuzzy"] floating enable
 bindsym $mod+x exec termite --name=fuzzy -t menu -e /home/phil/scripts/menu
 #bindsym $mod+x exec termite --name=fuzzy 
-bindsym $mod+g exec termite -e gotop
+bindsym $mod+g exec gnome-terminal -e ytop
 
 #bindsym $mod+x exec rofi -show run
 #bindsym $mod+y exec rofi -show window
@@ -344,14 +345,12 @@ bindsym $mod+r mode "resize"
 # Start appliction and run `swaymsg -t get_tree`
 # Look up criteria in `man 5 sway`
 assign [app_id="thunderbird"] → $mail
-assign [class="^Skype$"] → $chat
 assign [class="^Firefox$"] → $firefox
 assign [class="^firefox$"] → $firefox
 assign [app_id="firefox"] → $firefox
 assign [class="Google-chrome-stable"] → $chrome
 assign [class="Google-chrome"] → $chrome
 assign [class="google-chrome"] → $chrome
-assign [class="google-chat-linux"] → $chat
 assign [class="chromium"] → $chrome
 assign [class="^Opera$"] → $opera
 assign [class="^Mysql-workbench-bin$"] → $sql
@@ -359,6 +358,7 @@ assign [app_id="DBeaver"] → $sql
 assign [class="^jetbrains-datagrip$"] → $sql
 assign [class="^Cherrytree$"] → $cherrytree
 assign [class="^inkdrop$"] → $inkdrop
+assign [class="Microsoft Teams - Preview"] → $chat
 # assign [name="^gotop$"] → $gotop
 #assign [class="^SWT$"] → $spoon  # spoon has a funky WM_CLASS
 #assign [class="^java-lang-Thread$"] → $ireport  # ireport has a funky WM_CLASS too
