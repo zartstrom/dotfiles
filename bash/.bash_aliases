@@ -52,3 +52,5 @@ source "$HOME/.bash_aliases_local"
 
 alias cat="bat -p"
 
+alias .j='just --justfile ~/.justfile --working-directory ~'
+
