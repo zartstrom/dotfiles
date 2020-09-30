@@ -103,7 +103,7 @@ set $base04 #C0C5CE
 set $base05 #d1d4e0
 set $base06 #C9CCDB
 # set $base07 #ffffff
-set $base07 #ff6600
+set $base07 #ffdf9a
 set $base08 #ee829f
 set $base09 #f99170
 set $base0A #ffefcc
