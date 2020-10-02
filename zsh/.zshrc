@@ -143,6 +143,9 @@ complete -o nospace -C /usr/bin/vault vault
 if [ $commands[kubectl] ]; then source <(kubectl completion zsh); fi
 alias k=kubectl
 
+# justfile
+alias .j='just --justfile ~/.justfile --working-directory .'
+
 NNN_TMPFILE="/tmp/nnn"
 
 n()
