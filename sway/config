@@ -13,17 +13,23 @@ set $menu dmenu_run
 ### Output configuration
 # For help see man 5 sway-output
 
-output LVDS-1 resolution 1366x786 position 0 0
-output HDMI-A-2 resolution 1920x1080 position 1366 0
-output HDMI-A-3 resolution 1920x1080 position 3286 0
+# output LVDS-1 resolution 1366x786 position 0 0
+# output HDMI-A-2 resolution 1920x1080 position 1366 0
+# output HDMI-A-3 resolution 1920x1080 position 3286 0
 
-output eDP-1 resolution 1600x900 position 0 0
-output DP-4 resolution 1920x1080 position 1600 0
+# output eDP-1 resolution 1600x900 position 0 0
+# output DP-4 resolution 1920x1080 position 1600 0
+
+# 34" work monitor
+output eDP-1 resolution 1920x1080 position 0 0
+output DP-2 resolution 3440x1440 position -760 -1440
 
 # Wallpaper
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+# output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+output * bg /home/phil/pictures/arch_linux_wallpaper_03.png fill
+
 # output * bg /home/phil/pictures/sandcastle3.jpg stretch
 # output * bg /home/phil/dotfiles/assets/two_mindsets.jpg center
 
@@ -92,35 +98,67 @@ set $mod Mod4
 # is used in the bar {} block below.
 # see as well https://wiki.archlinux.org/index.php/i3#Iconic_fonts_in_the_status_bar
 font Monoid, pango:Hack, FontAwesome 10
-
-
 #-----------------------appearance-------------------------
-set $base00 #101218
-set $base01 #1f222d
-set $base02 #252936
-set $base03 #7780a1
-set $base04 #C0C5CE
-set $base05 #d1d4e0
-set $base06 #C9CCDB
-# set $base07 #ffffff
-set $base07 #ffdf9a
-set $base08 #ee829f
-set $base09 #f99170
-set $base0A #ffefcc
-set $base0B #a5ffe1
-set $base0C #97e0ff
-set $base0D #97bbf7
-set $base0E #c0b7f9
-set $base0F #fcc09e
-# my colors
-set $base10 #ff0000
+## Base16 Material
+# Author: Nate Peterson
+
+set $base00 #263238
+set $base01 #2E3C43
+set $base02 #314549
+set $base03 #546E7A
+set $base04 #B2CCD6
+set $base05 #EEFFFF
+set $base06 #EEFFFF
+set $base07 #FFFFFF
+set $base08 #F07178
+set $base09 #F78C6C
+set $base0A #FFCB6B
+set $base0B #C3E88D
+set $base0C #89DDFE
+set $base0D #82AAFF
+set $base0E #C792EA
+set $base0F #FF5370
+
+
+#set $base00 #101218
+#set $base01 #1f222d
+## set $base01 #448822
+#set $base02 #252936
+#set $base03 #7780a1
+#set $base04 #C0C5CE
+#set $base05 #d1d4e0
+#set $base06 #C9CCDB
+## set $base07 #ffffff
+#set $base07 #ffdf9a
+#set $base08 #ee829f
+#set $base09 #f99170
+#set $base0A #ffefcc
+#set $base0B #a5ffe1
+#set $base0C #97e0ff
+#set $base0D #97bbf7
+#set $base0E #c0b7f9
+#set $base0F #fcc09e
+## my colors
+#set $base10 #ff0000
+#
+# RGB(23, 23, 49);
 
 # Window Colors
 #                       border     background     text       indicator  child_border
-client.focused          $base01    $base01        $base07    $base03    $base01
-client.focused_inactive $base02    $base02        $base03    $base03    $base02
-client.unfocused        $base02    $base02        $base03    $base03    $base02
-client.urgent           $base10    $base10        $base07    $base03    $base10
+#client.focused          $base01    $base01        $base07    $base03    $base01
+#client.focused_inactive $base02    $base02        $base03    $base03    $base02
+#client.unfocused        $base02    $base02        $base03    $base03    $base02
+#client.urgent           $base10    $base10        $base07    $base03    $base10
+
+# Basic color configuration using the Base16 variables for windows and borders.
+# Property Name         Border  BG      Text    Indicator Child Border
+client.focused          $base0D $base0D $base00 $base0D $base0D
+client.focused_inactive $base01 $base01 $base05 $base03 $base01
+client.unfocused        $base01 $base00 $base05 $base01 $base01
+client.urgent           $base08 $base08 $base00 $base08 $base08
+client.placeholder      $base00 $base00 $base05 $base00 $base00
+client.background       $base07
+
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -130,14 +168,30 @@ bar {
     bindsym button4 nop
     bindsym button5 nop
     colors {
-      separator $base03
-      background $base01
-      statusline $base05
-#                        border  background text
-      focused_workspace  $base01 $base01    $base07
-      active_workspace   $base01 $base02    $base03
-      inactive_workspace $base01 $base01    $base03
-      urgent_workspace   $base10 $base10    $base07
+        background $base00
+        separator  $base01
+        statusline $base04
+
+        # State             Border  BG      Text
+        focused_workspace   $base0D $base0D $base00
+        active_workspace    $base03 $base03 $base00
+        inactive_workspace  $base01 $base01 $base05
+        urgent_workspace    $base08 $base08 $base00
+        binding_mode        $base00 $base0A $base00
+        #      separator $base03
+        #      background $base01
+        #      # background $base0E
+        #      statusline $base05
+        #      # statusline $base0E
+        ##                        border  background text
+        #      focused_workspace  $base01 $base01    $base07
+        #      active_workspace   $base01 $base02    $base03
+        #      inactive_workspace $base01 $base01    $base03
+        #      urgent_workspace   $base10 $base10    $base07
+        #      #focused_workspace  $base01 $base0D    $base07
+        #      #active_workspace   $base01 $base0E    $base03
+        #      #inactive_workspace $base01 $base0D    $base03
+        #      #urgent_workspace   $base10 $base10    $base07
     }
 }
 
@@ -163,9 +217,10 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec dmenu_run -nb '$base01' -nf '$base03' -sb '$base0D' -sf '$base07' -fn 'Monoid'
 #bindsym $mod+x exec BEMENU_BACKEND=wayland bemenu
 
-for_window [app_id="fuzzy"] floating enable
-bindsym $mod+x exec termite --name=fuzzy -t menu -e /home/phil/scripts/menu
+#for_window [app_id="fuzzy"] floating enable
+#bindsym $mod+x exec gnome-terminal --name=fuzzy -t menu -e /home/phil/scripts/menu
 #bindsym $mod+x exec termite --name=fuzzy 
+
 bindsym $mod+g exec gnome-terminal -e ytop
 
 #bindsym $mod+x exec rofi -show run
@@ -198,14 +253,16 @@ bindsym $mod+Shift+l move right
 #bindsym $mod+Shift+odiaeresis move right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
+#bindsym $mod+Shift+Left move left
+#bindsym $mod+Shift+Down move down
+#bindsym $mod+Shift+Up move up
+#bindsym $mod+Shift+Right move right
 
 # move workspace to different output
-bindsym $mod+m move workspace to output right
-bindsym $mod+n move workspace to output left
+bindsym $mod+Shift+Up move workspace to output up
+bindsym $mod+Shift+Right move workspace to output right
+bindsym $mod+Shift+Down move workspace to output down
+bindsym $mod+Shift+Left move workspace to output left
 
 # split in horizontal orientation
 bindsym $mod+odiaeresis split h
@@ -218,9 +275,9 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+# bindsym $mod+s layout stacking
+# bindsym $mod+w layout tabbed
+# bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -229,7 +286,7 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 
 # focus the parent container
-bindsym $mod+a focus parent
+# bindsym $mod+a focus parent
 
 bindsym $mod+p exec --no-startup-id $HOME/scripts/screenshot.sh
 
