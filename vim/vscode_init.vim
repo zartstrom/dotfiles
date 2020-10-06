@@ -27,5 +27,8 @@ Plug 'tpope/vim-surround'
 " Easy Align
 Plug 'junegunn/vim-easy-align'
 
+" colorizer
+Plug 'norcalli/nvim-colorizer.lua'
+
 call plug#end()
 

@@ -108,21 +108,10 @@ softlink_dotfiles_home("i3/from_here.sh", "scripts/from_here.sh")
 softlink_dotfiles_home("scripts/menu", "scripts/menu")
 softlink_dotfiles_home("scripts/screenshot.sh", "scripts/screenshot.sh")
 
-# kitty
-display_header("kitty")
-mkdir_p_from_home(".config/kitty")
-softlink_dotfiles_home("kitty/kitty.conf", ".config/kitty/kitty.conf")
-
 # pulse
 display_header("pulse")
 mkdir_p_from_home(".config/pulse")
 softlink_dotfiles_home("pulse/default.pa", ".config/pulse/default.pa")
-
-# python / myrandr
-# TODO: not needed in sway
-display_header("myrandr")
-# TODO: create venv_myrandr and do "pip install --editable ." to create myrandr executable.
-create_softlink(os.path.join(HOME, "repos/myrandr/venv_myrandr/bin/myrandr"), os.path.join(HOME, "scripts/myrandr"))
 
 # pylint
 display_header("pylint")

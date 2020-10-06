@@ -448,7 +448,7 @@ lua require'colorizer'.setup()
 "set background=dark
 set background=light
 colorscheme kalisi
-"colorscheme peaksea
+" colorscheme buttercream
 
 hi ColorColumn cterm=NONE ctermbg=168 ctermfg=NONE
 hi Search cterm=NONE ctermbg=190
