@@ -279,6 +279,7 @@ bindsym $mod+7 workspace $T7
 bindsym $mod+8 workspace $T8
 bindsym $mod+9 workspace $firefox
 bindsym $mod+0 workspace $chrome
+bindsym $mod+i workspace $inkdrop
 
 # next/previous workspace
 bindsym Control+$mod+Right workspace next
@@ -295,6 +296,7 @@ bindsym $mod+Shift+7 move container to workspace $T7
 bindsym $mod+Shift+8 move container to workspace $T8
 bindsym $mod+Shift+9 move container to workspace $firefox
 bindsym $mod+Shift+0 move container to workspace $chrome
+bindsym $mod+Shift+i move container to workspace $inkdrop
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
