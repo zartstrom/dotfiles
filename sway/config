@@ -6,23 +6,14 @@
 #                     |___/
 #
 
-
-# Your preferred application launcher
-set $menu dmenu_run
-
 ### Output configuration
 # For help see man 5 sway-output
 
-# output LVDS-1 resolution 1366x786 position 0 0
-# output HDMI-A-2 resolution 1920x1080 position 1366 0
-# output HDMI-A-3 resolution 1920x1080 position 3286 0
-
-# output eDP-1 resolution 1600x900 position 0 0
-# output DP-4 resolution 1920x1080 position 1600 0
+# Home
+output "Chimei Innolux Corporation 0x1482 0x00000000" resolution 1600x900 position 0 0
+output "Eizo Nanao Corporation EV2336W 61488064" resolution 1920x1080 position 1600 0
 
 # 34" work monitor
-# output eDP-1 res 1920x1080 position 0 0
-# output DP-2 res 3440x1440 position -760 -1440
 output eDP-1 res 1920x1080 position 760 1440
 output DP-2 res 3440x1440 position 0 0
 
@@ -157,6 +148,7 @@ floating_modifier $mod
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run -nb '$base01' -nf '$base03' -sb '$base0D' -sf '$base07' -fn 'Monoid'
+
 # start rofi
 bindsym $mod+x exec rofi -show run \
     -color-window "$base01, $base01, $base05" \
