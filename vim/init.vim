@@ -47,7 +47,7 @@ let mapleader = ","
 let maplocalleader = "-"
 
 """ PYTHON
-let g:python_host_prog = '/usr/bin/python2'
+let g:python_host_prog = '/usr/bin/python'
 let g:python3_host_prog = '/usr/bin/python'
 
 
@@ -313,44 +313,69 @@ nmap ga <Plug>(EasyAlign)
 " Fuzzy Finder
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
+" Python
+Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
+
+Plug 'dense-analysis/ale'
+
+Plug 'psf/black', { 'branch': 'stable' }
+autocmd BufWritePre *.py execute ':Black'
+
+Plug 'davidhalter/jedi-vim'
+
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+"nmap <silent> gd <Plug>(coc-definition)
+"nnoremap <silent> K :call <SID>show_documentation()<CR>
+"function! s:show_documentation()
+"  if (index(['vim','help'], &filetype) >= 0)
+"    execute 'h '.expand('<cword>')
+"  else
+"    call CocAction('doHover')
+"  endif
+"endfunction
+"nmap <leader>rn <Plug>(coc-rename)
+
 " Python-Mode
-Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
+"Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 
-" let g:pymode_python = 'python3'
+"" let g:pymode_python = 'python3'
+"" lets debug
+"let g:pymode_debug = 1
 
-" linting
-let g:pymode_lint = 1
-let g:pymode_lint_unmodified = 1
-let g:pymode_lint_on_fly = 0
-let g:pymode_lint_message = 1
-" Values may be chosen from: `pylint`, `pep8`, `mccabe`, `pep257`, `pyflakes`.
-let g:pymode_lint_checkers = ['pylint', 'mccabe', 'pyflakes']
-"let g:pymode_lint_ignore = 'E501,E127,E126,E265,I,C0110,C0111,D102,D202,D401'
-let g:pymode_lint_sort = ['E', 'W', 'C', 'I']
-let g:pymode_lint_signs = 1
+"" linting
+"let g:pymode_lint = 1
+"let g:pymode_lint_unmodified = 1
+"let g:pymode_lint_on_fly = 0
+"let g:pymode_lint_message = 1
+"" Values may be chosen from: `pylint`, `pep8`, `mccabe`, `pep257`, `pyflakes`.
+"" let g:pymode_lint_checkers = ['pylint', 'mccabe', 'pyflakes']
+""let g:pymode_lint_ignore = 'E501,E127,E126,E265,I,C0110,C0111,D102,D202,D401'
+"let g:pymode_lint_sort = ['E', 'W', 'C', 'I']
+"let g:pymode_lint_signs = 1
 
-" linter options
-let g:pymode_lint_options_mccabe = { 'complexity': 5 }
-"let g:pymode_lint_options_pep8 = {'max_line_length': 120}
-let g:pymode_lint_options_pylint = {'max-line-length': 120}
+"" linter options
+"let g:pymode_lint_options_mccabe = { 'complexity': 5 }
+""let g:pymode_lint_options_pep8 = {'max_line_length': 120}
+"let g:pymode_lint_options_pylint = {'max-line-length': 120}
 
-let g:pymode_virtualenv = 1
-let g:pymode_run = 0        " disable run code
-let g:pymode_folding = 0    " disable folding
-let g:pymode_syntax = 1
-let g:pymode_quickfix_minheight = 3
-let g:pymode_quickfix_maxheight = 10
-let g:pymode_motion = 1
-let g:pymode_trim_whitespace = 1
+"let g:pymode_virtualenv = 1
+"let g:pymode_run = 0        " disable run code
+"let g:pymode_folding = 0    " disable folding
+"let g:pymode_syntax = 1
+"let g:pymode_quickfix_minheight = 3
+"let g:pymode_quickfix_maxheight = 10
+"let g:pymode_motion = 1
+"let g:pymode_trim_whitespace = 1
 
-let g:pymode_lint_maxheight = 5
-let g:pymode_lint_on_write = 1
-let g:pymode_lint_cwindow = 1
-let g:pymode_rope = 1
-let ropevim_enable_shortcuts = 1
-let g:pymode_rope_vim_completion = 1
-"let g:pymode_rope_goto_def_newwin = "1"
-map <leader>p :PymodeLint<CR>
+"let g:pymode_lint_maxheight = 5
+"let g:pymode_lint_on_write = 1
+"let g:pymode_lint_cwindow = 1
+"let g:pymode_rope = 1
+"let ropevim_enable_shortcuts = 1
+"let g:pymode_rope_vim_completion = 1
+""let g:pymode_rope_goto_def_newwin = "1"
+"map <leader>p :PymodeLint<CR>
 
 " idris
 Plug 'idris-hackers/idris-vim'
