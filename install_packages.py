@@ -24,6 +24,7 @@ PACKAGES = [
     "zsh-syntax-highlighting",
 ]
 
+
 def main():
     command = "yay --noconfirm -S %s" % " ".join(PACKAGES)
     print(command)

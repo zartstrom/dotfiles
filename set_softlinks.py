@@ -177,4 +177,6 @@ softlink_dotfiles_home("X11/.imwheelrc", ".imwheelrc")
 display_header("zsh")
 mkdir_p_from_home(".oh-my-zsh/themes")
 softlink_dotfiles_home("zsh/.zshrc", ".zshrc")
-softlink_dotfiles_home("zsh/af-magic-light.zsh-theme", ".oh-my-zsh/themes/af-magic-light.zsh-theme")
+softlink_dotfiles_home(
+    "zsh/af-magic-light.zsh-theme", ".oh-my-zsh/themes/af-magic-light.zsh-theme"
+)

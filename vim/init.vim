@@ -256,6 +256,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 let g:airline_theme='kalisi'
+"let g:airline_theme='onedark'
 "let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
@@ -444,6 +445,9 @@ Plug 'norcalli/nvim-colorizer.lua'
 " colorschemes
 Plug 'flazz/vim-colorschemes'
 
+" colorscheme onedark
+Plug 'joshdick/onedark.vim'
+
 " LineDiff
 Plug 'AndrewRadev/linediff.vim'
 
@@ -471,9 +475,9 @@ lua require'colorizer'.setup()
 " let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 "colorscheme OceanicNext
 "set background=dark
-set background=light
-colorscheme kalisi
-" colorscheme buttercream
+"set background=light
+" colorscheme kalisi
+colorscheme onedark
 
 hi ColorColumn cterm=NONE ctermbg=168 ctermfg=NONE
 hi Search cterm=NONE ctermbg=190
