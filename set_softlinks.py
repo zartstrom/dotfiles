@@ -82,6 +82,7 @@ softlink_pattern("fonts", ".local/share/fonts", "ttf")
 # git
 display_header("git")
 softlink_dotfiles_home("git/.gitconfig", ".gitconfig")
+softlink_dotfiles_home("git/.gitattributes", ".gitattributes")
 
 # golang
 display_header("golang")
