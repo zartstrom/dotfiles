@@ -463,6 +463,9 @@ Plug 'hashivim/vim-terraform'
 " unicode vim
 Plug 'chrisbra/unicode.vim'
 
+" unison
+Plug 'unisonweb/unison', { 'branch': 'trunk', 'rtp': 'editor-support/vim' }
+
 " End plugins
 call plug#end()
 
