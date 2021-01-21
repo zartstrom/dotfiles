@@ -4,9 +4,8 @@
 # Syntax: simple "KEY=VAL" pairs on separate lines
 #
 
-# java stuff
-export _JAVA_AWT_WM_NONREPARENTING=1
-export JAVA_FONTS=/usr/share/fonts/TTF
+# java stuff, especially for datagrip
+_JAVA_AWT_WM_NONREPARENTING=1
 
 # firefox for wayland
 MOZ_ENABLE_WAYLAND=1

@@ -463,8 +463,9 @@ Plug 'hashivim/vim-terraform'
 " unicode vim
 Plug 'chrisbra/unicode.vim'
 
-" unison
-Plug 'unisonweb/unison', { 'branch': 'trunk', 'rtp': 'editor-support/vim' }
+" Try out this icons stuff
+Plug 'https://github.com/ryanoasis/vim-devicons'
+Plug 'https://github.com/adelarsq/vim-devicons-emoji'
 
 " End plugins
 call plug#end()

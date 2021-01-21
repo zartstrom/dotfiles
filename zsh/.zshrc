@@ -91,6 +91,9 @@ export PATH=$PATH:/home/phil/.minimesos/bin
 # spark
 export PATH=$PATH:/home/phil/spark/bin
 
+# shasum from perl
+export PATH=$PATH:/usr/bin/core_perl
+
 # stuff for work
 if [ -f ~/devel/tracking_service/src/main/bash/.bashrc_local_tracking_service ]; then
     . ~/devel/tracking_service/src/main/bash/.bashrc_local_tracking_service

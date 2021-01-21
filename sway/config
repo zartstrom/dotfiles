@@ -16,6 +16,7 @@ output "Eizo Nanao Corporation EV2336W 61488064" resolution 1920x1080 position 1
 # 34" work monitor
 output eDP-1 res 1920x1080 position 760 1440
 output DP-2 res 3440x1440 position 0 0
+output "Goldstar Company Ltd   0x0000332B" res 1280x1080 position 2680 1440
 
 # Wallpaper
 #
