@@ -256,7 +256,6 @@ set $sql "21:sql "
 set $inkdrop "23:inkdrop 🌢"
 set $gotop "24:top"
 #set $cherrytree "22:🍒🍒🍒"
-#set $music "31:music "
 
 workspace "18:8 " output eDP-1
 workspace "5:firefox " output DP-4

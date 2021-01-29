@@ -467,6 +467,16 @@ Plug 'chrisbra/unicode.vim'
 Plug 'https://github.com/ryanoasis/vim-devicons'
 Plug 'https://github.com/adelarsq/vim-devicons-emoji'
 
+" Emoticons (fzf is dependency of the unicodemoji plugin)
+set rtp+=/usr/bin/fzf
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
+source /usr/share/vim/vimfiles/plugin/fzf.vim
+
+Plug 'yazgoo/unicodemoji'
+nmap <leader>u :Unicodemoji<CR>
+
+
 " End plugins
 call plug#end()
 
