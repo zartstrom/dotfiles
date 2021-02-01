@@ -137,7 +137,10 @@ setopt EXTENDED_HISTORY
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# Configuring fzf
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
+ [ -f /usr/share/fzf/completion.zsh ] && source /usr/share/fzf/completion.zsh
+ [ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/bin/vault vault
