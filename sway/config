@@ -374,6 +374,7 @@ exec megasync
 
 # exec thunderbird
 exec MOZ_ENABLE_WAYLAND=1 firefox
+exec gnome-terminal
 
 
 # use full path $HOME/scripts/i3exit.sh
