@@ -1,16 +1,11 @@
 #!/bin/sh
-lock() {
-    #i3lock
-    $HOME/scripts/lock.sh
-}
-
 
 case "$1" in
     lock)
         swaylock-blur
         ;;
     logout)
-        i3-msg exit
+        swaymsg exit
         ;;
     suspend)
         swaylock-blur && systemctl suspend

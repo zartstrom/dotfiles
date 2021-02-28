@@ -8,6 +8,7 @@
 
 ### Output configuration
 # For help see man 5 sway-output
+# You can get the names of your outputs by running 'swaymsg -t get_outputs'
 
 # Home
 output "Chimei Innolux Corporation 0x1482 0x00000000" resolution 1600x900 position 0 0
@@ -22,19 +23,6 @@ output "Goldstar Company Ltd   0x0000332B" res 1280x1080 position 2680 1440
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 exec ~/.azotebg
-# output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-# output * bg /home/phil/pictures/arch_linux_wallpaper_03.png fill
-
-# output * bg /home/phil/pictures/sandcastle3.jpg stretch
-# output * bg /home/phil/dotfiles/assets/two_mindsets.jpg center
-
-
-#
-# Example configuration:
-#
-#   output HDMI-A-1 resolution 1920x1080 position 1920,0
-#
-# You can get the names of your outputs by running: swaymsg -t get_outputs
 
 ### Input configuration
 #
@@ -292,25 +280,22 @@ bindsym $mod+Shift+i move container to workspace $inkdrop
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
-# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+# restart sway in place
 bindsym $mod+Shift+r restart
 
-# lock the screen with i3lock. Memo: lock with "b"-lock
-# TODO: check for sway alternative
 bindsym $mod+Shift+b exec swaylock-blur
 
-# use full path $HOME/scripts/i3exit.sh, seems to be more reliable.
+# use full path $HOME/scripts/swayexit.sh, seems to be more reliable.
 # Look at i3 $PATH: `tr '\0' '\n' </proc/$(pidof i3)/environ | grep PATH`
 # http://permalink.gmane.org/gmane.linux.debian.user/472626
-# TODO: redo this in sway terms as well
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
-    bindsym l exec --no-startup-id $HOME/scripts/i3exit.sh lock, mode "default"
-    bindsym e exec --no-startup-id $HOME/scripts/i3exit.sh logout, mode "default"
-    bindsym s exec --no-startup-id $HOME/scripts/i3exit.sh suspend, mode "default"
-    bindsym h exec --no-startup-id $HOME/scripts/i3exit.sh hibernate, mode "default"
-    bindsym r exec --no-startup-id $HOME/scripts/i3exit.sh reboot, mode "default"
-    bindsym Shift+s exec --no-startup-id $HOME/scripts/i3exit.sh shutdown, mode "default"
+    bindsym l exec --no-startup-id $HOME/scripts/swayexit.sh lock, mode "default"
+    bindsym e exec --no-startup-id $HOME/scripts/swayexit.sh logout, mode "default"
+    bindsym s exec --no-startup-id $HOME/scripts/swayexit.sh suspend, mode "default"
+    bindsym h exec --no-startup-id $HOME/scripts/swayexit.sh hibernate, mode "default"
+    bindsym r exec --no-startup-id $HOME/scripts/swayexit.sh reboot, mode "default"
+    bindsym Shift+s exec --no-startup-id $HOME/scripts/swayexit.sh shutdown, mode "default"
 
     # back to normal: Enter or Escape
     bindsym Return mode "default"
@@ -377,7 +362,7 @@ exec MOZ_ENABLE_WAYLAND=1 firefox
 exec gnome-terminal
 
 
-# use full path $HOME/scripts/i3exit.sh
+# use full path $HOME/scripts/swayexit.sh
 # Look at i3 $PATH: `tr '\0' '\n' </proc/$(pidof i3)/environ | grep PATH`
 # http://permalink.gmane.org/gmane.linux.debian.user/472626
 set $mode_click click
