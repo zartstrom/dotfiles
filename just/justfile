@@ -1,0 +1,5 @@
+
+vpn-host := "vpn.idealo.de"
+
+vpn:
+  cat ~/.ldap/password | sudo openconnect --authgroup Employees --user philipp.hitzler --passwd-on-stdin {{ vpn-host }}
