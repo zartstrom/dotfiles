@@ -108,6 +108,7 @@ softlink_dotfiles_home("i3/lock.sh", "scripts/lock.sh")
 softlink_dotfiles_home("i3/from_here.sh", "scripts/from_here.sh")
 softlink_dotfiles_home("scripts/menu", "scripts/menu")
 softlink_dotfiles_home("scripts/screenshot.sh", "scripts/screenshot.sh")
+softlink_dotfiles_home("scripts/screenshot-output.sh", "scripts/screenshot-output.sh")
 
 # pulse
 display_header("pulse")
@@ -145,6 +146,7 @@ display_header("sway")
 mkdir_p_from_home(".config/sway")
 softlink_dotfiles_home("sway/config", ".config/sway/config")
 softlink_dotfiles_home("sway/swayexit.sh", "scripts/swayexit.sh")
+softlink_dotfiles_home("sway/focused_output.py", "scripts/focused_output.py")
 
 # termite
 display_header("termite")
@@ -173,6 +175,10 @@ softlink_dotfiles_home("X11/.Xdefaults", ".Xdefaults")
 softlink_dotfiles_home("X11/.Xmodmap", ".Xmodmap")
 # mouse config:
 softlink_dotfiles_home("X11/.imwheelrc", ".imwheelrc")
+
+# xdg-user-dirs
+display_header("xdg-user-dirs")
+softlink_dotfiles_home("xdg-user-dirs/user-dirs.dirs", ".config/user-dirs.dirs")
 
 # zsh
 display_header("zsh")

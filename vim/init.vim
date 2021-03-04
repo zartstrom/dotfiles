@@ -322,7 +322,7 @@ Plug 'dense-analysis/ale'
 Plug 'psf/black', { 'branch': 'stable' }
 autocmd BufWritePre *.py execute ':Black'
 
-Plug 'davidhalter/jedi-vim'
+" Plug 'davidhalter/jedi-vim'
 
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
@@ -379,16 +379,16 @@ Plug 'davidhalter/jedi-vim'
 "map <leader>p :PymodeLint<CR>
 
 " idris
-Plug 'idris-hackers/idris-vim'
+" Plug 'idris-hackers/idris-vim'
 
 " JSHint
-Plug 'walm/jshint.vim'
+" Plug 'walm/jshint.vim'
 
-autocmd BufWritePost *.js :JSHint
+" autocmd BufWritePost *.js :JSHint
 
 
 " pony vim syntax
-Plug 'dleonard0/pony-vim-syntax'
+" Plug 'dleonard0/pony-vim-syntax'
 
 " vim-scala
 Plug 'derekwyatt/vim-scala'

@@ -10,14 +10,16 @@
 # For help see man 5 sway-output
 # You can get the names of your outputs by running 'swaymsg -t get_outputs'
 
+# TODO: use proper name for laptop monitor
+output eDP-1 res 1920x1080 position 760 1440
+# 34" work monitor
+output DP-2 res 3440x1440 position 0 0
+
+output "Goldstar Company Ltd   0x0000332B" res 1280x1080 position 2680 1440
+
 # Home
 output "Chimei Innolux Corporation 0x1482 0x00000000" resolution 1600x900 position 0 0
 output "Eizo Nanao Corporation EV2336W 61488064" resolution 1920x1080 position 1600 0
-
-# 34" work monitor
-output eDP-1 res 1920x1080 position 760 1440
-output DP-2 res 3440x1440 position 0 0
-output "Goldstar Company Ltd   0x0000332B" res 1280x1080 position 2680 1440
 
 # Wallpaper
 #
@@ -223,6 +225,7 @@ bindsym $mod+space focus mode_toggle
 # bindsym $mod+a focus parent
 
 bindsym $mod+p exec --no-startup-id $HOME/scripts/screenshot.sh
+bindsym $mod+o exec --no-startup-id $HOME/scripts/screenshot.sh focused_output
 
 # focus the child container
 #bindsym $mod+d focus child
@@ -245,8 +248,10 @@ set $inkdrop "23:inkdrop 🌢"
 set $gotop "24:top"
 #set $cherrytree "22:🍒🍒🍒"
 
-workspace "18:8 " output eDP-1
-workspace "5:firefox " output DP-4
+workspace $T8 output eDP-1
+workspace $firefox output DP-4
+#workspace "18:8 " output eDP-1
+#workspace "5:firefox " output DP-4
 
 # switch to workspace
 bindsym $mod+1 workspace $T1
