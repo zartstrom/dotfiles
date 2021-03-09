@@ -205,6 +205,9 @@ Plug 'tpope/vim-fugitive'
 " repeat
 Plug 'tpope/vim-repeat'
 
+" Easy motion - Neovim motions on speed!
+Plug 'phaazon/hop.nvim'
+
 " vim-easymotion
 Plug 'Lokaltog/vim-easymotion'
 map <Space> <Plug>(easymotion-prefix)

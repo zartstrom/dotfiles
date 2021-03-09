@@ -51,6 +51,7 @@ alias cat="bat -p"
 source "$HOME/.bash_aliases_local"
 
 alias cat="bat -p"
+alias token="/usr/bin/cat $HOME/.github/token_work"
 
 alias .j='just --justfile ~/.justfile --working-directory ~'
 
