@@ -12,8 +12,16 @@ call plug#begin('~/.vim/plugged')
 " not work in neovim, so I renamed it in `~/.vim`.
 " cd ~/.vim/plugged
 " git clone https://github.com/asvetliakov/vim-easymotion.git vim-easymotion-vscode
-Plug 'asvetliakov/vim-easymotion-vscode'
-map <Space> <Plug>(easymotion-prefix)
+" Plug 'asvetliakov/vim-easymotion-vscode'
+" map <Space> <Plug>(easymotion-prefix)
+"
+" Easy motion - Neovim motions on speed!
+Plug 'phaazon/hop.nvim'
+map <Space>j :HopLine<CR>
+map <Space>w :HopWord<CR>
+map <Space>f :HopChar1<CR>
+map <Space>F :HopChar2<CR>
+
 
 " abolish - develish good
 Plug 'tpope/vim-abolish'

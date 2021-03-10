@@ -207,10 +207,14 @@ Plug 'tpope/vim-repeat'
 
 " Easy motion - Neovim motions on speed!
 Plug 'phaazon/hop.nvim'
+map <Space>j :HopLine<CR>
+map <Space>w :HopWord<CR>
+map <Space>f :HopChar1<CR>
+map <Space>F :HopChar2<CR>
 
 " vim-easymotion
-Plug 'Lokaltog/vim-easymotion'
-map <Space> <Plug>(easymotion-prefix)
+" Plug 'Lokaltog/vim-easymotion'
+" map <Space> <Plug>(easymotion-prefix)
 
 " surround.vim - quotes, brackets and (html-)tags
 Plug 'tpope/vim-surround'

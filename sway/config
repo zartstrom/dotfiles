@@ -140,6 +140,10 @@ floating_modifier $mod
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run -nb '$base01' -nf '$base03' -sb '$base0D' -sf '$base07' -fn 'Monoid'
 
+# Handwritten alternative to rofi:
+# bindsym $mod+r exec termite --name=launcher -e "bash -c 'compgen -c | grep -v fzf | sort -u | fzf --layout=reverse | xargs -r swaymsg -t command exec'"
+# for_window [app_id="^launcher$"] floating enable, border none, opacity 0.8
+#
 # start rofi
 bindsym $mod+x exec rofi -show run \
     -color-window "$base01, $base01, $base05" \
@@ -246,7 +250,6 @@ set $T8 "18:8 "
 set $sql "21:sql "
 set $inkdrop "23:inkdrop 🌢"
 set $gotop "24:top"
-#set $cherrytree "22:🍒🍒🍒"
 
 workspace $T8 output eDP-1
 workspace $firefox output DP-4
@@ -351,7 +354,6 @@ assign [class="^Opera$"] → $opera
 assign [class="^Mysql-workbench-bin$"] → $sql
 assign [app_id="DBeaver"] → $sql
 assign [class="^jetbrains-datagrip$"] → $sql
-assign [class="^Cherrytree$"] → $cherrytree
 assign [class="^inkdrop$"] → $inkdrop
 assign [class="Microsoft Teams - Preview"] → $chat
 # assign [name="^gotop$"] → $gotop
