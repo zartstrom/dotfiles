@@ -4,7 +4,7 @@
 [core]
   pager = less -FRSX
   whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
-  excludesfile = ~/.gitignore
+  excludesFile = ~/.gitignore
 [alias]
   co = checkout
   st = status
