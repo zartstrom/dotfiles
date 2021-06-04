@@ -22,6 +22,11 @@ output "Goldstar Company Ltd   0x0000332B" res 1280x1080 position 2680 1440
 output "Chimei Innolux Corporation 0x1482 0x00000000" resolution 1600x900 position 0 0
 output "Eizo Nanao Corporation EV2336W 61488064" resolution 1920x1080 position 1600 0
 
+# Schergenbreite
+# output "Eizo Nanao Corporation EV2480 22743011" resolution 1920x1080 position 0 0
+# TODO: fix conflict with work setup
+# output eDP-1 res 1920x1080 position 0 1080
+
 # Wallpaper
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)

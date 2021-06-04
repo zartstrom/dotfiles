@@ -9,4 +9,6 @@ _JAVA_AWT_WM_NONREPARENTING=1
 
 # firefox for wayland
 MOZ_ENABLE_WAYLAND=1
+# Please don't use GDK_BACKEND, it's for debugging only. Use MOZ_ENABLE_WAYLAND=1
+# GDK_BACKEND=wayland
 
