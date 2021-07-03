@@ -206,7 +206,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 
 " Easy motion - Neovim motions on speed!
-Plug 'phaazon/hop.nvim'
+Plug 'phaazon/hop.nvim', { 'branch': 'pre-extmarks' }
 map <Space>j :HopLine<CR>
 map <Space>w :HopWord<CR>
 map <Space>f :HopChar1<CR>
@@ -223,25 +223,25 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-abolish'
 
 " NERDCommenter
-Plug 'scrooloose/nerdcommenter'
+Plug 'preservim/nerdcommenter'
 map <leader>cc <leader>cl
 
-" js-beautify
-Plug 'maksimr/vim-jsbeautify'
-Plug 'einars/js-beautify'
+" js-beautify " Who needs javascript?!
+" Plug 'maksimr/vim-jsbeautify'
+" Plug 'einars/js-beautify'
 " autocmd FileType javascript vnoremap <buffer>  <C-f> :call RangeJsBeautify()<cr>
 " autocmd FileType html vnoremap <buffer> <C-f> :call RangeHtmlBeautify()<cr>
 " autocmd FileType css vnoremap <buffer> <C-f> :call RangeCSSBeautify()<cr>
 " for js
-autocmd FileType javascript noremap <leader>b :call JsBeautify()<cr>
+" autocmd FileType javascript noremap <leader>b :call JsBeautify()<cr>
 " for html
-autocmd FileType html noremap <leader>b :call HtmlBeautify()<cr>
+" autocmd FileType html noremap <leader>b :call HtmlBeautify()<cr>
 
 " taglist.vim
-Plug 'vim-scripts/taglist.vim'
+" Plug 'vim-scripts/taglist.vim'
 
 " R
-Plug 'jcfaria/Vim-R-plugin'
+" Plug 'jcfaria/Vim-R-plugin'
 
 " UltiSnips
 "Plug 'SirVer/ultisnips'
@@ -319,12 +319,12 @@ xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
 " Fuzzy Finder
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
 " Python
 Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 
-Plug 'dense-analysis/ale'
+" Plug 'dense-analysis/ale'
 
 Plug 'psf/black', { 'branch': 'stable' }
 autocmd BufWritePre *.py execute ':Black'
@@ -431,7 +431,7 @@ map <leader>n :NERDTreeToggle<CR>
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " vim orgmode
-Plug 'jceb/vim-orgmode'
+" Plug 'jceb/vim-orgmode'
 
 " Colorschemes
 "" solarized colorscheme
@@ -456,7 +456,7 @@ Plug 'flazz/vim-colorschemes'
 Plug 'joshdick/onedark.vim'
 
 " LineDiff
-Plug 'AndrewRadev/linediff.vim'
+" Plug 'AndrewRadev/linediff.vim'
 
 " 'vmchale/just-vim' Syntax highlighting for justfiles
 Plug 'vmchale/just-vim'
@@ -465,7 +465,7 @@ Plug 'vmchale/just-vim'
 Plug 'mhinz/vim-startify'
 
 " terraform
-Plug 'hashivim/vim-terraform'
+" Plug 'hashivim/vim-terraform'
 
 " unicode vim
 Plug 'chrisbra/unicode.vim'

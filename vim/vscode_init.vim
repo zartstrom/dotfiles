@@ -5,22 +5,23 @@
 "    |_| |_|\___|\___/ \_/ |_|_| |_| |_|
 "
 
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.vim/plugged_vscode')
 
-" fork of easymotion plugin for vscode
-" actual plugin is in repository 'asvetliakov/vim-easymotion', but this does
-" not work in neovim, so I renamed it in `~/.vim`.
-" cd ~/.vim/plugged
-" git clone https://github.com/asvetliakov/vim-easymotion.git vim-easymotion-vscode
-" Plug 'asvetliakov/vim-easymotion-vscode'
-" map <Space> <Plug>(easymotion-prefix)
-"
+let mapleader = ","
+
+Plug 'asvetliakov/vim-easymotion'
 " Easy motion - Neovim motions on speed!
-Plug 'phaazon/hop.nvim'
-map <Space>j :HopLine<CR>
-map <Space>w :HopWord<CR>
-map <Space>f :HopChar1<CR>
-map <Space>F :HopChar2<CR>
+" fork of easymotion plugin for vscode
+" Plug 'asvetliakov/vim-easymotion-vscode'
+map <Space> <Plug>(easymotion-prefix)
+
+"Plug 'phaazon/hop.nvim'
+" does currently not work with vscode
+"map <Space>j :HopLine<CR>
+"map <Space>w :HopWord<CR>
+"map <Space>f :HopChar1<CR>
+"map <Space>F :HopChar2<CR>
+
 
 
 " abolish - develish good
@@ -37,6 +38,18 @@ Plug 'junegunn/vim-easy-align'
 
 " colorizer
 Plug 'norcalli/nvim-colorizer.lua'
+
+" Nerd Commenter
+Plug 'preservim/nerdcommenter'
+map <leader>cc <leader>cl
+
+" fuzzy finder
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+
+" Unicode emojis
+Plug 'yazgoo/unicodemoji'
+nmap <leader>u :Unicodemoji<CR>
+
 
 call plug#end()
 

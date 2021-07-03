@@ -164,5 +164,6 @@ n()
         fi
 }
 
+. ~/devel/recalc-service/.complete.zsh
 # eval "$(starship init zsh)"
 
