@@ -159,8 +159,10 @@ bindsym $mod+x exec rofi -show run \
 
 # start a terminal
 #set $term termite
-set $term dbus-launch gnome-terminal
-bindsym $mod+Return exec $term
+set $term gnome-terminal
+# bindsym $mod+Return exec $term
+bindsym $mod+Return exec dbus-launch $term
+
 # bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+t exec gnome-terminal
 

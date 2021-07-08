@@ -54,6 +54,7 @@ def run(script):
 
 
 def display_header(section):
+    """Print a nice header line"""
     print("--- %s ---" % section)
 
 

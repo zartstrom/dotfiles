@@ -1,5 +1,6 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
+
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python2
 
 # Set name of the theme to load.
@@ -54,6 +55,8 @@ setopt interactivecomments
 export PATH=$HOME/bin:$HOME/scripts:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 source $ZSH/oh-my-zsh.sh
+export WORDCHARS='*?_-.[]~=/&;!#$%^(){}<>"'
+
 source $HOME/.bash_aliases
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -166,4 +169,5 @@ n()
 
 . ~/devel/recalc-service/.complete.zsh
 # eval "$(starship init zsh)"
+source ~/devel/recalc-service/.complete.zsh
 
