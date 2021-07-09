@@ -25,4 +25,23 @@ return require('packer').startup(function()
   use { 'vim-airline/vim-airline' }
   use { 'vim-airline/vim-airline-themes' }
 
+  -- treesitter
+   use {
+        'nvim-treesitter/nvim-treesitter',
+        run = ':TSUpdate'
+    }
+   use { 'nvim-treesitter/nvim-treesitter-textobjects' }
+
+
+  -- lua
+  use 'nvim-lua/popup.nvim'
+  use 'nvim-lua/plenary.nvim'
+  -- 'nvim-telescope/telescope.nvim'
+
+  -- Colorizer
+  use 'norcalli/nvim-colorizer.lua'
+
+  -- Hop
+  use 'phaazon/hop.nvim'
+
 end)

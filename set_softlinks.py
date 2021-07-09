@@ -157,15 +157,15 @@ mkdir_p_from_home(".config/termite/color")
 softlink_dotfiles_home("termite/color_default", ".config/termite/color/default")
 run("termite/color_switcher_setup.sh")
 
-# vim
-display_header("vim")
+# nvim
+display_header("nvim")
 mkdir_p_from_home(".vim")
 mkdir_p_from_home(".vimswap")
 mkdir_p_from_home(".config/nvim")
-softlink_dotfiles_home("vim/vimrc", ".vimrc")
-softlink_dotfiles_home("vim/init.vim", ".config/nvim/init.vim")
-softlink_dotfiles_home("vim/vscode_init.vim", ".config/nvim/vscode_init.vim")
-softlink_dotfiles_home("vim/coc-settings.json", ".config/nvim/coc-settings.json")
+# softlink_dotfiles_home("vim/init.vim", ".config/nvim/init.vim")
+softlink_dotfiles_home("nvim/vscode_init.vim", ".config/nvim/vscode_init.vim")
+softlink_dotfiles_home("nvim/init.lua", ".config/nvim/init.lua")
+softlink_dotfiles_home("nvim/lua", ".config/nvim/lua")
 
 # X11
 display_header("X11")
