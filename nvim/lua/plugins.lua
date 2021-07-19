@@ -38,8 +38,9 @@ return require('packer').startup(function()
   use 'nvim-lua/plenary.nvim'
   -- 'nvim-telescope/telescope.nvim'
 
-  -- Colorizer
+  -- Color
   use 'norcalli/nvim-colorizer.lua'
+  use 'ful1e5/onedark.nvim'
 
   -- Hop
   use 'phaazon/hop.nvim'

@@ -62,8 +62,8 @@ HOME = os.environ["HOME"]
 DOTFILES = os.path.join(HOME, "dotfiles")
 
 # alacritty
-display_header("alacritty")
-softlink_dotfiles_home("alacritty/alacritty.yml", ".config/alacritty/alacritty.yml")
+#display_header("alacritty")
+#softlink_dotfiles_home("alacritty/alacritty.yml", ".config/alacritty/alacritty.yml")
 
 # bash
 display_header("bash")
