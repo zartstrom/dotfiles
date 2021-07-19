@@ -94,10 +94,10 @@ map('v', '<leader>s', ':s//gcI<Left><Left><Left><Left>')
 -------------------- LSP -----------------------------------
 require'lspconfig'.pyright.setup{}
 local lsp = require('lspconfig')
-for ls, cfg in pairs({
-  bashls = {}, gopls = {}, ccls = {}, jsonls = {},
-  pyls = {root_dir = lsp.util.root_pattern('.git', fn.getcwd())},
-}) do lsp[ls].setup(cfg) end
+--for ls, cfg in pairs({
+--  bashls = {}, gopls = {}, ccls = {}, jsonls = {},
+--  pyls = {root_dir = lsp.util.root_pattern('.git', fn.getcwd())},
+--}) do lsp[ls].setup(cfg) end
 
 -------------------- TREE-SITTER ---------------------------
 require('nvim-treesitter.configs').setup {

@@ -13,6 +13,7 @@ return require('packer').startup(function()
 
 
   -- Vim dispatch
+  use 'tpope/vim-abolish'
   use { 'tpope/vim-dispatch' }
   use 'tpope/vim-commentary'
   use 'tpope/vim-surround'
