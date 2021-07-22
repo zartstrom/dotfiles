@@ -12,26 +12,26 @@ return require('packer').startup(function()
   use { 'tjdevries/nlua.nvim' }
 
 
-  -- Vim dispatch
+  -- tpope goodies
   use 'tpope/vim-abolish'
-  use { 'tpope/vim-dispatch' }
   use 'tpope/vim-commentary'
-  use 'tpope/vim-surround'
+  use 'tpope/vim-dadbot'
+  use 'tpope/vim-eunuch'
+  use 'tpope/vim-fugitive'
   use 'tpope/vim-repeat'
-
-  -- Fugitive for Git
-  use { 'tpope/vim-fugitive' }
+  -- use 'tpope/vim-sensible' -- try it out some time
+  use 'tpope/vim-surround'
 
   -- vim-airline
   use { 'vim-airline/vim-airline' }
   use { 'vim-airline/vim-airline-themes' }
 
   -- treesitter
-   use {
+  use {
         'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate'
     }
-   use { 'nvim-treesitter/nvim-treesitter-textobjects' }
+  use { 'nvim-treesitter/nvim-treesitter-textobjects' }
 
 
   -- lua
@@ -44,6 +44,13 @@ return require('packer').startup(function()
   use 'ful1e5/onedark.nvim'
 
   -- Hop
-  use 'phaazon/hop.nvim'
+  use {
+  'phaazon/hop.nvim',
+  as = 'hop',
+  config = function()
+    -- you can configure Hop the way you like here; see :h hop-config
+    require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
+  end
+}
 
 end)

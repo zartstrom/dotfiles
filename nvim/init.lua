@@ -148,6 +148,7 @@ vim.g.airline_symbols = {
 }
 -------------------- Hop -----------------------------------
 
+require('hop').setup{}
 map('n', '<Space>j', ':HopLine<CR>')
 map('n', '<Space>w', ':HopWord<CR>')
 map('n', '<Space>f', ':HopChar1<CR>')
@@ -157,7 +158,7 @@ map('n', '<Space>F', ':HopChar2<CR>')
 -- Use the `default_options` as the second parameter, which uses
 -- `foreground` for every mode. This is the inverse of the previous
 -- setup configuration.
-require 'colorizer'.setup {
+require('colorizer').setup {
   '*'; -- Highlight all files, but customize some others.
   css = { rgb_fn = true; }; -- Enable parsing rgb(...) functions in css.
   html = { names = false; } -- Disable parsing "names" like Blue or Gray

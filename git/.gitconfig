@@ -12,6 +12,7 @@
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
   lol = log --oneline --graph --decorate
   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  lx = log --graph --pretty=format:'%h -%d %s %cr <%an>' --abbrev-commit
   lh = "!sh -c 'git lg | head'"
   la = log --all --graph --oneline --decorate
 [color]
