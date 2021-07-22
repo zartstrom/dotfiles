@@ -15,7 +15,6 @@ return require('packer').startup(function()
   -- tpope goodies
   use 'tpope/vim-abolish'
   use 'tpope/vim-commentary'
-  use 'tpope/vim-dadbot'
   use 'tpope/vim-eunuch'
   use 'tpope/vim-fugitive'
   use 'tpope/vim-repeat'
