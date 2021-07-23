@@ -5,11 +5,14 @@ return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
 
   -- LSP and completion
-  use { 'neovim/nvim-lspconfig' }
-  use { 'nvim-lua/completion-nvim' }
+  use  'neovim/nvim-lspconfig'
+  use  'nvim-lua/completion-nvim'
 
   -- Lua development
-  use { 'tjdevries/nlua.nvim' }
+  use  'tjdevries/nlua.nvim'
+
+  -- justfile
+  use 'NoahTheDuke/vim-just'
 
 
   -- tpope goodies
@@ -21,16 +24,17 @@ return require('packer').startup(function()
   -- use 'tpope/vim-sensible' -- try it out some time
   use 'tpope/vim-surround'
 
+
   -- vim-airline
-  use { 'vim-airline/vim-airline' }
-  use { 'vim-airline/vim-airline-themes' }
+  use  'vim-airline/vim-airline'
+  use  'vim-airline/vim-airline-themes'
 
   -- treesitter
   use {
         'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate'
     }
-  use { 'nvim-treesitter/nvim-treesitter-textobjects' }
+  use 'nvim-treesitter/nvim-treesitter-textobjects'
 
 
   -- lua
