@@ -112,6 +112,15 @@ require('nvim-treesitter.configs').setup {
         ['ac'] = '@class.outer', ['ic'] = '@class.inner',
       },
     },
+    incremental_selection = {
+      enable = true,
+      keymaps = {
+        init_selection = "gnn",
+        node_incremental = "grn",
+        scope_incremental = "grc",
+        node_decremental = "grm",
+      },
+    },
     swap = {
       enable = true,
       swap_next = {['<leader>a'] = '@parameter.inner'},
@@ -121,7 +130,7 @@ require('nvim-treesitter.configs').setup {
       enable = true,
       set_jumps = true,
       goto_next_start = {[']a'] = '@parameter.outer', [']f'] = '@function.outer', [']c'] = '@class.outer'},
-      goto_next_end = {[']A'] = '@parameter.outer', [']F'] = '@function.outer', [']C'] = '@class.outer'},
+      goto_next_end = {[']A'] = '@parameter.outer', ['<leader>ö'] = '@function.outer', [']C'] = '@class.outer'},
       goto_previous_start = {['[a'] = '@parameter.outer', ['[f'] = '@function.outer', ['[c'] = '@class.outer'},
       goto_previous_end = {['[A'] = '@parameter.outer', ['[F'] = '@function.outer', ['[C'] = '@class.outer'},
     },
