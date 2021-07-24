@@ -28,7 +28,6 @@ end
 -------------------- PLUGINS -------------------------------
 require('plugins')
 
--------------------- PLUGIN SETUP --------------------------
 
 -------------------- OPTIONS -------------------------------
 local indent, width = 4, 108
@@ -63,6 +62,7 @@ opt.wildmode = {'list', 'longest'}  -- Command-line completion mode
 opt.wrap = false                    -- Disable line wrap
 cmd 'colorscheme onedark'
 
+
 -------------------- MAPPINGS ------------------------------
 map('n', ',', '<leader>', {noremap = false})
 map('', '<leader>c', '"+y')
@@ -91,13 +91,36 @@ map('t', '<ESC>', '&filetype == "fzf" ? "\\<ESC>" : "\\<C-\\>\\<C-n>"' , {expr =
 map('t', 'jj', '<ESC>', {noremap = false})
 map('v', '<leader>s', ':s//gcI<Left><Left><Left><Left>')
 
+require'settings'
+
+
+-------------------- PLUGIN SETUP --------------------------
+
 -------------------- LSP -----------------------------------
-require'lspconfig'.pyright.setup{}
+-- require'lspconfig'.pyright.setup{}
 local lsp = require('lspconfig')
---for ls, cfg in pairs({
---  bashls = {}, gopls = {}, ccls = {}, jsonls = {},
---  pyls = {root_dir = lsp.util.root_pattern('.git', fn.getcwd())},
---}) do lsp[ls].setup(cfg) end
+-- for ls, cfg in pairs({
+--   bashls = {}, gopls = {}, ccls = {}, jsonls = {},
+--   pyls = {root_dir = lsp.util.root_pattern('.git', fn.getcwd())},
+-- }) do lsp[ls].setup(cfg) end
+require'lspconfig'.pyright.setup{on_attach=require'completion'.on_attach}
+
+
+-------------------- LSP SAGA ------------------------------
+local saga = require 'lspsaga'
+
+saga.init_lsp_saga {
+  error_sign = '',
+  warn_sign = '',
+  hint_sign = '',
+  infor_sign = '',
+  border_style = "round",
+}
+
+map('n', 'K', ':Lspsaga hover_doc<CR>', {silent = true})
+map('n', 'gh', ':Lspsaga lsp_finder<CR>', {silent = true})
+map('i', '<C-k>', '<CMD>Lspsaga signature_help<CR>')
+
 
 -------------------- TREE-SITTER ---------------------------
 require('nvim-treesitter.configs').setup {
@@ -137,24 +160,14 @@ require('nvim-treesitter.configs').setup {
   },
 }
 
--------------------- Airline -------------------------------
+-------------------- TELESCOPE -----------------------------
+local telescope_builtin = require('telescope.builtin')
 
-vim.g.airline_extensions = {'branch', 'tabline'}
-vim.g.airline_left_sep = ''
-vim.g.airline_left_alt_sep = ''
-vim.g.airline_right_sep = ''
-vim.g.airline_right_alt_sep = ''
-vim.g["airline#extensions#tabline#left_sep"] = ' '
-vim.g["airline#extensions#tabline#left_alt_sep"] = ''
-vim.g["airline#extensions#keymap#enabled"] = 0
+map('n', '<leader>ff', "<CMD>lua require('telescope.builtin').find_files()<CR>")
+map('n', '<leader>fg', "<CMD>lua require('telescope.builtin').live_grep()<CR>")
+map('n', '<leader>fb', "<CMD>lua require('telescope.builtin').buffers()<CR>")
+map('n', '<leader>fh', "<CMD>lua require('telescope.builtin').help_tags()<CR>")
 
-vim.g.airline_symbols = {
-    branch = '';
-    readonly = '';
-    linenr = '';
-    maxlinenr = '≡';
-    colnr = '  col';
-}
 -------------------- Hop -----------------------------------
 
 require('hop').setup{}
@@ -162,6 +175,16 @@ map('n', '<Space>j', ':HopLine<CR>')
 map('n', '<Space>w', ':HopWord<CR>')
 map('n', '<Space>f', ':HopChar1<CR>')
 map('n', '<Space>F', ':HopChar2<CR>')
+
+map('n', 'y<Space>j', 'y:HopLine<CR>')
+map('n', 'y<Space>w', 'y:HopWord<CR>')
+map('n', 'y<Space>f', 'y:HopChar1<CR>')
+map('n', 'y<Space>F', 'y:HopChar2<CR>')
+
+map('n', 'd<Space>j', 'd:HopLine<CR>')
+map('n', 'd<Space>w', 'd:HopWord<CR>')
+map('n', 'd<Space>f', 'd:HopChar1<CR>')
+map('n', 'd<Space>F', 'd:HopChar2<CR>')
 
 -------------------- colorizer -----------------------------
 -- Use the `default_options` as the second parameter, which uses
@@ -172,8 +195,6 @@ require('colorizer').setup {
   css = { rgb_fn = true; }; -- Enable parsing rgb(...) functions in css.
   html = { names = false; } -- Disable parsing "names" like Blue or Gray
 }
--------------------- color ---------------------------------
-
 
 -------------------- COMMANDS ------------------------------
 function init_term()

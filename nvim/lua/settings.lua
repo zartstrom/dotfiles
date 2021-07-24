@@ -21,23 +21,28 @@ utils.opt('w', 'number', true)
 -- utils.opt('w', 'relativenumber', true)
 utils.opt('o', 'clipboard','unnamed,unnamedplus')
 
--- vim-airline
+
+-------------------- Airline -------------------------------
+
+vim.g.airline_extensions = {'branch', 'tabline'}
 vim.g.airline_left_sep = ''
 vim.g.airline_left_alt_sep = ''
 vim.g.airline_right_sep = ''
 vim.g.airline_right_alt_sep = ''
--- vim.g.airline#extensions#tabline#left_sep = ''
--- vim.g.airline#extensions#tabline#left_alt_sep = ''
+vim.g["airline#extensions#tabline#left_sep"] = ' '
+vim.g["airline#extensions#tabline#left_alt_sep"] = ''
+vim.g["airline#extensions#keymap#enabled"] = 0
 
 vim.g.airline_symbols = {
     branch = '';
     readonly = '';
     linenr = '';
     maxlinenr = '≡';
+    colnr = '  col';
 }
-
--- Movement
-vim.api.nvim_set_keymap('n', '<Up>', '<Nop>', { noremap = true, silent = true })
 
 -- Highlight on yank
 vim.cmd 'au TextYankPost * lua vim.highlight.on_yank {on_visual = false}'
+
+-- Movement
+vim.api.nvim_set_keymap('n', '<Up>', '<Nop>', { noremap = true, silent = true })

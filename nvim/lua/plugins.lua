@@ -4,9 +4,13 @@ return require('packer').startup(function()
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
-  -- LSP and completion
+  -- LSP
   use  'neovim/nvim-lspconfig'
+  use  'glepnir/lspsaga.nvim'
+
+  -- Code Completion
   use  'nvim-lua/completion-nvim'
+
 
   -- Lua development
   use  'tjdevries/nlua.nvim'
@@ -36,11 +40,14 @@ return require('packer').startup(function()
     }
   use 'nvim-treesitter/nvim-treesitter-textobjects'
 
+  -- telescope
+  use {
+    'nvim-telescope/telescope.nvim',
+    requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
+  }
 
-  -- lua
-  use 'nvim-lua/popup.nvim'
-  use 'nvim-lua/plenary.nvim'
-  -- 'nvim-telescope/telescope.nvim'
+  -- lua format
+  use 'andrejlevkovitch/vim-lua-format'
 
   -- Color
   use 'norcalli/nvim-colorizer.lua'
@@ -48,12 +55,12 @@ return require('packer').startup(function()
 
   -- Hop
   use {
-  'phaazon/hop.nvim',
-  as = 'hop',
-  config = function()
-    -- you can configure Hop the way you like here; see :h hop-config
-    require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
-  end
-}
+    'phaazon/hop.nvim',
+    as = 'hop',
+    config = function()
+      -- you can configure Hop the way you like here; see :h hop-config
+      require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
+    end
+  }
 
 end)
