@@ -46,3 +46,4 @@ vim.cmd 'au TextYankPost * lua vim.highlight.on_yank {on_visual = false}'
 
 -- Movement
 vim.api.nvim_set_keymap('n', '<Up>', '<Nop>', { noremap = true, silent = true })
+

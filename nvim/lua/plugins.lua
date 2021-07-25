@@ -8,18 +8,49 @@ return require('packer').startup(function()
   use  'neovim/nvim-lspconfig'
   use  'glepnir/lspsaga.nvim'
 
-  -- Code Completion
-  use  'nvim-lua/completion-nvim'
+  -- Treesitter
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate'
+  }
+  use 'nvim-treesitter/nvim-treesitter-textobjects'
 
+  -- Code Completion
+  -- use  'nvim-lua/completion-nvim'
+  use 'hrsh7th/nvim-compe'
 
   -- Lua development
   use  'tjdevries/nlua.nvim'
 
-  -- justfile
+  -- Lua format
+  use 'andrejlevkovitch/vim-lua-format'
+
+  -- Neorg
+  use {
+    "vhyrro/neorg",
+    config = function()
+      require('neorg').setup {
+        -- Tell Neorg what modules to load
+        load = {
+          ["core.defaults"] = {}, -- Load all the default modules
+          ["core.norg.concealer"] = {}, -- Allows for use of icons
+          ["core.norg.dirman"] = { -- Manage your directories with Neorg
+            config = {
+              workspaces = {
+                my_workspace = "~/.neorg"
+              }
+            }
+          }
+        },
+      }
+    end,
+    requires = "nvim-lua/plenary.nvim"
+  }
+
+  -- Justfile
   use 'NoahTheDuke/vim-just'
 
-
-  -- tpope goodies
+  -- Tpope goodies
   use 'tpope/vim-abolish'
   use 'tpope/vim-commentary'
   use 'tpope/vim-eunuch'
@@ -33,21 +64,11 @@ return require('packer').startup(function()
   use  'vim-airline/vim-airline'
   use  'vim-airline/vim-airline-themes'
 
-  -- treesitter
-  use {
-        'nvim-treesitter/nvim-treesitter',
-        run = ':TSUpdate'
-    }
-  use 'nvim-treesitter/nvim-treesitter-textobjects'
-
-  -- telescope
+  -- Telescope
   use {
     'nvim-telescope/telescope.nvim',
     requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
   }
-
-  -- lua format
-  use 'andrejlevkovitch/vim-lua-format'
 
   -- Color
   use 'norcalli/nvim-colorizer.lua'

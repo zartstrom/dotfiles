@@ -23,8 +23,6 @@ if fn.empty(fn.glob(install_path)) > 0 then
   execute 'packadd packer.nvim'
 end
 
--- vim.cmd [[packadd packer.nvim]]
-
 -------------------- PLUGINS -------------------------------
 require('plugins')
 
@@ -91,7 +89,6 @@ map('t', '<ESC>', '&filetype == "fzf" ? "\\<ESC>" : "\\<C-\\>\\<C-n>"' , {expr =
 map('t', 'jj', '<ESC>', {noremap = false})
 map('v', '<leader>s', ':s//gcI<Left><Left><Left><Left>')
 
-require'settings'
 
 
 -------------------- PLUGIN SETUP --------------------------
@@ -103,7 +100,9 @@ local lsp = require('lspconfig')
 --   bashls = {}, gopls = {}, ccls = {}, jsonls = {},
 --   pyls = {root_dir = lsp.util.root_pattern('.git', fn.getcwd())},
 -- }) do lsp[ls].setup(cfg) end
-require'lspconfig'.pyright.setup{on_attach=require'completion'.on_attach}
+
+-- nvim-completion requires this:
+-- require'lspconfig'.pyright.setup{on_attach=require'completion'.on_attach}
 
 
 -------------------- LSP SAGA ------------------------------
@@ -159,6 +158,15 @@ require('nvim-treesitter.configs').setup {
     },
   },
 }
+local parser_configs = require('nvim-treesitter.parsers').get_parser_configs()
+
+parser_configs.norg = {
+  install_info = {
+    url = "https://github.com/vhyrro/tree-sitter-norg",
+    files = { "src/parser.c" },
+    branch = "main"
+  },
+}
 
 -------------------- TELESCOPE -----------------------------
 local telescope_builtin = require('telescope.builtin')
@@ -196,6 +204,42 @@ require('colorizer').setup {
   html = { names = false; } -- Disable parsing "names" like Blue or Gray
 }
 
+-------------------- Code Completion -----------------------
+require'compe'.setup {
+  enabled = true;
+  autocomplete = true;
+  debug = false;
+  min_length = 1;
+  preselect = 'enable';
+  throttle_time = 80;
+  source_timeout = 200;
+  resolve_timeout = 800;
+  incomplete_delay = 400;
+  max_abbr_width = 100;
+  max_kind_width = 100;
+  max_menu_width = 100;
+  documentation = {
+    border = { '', '' ,'', ' ', '', '', '', ' ' }, -- the border option is the same as `|help nvim_open_win|`
+    winhighlight = "NormalFloat:CompeDocumentation,FloatBorder:CompeDocumentationBorder",
+    max_width = 120,
+    min_width = 60,
+    max_height = math.floor(vim.o.lines * 0.3),
+    min_height = 1,
+  };
+
+  source = {
+    path = true;
+    buffer = true;
+    calc = true;
+    nvim_lsp = true;
+    nvim_lua = true;
+    vsnip = true;
+    ultisnips = true;
+    luasnip = true;
+    neorg = true;
+  };
+}
+
 -------------------- COMMANDS ------------------------------
 function init_term()
   cmd 'setlocal nonumber norelativenumber'
@@ -221,4 +265,6 @@ end
 --  'TextYankPost * if v:event.operator is "y" && v:event.regname is "+" | OSCYankReg + | endif',
 --  'VimEnter * call deoplete#custom#var("omni", "input_patterns", {"tex": g:vimtex#re#deoplete})',
 --})
+
+require'settings'
 
