@@ -88,7 +88,7 @@ set $mod Mod4
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 # see as well https://wiki.archlinux.org/index.php/i3#Iconic_fonts_in_the_status_bar
-font Monoid, pango:Hack, FontAwesome 10
+font Monoid, pango:Hack, FontAwesome 10, UBraille 10
 #-----------------------appearance-------------------------
 ## Base16 Material
 # Author: Nate Peterson
@@ -151,7 +151,7 @@ bindsym $mod+d exec dmenu_run -nb '$base01' -nf '$base03' -sb '$base0D' -sf '$ba
 # for_window [app_id="^launcher$"] floating enable, border none, opacity 0.8
 #
 # start rofi
-bindsym $mod+x exec rofi -show run \
+bindsym $mod+x exec rofi -show run -font "Monoid 12" \
     -color-window "$base01, $base01, $base05" \
     -color-normal "$base01, $base05, $base01, $base0D, $base00" \
     -color-active "#222222, #b1b4b3, #222222, #007763, #b1b4b3" \
@@ -168,7 +168,7 @@ bindsym $mod+t exec gnome-terminal
 
 bindsym $mod+b exec --no-startup-id $HOME/scripts/from_here.sh
 
-bindsym $mod+g exec gnome-terminal -e ytop
+bindsym $mod+g exec dbus-launch gnome-terminal -e ytop
 
 # toggle touchpad # TODO: do it correctly in sway
 #bindsym $mod+t exec --no-startup-id $HOME/scripts/touchpad_toggle.sh
@@ -256,13 +256,12 @@ set $T6 "16:6 "
 set $T7 "17:7 "
 set $T8 "18:8 "
 set $sql "21:sql "
+set $lens "22:lens 🔍"
 set $inkdrop "23:inkdrop 🌢"
 set $gotop "24:top"
 
 workspace $T8 output eDP-1
 workspace $firefox output DP-4
-#workspace "18:8 " output eDP-1
-#workspace "5:firefox " output DP-4
 
 # switch to workspace
 bindsym $mod+1 workspace $T1
@@ -358,20 +357,16 @@ assign [class="Google-chrome-stable"] → $chrome
 assign [class="Google-chrome"] → $chrome
 assign [class="google-chrome"] → $chrome
 assign [class="chromium"] → $chrome
+assign [class="^Lens$"] → $lens
 assign [class="^Opera$"] → $opera
 assign [class="^Mysql-workbench-bin$"] → $sql
 assign [app_id="DBeaver"] → $sql
 assign [class="^jetbrains-datagrip$"] → $sql
 assign [class="^inkdrop$"] → $inkdrop
 assign [class="Microsoft Teams - Preview"] → $chat
-# assign [name="^gotop$"] → $gotop
-#assign [class="^SWT$"] → $spoon  # spoon has a funky WM_CLASS
-#assign [class="^java-lang-Thread$"] → $ireport  # ireport has a funky WM_CLASS too
-#assign [class="^Nightingale$"] → $music
+
 
 exec megasync
-
-
 # exec thunderbird
 exec MOZ_ENABLE_WAYLAND=1 firefox
 exec gnome-terminal
