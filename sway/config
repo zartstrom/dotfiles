@@ -31,6 +31,9 @@ output "Eizo Nanao Corporation EV2336W 61488064" resolution 1920x1080 position 1
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 exec ~/.azotebg
+#exec -no-startup-id greenclip daemon > /dev/null
+exec wl-paste -t text --watch clipman store 1>> /tmp/clipman.log 2>&1 &
+exec wl-paste -p -t text --watch clipman store -P --histpath="~/.local/share/clipman-primary.json"
 
 ### Input configuration
 #
@@ -152,6 +155,12 @@ bindsym $mod+d exec dmenu_run -nb '$base01' -nf '$base03' -sb '$base0D' -sf '$ba
 #
 # start rofi
 bindsym $mod+x exec rofi -show run -font "Monoid 12" \
+    -color-window "$base01, $base01, $base05" \
+    -color-normal "$base01, $base05, $base01, $base0D, $base00" \
+    -color-active "#222222, #b1b4b3, #222222, #007763, #b1b4b3" \
+    -color-urgent "#222222, #b1b4b3, #222222, #77003d, #b1b4b3"
+
+bindsym $mod+c exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}' \
     -color-window "$base01, $base01, $base05" \
     -color-normal "$base01, $base05, $base01, $base0D, $base00" \
     -color-active "#222222, #b1b4b3, #222222, #007763, #b1b4b3" \
@@ -375,16 +384,16 @@ exec gnome-terminal
 # use full path $HOME/scripts/swayexit.sh
 # Look at i3 $PATH: `tr '\0' '\n' </proc/$(pidof i3)/environ | grep PATH`
 # http://permalink.gmane.org/gmane.linux.debian.user/472626
-set $mode_click click
+# set $mode_click click
 
-mode "$mode_click" {
-    bindsym x exec --no-startup-id $HOME/scripts/clicker.sh 10, mode "default"
-    bindsym l exec --no-startup-id $HOME/scripts/clicker.sh 30, mode "default"
-    # bindsym d exec --no-startup-id $HOME/scripts/clicker.sh 500, mode "default"
+# mode "$mode_click" {
+#     bindsym x exec --no-startup-id $HOME/scripts/clicker.sh 10, mode "default"
+#     bindsym l exec --no-startup-id $HOME/scripts/clicker.sh 30, mode "default"
+#     # bindsym d exec --no-startup-id $HOME/scripts/clicker.sh 500, mode "default"
 
-    # back to normal: Enter or Escape
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-}
+#     # back to normal: Enter or Escape
+#     bindsym Return mode "default"
+#     bindsym Escape mode "default"
+# }
 
-bindsym $mod+c mode "$mode_click"
+# bindsym $mod+c mode "$mode_click"
