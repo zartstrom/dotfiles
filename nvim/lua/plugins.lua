@@ -22,7 +22,8 @@ return require('packer').startup(function()
   -- Lua development
   use  'tjdevries/nlua.nvim'
 
-  -- Lua format
+  -- Formatting
+  use 'mhartington/formatter.nvim'
   use 'andrejlevkovitch/vim-lua-format'
 
   -- Neorg

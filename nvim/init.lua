@@ -241,6 +241,29 @@ require'compe'.setup {
   };
 }
 
+-------------------- Formatting ----------------------------
+require('formatter').setup({
+  logging = false,
+  filetype = {
+    python = {
+        -- black
+       function()
+          return {
+            exe = "black",
+            args = {"--line-length", 120},
+            stdin = false
+          }
+        end
+    }
+  }
+})
+vim.api.nvim_exec([[
+augroup FormatAutogroup
+  autocmd!
+  autocmd BufWritePost *.py FormatWrite
+augroup END
+]], true)
+
 -------------------- COMMANDS ------------------------------
 function init_term()
   cmd 'setlocal nonumber norelativenumber'
