@@ -1,0 +1,17 @@
+extra/ttf-hack
+community/ttf-fira-code
+community/ttf-fira-mono
+community/ttf-fira-sans
+community/ttf-font-awesome
+community/ttf-hanazono
+community/ttf-inconsolata
+community/ttf-indic-otf
+community/ttf-liberation
+community/ttf-opensans
+community/ttf-roboto
+community/ttf-ubuntu-font-family
+extra/adobe-source-code-pro-fonts
+extra/cantarell-fonts
+extra/gsfonts
+extra/ttf-croscore
+extra/ttf-dejavu

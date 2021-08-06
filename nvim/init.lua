@@ -94,7 +94,7 @@ map('v', '<leader>s', ':s//gcI<Left><Left><Left><Left>')
 -------------------- PLUGIN SETUP --------------------------
 
 -------------------- LSP -----------------------------------
--- require'lspconfig'.pyright.setup{}
+require'lspconfig'.pyright.setup{}
 local lsp = require('lspconfig')
 -- for ls, cfg in pairs({
 --   bashls = {}, gopls = {}, ccls = {}, jsonls = {},

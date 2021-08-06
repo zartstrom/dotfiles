@@ -1,909 +1,407 @@
-Command 'pacman -F /home/phil/.local/share/fonts/ter-powerline-x18n.pcf.gz' returned non-zero exit status 1.
-Command 'pacman -F /usr/share/fonts/TTF/Signika-SemiBold.ttf' returned non-zero exit status 1.
-Command 'pacman -F /usr/share/fonts/TTF/Merriweather-BoldItalic.ttf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/Ubuntu\ Mono\ derivative\ Powerline\ Italic.ttf' returned non-zero exit status 1.
-Command 'pacman -F /usr/share/fonts/TTF/Merriweather-BlackItalic.ttf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/Tinos\ Bold\ Italic\ for\ Powerline.ttf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/DejaVu\ Sans\ Mono\ Bold\ for\ Powerline.ttf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/ter-powerline-x28n.pcf.gz' returned non-zero exit status 1.
-Command 'pacman -F /usr/share/fonts/TTF/Monoid-Bold.ttf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/ter-powerline-x20n.pcf.gz' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/Roboto\ Mono\ for\ Powerline.ttf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/Ubuntu\ Mono\ derivative\ Powerline\ Bold\ Italic.ttf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/System\ San\ Francisco\ Display\ Regular.ttf' returned non-zero exit status 1.
-Command 'pacman -F /usr/share/fonts/OTF/Crimson-Semibold.otf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/Cousine\ for\ Powerline.ttf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/Tinos\ for\ Powerline.ttf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/Sauce\ Code\ Powerline\ ExtraLight.otf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete.otf' returned non-zero exit status 1.
-Command 'pacman -F /usr/share/fonts/OTF/Crimson-BoldItalic.otf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/Droid\ Sans\ Mono\ Slashed\ for\ Powerline.ttf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/Anonymice\ Powerline.ttf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/Droid\ Sans\ Mono\ Dotted\ for\ Powerline.ttf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/Roboto\ Mono\ Thin\ for\ Powerline.ttf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/Roboto\ Mono\ Bold\ Italic\ for\ Powerline.ttf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/Symbol\ Neu\ for\ Powerline.ttf' returned non-zero exit status 1.
-Command 'pacman -F /usr/share/fonts/TTF/Symbola.ttf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/Sauce\ Code\ Powerline\ Light.otf' returned non-zero exit status 1.
-Command 'pacman -F /usr/share/fonts/TTF/Merriweather-Light.ttf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/Arimo\ Bold\ for\ Powerline.ttf' returned non-zero exit status 1.
-Command 'pacman -F /usr/share/fonts/TTF/Oswald-Regular.ttf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/Roboto\ Mono\ Medium\ for\ Powerline.ttf' returned non-zero exit status 1.
-Command 'pacman -F /usr/share/fonts/TTF/webhostinghub-glyphs.ttf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/DejaVu\ Sans\ Mono\ Bold\ Oblique\ for\ Powerline.ttf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/Anonymice\ Powerline\ Italic.ttf' returned non-zero exit status 1.
-Command 'pacman -F /usr/share/fonts/TTF/Monoid-Italic.ttf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/Roboto\ Mono\ Light\ Italic\ for\ Powerline.ttf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/Literation\ Mono\ Powerline\ Bold\ Italic.ttf' returned non-zero exit status 1.
-Command 'pacman -F /usr/share/fonts/OTF/Crimson-Roman.otf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/Roboto\ Mono\ Light\ for\ Powerline.ttf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/Sauce\ Code\ Powerline\ Regular.otf' returned non-zero exit status 1.
-Command 'pacman -F /usr/share/fonts/TTF/webhostinghubglyphs.ttf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/Roboto\ Mono\ Thin\ Italic\ for\ Powerline.ttf' returned non-zero exit status 1.
-Command 'pacman -F /usr/share/fonts/TTF/Merriweather-Bold.ttf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/FuraMono-Bold\ Powerline.otf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/Sauce\ Code\ Powerline\ Black.otf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/fontawesome-webfont.ttf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/Roboto\ Mono\ Italic\ for\ Powerline.ttf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/Sauce\ Code\ Powerline\ Medium.otf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/Monofur\ Bold\ for\ Powerline.ttf' returned non-zero exit status 1.
-Command 'pacman -F /usr/share/fonts/OTF/Crimson-SemiboldItalic.otf' returned non-zero exit status 1.
-Command 'pacman -F /usr/share/fonts/TTF/Oswald-SemiBold.ttf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/Cousine\ Bold\ Italic\ for\ Powerline.ttf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/DejaVu\ Sans\ Mono\ for\ Powerline.ttf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/ter-powerline-x18b.pcf.gz' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/Arimo\ for\ Powerline.ttf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/ter-powerline-x28b.pcf.gz' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/Inconsolata-g\ for\ Powerline.otf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/ter-powerline-x20b.pcf.gz' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/Cousine\ Bold\ for\ Powerline.ttf' returned non-zero exit status 1.
-Command 'pacman -F /usr/share/fonts/TTF/Signika-Regular.ttf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/ter-powerline-x12b.pcf.gz' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/System\ San\ Francisco\ Display\ Ultralight.ttf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/Literation\ Mono\ Powerline\ Italic.ttf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/Ubuntu\ Mono\ derivative\ Powerline.ttf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/ter-powerline-x32b.pcf.gz' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/Droid\ Sans\ Mono\ for\ Powerline.otf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/ter-powerline-x22b.pcf.gz' returned non-zero exit status 1.
-Command 'pacman -F /usr/share/fonts/TTF/Signika-Bold.ttf' returned non-zero exit status 1.
-Command 'pacman -F /usr/share/fonts/TTF/Monoisome-Regular.ttf' returned non-zero exit status 1.
-Command 'pacman -F /usr/share/fonts/TTF/Oswald-ExtraLight.ttf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/Literation\ Mono\ Powerline\ Bold.ttf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/ter-powerline-x14b.pcf.gz' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/Inconsolata\ for\ Powerline.otf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/Anonymice\ Powerline\ Bold.ttf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/Literation\ Mono\ Powerline.ttf' returned non-zero exit status 1.
-Command 'pacman -F /usr/share/fonts/TTF/Quintessential-Regular.ttf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/System\ San\ Francisco\ Display\ Bold.ttf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/ter-powerline-x16n.pcf.gz' returned non-zero exit status 1.
-Command 'pacman -F /usr/share/fonts/TTF/Oswald-Medium.ttf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/ter-powerline-x24b.pcf.gz' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/Sauce\ Code\ Powerline\ Semibold.otf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/Inconsolata-dz\ for\ Powerline.otf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/ter-powerline-x16b.pcf.gz' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/Anonymice\ Powerline\ Bold\ Italic.ttf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/Arimo\ Italic\ for\ Powerline.ttf' returned non-zero exit status 1.
-Command 'pacman -F /usr/share/fonts/OTF/Crimson-Italic.otf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/FuraMono-Medium\ Powerline.otf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/FuraMono-Regular\ Powerline.otf' returned non-zero exit status 1.
-Command 'pacman -F /usr/share/fonts/TTF/Oswald-Light.ttf' returned non-zero exit status 1.
-Command 'pacman -F /usr/share/fonts/TTF/Merriweather-Italic.ttf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/DejaVu\ Sans\ Mono\ Oblique\ for\ Powerline.ttf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/ter-powerline-x14n.pcf.gz' returned non-zero exit status 1.
-Command 'pacman -F /usr/share/fonts/TTF/Merriweather-LightItalic.ttf' returned non-zero exit status 1.
-Command 'pacman -F /usr/share/fonts/OTF/Crimson-Bold.otf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/Cousine\ Italic\ for\ Powerline.ttf' returned non-zero exit status 1.
-Command 'pacman -F /usr/share/fonts/TTF/Monoid-Regular.ttf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/Tinos\ Italic\ for\ Powerline.ttf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/Sauce\ Code\ Powerline\ Bold.otf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/ter-powerline-x24n.pcf.gz' returned non-zero exit status 1.
-Command 'pacman -F /usr/share/fonts/TTF/Merriweather-Regular.ttf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/ter-powerline-x12n.pcf.gz' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/Roboto\ Mono\ Medium\ Italic\ for\ Powerline.ttf' returned non-zero exit status 1.
-Command 'pacman -F /usr/share/fonts/TTF/Monoid-Retina.ttf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/System\ San\ Francisco\ Display\ Thin.ttf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/ter-powerline-x32n.pcf.gz' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/Tinos\ Bold\ for\ Powerline.ttf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/Monofur\ for\ Powerline.ttf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/Arimo\ Bold\ Italic\ for\ Powerline.ttf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/ter-powerline-x22n.pcf.gz' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/Ubuntu\ Mono\ derivative\ Powerline\ Bold.ttf' returned non-zero exit status 1.
-Command 'pacman -F /usr/share/fonts/TTF/Oswald-Bold.ttf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/Roboto\ Mono\ Bold\ for\ Powerline.ttf' returned non-zero exit status 1.
-Command 'pacman -F /home/phil/.local/share/fonts/Monofur\ Italic\ for\ Powerline.ttf' returned non-zero exit status 1.
 extra/gsfonts 20180524-3
   /usr/share/fonts/gsfonts/D050000L.otf
-
   /usr/share/fonts/gsfonts/URWBookman-DemiItalic.otf
-
   /usr/share/fonts/gsfonts/NimbusMonoPS-BoldItalic.otf
-
   /usr/share/fonts/gsfonts/URWBookman-LightItalic.otf
-
   /usr/share/fonts/gsfonts/NimbusRoman-Bold.otf
-
   /usr/share/fonts/gsfonts/P052-Roman.otf
-
   /usr/share/fonts/gsfonts/URWBookman-Light.otf
-
   /usr/share/fonts/gsfonts/NimbusSans-Italic.otf
-
   /usr/share/fonts/gsfonts/URWGothic-BookOblique.otf
-
   /usr/share/fonts/gsfonts/NimbusSans-Bold.otf
-
   /usr/share/fonts/gsfonts/P052-Bold.otf
-
   /usr/share/fonts/gsfonts/NimbusMonoPS-Regular.otf
-
   /usr/share/fonts/gsfonts/NimbusSans-Regular.otf
-
   /usr/share/fonts/gsfonts/NimbusRoman-BoldItalic.otf
-
   /usr/share/fonts/gsfonts/StandardSymbolsPS.otf
-
   /usr/share/fonts/gsfonts/NimbusMonoPS-Bold.otf
-
   /usr/share/fonts/gsfonts/Z003-MediumItalic.otf
-
   /usr/share/fonts/gsfonts/NimbusSansNarrow-Bold.otf
-
   /usr/share/fonts/gsfonts/NimbusRoman-Regular.otf
-
   /usr/share/fonts/gsfonts/P052-Italic.otf
-
   /usr/share/fonts/gsfonts/NimbusRoman-Italic.otf
-
   /usr/share/fonts/gsfonts/NimbusSansNarrow-BoldOblique.otf
-
   /usr/share/fonts/gsfonts/URWGothic-Demi.otf
-
   /usr/share/fonts/gsfonts/C059-Bold.otf
-
   /usr/share/fonts/gsfonts/NimbusSansNarrow-Oblique.otf
-
   /usr/share/fonts/gsfonts/C059-Italic.otf
-
   /usr/share/fonts/gsfonts/P052-BoldItalic.otf
-
   /usr/share/fonts/gsfonts/NimbusSansNarrow-Regular.otf
-
   /usr/share/fonts/gsfonts/NimbusMonoPS-Italic.otf
-
   /usr/share/fonts/gsfonts/C059-BdIta.otf
-
   /usr/share/fonts/gsfonts/C059-Roman.otf
-
   /usr/share/fonts/gsfonts/URWBookman-Demi.otf
-
   /usr/share/fonts/gsfonts/NimbusSans-BoldItalic.otf
-
   /usr/share/fonts/gsfonts/URWGothic-DemiOblique.otf
-
   /usr/share/fonts/gsfonts/URWGothic-Book.otf
-
 community/ttf-indic-otf 0.2-11
   /usr/share/fonts/TTF/akruti1b.ttf
-
   /usr/share/fonts/TTF/padmaa-Bold-0.5.ttf
-
   /usr/share/fonts/TTF/akruti2b.ttf
-
   /usr/share/fonts/TTF/LikhanNormal.ttf
-
   /usr/share/fonts/TTF/gbolilite.ttf
-
   /usr/share/fonts/TTF/GurbaniBoliLite.ttf
-
   /usr/share/fonts/TTF/TSCu_paranari.ttf
-
   /usr/share/fonts/TTF/akruti1.ttf
-
   /usr/share/fonts/TTF/Gargi-1.2b.ttf
-
   /usr/share/fonts/TTF/akruti2.ttf
-
   /usr/share/fonts/TTF/padmaa-Medium-0.5.ttf
-
   /usr/share/fonts/TTF/SagarNormal.ttf
-
   /usr/share/fonts/TTF/MuktiNarrowBold.ttf
-
   /usr/share/fonts/TTF/Pothana2000.ttf
-
   /usr/share/fonts/TTF/TAMu_Kadampari.ttf
-
   /usr/share/fonts/TTF/mal1-n.ttf
-
   /usr/share/fonts/TTF/TAMu_Kalyani.ttf
-
   /usr/share/fonts/TTF/ani.ttf
-
   /usr/share/fonts/TTF/mal2-n.ttf
-
   /usr/share/fonts/TTF/malayalam.ttf
-
   /usr/share/fonts/TTF/TSCu_Comic.ttf
-
   /usr/share/fonts/TTF/TAMu_Maduram.ttf
-
   /usr/share/fonts/TTF/Sampige.ttf
-
   /usr/share/fonts/TTF/mal1-b.ttf
-
   /usr/share/fonts/TTF/MalOtf.ttf
-
   /usr/share/fonts/TTF/oriya.ttf
-
   /usr/share/fonts/TTF/mal2-b.ttf
-
   /usr/share/fonts/TTF/TSCu_Paranar.ttf
-
   /usr/share/fonts/TTF/MuktiNarrow.ttf
-
   /usr/share/fonts/TTF/TSCu_Times.ttf
-
   /usr/share/fonts/TTF/AkaashNormal.ttf
-
   /usr/share/fonts/TTF/TSCu_paranarb.ttf
-
 community/ttf-roboto 2.138-4
   /usr/share/fonts/TTF/Roboto-Medium.ttf
-
   /usr/share/fonts/TTF/Roboto-MediumItalic.ttf
-
   /usr/share/fonts/TTF/RobotoCondensed-Bold.ttf
-
   /usr/share/fonts/TTF/Roboto-ThinItalic.ttf
-
   /usr/share/fonts/TTF/Roboto-Regular.ttf
-
   /usr/share/fonts/TTF/Roboto-BoldItalic.ttf
-
   /usr/share/fonts/TTF/RobotoCondensed-BoldItalic.ttf
-
   /usr/share/fonts/TTF/RobotoCondensed-Regular.ttf
-
   /usr/share/fonts/TTF/RobotoCondensed-LightItalic.ttf
-
   /usr/share/fonts/TTF/Roboto-Light.ttf
-
   /usr/share/fonts/TTF/RobotoCondensed-Italic.ttf
-
   /usr/share/fonts/TTF/Roboto-BlackItalic.ttf
-
   /usr/share/fonts/TTF/Roboto-Italic.ttf
-
   /usr/share/fonts/TTF/Roboto-Bold.ttf
-
   /usr/share/fonts/TTF/Roboto-LightItalic.ttf
-
   /usr/share/fonts/TTF/RobotoCondensed-Light.ttf
-
   /usr/share/fonts/TTF/Roboto-Black.ttf
-
   /usr/share/fonts/TTF/Roboto-Thin.ttf
-
 community/ttf-fira-sans 1:4.301-2
   /usr/share/fonts/TTF/FiraSansCondensed-UltraLight.ttf
-
   /usr/share/fonts/TTF/FiraSans-Book.ttf
-
   /usr/share/fonts/TTF/FiraSansCompressed-Four.ttf
-
   /usr/share/fonts/TTF/FiraSans-Eight.ttf
-
   /usr/share/fonts/TTF/FiraSansCompressed-BoldItalic.ttf
-
   /usr/share/fonts/TTF/FiraSansCompressed-Thin.ttf
-
   /usr/share/fonts/TTF/FiraSans-BoldItalic.ttf
-
   /usr/share/fonts/TTF/FiraSansCompressed-HeavyItalic.ttf
-
   /usr/share/fonts/TTF/FiraSans-Light.ttf
-
   /usr/share/fonts/TTF/FiraSansCompressed-ExtraLight.ttf
-
   /usr/share/fonts/TTF/FiraSansCondensed-Light.ttf
-
   /usr/share/fonts/TTF/FiraSansCondensed-ExtraLightItalic.ttf
-
   /usr/share/fonts/TTF/FiraSansCondensed-Eight.ttf
-
   /usr/share/fonts/TTF/FiraSans-BookItalic.ttf
-
   /usr/share/fonts/TTF/FiraSansCondensed-Book.ttf
-
   /usr/share/fonts/TTF/FiraSansCompressed-Two.ttf
-
   /usr/share/fonts/TTF/FiraSans-Bold.ttf
-
   /usr/share/fonts/TTF/FiraSansCondensed-ExtraLight.ttf
-
   /usr/share/fonts/TTF/FiraSansCondensed-Regular.ttf
-
   /usr/share/fonts/TTF/FiraSansCondensed-ExtraBoldItalic.ttf
-
   /usr/share/fonts/TTF/FiraSans-Two.ttf
-
   /usr/share/fonts/TTF/FiraSans-ExtraLight.ttf
-
   /usr/share/fonts/TTF/FiraSans-TwoItalic.ttf
-
   /usr/share/fonts/TTF/FiraSans-Medium.ttf
-
   /usr/share/fonts/TTF/FiraSansCompressed-SemiBoldItalic.ttf
-
   /usr/share/fonts/TTF/FiraSans-HairItalic.ttf
-
   /usr/share/fonts/TTF/FiraSansCompressed-Italic.ttf
-
   /usr/share/fonts/TTF/FiraSansCompressed-FourItalic.ttf
-
   /usr/share/fonts/TTF/FiraSansCompressed-SemiBold.ttf
-
   /usr/share/fonts/TTF/FiraSans-LightItalic.ttf
-
   /usr/share/fonts/TTF/FiraSansCondensed-SemiBoldItalic.ttf
-
   /usr/share/fonts/TTF/FiraSans-Regular.ttf
-
   /usr/share/fonts/TTF/FiraSansCompressed-ExtraBoldItalic.ttf
-
   /usr/share/fonts/TTF/FiraSans-UltraLight.ttf
-
   /usr/share/fonts/TTF/FiraSansCompressed-ThinItalic.ttf
-
   /usr/share/fonts/TTF/FiraSansCompressed-Regular.ttf
-
   /usr/share/fonts/TTF/FiraSansCompressed-ExtraLightItalic.ttf
-
   /usr/share/fonts/TTF/FiraSans-Thin.ttf
-
   /usr/share/fonts/TTF/FiraSansCondensed-LightItalic.ttf
-
   /usr/share/fonts/TTF/FiraSansCompressed-Heavy.ttf
-
   /usr/share/fonts/TTF/FiraSansCondensed-HairItalic.ttf
-
   /usr/share/fonts/TTF/FiraSansCondensed-BoldItalic.ttf
-
   /usr/share/fonts/TTF/FiraSansCondensed-BookItalic.ttf
-
   /usr/share/fonts/TTF/FiraSansCondensed-Medium.ttf
-
   /usr/share/fonts/TTF/FiraSansCondensed-MediumItalic.ttf
-
   /usr/share/fonts/TTF/FiraSansCompressed-Bold.ttf
-
   /usr/share/fonts/TTF/FiraSans-ExtraLightItalic.ttf
-
   /usr/share/fonts/TTF/FiraSans-Four.ttf
-
   /usr/share/fonts/TTF/FiraSans-MediumItalic.ttf
-
   /usr/share/fonts/TTF/FiraSansCondensed-SemiBold.ttf
-
   /usr/share/fonts/TTF/FiraSansCondensed-ThinItalic.ttf
-
   /usr/share/fonts/TTF/FiraSans-ExtraBold.ttf
-
   /usr/share/fonts/TTF/FiraSans-Heavy.ttf
-
   /usr/share/fonts/TTF/FiraSansCompressed-LightItalic.ttf
-
   /usr/share/fonts/TTF/FiraSansCompressed-Book.ttf
-
   /usr/share/fonts/TTF/FiraSansCompressed-HairItalic.ttf
-
   /usr/share/fonts/TTF/FiraSansCondensed-Hair.ttf
-
   /usr/share/fonts/TTF/FiraSansCondensed-Heavy.ttf
-
   /usr/share/fonts/TTF/FiraSans-UltraItalic.ttf
-
   /usr/share/fonts/TTF/FiraSansCondensed-Four.ttf
-
   /usr/share/fonts/TTF/FiraSansCompressed-TwoItalic.ttf
-
   /usr/share/fonts/TTF/FiraSans-Hair.ttf
-
   /usr/share/fonts/TTF/FiraSans-SemiBold.ttf
-
   /usr/share/fonts/TTF/FiraSansCondensed-UltraLightItalic.ttf
-
   /usr/share/fonts/TTF/FiraSansCondensed-Bold.ttf
-
   /usr/share/fonts/TTF/FiraSansCondensed-EightItalic.ttf
-
   /usr/share/fonts/TTF/FiraSansCompressed-ExtraBold.ttf
-
   /usr/share/fonts/TTF/FiraSans-ThinItalic.ttf
-
   /usr/share/fonts/TTF/FiraSans-FourItalic.ttf
-
   /usr/share/fonts/TTF/FiraSansCondensed-TwoItalic.ttf
-
   /usr/share/fonts/TTF/FiraSansCondensed-Thin.ttf
-
   /usr/share/fonts/TTF/FiraSans-HeavyItalic.ttf
-
   /usr/share/fonts/TTF/FiraSans-Ultra.ttf
-
   /usr/share/fonts/TTF/FiraSans-SemiBoldItalic.ttf
-
   /usr/share/fonts/TTF/FiraSans-Italic.ttf
-
   /usr/share/fonts/TTF/FiraSansCompressed-Medium.ttf
-
   /usr/share/fonts/TTF/FiraSansCompressed-Hair.ttf
-
   /usr/share/fonts/TTF/FiraSansCondensed-FourItalic.ttf
-
   /usr/share/fonts/TTF/FiraSansCondensed-HeavyItalic.ttf
-
   /usr/share/fonts/TTF/FiraSansCondensed-ExtraBold.ttf
-
   /usr/share/fonts/TTF/FiraSans-ExtraBoldItalic.ttf
-
   /usr/share/fonts/TTF/FiraSans-EightItalic.ttf
-
   /usr/share/fonts/TTF/FiraSansCompressed-EightItalic.ttf
-
   /usr/share/fonts/TTF/FiraSansCompressed-MediumItalic.ttf
-
   /usr/share/fonts/TTF/FiraSansCondensed-Two.ttf
-
   /usr/share/fonts/TTF/FiraSansCompressed-Light.ttf
-
   /usr/share/fonts/TTF/FiraSansCondensed-Italic.ttf
-
   /usr/share/fonts/TTF/FiraSans-UltraLightItalic.ttf
-
   /usr/share/fonts/TTF/FiraSansCompressed-Eight.ttf
-
   /usr/share/fonts/TTF/FiraSansCompressed-UltraLightItalic.ttf
-
   /usr/share/fonts/TTF/FiraSansCompressed-UltraLight.ttf
-
   /usr/share/fonts/TTF/FiraSansCompressed-BookItalic.ttf
-
 community/ttf-fira-mono 2:3.206-4
   /usr/share/fonts/TTF/FiraMono-Bold.ttf
-
   /usr/share/fonts/TTF/FiraMono-Regular.ttf
-
   /usr/share/fonts/TTF/FiraMono-Medium.ttf
-
 extra/ttf-dejavu 2.37+18+g9b5d1b2f-2
   /usr/share/fonts/TTF/DejaVuSerifCondensed.ttf
-
   /usr/share/fonts/TTF/DejaVuSansCondensed.ttf
-
   /usr/share/fonts/TTF/DejaVuSans-BoldOblique.ttf
-
   /usr/share/fonts/TTF/DejaVuMathTeXGyre.ttf
-
   /usr/share/fonts/TTF/DejaVuSerifCondensed-Bold.ttf
-
   /usr/share/fonts/TTF/DejaVuSerif-Bold.ttf
-
   /usr/share/fonts/TTF/DejaVuSansMono.ttf
-
   /usr/share/fonts/TTF/DejaVuSerif.ttf
-
   /usr/share/fonts/TTF/DejaVuSerifCondensed-Italic.ttf
-
   /usr/share/fonts/TTF/DejaVuSansCondensed-Oblique.ttf
-
   /usr/share/fonts/TTF/DejaVuSerif-BoldItalic.ttf
-
   /usr/share/fonts/TTF/DejaVuSerifCondensed-BoldItalic.ttf
-
   /usr/share/fonts/TTF/DejaVuSansMono-Oblique.ttf
-
   /usr/share/fonts/TTF/DejaVuSansCondensed-BoldOblique.ttf
-
   /usr/share/fonts/TTF/DejaVuSans-ExtraLight.ttf
-
   /usr/share/fonts/TTF/DejaVuSans-Oblique.ttf
-
   /usr/share/fonts/TTF/DejaVuSansMono-Bold.ttf
-
   /usr/share/fonts/TTF/DejaVuSansCondensed-Bold.ttf
-
   /usr/share/fonts/TTF/DejaVuSerif-Italic.ttf
-
   /usr/share/fonts/TTF/DejaVuSansMono-BoldOblique.ttf
-
   /usr/share/fonts/TTF/DejaVuSans.ttf
-
   /usr/share/fonts/TTF/DejaVuSans-Bold.ttf
-
 community/ttf-inconsolata 1:3.000-2
   /usr/share/fonts/TTF/Inconsolata-SemiExpandedMedium.ttf
-
   /usr/share/fonts/TTF/Inconsolata-UltraCondensedMedium.ttf
-
   /usr/share/fonts/TTF/Inconsolata-ExtraExpandedBold.ttf
-
   /usr/share/fonts/TTF/Inconsolata-ExtraCondensedBlack.ttf
-
   /usr/share/fonts/TTF/Inconsolata-UltraCondensed.ttf
-
   /usr/share/fonts/TTF/Inconsolata-ExtraExpandedBlack.ttf
-
   /usr/share/fonts/TTF/Inconsolata-ExtraBold.ttf
-
   /usr/share/fonts/TTF/Inconsolata-SemiExpandedLight.ttf
-
   /usr/share/fonts/TTF/Inconsolata-UltraExpandedLight.ttf
-
   /usr/share/fonts/TTF/Inconsolata-ExtraCondensed.ttf
-
   /usr/share/fonts/TTF/Inconsolata-ExpandedBold.ttf
-
   /usr/share/fonts/TTF/Inconsolata-SemiExpandedBlack.ttf
-
   /usr/share/fonts/TTF/Inconsolata-Black.ttf
-
   /usr/share/fonts/TTF/Inconsolata-SemiBold.ttf
-
   /usr/share/fonts/TTF/Inconsolata-UltraExpandedBold.ttf
-
   /usr/share/fonts/TTF/Inconsolata-UltraExpandedBlack.ttf
-
   /usr/share/fonts/TTF/Inconsolata-UltraCondensedLight.ttf
-
   /usr/share/fonts/TTF/Inconsolata-Expanded.ttf
-
   /usr/share/fonts/TTF/Inconsolata-ExtraExpandedSemiBold.ttf
-
   /usr/share/fonts/TTF/Inconsolata-UltraExpandedExtraBold.ttf
-
   /usr/share/fonts/TTF/Inconsolata-ExpandedSemiBold.ttf
-
   /usr/share/fonts/TTF/Inconsolata-UltraExpandedExtraLight.ttf
-
   /usr/share/fonts/TTF/Inconsolata-ExpandedMedium.ttf
-
   /usr/share/fonts/TTF/Inconsolata-ExtraExpandedExtraBold.ttf
-
   /usr/share/fonts/TTF/Inconsolata-Bold.ttf
-
   /usr/share/fonts/TTF/Inconsolata-UltraCondensedSemiBold.ttf
-
   /usr/share/fonts/TTF/Inconsolata-Medium.ttf
-
   /usr/share/fonts/TTF/Inconsolata-CondensedBold.ttf
-
   /usr/share/fonts/TTF/Inconsolata-SemiCondensedBold.ttf
-
   /usr/share/fonts/TTF/Inconsolata-UltraCondensedBlack.ttf
-
   /usr/share/fonts/TTF/Inconsolata-SemiCondensedExtraBold.ttf
-
   /usr/share/fonts/TTF/Inconsolata-ExpandedExtraBold.ttf
-
   /usr/share/fonts/TTF/Ligconsolata-Regular.ttf
-
   /usr/share/fonts/TTF/Inconsolata-SemiCondensedExtraLight.ttf
-
   /usr/share/fonts/TTF/Inconsolata-CondensedMedium.ttf
-
   /usr/share/fonts/TTF/Inconsolata-CondensedExtraLight.ttf
-
   /usr/share/fonts/TTF/Inconsolata-SemiCondensedLight.ttf
-
   /usr/share/fonts/TTF/Inconsolata-ExtraCondensedBold.ttf
-
   /usr/share/fonts/TTF/Inconsolata-CondensedBlack.ttf
-
   /usr/share/fonts/TTF/Inconsolata-ExpandedExtraLight.ttf
-
   /usr/share/fonts/TTF/Inconsolata-UltraCondensedBold.ttf
-
   /usr/share/fonts/TTF/Inconsolata-CondensedExtraBold.ttf
-
   /usr/share/fonts/TTF/Inconsolata-SemiExpandedSemiBold.ttf
-
   /usr/share/fonts/TTF/Inconsolata-Regular.ttf
-
   /usr/share/fonts/TTF/Ligconsolata-Bold.ttf
-
   /usr/share/fonts/TTF/Inconsolata-CondensedLight.ttf
-
   /usr/share/fonts/TTF/Inconsolata-SemiCondensedBlack.ttf
-
   /usr/share/fonts/TTF/Inconsolata-UltraExpanded.ttf
-
   /usr/share/fonts/TTF/Inconsolata-UltraCondensedExtraLight.ttf
-
   /usr/share/fonts/TTF/Inconsolata-UltraCondensedExtraBold.ttf
-
   /usr/share/fonts/TTF/Inconsolata-ExtraExpanded.ttf
-
   /usr/share/fonts/TTF/Inconsolata-CondensedSemiBold.ttf
-
   /usr/share/fonts/TTF/Inconsolata-SemiCondensed.ttf
-
   /usr/share/fonts/TTF/Inconsolata-ExtraLight.ttf
-
   /usr/share/fonts/TTF/Inconsolata-UltraExpandedMedium.ttf
-
   /usr/share/fonts/TTF/Inconsolata-ExtraExpandedExtraLight.ttf
-
   /usr/share/fonts/TTF/Inconsolata-SemiCondensedMedium.ttf
-
   /usr/share/fonts/TTF/Inconsolata-SemiExpandedExtraBold.ttf
-
   /usr/share/fonts/TTF/Inconsolata-ExpandedBlack.ttf
-
   /usr/share/fonts/TTF/Inconsolata-ExtraExpandedMedium.ttf
-
   /usr/share/fonts/TTF/Inconsolata-ExtraCondensedExtraLight.ttf
-
   /usr/share/fonts/TTF/Inconsolata-UltraExpandedSemiBold.ttf
-
   /usr/share/fonts/TTF/Inconsolata-SemiExpandedBold.ttf
-
   /usr/share/fonts/TTF/Inconsolata-ExtraCondensedLight.ttf
-
   /usr/share/fonts/TTF/Inconsolata-Condensed.ttf
-
   /usr/share/fonts/TTF/Inconsolata-SemiCondensedSemiBold.ttf
-
   /usr/share/fonts/TTF/Inconsolata-SemiExpanded.ttf
-
   /usr/share/fonts/TTF/Inconsolata-ExtraCondensedSemiBold.ttf
-
   /usr/share/fonts/TTF/Inconsolata-ExtraCondensedExtraBold.ttf
-
   /usr/share/fonts/TTF/Inconsolata-ExpandedLight.ttf
-
   /usr/share/fonts/TTF/Inconsolata-SemiExpandedExtraLight.ttf
-
   /usr/share/fonts/TTF/Inconsolata-ExtraExpandedLight.ttf
-
   /usr/share/fonts/TTF/Inconsolata-Light.ttf
-
   /usr/share/fonts/TTF/Inconsolata-ExtraCondensedMedium.ttf
-
 community/ttf-liberation 2.1.1-1
   /usr/share/fonts/liberation/LiberationSerif-Italic.ttf
-
   /usr/share/fonts/liberation/LiberationSans-Bold.ttf
-
   /usr/share/fonts/liberation/LiberationMono-Bold.ttf
-
   /usr/share/fonts/liberation/LiberationSerif-BoldItalic.ttf
-
   /usr/share/fonts/liberation/LiberationSerif-Regular.ttf
-
   /usr/share/fonts/liberation/LiberationSerif-Bold.ttf
-
   /usr/share/fonts/liberation/LiberationMono-Italic.ttf
-
   /usr/share/fonts/liberation/LiberationSans-BoldItalic.ttf
-
   /usr/share/fonts/liberation/LiberationMono-Regular.ttf
-
   /usr/share/fonts/liberation/LiberationSans-Italic.ttf
-
   /usr/share/fonts/liberation/LiberationMono-BoldItalic.ttf
-
   /usr/share/fonts/liberation/LiberationSans-Regular.ttf
-
 extra/adobe-source-code-pro-fonts 2.030ro+1.050it-6
   /usr/share/fonts/adobe-source-code-pro/SourceCodeVariable-Roman.otf
-
   /usr/share/fonts/adobe-source-code-pro/SourceCodePro-BlackIt.otf
-
   /usr/share/fonts/adobe-source-code-pro/SourceCodePro-LightIt.otf
-
   /usr/share/fonts/adobe-source-code-pro/SourceCodePro-Bold.otf
-
   /usr/share/fonts/adobe-source-code-pro/SourceCodePro-Regular.otf
-
   /usr/share/fonts/adobe-source-code-pro/SourceCodePro-Medium.otf
-
   /usr/share/fonts/adobe-source-code-pro/SourceCodePro-MediumIt.otf
-
   /usr/share/fonts/adobe-source-code-pro/SourceCodeVariable-Roman.otf
-
   /usr/share/fonts/adobe-source-code-pro/SourceCodePro-Light.otf
-
   /usr/share/fonts/adobe-source-code-pro/SourceCodeVariable-Roman.otf
-
   /usr/share/fonts/adobe-source-code-pro/SourceCodeVariable-Roman.otf
-
   /usr/share/fonts/adobe-source-code-pro/SourceCodeVariable-Italic.otf
-
   /usr/share/fonts/adobe-source-code-pro/SourceCodePro-Black.otf
-
   /usr/share/fonts/adobe-source-code-pro/SourceCodeVariable-Italic.otf
-
   /usr/share/fonts/adobe-source-code-pro/SourceCodePro-ExtraLight.otf
-
   /usr/share/fonts/adobe-source-code-pro/SourceCodeVariable-Italic.otf
-
   /usr/share/fonts/adobe-source-code-pro/SourceCodeVariable-Italic.otf
-
   /usr/share/fonts/adobe-source-code-pro/SourceCodeVariable-Italic.otf
-
   /usr/share/fonts/adobe-source-code-pro/SourceCodePro-BoldIt.otf
-
   /usr/share/fonts/adobe-source-code-pro/SourceCodeVariable-Roman.otf
-
   /usr/share/fonts/adobe-source-code-pro/SourceCodePro-ExtraLightIt.otf
-
   /usr/share/fonts/adobe-source-code-pro/SourceCodeVariable-Roman.otf
-
   /usr/share/fonts/adobe-source-code-pro/SourceCodeVariable-Roman.otf
-
   /usr/share/fonts/adobe-source-code-pro/SourceCodeVariable-Roman.otf
-
   /usr/share/fonts/adobe-source-code-pro/SourceCodeVariable-Italic.otf
-
   /usr/share/fonts/adobe-source-code-pro/SourceCodePro-SemiboldIt.otf
-
   /usr/share/fonts/adobe-source-code-pro/SourceCodePro-It.otf
-
   /usr/share/fonts/adobe-source-code-pro/SourceCodePro-Semibold.otf
-
   /usr/share/fonts/adobe-source-code-pro/SourceCodeVariable-Italic.otf
-
   /usr/share/fonts/adobe-source-code-pro/SourceCodeVariable-Italic.otf
-
 extra/ttf-croscore 20190926-4
   /usr/share/fonts/croscore/Tinos-BoldItalic.ttf
-
   /usr/share/fonts/croscore/Cousine-Regular.ttf
-
   /usr/share/fonts/croscore/Tinos-Italic.ttf
-
   /usr/share/fonts/croscore/Tinos-Regular.ttf
-
   /usr/share/fonts/croscore/Arimo-Bold.ttf
-
   /usr/share/fonts/croscore/Arimo-Italic.ttf
-
   /usr/share/fonts/croscore/Cousine-Bold.ttf
-
   /usr/share/fonts/croscore/Arimo-BoldItalic.ttf
-
   /usr/share/fonts/croscore/Arimo-Regular.ttf
-
   /usr/share/fonts/croscore/Cousine-BoldItalic.ttf
-
   /usr/share/fonts/croscore/Cousine-Italic.ttf
-
   /usr/share/fonts/croscore/Tinos-Bold.ttf
-
 community/ttf-ubuntu-font-family 0.83-6
   /usr/share/fonts/ubuntu/Ubuntu-L.ttf
-
   /usr/share/fonts/ubuntu/Ubuntu-M.ttf
-
   /usr/share/fonts/ubuntu/Ubuntu-MI.ttf
-
   /usr/share/fonts/ubuntu/Ubuntu-BI.ttf
-
   /usr/share/fonts/ubuntu/Ubuntu-LI.ttf
-
   /usr/share/fonts/ubuntu/UbuntuMono-RI.ttf
-
   /usr/share/fonts/ubuntu/UbuntuMono-R.ttf
-
   /usr/share/fonts/ubuntu/Ubuntu-C.ttf
-
   /usr/share/fonts/ubuntu/UbuntuMono-B.ttf
-
   /usr/share/fonts/ubuntu/Ubuntu-RI.ttf
-
   /usr/share/fonts/ubuntu/Ubuntu-R.ttf
-
   /usr/share/fonts/ubuntu/Ubuntu-B.ttf
-
   /usr/share/fonts/ubuntu/UbuntuMono-BI.ttf
-
 community/ttf-fira-code 5.2-1
   /usr/share/fonts/TTF/FiraCode-SemiBold.ttf
-
   /usr/share/fonts/TTF/FiraCode-Retina.ttf
-
   /usr/share/fonts/TTF/FiraCode-Bold.ttf
-
   /usr/share/fonts/TTF/FiraCode-Light.ttf
-
   /usr/share/fonts/TTF/FiraCode-Medium.ttf
-
   /usr/share/fonts/TTF/FiraCode-Regular.ttf
-
 extra/cantarell-fonts 1:0.201-1
   /usr/share/fonts/cantarell/Cantarell-Light.otf
-
   /usr/share/fonts/cantarell/Cantarell-VF.otf
-
   /usr/share/fonts/cantarell/Cantarell-Bold.otf
-
   /usr/share/fonts/cantarell/Cantarell-ExtraBold.otf
-
   /usr/share/fonts/cantarell/Cantarell-VF.otf
-
   /usr/share/fonts/cantarell/Cantarell-VF.otf
-
   /usr/share/fonts/cantarell/Cantarell-Thin.otf
-
   /usr/share/fonts/cantarell/Cantarell-VF.otf
-
   /usr/share/fonts/cantarell/Cantarell-VF.otf
-
   /usr/share/fonts/cantarell/Cantarell-Regular.otf
-
   /usr/share/fonts/cantarell/Cantarell-VF.otf
-
 community/ttf-opensans 1.101-2
   /usr/share/fonts/TTF/OpenSans-BoldItalic.ttf
-
   /usr/share/fonts/TTF/OpenSans-LightItalic.ttf
-
   /usr/share/fonts/TTF/OpenSans-Italic.ttf
-
   /usr/share/fonts/TTF/OpenSans-SemiBold.ttf
-
   /usr/share/fonts/TTF/OpenSans-ExtraBold.ttf
-
   /usr/share/fonts/TTF/OpenSans-Light.ttf
-
   /usr/share/fonts/TTF/OpenSansCondensed-Bold.ttf
-
   /usr/share/fonts/TTF/OpenSans-Regular.ttf
-
   /usr/share/fonts/TTF/OpenSansCondensed-LightItalic.ttf
-
   /usr/share/fonts/TTF/OpenSans-Bold.ttf
-
   /usr/share/fonts/TTF/OpenSans-ExtraBoldItalic.ttf
-
   /usr/share/fonts/TTF/OpenSans-SemiBoldItalic.ttf
-
   /usr/share/fonts/TTF/OpenSansCondensed-Light.ttf
-
 community/ttf-font-awesome 5.14.0-1
   /usr/share/fonts/TTF/fa-brands-400.ttf
-
   /usr/share/fonts/TTF/fa-solid-900.ttf
-
   /usr/share/fonts/TTF/fa-regular-400.ttf
-
 extra/ttf-hack 3.003-3
   /usr/share/fonts/TTF/Hack-Italic.ttf
-
   /usr/share/fonts/TTF/Hack-Bold.ttf
-
   /usr/share/fonts/TTF/Hack-BoldItalic.ttf
-
   /usr/share/fonts/TTF/Hack-Regular.ttf
-
 community/adobe-source-han-sans-jp-fonts 2.001-2
   /usr/share/fonts/adobe-source-han-sans/SourceHanSansJP-Normal.otf
-
   /usr/share/fonts/adobe-source-han-sans/SourceHanSansJP-Regular.otf
-
   /usr/share/fonts/adobe-source-han-sans/SourceHanSansJP-ExtraLight.otf
-
   /usr/share/fonts/adobe-source-han-sans/SourceHanSansJP-Medium.otf
-
   /usr/share/fonts/adobe-source-han-sans/SourceHanSansJP-Bold.otf
-
   /usr/share/fonts/adobe-source-han-sans/SourceHanSansJP-Heavy.otf
-
   /usr/share/fonts/adobe-source-han-sans/SourceHanSansJP-Light.otf
-
 community/ttf-hanazono 20170904-4
   /usr/share/fonts/TTF/HanaMinB.ttf
-
   /usr/share/fonts/TTF/HanaMinA.ttf
-
