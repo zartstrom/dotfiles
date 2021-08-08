@@ -89,6 +89,8 @@ exec_always swayidle -w \
 
 set $mod Mod4
 
+focus_follows_mouse always
+
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 # see as well https://wiki.archlinux.org/index.php/i3#Iconic_fonts_in_the_status_bar
@@ -155,7 +157,7 @@ bindsym $mod+d exec dmenu_run -nb '$base01' -nf '$base03' -sb '$base0D' -sf '$ba
 # for_window [app_id="^launcher$"] floating enable, border none, opacity 0.8
 #
 # start rofi
-bindsym $mod+x exec rofi -show run -font "Monoid 12" \
+bindsym $mod+x exec rofi -show run -font "Monoid 11" \
     -color-window "$base01, $base01, $base05" \
     -color-normal "$base01, $base05, $base01, $base0D, $base00" \
     -color-active "#222222, #b1b4b3, #222222, #007763, #b1b4b3" \
@@ -185,9 +187,6 @@ bindsym $mod+g exec dbus-launch gnome-terminal -e ytop
 
 # kill focused window
 bindsym $mod+Shift+q kill
-
-#bindsym $mod+x exec termite --name=launcher -e "bash -c 'compgen -c | grep -v fzf | sort -u | fzf --layout=reverse | xargs -r swaymsg -t command exec'"
-#for_window [app_id="^launcher$"] floating enable, border none, opacity 0.8
 
 
 # change focus
@@ -381,20 +380,3 @@ exec megasync
 exec MOZ_ENABLE_WAYLAND=1 firefox
 exec gnome-terminal
 
-
-# use full path $HOME/scripts/swayexit.sh
-# Look at i3 $PATH: `tr '\0' '\n' </proc/$(pidof i3)/environ | grep PATH`
-# http://permalink.gmane.org/gmane.linux.debian.user/472626
-# set $mode_click click
-
-# mode "$mode_click" {
-#     bindsym x exec --no-startup-id $HOME/scripts/clicker.sh 10, mode "default"
-#     bindsym l exec --no-startup-id $HOME/scripts/clicker.sh 30, mode "default"
-#     # bindsym d exec --no-startup-id $HOME/scripts/clicker.sh 500, mode "default"
-
-#     # back to normal: Enter or Escape
-#     bindsym Return mode "default"
-#     bindsym Escape mode "default"
-# }
-
-# bindsym $mod+c mode "$mode_click"
