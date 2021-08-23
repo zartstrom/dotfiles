@@ -1,3 +1,5 @@
+# AWS
+alias profile="source $HOME/scripts/set_aws_profile.sh"
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then

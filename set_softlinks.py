@@ -62,8 +62,8 @@ HOME = os.environ["HOME"]
 DOTFILES = os.path.join(HOME, "dotfiles")
 
 # alacritty
-#display_header("alacritty")
-#softlink_dotfiles_home("alacritty/alacritty.yml", ".config/alacritty/alacritty.yml")
+# display_header("alacritty")
+# softlink_dotfiles_home("alacritty/alacritty.yml", ".config/alacritty/alacritty.yml")
 
 # bash
 display_header("bash")
@@ -110,6 +110,7 @@ softlink_dotfiles_home("i3/from_here.sh", "scripts/from_here.sh")
 softlink_dotfiles_home("scripts/menu", "scripts/menu")
 softlink_dotfiles_home("scripts/screenshot.sh", "scripts/screenshot.sh")
 softlink_dotfiles_home("scripts/screenshot-output.sh", "scripts/screenshot-output.sh")
+softlink_dotfiles_home("scripts/set_aws_profile.sh", "scripts/set_aws_profile.sh")
 
 # pulse
 display_header("pulse")
@@ -185,6 +186,4 @@ softlink_dotfiles_home("xdg-user-dirs/user-dirs.dirs", ".config/user-dirs.dirs")
 display_header("zsh")
 mkdir_p_from_home(".oh-my-zsh/themes")
 softlink_dotfiles_home("zsh/.zshrc", ".zshrc")
-softlink_dotfiles_home(
-    "zsh/af-magic-light.zsh-theme", ".oh-my-zsh/themes/af-magic-light.zsh-theme"
-)
+softlink_dotfiles_home("zsh/af-magic-light.zsh-theme", ".oh-my-zsh/themes/af-magic-light.zsh-theme")
