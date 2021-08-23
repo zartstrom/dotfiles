@@ -11,7 +11,7 @@
 # You can get the names of your outputs by running 'swaymsg -t get_outputs'
 
 # TODO: use proper name for laptop monitor
-output eDP-1 res 1920x1080 position 760 1440
+# output eDP-1 res 1920x1080 position 760 1440
 # 34" work monitor
 output DP-1 res 3440x1440 position 0 0
 output DP-2 res 3440x1440 position 0 0
@@ -20,20 +20,21 @@ output "Goldstar Company Ltd   0x0000332B" res 1280x1080 position 2680 1440
 
 # Home
 output "Chimei Innolux Corporation 0x1482 0x00000000" resolution 1600x900 position 0 0
-output "Eizo Nanao Corporation EV2336W 61488064" resolution 1920x1080 position 1600 0
+# output "Eizo Nanao Corporation EV2336W 61488064" resolution 1920x1080 position 1600 0
 
 # Schergenbreite
-# output "Eizo Nanao Corporation EV2480 22743011" resolution 1920x1080 position 0 0
+output "Eizo Nanao Corporation EV2480 22743011" resolution 1920x1080 position 0 0
 # TODO: fix conflict with work setup
 # output eDP-1 res 1920x1080 position 0 1080
+output eDP-1 res 1920x1080 position 1920 0
 
 # Wallpaper
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 exec ~/.azotebg
 #exec -no-startup-id greenclip daemon > /dev/null
-exec wl-paste -t text --watch clipman store 1>> /tmp/clipman.log 2>&1 &
-exec wl-paste -p -t text --watch clipman store -P --histpath="~/.local/share/clipman-primary.json"
+# exec wl-paste -t text --watch clipman store 1>> /tmp/clipman.log 2>&1 &
+# exec wl-paste -p -t text --watch clipman store -P --histpath="~/.local/share/clipman-primary.json"
 
 ### Input configuration
 #
@@ -160,11 +161,11 @@ bindsym $mod+x exec rofi -show run -font "Monoid 12" \
     -color-active "#222222, #b1b4b3, #222222, #007763, #b1b4b3" \
     -color-urgent "#222222, #b1b4b3, #222222, #77003d, #b1b4b3"
 
-bindsym $mod+c exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}' \
-    -color-window "$base01, $base01, $base05" \
-    -color-normal "$base01, $base05, $base01, $base0D, $base00" \
-    -color-active "#222222, #b1b4b3, #222222, #007763, #b1b4b3" \
-    -color-urgent "#222222, #b1b4b3, #222222, #77003d, #b1b4b3"
+# bindsym $mod+c exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}' \
+#     -color-window "$base01, $base01, $base05" \
+#     -color-normal "$base01, $base05, $base01, $base0D, $base00" \
+#     -color-active "#222222, #b1b4b3, #222222, #007763, #b1b4b3" \
+#     -color-urgent "#222222, #b1b4b3, #222222, #77003d, #b1b4b3"
 
 # start a terminal
 #set $term termite
