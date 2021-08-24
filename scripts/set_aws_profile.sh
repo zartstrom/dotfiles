@@ -5,8 +5,11 @@ PROFILE=$1
 TMP_FILE=/tmp/creds.json
 
 # aws --profile $PROFILE sts get-session-token > $TMP_FILE
+unset AWS_ACCESS_KEY_ID
+unset AWS_SECRET_ACCESS_KEY
+unset AWS_SESSION_TOKEN
 
-python - << EOF
+/usr/bin/python - << EOF
 import boto3
 import json
 session = boto3.Session(profile_name="$PROFILE")
