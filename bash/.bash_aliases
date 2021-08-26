@@ -55,3 +55,6 @@ alias token="/usr/bin/cat $HOME/.github/token_work"
 
 alias .j='just --justfile ~/.justfile --working-directory ~'
 
+alias kn='~/scripts/kubernetes_namespace_switch.sh'
+alias acc='~/scripts/default_credentials.py --profile-name'
+
