@@ -1,7 +1,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python2
+# export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python2
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -72,9 +72,6 @@ export LANG=en_US.UTF-8
 export GOPATH=$HOME/go
 export PATH=$PATH:~/go/bin
 
-# haskell stack
-export PATH=$PATH:~/.local/bin
-
 # hdfs
 export PATH=$PATH:/usr/lib/hadoop/bin
 
@@ -88,19 +85,12 @@ export PATH="${PATH}:${HOME}/.krew/bin"
 export PATH=$PATH:~/.gem/ruby/2.3.0/bin
 export PATH=$PATH:~/.gem/ruby/2.4.0/bin
 
-# mesos
-export PATH=$PATH:/home/phil/.minimesos/bin
-
 # spark
 export PATH=$PATH:/home/phil/spark/bin
 
 # shasum from perl
 export PATH=$PATH:/usr/bin/core_perl
 
-# stuff for work
-if [ -f ~/devel/tracking_service/src/main/bash/.bashrc_local_tracking_service ]; then
-    . ~/devel/tracking_service/src/main/bash/.bashrc_local_tracking_service
-fi
 
 # keys
 bindkey "^[[1~" beginning-of-line
@@ -118,27 +108,6 @@ setopt HIST_IGNORE_DUPS
 #add timestamp for each entry
 setopt EXTENDED_HISTORY
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Configuring fzf
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
@@ -146,7 +115,6 @@ export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
  [ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
 
 autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /usr/bin/vault vault
 
 # kubectl autocomplete
 if [ $commands[kubectl] ]; then source <(kubectl completion zsh); fi
@@ -155,19 +123,5 @@ alias k=kubectl
 # justfile
 alias .j='just --justfile ~/.justfile --working-directory .'
 
-NNN_TMPFILE="/tmp/nnn"
-
-n()
-{
-        nnn "$@"
-
-        if [ -f $NNN_TMPFILE ]; then
-                . $NNN_TMPFILE
-                rm $NNN_TMPFILE
-        fi
-}
-
-. ~/devel/recalc-service/.complete.zsh
-# eval "$(starship init zsh)"
 source ~/devel/recalc-service/.complete.zsh
 

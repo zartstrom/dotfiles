@@ -113,5 +113,3 @@ export PATH
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-complete -C /usr/bin/vault vault
-
