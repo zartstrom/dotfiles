@@ -158,11 +158,11 @@ bindsym $mod+d exec dmenu_run -nb '$base01' -nf '$base03' -sb '$base0D' -sf '$ba
 # for_window [app_id="^launcher$"] floating enable, border none, opacity 0.8
 #
 # start rofi
-bindsym $mod+x exec rofi -show run -font "Monoid 11" \
-    -color-window "$base01, $base01, $base05" \
-    -color-normal "$base01, $base05, $base01, $base0D, $base00" \
-    -color-active "#222222, #b1b4b3, #222222, #007763, #b1b4b3" \
-    -color-urgent "#222222, #b1b4b3, #222222, #77003d, #b1b4b3"
+bindsym $mod+x exec rofi -show run -font "Monoid 11" -theme sway_theme
+    # -color-window "$base01, $base01, $base05" \
+    # -color-normal "$base01, $base05, $base01, $base0D, $base00" \
+    # -color-active "#222222, #b1b4b3, #222222, #007763, #b1b4b3" \
+    # -color-urgent "#222222, #b1b4b3, #222222, #77003d, #b1b4b3"
 
 # bindsym $mod+c exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}' \
 #     -color-window "$base01, $base01, $base05" \

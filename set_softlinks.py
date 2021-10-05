@@ -168,6 +168,11 @@ softlink_dotfiles_home("nvim/vscode_init.vim", ".config/nvim/vscode_init.vim")
 softlink_dotfiles_home("nvim/init.lua", ".config/nvim/init.lua")
 softlink_dotfiles_home("nvim/lua", ".config/nvim/lua")
 
+# sway
+display_header("rofi")
+mkdir_p_from_home(".config/rofi")
+softlink_dotfiles_home("rofi/sway_theme.rasi", ".config/rofi/sway_theme.rasi")
+
 # X11
 display_header("X11")
 softlink_dotfiles_home("X11/.xinitrc", ".xinitrc")
