@@ -202,7 +202,8 @@ require('colorizer').setup {
   '*'; -- Highlight all files, but customize some others.
   css = { rgb_fn = true; }; -- Enable parsing rgb(...) functions in css.
   lua = { rgb_fn = true; }; -- Enable parsing rgb(...) functions in lua.
-  html = { names = false; } -- Disable parsing "names" like Blue or Gray, '#FF0000'
+  html = { names = false; }; -- Disable parsing "names" like Blue or Gray, '#FF0000'
+  -- use :ColorizerAttachToBuffer to attach the plugin to any file.
 }
 
 -------------------- Code Completion -----------------------
