@@ -60,4 +60,7 @@ alias acc='python ~/scripts/default_credentials.py --profile-name'
 
 alias airward='export POD_NAME=$(kubectl get pods --namespace airflow -l "component=web,app=airflow" -o jsonpath="{.items[0].metadata.name}") && \
     kubectl port-forward --namespace airflow $POD_NAME 8080:8080'
-
+alias graward='export POD_NAME=$(kubectl get pods --namespace grafana -l "app.kubernetes.io/name=grafana,app.kubernetes.io/instance=grafana-v1" -o jsonpath="{.items[0].metadata.name}") && \
+    kubectl port-forward --namespace grafana $POD_NAME 3000'
+alias promward='export POD_NAME=$(kubectl get pods --namespace kubernetes-dashboard -l "component=server,app=prometheus" -o jsonpath="{.items[0].metadata.name}") && \
+    kubectl port-forward --namespace kubernetes-dashboard $POD_NAME 9090:9090'
