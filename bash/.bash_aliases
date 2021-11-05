@@ -57,6 +57,7 @@ alias .j='just --justfile ~/.justfile --working-directory ~'
 
 alias kn='~/scripts/kubernetes_namespace_switch.sh'
 alias acc='python ~/scripts/default_credentials.py --profile-name'
+alias ic='infra-client'
 
 alias airward='export POD_NAME=$(kubectl get pods --namespace airflow -l "component=web,app=airflow" -o jsonpath="{.items[0].metadata.name}") && \
     kubectl port-forward --namespace airflow $POD_NAME 8080:8080'

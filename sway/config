@@ -267,7 +267,16 @@ set $T7 "17:7 "
 set $T8 "18:8 "
 set $T9 "19:9 "
 set $T10 "20:10 "
-set $T11 "21:11 "
+set $T11 "21:browser 🕸"
+set $T12 "22:browser 🕸"
+set $T13 "23:13 𣎴"
+set $T14 "24:14 𣎴"
+set $T15 "25:15 ⺢"
+set $T16 "26:16 ⺢"
+set $T17 "27:17 𫗧"
+set $T18 "28:18 𫗧"
+set $T19 "29:19 日"
+set $T20 "30:20 日"
 set $sql "31:sql "
 set $lens "32:lens 🔍"
 set $inkdrop "33:inkdrop 🌢"
@@ -285,7 +294,18 @@ bindsym $mod+5 workspace $T5
 bindsym $mod+6 workspace $T6
 bindsym $mod+7 workspace $T7
 bindsym $mod+8 workspace $T8
+bindsym $mod+9 workspace $T9
+bindsym $mod+0 workspace $T10
 bindsym $mod+F1 workspace $T11
+bindsym $mod+F2 workspace $T12
+bindsym $mod+F3 workspace $T13
+bindsym $mod+F4 workspace $T14
+bindsym $mod+F5 workspace $T15
+bindsym $mod+F6 workspace $T16
+bindsym $mod+F7 workspace $T17
+bindsym $mod+F8 workspace $T18
+bindsym $mod+F9 workspace $T19
+bindsym $mod+F10 workspace $T20
 bindsym $mod+F11 workspace $firefox
 bindsym $mod+F12 workspace $chrome
 bindsym $mod+i workspace $inkdrop
@@ -306,6 +326,15 @@ bindsym $mod+Shift+8 move container to workspace $T8
 bindsym $mod+Shift+9 move container to workspace $T9
 bindsym $mod+Shift+0 move container to workspace $T10
 bindsym $mod+Shift+F1 move container to workspace $T11
+bindsym $mod+Shift+F2 move container to workspace $T12
+bindsym $mod+Shift+F3 move container to workspace $T13
+bindsym $mod+Shift+F4 move container to workspace $T14
+bindsym $mod+Shift+F5 move container to workspace $T15
+bindsym $mod+Shift+F6 move container to workspace $T16
+bindsym $mod+Shift+F7 move container to workspace $T17
+bindsym $mod+Shift+F8 move container to workspace $T18
+bindsym $mod+Shift+F9 move container to workspace $T19
+bindsym $mod+Shift+F10 move container to workspace $T10
 bindsym $mod+Shift+F11 move container to workspace $firefox
 bindsym $mod+Shift+F12 move container to workspace $chrome
 bindsym $mod+Shift+i move container to workspace $inkdrop
