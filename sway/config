@@ -411,6 +411,7 @@ assign [app_id="DBeaver"] → $sql
 assign [class="^jetbrains-datagrip$"] → $sql
 assign [class="^inkdrop$"] → $inkdrop
 assign [class="Microsoft Teams - Preview"] → $chat
+assign [app_id="q5go"] → $28
 
 
 # exec thunderbird

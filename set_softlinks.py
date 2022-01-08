@@ -103,6 +103,8 @@ mkdir_p_from_home(".config/i3")
 mkdir_p_from_home(".config/i3status")
 softlink_dotfiles_home("i3/i3status.conf", ".config/i3status/config")
 
+# scripts
+display_header("scripts")
 mkdir_p_from_home("scripts")
 softlink_dotfiles_home("i3/i3exit.sh", "scripts/i3exit.sh")
 softlink_dotfiles_home("i3/lock.sh", "scripts/lock.sh")

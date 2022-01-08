@@ -14,8 +14,8 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-# ZSH_THEME="af-magic-light"
-ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_THEME="af-magic-light"
+# ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -133,7 +133,6 @@ alias .j='just --justfile ~/.justfile --working-directory .'
 
 source ~/devel/recalc-service/.complete.zsh
 
-
 # Created by `pipx` on 2021-11-12 12:16:40
 export PATH="$PATH:/home/phil/.local/bin"
 
@@ -142,3 +141,5 @@ export AWS_DEFAULT_SSO_REGION="eu-central-1"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# Created by `pipx` on 2021-11-17 15:22:26
+export PATH="$PATH:/home/phil/.local/bin"
