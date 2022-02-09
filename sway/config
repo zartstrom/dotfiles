@@ -10,6 +10,7 @@
 # For help see man 5 sway-output
 # You can get the names of your outputs by running 'swaymsg -t get_outputs'
 
+# Work setup
 # TODO: use proper name for laptop monitor
 output eDP-1 res 1920x1080 position 760 1440
 # 34" work monitor
@@ -83,7 +84,7 @@ input "6058:20564:ThinkPad_Extra_B" {
 }
 
 exec_always swayidle -w \
-        timeout 600 'swaymsg "output * dpms off"' \
+        timeout 6000 'swaymsg "output * dpms off"' \
         resume 'swaymsg "output * dpms on"'
         #timeout 1800 'swaylock-blur' \
         #before-sleep 'swaylock-blur'
@@ -267,8 +268,8 @@ set $T7 "17:7 "
 set $T8 "18:8 "
 set $T9 "19:9 "
 set $T10 "20:10 "
-set $T11 "21:browser 🕸"
-set $T12 "22:browser 🕸"
+set $T11 "21:11 browser 🕸"
+set $T12 "22:12 browser 🕸"
 set $T13 "23:13 𣎴"
 set $T14 "24:14 𣎴"
 set $T15 "25:15 ⺢"
@@ -334,7 +335,7 @@ bindsym $mod+Shift+F6 move container to workspace $T16
 bindsym $mod+Shift+F7 move container to workspace $T17
 bindsym $mod+Shift+F8 move container to workspace $T18
 bindsym $mod+Shift+F9 move container to workspace $T19
-bindsym $mod+Shift+F10 move container to workspace $T10
+bindsym $mod+Shift+F10 move container to workspace $T20
 bindsym $mod+Shift+F11 move container to workspace $firefox
 bindsym $mod+Shift+F12 move container to workspace $chrome
 bindsym $mod+Shift+i move container to workspace $inkdrop

@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
@@ -7,7 +14,8 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="af-magic-light"
+# ZSH_THEME="af-magic-light"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -47,7 +55,7 @@ ZSH_THEME="af-magic-light"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(autojump git gitfast virtualenv virtualenvwrapper pyenv pylint rsync python history ssh-agent bower pip npm per-directory-history)
+plugins=(git gitfast virtualenv virtualenvwrapper pyenv pylint rsync python history ssh-agent bower pip npm per-directory-history)
 
 # User configuration
 setopt interactivecomments
@@ -125,3 +133,12 @@ alias .j='just --justfile ~/.justfile --working-directory .'
 
 source ~/devel/recalc-service/.complete.zsh
 
+
+# Created by `pipx` on 2021-11-12 12:16:40
+export PATH="$PATH:/home/phil/.local/bin"
+
+export AWS_DEFAULT_SSO_START_URL="https://idealo-login.awsapps.com/start#/"
+export AWS_DEFAULT_SSO_REGION="eu-central-1"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
