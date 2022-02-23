@@ -12,7 +12,7 @@
 
 # Work setup
 # TODO: use proper name for laptop monitor
-output eDP-1 res 1920x1080 position 760 1440
+# output eDP-1 res 1920x1080 position 760 1440
 # 34" work monitor
 output DP-1 res 3440x1440 position 0 0
 output DP-2 res 3440x1440 position 0 0
@@ -20,8 +20,11 @@ output DP-2 res 3440x1440 position 0 0
 # output "Goldstar Company Ltd   0x0000332B" res 1280x1080 position 2680 1440
 
 # Home
-output "Chimei Innolux Corporation 0x1482 0x00000000" resolution 1600x900 position 0 0
+# output "Chimei Innolux Corporation 0x1482 0x00000000" resolution 1600x900 position 0 0
 # output "Eizo Nanao Corporation EV2336W 61488064" resolution 1920x1080 position 1600 0
+
+output eDP-1 res 1920x1080 position 0 0
+output "Eizo Nanao Corporation EV2785 0x0000D7ED" resolution 2560x1440 position 1920 0
 
 # Schergenbreite
 # TODO: fix conflict with work setup
