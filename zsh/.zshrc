@@ -138,7 +138,7 @@ export PATH="$PATH:/home/phil/.local/bin"
 
 export AWS_DEFAULT_SSO_START_URL="https://idealo-login.awsapps.com/start#/"
 export AWS_DEFAULT_SSO_REGION="eu-central-1"
-export AWS_PROFILE="pro"
+# export AWS_PROFILE="pro"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 # Created by `pipx` on 2021-11-17 15:22:26

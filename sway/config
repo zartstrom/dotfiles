@@ -12,7 +12,7 @@
 
 # Work setup
 # TODO: use proper name for laptop monitor
-output eDP-1 res 1920x1080 position 760 1440
+# work: output eDP-1 res 1920x1080 position 760 1440
 # 34" work monitor
 output DP-1 res 3440x1440 position 0 0
 output DP-2 res 3440x1440 position 0 0
@@ -24,13 +24,13 @@ output DP-2 res 3440x1440 position 0 0
 # output "Eizo Nanao Corporation EV2336W 61488064" resolution 1920x1080 position 1600 0
 
 # output eDP-1 res 1920x1080 position 0 0
-output "Eizo Nanao Corporation EV2785 0x0000D7ED" resolution 2560x1440 position 1680 1440
+# home: output "Eizo Nanao Corporation EV2785 0x0000D7ED" resolution 2560x1440 position 2680 1440
 # 1680 = 760 (x value from eDP-1 above) + 1920 (resolution x value for eDP-1)
 
 # Schergenbreite
 # TODO: fix conflict with work setup
-# output "Eizo Nanao Corporation EV2480 22743011" resolution 1920x1080 position 0 0
-# output eDP-1 res 1920x1080 position 1920 0
+output "Eizo Nanao Corporation EV2480 22743011" resolution 1920x1080 position 0 0
+output eDP-1 res 1920x1080 position 1920 0
 
 # Wallpaper
 #
