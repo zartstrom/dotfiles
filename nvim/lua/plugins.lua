@@ -24,7 +24,7 @@ return require('packer').startup(function()
 
   -- Formatting
   use 'mhartington/formatter.nvim'
-  use 'andrejlevkovitch/vim-lua-format'
+  -- use 'andrejlevkovitch/vim-lua-format'
 
   -- Neorg
   -- use {
