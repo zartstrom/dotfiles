@@ -109,30 +109,39 @@ require"lspconfig".efm.setup {
         }
     }
 }
-local lsp = require('lspconfig')
+local lspconfig = require('lspconfig')
 
--- for ls, cfg in pairs({
---   bashls = {}, gopls = {}, ccls = {}, jsonls = {},
---   pyls = {root_dir = lsp.util.root_pattern('.git', fn.getcwd())},
--- }) do lsp[ls].setup(cfg) end
+local on_attach = function(_, bufnr)
+    local opts = {buffer = bufnr}
+    vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
+    vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
+    vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
+    vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
+    vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, opts)
+    vim.keymap.set('n', '<leader>wa', vim.lsp.buf.add_workspace_folder, opts)
+    vim.keymap.set('n', '<leader>wr', vim.lsp.buf.remove_workspace_folder, opts)
+    vim.keymap.set('n', '<leader>wl', function()
+        vim.inspect(vim.lsp.buf.list_workspace_folders())
+    end, opts)
+    vim.keymap.set('n', '<leader>D', vim.lsp.buf.type_definition, opts)
+    vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, opts)
+    vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
+    vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, opts)
+    vim.keymap.set('n', '<leader>so',
+                   require('telescope.builtin').lsp_document_symbols, opts)
+    vim.api.nvim_buf_create_user_command(bufnr, "Format",
+                                         vim.lsp.buf.formatting, {})
+end
 
--- nvim-completion requires this:
--- require'lspconfig'.pyright.setup{on_attach=require'completion'.on_attach}
+-- nvim-cmp supports additional completion capabilities
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
--------------------- LSP SAGA ------------------------------
--- local saga = require 'lspsaga'
-
--- saga.init_lsp_saga {
---   error_sign = '',
---   warn_sign = '',
---   hint_sign = '',
---   infor_sign = '',
---   border_style = "round",
--- }
-
--- map('n', 'K', ':Lspsaga hover_doc<CR>', {silent = true})
--- map('n', 'gh', ':Lspsaga lsp_finder<CR>', {silent = true})
--- map('i', '<C-k>', '<CMD>Lspsaga signature_help<CR>')
+-- Enable the following language servers
+local servers = {'pyright'}
+for _, lsp in ipairs(servers) do
+    lspconfig[lsp].setup {on_attach = on_attach, capabilities = capabilities}
+end
 
 -------------------- TREE-SITTER ---------------------------
 require('nvim-treesitter.configs').setup {
@@ -304,6 +313,13 @@ augroup END
 ]], true)
 
 -------------------- COMMANDS ------------------------------
+vim.api.nvim_exec([[
+augroup FormatAutogroup
+  autocmd!
+  autocmd CmdlineEnter : echo ':'
+augroup END
+]], true)
+
 function init_term()
     cmd 'setlocal nonumber norelativenumber'
     cmd 'setlocal nospell'
