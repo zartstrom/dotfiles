@@ -105,6 +105,7 @@ alias hubble-ui='kubectl port-forward -n kube-system svc/hubble-ui --address 0.0
 
 # justfile
 alias .j='just --justfile ~/.justfile --working-directory .'
+alias open='xdg-open'
 
 source ~/devel/recalc-service/.complete.zsh
 
@@ -122,3 +123,4 @@ export PATH="$PATH:/home/phil/.local/bin"
 # START: Added by Updated Airflow Breeze autocomplete setup
 source /home/phil/devel/airflow/dev/breeze/autocomplete/breeze-complete-zsh.sh
 # END: Added by Updated Airflow Breeze autocomplete setup
+eval "$(pyenv virtualenv-init -)"

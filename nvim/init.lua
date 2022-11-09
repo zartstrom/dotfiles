@@ -144,64 +144,64 @@ for _, lsp in ipairs(servers) do
 end
 
 -------------------- TREE-SITTER ---------------------------
-require('nvim-treesitter.configs').setup {
-    ensure_installed = {'python', 'lua', 'scala'},
-    highlight = {enable = true},
-    incremental_selection = {
-        enable = true,
-        keymaps = {
-            init_selection = "gnn",
-            node_incremental = "grn",
-            scope_incremental = "grc",
-            node_decremental = "grm"
-        }
-    },
-    textobjects = {
-        select = {
-            enable = true,
-            keymaps = {
-                ['aa'] = '@parameter.outer',
-                ['ia'] = '@parameter.inner',
-                ['af'] = '@function.outer',
-                ['if'] = '@function.inner',
-                ['ac'] = '@class.outer',
-                ['ic'] = '@class.inner'
-            }
-        },
-        swap = {
-            enable = true,
-            swap_next = {['<leader>a'] = '@parameter.inner'},
-            swap_previous = {['<leader>A'] = '@parameter.inner'}
-        },
-        move = {
-            enable = true,
-            set_jumps = true,
-            goto_next_start = {
-                [']a'] = '@parameter.outer',
-                [']f'] = '@function.outer',
-                [']c'] = '@class.outer'
-            },
-            goto_next_end = {
-                [']A'] = '@parameter.outer',
-                ['<leader>ö'] = '@function.outer',
-                [']C'] = '@class.outer'
-            },
-            goto_previous_start = {
-                ['[a'] = '@parameter.outer',
-                ['[f'] = '@function.outer',
-                ['[c'] = '@class.outer'
-            },
-            goto_previous_end = {
-                ['[A'] = '@parameter.outer',
-                ['[F'] = '@function.outer',
-                ['[C'] = '@class.outer'
-            }
-        }
-    }
-}
-local parser_configs = require('nvim-treesitter.parsers').get_parser_configs()
+-- require('nvim-treesitter.configs').setup {
+--     ensure_installed = {'python', 'lua', 'scala'},
+--     highlight = {enable = true},
+--     incremental_selection = {
+--         enable = true,
+--         keymaps = {
+--             init_selection = "gnn",
+--             node_incremental = "grn",
+--             scope_incremental = "grc",
+--             node_decremental = "grm"
+--         }
+--     },
+--     textobjects = {
+--         select = {
+--             enable = true,
+--             keymaps = {
+--                 ['aa'] = '@parameter.outer',
+--                 ['ia'] = '@parameter.inner',
+--                 ['af'] = '@function.outer',
+--                 ['if'] = '@function.inner',
+--                 ['ac'] = '@class.outer',
+--                 ['ic'] = '@class.inner'
+--             }
+--         },
+--         swap = {
+--             enable = true,
+--             swap_next = {['<leader>a'] = '@parameter.inner'},
+--             swap_previous = {['<leader>A'] = '@parameter.inner'}
+--         },
+--         move = {
+--             enable = true,
+--             set_jumps = true,
+--             goto_next_start = {
+--                 [']a'] = '@parameter.outer',
+--                 [']f'] = '@function.outer',
+--                 [']c'] = '@class.outer'
+--             },
+--             goto_next_end = {
+--                 [']A'] = '@parameter.outer',
+--                 ['<leader>ö'] = '@function.outer',
+--                 [']C'] = '@class.outer'
+--             },
+--             goto_previous_start = {
+--                 ['[a'] = '@parameter.outer',
+--                 ['[f'] = '@function.outer',
+--                 ['[c'] = '@class.outer'
+--             },
+--             goto_previous_end = {
+--                 ['[A'] = '@parameter.outer',
+--                 ['[F'] = '@function.outer',
+--                 ['[C'] = '@class.outer'
+--             }
+--         }
+--     }
+-- }
+-- local parser_configs = require('nvim-treesitter.parsers').get_parser_configs()
 
--- parser_configs.norg = {
+-- -- parser_configs.norg = {
 --   install_info = {
 --     url = "https://github.com/vhyrro/tree-sitter-norg",
 --     files = { "src/parser.c" },
@@ -234,6 +234,9 @@ map('n', 'd<Space>j', 'd:HopLine<CR>')
 map('n', 'd<Space>w', 'd:HopWord<CR>')
 map('n', 'd<Space>f', 'd:HopChar1<CR>')
 map('n', 'd<Space>F', 'd:HopChar2<CR>')
+
+-------------------- Random String -----------------------------------
+map('n', '<leader>r', 'iXxUQ<esc>:read!head /dev/random | tr -dc A-Za-z0-9 | head -c12<cr><esc>d$k:s/XxUQ/<C-r>"/<cr>')
 
 -------------------- colorizer -----------------------------
 -- Use the `default_options` as the second parameter, which uses

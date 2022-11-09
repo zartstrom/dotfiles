@@ -11,7 +11,7 @@ return require('packer').startup(function()
 
     -- Treesitter
     use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
-    use 'nvim-treesitter/nvim-treesitter-textobjects'
+    -- use 'nvim-treesitter/nvim-treesitter-textobjects'
 
     -- Code Completion
     -- use  'nvim-lua/completion-nvim'

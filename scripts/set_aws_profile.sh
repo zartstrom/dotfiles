@@ -26,7 +26,16 @@ with open("$TMP_FILE", "w") as out:
 
 EOF
 
-export AWS_ACCESS_KEY_ID=$(cat $TMP_FILE | jq .Credentials.AccessKeyId)
-export AWS_SECRET_ACCESS_KEY=$(cat $TMP_FILE | jq .Credentials.SecretAccessKey)
-export AWS_SESSION_TOKEN=$(cat $TMP_FILE | jq .Credentials.SessionToken)
+export AWS_ACCESS_KEY_ID=$(cat $TMP_FILE | jq .Credentials.AccessKeyId | tr -d \")
+export AWS_SECRET_ACCESS_KEY=$(cat $TMP_FILE | jq .Credentials.SecretAccessKey | tr -d \")
+export AWS_SESSION_TOKEN=$(cat $TMP_FILE | jq .Credentials.SessionToken | tr -d \")
+
+echo $AWS_ACCESS_KEY_ID
+echo $AWS_SECRET_ACCESS_KEY
+
+TMP_TEXT="/tmp/creds.txt"
+echo "AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID" > $TMP_TEXT
+echo "AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY" >> $TMP_TEXT
+echo "AWS_SESSION_TOKEN=$AWS_SESSION_TOKEN" >> $TMP_TEXT
+
 
