@@ -124,3 +124,8 @@ export PATH="$PATH:/home/phil/.local/bin"
 source /home/phil/devel/airflow/dev/breeze/autocomplete/breeze-complete-zsh.sh
 # END: Added by Updated Airflow Breeze autocomplete setup
 eval "$(pyenv virtualenv-init -)"
+
+# Configuration for autoenv, see also https://github.com/hyperupcall/autoenv
+AUTOENV_ENV_FILENAME=".autoenv"
+source /usr/share/autoenv-git/activate.sh
+
