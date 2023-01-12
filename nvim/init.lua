@@ -55,14 +55,22 @@ require("packer").startup(
             after = "nvim-treesitter"
         }
 
+        -- Tpope goodies
+        use "tpope/vim-abolish"
+        use "tpope/vim-surround"
+
         -- Git related plugins
         use "tpope/vim-fugitive"
         use "tpope/vim-rhubarb"
         use "lewis6991/gitsigns.nvim"
 
+        -- Colors and colorschemes
+        use "norcalli/nvim-colorizer.lua"
         use "navarasu/onedark.nvim" -- Theme inspired by Atom
         use "Shatur/neovim-ayu" -- A colorscheme for Neovim 0.8+ reimplemented in lua from ayu-vim.
         use "bluz71/vim-nightfly-colors" -- nightfly is a dark midnight theme for classic Vim & modern Neovim.
+
+        -- Other good stuff
         use "nvim-lualine/lualine.nvim" -- Fancier statusline
         use "lukas-reineke/indent-blankline.nvim" -- Add indentation guides even on blank lines
         use "numToStr/Comment.nvim" -- "gc" to comment visual regions/lines
@@ -174,6 +182,14 @@ vim.api.nvim_create_autocmd(
         end,
         group = highlight_group,
         pattern = "*"
+    }
+)
+
+-- [[ Colorizer ]]
+require("colorizer").setup(
+    {
+        "*", -- Highlight all files, but customize some others.
+        css = {rgb_fn = true} -- Enable parsing rgb(...) functions in css.
     }
 )
 
