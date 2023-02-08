@@ -10,6 +10,8 @@
 # For help see man 5 sway-output
 # You can get the names of your outputs by running 'swaymsg -t get_outputs'
 
+exec ~/scripts/share-desktop.sh
+
 # Work setup
 # TODO: use proper name for laptop monitor
 output eDP-1 res 1920x1080 position 2760 1440
@@ -180,12 +182,14 @@ bindsym $mod+x exec rofi -show run -font "Monoid 11" -theme sway_theme
 
 # start a terminal
 #set $term termite
-set $term dbus-launch gnome-terminal
+# set $term dbus-launch gnome-terminal
+set $term terminology
 # bindsym $mod+Return exec $term
 bindsym $mod+Return exec $term
 
 # bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+t exec gnome-terminal
+# bindsym $mod+t exec terminology
+bindsym $mod+t exec $term
 
 # bindsym $mod+b exec --no-startup-id $HOME/scripts/from_here.sh
 
@@ -423,6 +427,6 @@ assign [app_id="q5go"] → $28
 
 # exec thunderbird
 exec MOZ_ENABLE_WAYLAND=1 firefox
-exec gnome-terminal
+# exec gnome-terminal
 exec megasync
 

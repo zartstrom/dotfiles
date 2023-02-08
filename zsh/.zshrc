@@ -125,7 +125,12 @@ source /home/phil/devel/airflow/dev/breeze/autocomplete/breeze-complete-zsh.sh
 # END: Added by Updated Airflow Breeze autocomplete setup
 eval "$(pyenv virtualenv-init -)"
 
+# McFly https://github.com/cantino/mcfly
+eval "$(mcfly init zsh)"
+
 # Configuration for autoenv, see also https://github.com/hyperupcall/autoenv
 AUTOENV_ENV_FILENAME=".autoenv"
 source /usr/share/autoenv-git/activate.sh
 
+
+source /home/phil/.config/broot/launcher/bash/br

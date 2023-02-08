@@ -13,6 +13,10 @@ MOZ_ENABLE_WAYLAND=1
 # Please don't use GDK_BACKEND, it's for debugging only. Use MOZ_ENABLE_WAYLAND=1
 # GDK_BACKEND=wayland
 
+
+# from https://wiki.archlinux.org/title/PipeWire
+XDG_CURRENT_DESKTOP=sway
+
 LC_ALL=en_US.UTF-8
 LANG=en_US.UTF-8
 

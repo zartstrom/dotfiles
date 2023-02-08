@@ -113,3 +113,5 @@ export PATH
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
+
+source /home/phil/.config/broot/launcher/bash/br
