@@ -422,18 +422,14 @@ end
 --  the `settings` field of the server config. You must look up that documentation yourself.
 local servers = {
     -- clangd = {},
-    -- gopls = {},
+    gopls = {},
     pyright = {},
     -- rust_analyzer = {},
     -- tsserver = {},
-    sumneko_lua = {
+    lua_ls = {
         Lua = {
             workspace = {checkThirdParty = false},
-            telemetry = {enable = false},
-            diagnostics = {
-                -- Get the language server to recognize the `vim` global
-                globals = {"vim"}
-            }
+            telemetry = {enable = false}
         }
     }
 }
@@ -450,7 +446,7 @@ vim.api.nvim_exec(
     [[
 augroup fmt
   autocmd!
-  autocmd BufWritePre *.py,*.lua undojoin | Neoformat
+  autocmd BufWritePre *.py,*.lua,*.go undojoin | Neoformat
 augroup END
 let g:neoformat_enabled_python = ['black']
 let g:neoformat_python_black = {
