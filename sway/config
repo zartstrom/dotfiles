@@ -30,8 +30,8 @@ output "Eizo Nanao Corporation EV2785 0x0000D7ED" resolution 2560x1440 position 
 # 1680 = 760 (x value from eDP-1 above) + 1920 (resolution x value for eDP-1)
 
 # Schergenbreite
-# TODO: fix conflict with work setup
-output "Eizo Nanao Corporation EV2480 22743011" resolution 1920x1080 position 840 1440
+output "Eizo Nanao Corporation EV2480 22743011" resolution 1920x1080 position 2760 360
+# output "Eizo Nanao Corporation EV2480 22743011" resolution 1920x1080 position 840 1440 # left of laptop
 # output eDP-1 res 1920x1080 position 1920 0
 
 # Wallpaper
