@@ -81,6 +81,8 @@ require("lazy").setup(
                     icons_enabled = false,
                     -- theme = "nightfly",
                     theme = "catppuccin",
+                    -- theme = "cobalt2",
+                    -- theme = "oxocarbon",
                     component_separators = "|",
                     section_separators = ""
                 }
@@ -137,7 +139,8 @@ require("lazy").setup(
         --    An additional note is that if you only copied in the `init.lua`, you can just comment this line
         --    to get rid of the warning telling you that there are not plugins in `lua/custom/plugins/`.
         -- { import = 'custom.plugins' },
-        {import = "plugins"}
+        {import = "plugins"},
+        {import = "plugins.colors"}
     },
     {}
 )
@@ -190,6 +193,9 @@ vim.o.completeopt = "menuone,noselect"
 vim.o.termguicolors = true
 
 vim.cmd.colorscheme "catppuccin-frappe"
+-- vim.cmd.colorscheme "catppuccin-latte"
+-- vim.cmd.colorscheme "cobalt2"
+-- vim.cmd.colorscheme "oxocarbon"
 
 -- [[ Basic Keymaps ]]
 
