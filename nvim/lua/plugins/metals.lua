@@ -20,7 +20,7 @@ return {
         map("n", "<leader>cl", vim.lsp.codelens.run)
         map("n", "<leader>sh", vim.lsp.buf.signature_help)
         map("n", "<leader>rn", vim.lsp.buf.rename)
-        map("n", "<leader>f", vim.lsp.buf.formatting)
+        -- map("n", "<leader>f", vim.lsp.buf.formatting)
         map("n", "<leader>ca", vim.lsp.buf.code_action)
 
         map(

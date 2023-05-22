@@ -19,15 +19,15 @@ ZSH_THEME="af-magic-light"
 
 # pyenv
 # Need to put this configuration before the plugin is loaded.
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init --path)"
+# export PYENV_ROOT="$HOME/.pyenv"
+# export PATH="$PYENV_ROOT/bin:$PATH"
+# eval "$(pyenv init --path)"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git gitfast virtualenv virtualenvwrapper pyenv pylint rsync python history ssh-agent bower pip npm per-directory-history)
+plugins=(git gitfast virtualenv virtualenvwrapper pylint rsync python history ssh-agent bower pip npm per-directory-history)
 
 # User configuration
 setopt interactivecomments
@@ -65,6 +65,11 @@ export PATH="${PATH}:${HOME}/.krew/bin"
 # ruby
 export PATH=$PATH:~/.gem/ruby/2.3.0/bin
 export PATH=$PATH:~/.gem/ruby/2.4.0/bin
+
+# scala
+# >>> coursier install directory >>>
+export PATH="$PATH:/home/phil/.local/share/coursier/bin"
+# <<< coursier install directory <<<
 
 # spark
 export PATH=$PATH:/home/phil/spark/bin
@@ -127,6 +132,10 @@ eval "$(pyenv virtualenv-init -)"
 
 # McFly https://github.com/cantino/mcfly
 eval "$(mcfly init zsh)"
+
+# Vi Mode
+# https://github.com/jeffreytse/zsh-vi-mode
+source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
 # Configuration for autoenv, see also https://github.com/hyperupcall/autoenv
 AUTOENV_ENV_FILENAME=".autoenv"

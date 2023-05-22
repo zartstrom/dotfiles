@@ -192,7 +192,7 @@ vim.o.completeopt = "menuone,noselect"
 -- NOTE: You should make sure your terminal supports this
 vim.o.termguicolors = true
 
-vim.cmd.colorscheme "catppuccin-frappe"
+vim.cmd.colorscheme "github_dark_dimmed"
 -- vim.cmd.colorscheme "catppuccin-latte"
 -- vim.cmd.colorscheme "cobalt2"
 -- vim.cmd.colorscheme "oxocarbon"
@@ -395,7 +395,7 @@ local servers = {
     gopls = {},
     pyright = {},
     -- rust_analyzer = {},
-    -- tsserver = {},
+    tsserver = {},
     lua_ls = {
         Lua = {
             workspace = {checkThirdParty = false},
