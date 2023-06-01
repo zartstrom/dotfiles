@@ -137,9 +137,5 @@ eval "$(mcfly init zsh)"
 # https://github.com/jeffreytse/zsh-vi-mode
 source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
-# Configuration for autoenv, see also https://github.com/hyperupcall/autoenv
-AUTOENV_ENV_FILENAME=".autoenv"
-source /usr/share/autoenv-git/activate.sh
-
 
 source /home/phil/.config/broot/launcher/bash/br
