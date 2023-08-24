@@ -128,14 +128,17 @@ export PATH="$PATH:/home/phil/.local/bin"
 # START: Added by Updated Airflow Breeze autocomplete setup
 source /home/phil/devel/airflow/dev/breeze/autocomplete/breeze-complete-zsh.sh
 # END: Added by Updated Airflow Breeze autocomplete setup
-eval "$(pyenv virtualenv-init -)"
+# eval "$(pyenv virtualenv-init -)"
 
 # McFly https://github.com/cantino/mcfly
 eval "$(mcfly init zsh)"
 
 # Vi Mode
 # https://github.com/jeffreytse/zsh-vi-mode
-source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
-
+# source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
 source /home/phil/.config/broot/launcher/bash/br
+
+# poetry
+alias poetry_env='source $(poetry env info --path)/bin/activate'
+

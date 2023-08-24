@@ -46,7 +46,7 @@ require("lazy").setup(
                 "williamboman/mason-lspconfig.nvim",
                 -- Useful status updates for LSP
                 -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
-                {"j-hui/fidget.nvim", opts = {}},
+                {"j-hui/fidget.nvim", tag = "legacy", opts = {}},
                 -- Additional lua configuration, makes nvim stuff amazing!
                 "folke/neodev.nvim"
             }
@@ -191,9 +191,9 @@ vim.o.completeopt = "menuone,noselect"
 
 -- NOTE: You should make sure your terminal supports this
 vim.o.termguicolors = true
-
-vim.cmd.colorscheme "github_dark_dimmed"
+-- vim.cmd.colorscheme "github_dark_dimmed"
 -- vim.cmd.colorscheme "catppuccin-latte"
+vim.cmd.colorscheme "catppuccin-frappe"
 -- vim.cmd.colorscheme "cobalt2"
 -- vim.cmd.colorscheme "oxocarbon"
 
@@ -265,7 +265,7 @@ vim.keymap.set("n", "<leader>sd", require("telescope.builtin").diagnostics, {des
 -- See `:help nvim-treesitter`
 require("nvim-treesitter.configs").setup {
     -- Add languages to be installed here that you want installed for treesitter
-    ensure_installed = {"c", "cpp", "go", "lua", "python", "rust", "scala", "typescript", "help", "vim"},
+    ensure_installed = {"c", "cpp", "go", "hcl", "lua", "python", "rust", "scala", "typescript", "help", "vim"},
     -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
     auto_install = false,
     highlight = {enable = true},
@@ -395,6 +395,8 @@ local servers = {
     gopls = {},
     pyright = {},
     -- rust_analyzer = {},
+    terraformls = {},
+    tflint = {},
     tsserver = {},
     lua_ls = {
         Lua = {

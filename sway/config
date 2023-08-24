@@ -93,7 +93,7 @@ input "6058:20564:ThinkPad_Extra_B" {
 }
 
 exec_always swayidle -w \
-        timeout 6000 'swaymsg "output * dpms off"' \
+        timeout 600 'swaymsg "output * dpms off"' \
         resume 'swaymsg "output * dpms on"'
         #timeout 1800 'swaylock-blur' \
         #before-sleep 'swaylock-blur'
@@ -281,8 +281,8 @@ set $T9 "19:9 "
 set $T10 "20:10 "
 set $T11 "21:11 browser 🕸"
 set $T12 "22:12 browser 🕸"
-set $T13 "23:13 𣎴"
-set $T14 "24:14 𣎴"
+set $T13 "23:mochi 餅"
+set $T14 "24:inkdrop 🌢"
 set $T15 "25:15 ⺢"
 set $T16 "26:16 ⺢"
 set $T17 "27:17 𫗧"
@@ -291,7 +291,7 @@ set $T19 "29:19 日"
 set $T20 "30:20 日"
 set $sql "31:sql "
 set $lens "32:lens 🔍"
-set $inkdrop "33:inkdrop 🌢"
+# set $inkdrop "33:inkdrop 🌢"
 set $gotop "34:top"
 
 workspace $T8 output eDP-1
@@ -320,7 +320,6 @@ bindsym $mod+F9 workspace $T19
 bindsym $mod+F10 workspace $T20
 bindsym $mod+F11 workspace $firefox
 bindsym $mod+F12 workspace $chrome
-bindsym $mod+i workspace $inkdrop
 
 # next/previous workspace
 bindsym Control+$mod+Right workspace next
@@ -349,7 +348,6 @@ bindsym $mod+Shift+F9 move container to workspace $T19
 bindsym $mod+Shift+F10 move container to workspace $T20
 bindsym $mod+Shift+F11 move container to workspace $firefox
 bindsym $mod+Shift+F12 move container to workspace $chrome
-bindsym $mod+Shift+i move container to workspace $inkdrop
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -420,7 +418,8 @@ assign [class="^Opera$"] → $opera
 assign [class="^Mysql-workbench-bin$"] → $sql
 assign [app_id="DBeaver"] → $sql
 assign [class="^jetbrains-datagrip$"] → $sql
-assign [class="^inkdrop$"] → $inkdrop
+assign [class="^mochi$"] → $T13
+assign [class="^inkdrop$"] → $T14
 assign [class="Microsoft Teams - Preview"] → $chat
 assign [app_id="q5go"] → $28
 

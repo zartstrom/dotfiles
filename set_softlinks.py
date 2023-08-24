@@ -111,8 +111,8 @@ softlink_dotfiles_home("i3/lock.sh", "scripts/lock.sh")
 softlink_dotfiles_home("i3/from_here.sh", "scripts/from_here.sh")
 softlink_dotfiles_home("scripts/menu", "scripts/menu")
 softlink_dotfiles_home("scripts/screenshot.sh", "scripts/screenshot.sh")
-softlink_dotfiles_home("scripts/screenshot-output.sh", "scripts/screenshot-output.sh")
 softlink_dotfiles_home("scripts/set_aws_profile.sh", "scripts/set_aws_profile.sh")
+softlink_dotfiles_home("scripts/share-desktop.sh", "scripts/share-desktop.sh")
 
 # pulse
 display_header("pulse")
