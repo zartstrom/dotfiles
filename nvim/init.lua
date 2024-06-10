@@ -267,7 +267,7 @@ vim.keymap.set("n", "<leader>sd", require("telescope.builtin").diagnostics, {des
 -- See `:help nvim-treesitter`
 require("nvim-treesitter.configs").setup {
     -- Add languages to be installed here that you want installed for treesitter
-    ensure_installed = {"c", "cpp", "go", "hcl", "lua", "python", "rust", "scala", "typescript", "help", "vim"},
+    ensure_installed = {"c", "cpp", "dart", "go", "hcl", "lua", "python", "rust", "scala", "typescript", "help", "vim"},
     -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
     auto_install = false,
     highlight = {enable = true},
@@ -394,8 +394,10 @@ end
 --  the `settings` field of the server config. You must look up that documentation yourself.
 local servers = {
     -- clangd = {},
+    -- dartls = {}, -- not sure whether there is a dart language server or how it is named.
     gopls = {},
-    pyright = {},
+    -- pyright = {},
+    pylsp = {},
     -- rust_analyzer = {},
     terraformls = {},
     tflint = {},
@@ -436,11 +438,10 @@ mason_lspconfig.setup_handlers {
 }
 
 -- nvim-cmp setup
-require("luasnip.loaders.from_vscode").lazy_load {paths = {"~/.local/nvim-snipiiipets"}}
-
 local cmp = require "cmp"
 local luasnip = require "luasnip"
 
+-- require("luasnip.loaders.from_vscode").lazy_load {paths = {"~/.local/nvim-snippets"}}  -- didn't get it to work yet
 luasnip.config.setup {}
 
 cmp.setup {

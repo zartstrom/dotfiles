@@ -120,8 +120,11 @@ mkdir_p_from_home(".config/pulse")
 softlink_dotfiles_home("pulse/default.pa", ".config/pulse/default.pa")
 
 # pylint
-display_header("pylint")
+
+# python
+display_header("python")
 softlink_dotfiles_home("pylint/pylintrc", ".pylintrc")
+softlink_dotfiles_home("python/pycodestyle", ".config/pycodestyle")
 
 # sbt
 display_header("sbt")
@@ -166,7 +169,7 @@ mkdir_p_from_home(".vim")
 mkdir_p_from_home(".vimswap")
 mkdir_p_from_home(".config/nvim")
 # softlink_dotfiles_home("vim/init.vim", ".config/nvim/init.vim")
-softlink_dotfiles_home("nvim/vscode_init.vim", ".config/nvim/vscode_init.vim")
+# softlink_dotfiles_home("nvim/vscode_init.vim", ".config/nvim/vscode_init.vim")
 softlink_dotfiles_home("nvim/init.lua", ".config/nvim/init.lua")
 softlink_dotfiles_home("nvim/lua", ".config/nvim/lua")
 
