@@ -188,6 +188,11 @@ softlink_dotfiles_home("X11/.Xmodmap", ".Xmodmap")
 # mouse config:
 softlink_dotfiles_home("X11/.imwheelrc", ".imwheelrc")
 
+# wezterm
+display_header("wezterm")
+mkdir_p_from_home(".config/wezterm")
+softlink_dotfiles_home("wezterm/wezterm.lua", ".config/wezterm/wezterm.lua")
+
 # xdg-user-dirs
 display_header("xdg-user-dirs")
 softlink_dotfiles_home("xdg-user-dirs/user-dirs.dirs", ".config/user-dirs.dirs")

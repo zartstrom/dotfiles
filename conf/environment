@@ -6,17 +6,13 @@
 
 # java stuff, especially for datagrip
 _JAVA_AWT_WM_NONREPARENTING=1
-JAVA_FONTS=/usr/share/fonts/TTF
 
 # firefox for wayland
 MOZ_ENABLE_WAYLAND=1
-# Please don't use GDK_BACKEND, it's for debugging only. Use MOZ_ENABLE_WAYLAND=1
-# GDK_BACKEND=wayland
-
 
 # from https://wiki.archlinux.org/title/PipeWire
 XDG_CURRENT_DESKTOP=sway
 
-LC_ALL=en_US.UTF-8
-LANG=en_US.UTF-8
+# https://github.com/flameshot-org/flameshot/issues/2872
+QT_QPA_PLATFORM=wayland
 

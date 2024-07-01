@@ -1,3 +1,4 @@
 return {
-    "NoahTheDuke/vim-just"
+    "NoahTheDuke/vim-just",
+    lazy = true
 }

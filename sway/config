@@ -184,7 +184,7 @@ bindsym $mod+x exec rofi -show run -font "Monoid 11" -theme sway_theme
 # start a terminal
 #set $term termite
 # set $term dbus-launch gnome-terminal
-set $term terminology
+set $term wezterm
 # bindsym $mod+Return exec $term
 bindsym $mod+Return exec $term
 

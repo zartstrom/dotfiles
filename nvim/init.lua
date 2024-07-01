@@ -31,7 +31,7 @@ require("lazy").setup(
     {
         -- NOTE: First, some plugins that don't require any configuration
         -- Git related plugins
-        "tpope/vim-fugitive",
+        -- "tpope/vim-fugitive", -- colored text isn't rendered correctly
         "tpope/vim-rhubarb",
         -- Detect tabstop and shiftwidth automatically
         "tpope/vim-sleuth",
@@ -398,7 +398,7 @@ local servers = {
     gopls = {},
     -- pyright = {},
     pylsp = {},
-    -- rust_analyzer = {},
+    rust_analyzer = {},
     terraformls = {},
     tflint = {},
     tsserver = {},
@@ -412,6 +412,9 @@ local servers = {
 
 -- Setup neovim lua configuration
 require("neodev").setup()
+
+-- gitsigns
+require("gitsigns").setup()
 
 -- nvim-cmp supports additional completion capabilities, so broadcast that to servers
 local capabilities = vim.lsp.protocol.make_client_capabilities()
