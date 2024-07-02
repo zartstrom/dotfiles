@@ -2,8 +2,8 @@
   name = Philipp Hitzler
   email = philipp.hitzler@idealo.de
 [core]
-  pager = less -FRSX
-  whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+  pager = delta
+  ; whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
   excludesFile = ~/.gitignore
 [alias]
   co = checkout
@@ -15,6 +15,27 @@
   lx = log --graph --pretty=format:'%h -%d %s %cr <%an>' --abbrev-commit
   lh = "!sh -c 'git lg | head'"
   la = log --all --graph --oneline --decorate
+[credential]
+  helper = store
+
+[interactive]
+  diffFilter = delta --color-only
+
+[delta]
+  diffFilter = delta --color-only
+  side-by-side = true
+  line-numbers = true
+  navigate = true
+[merge]
+  conflictstyle = diff3
+[diff]
+  colorMoved = default
+
+[push]
+  default = current
+[init]
+  defaultBranch = main
+
 [color]
   diff = auto
   status = auto
@@ -35,11 +56,3 @@
   added = yellow
   changed = green
   untracked = cyan
-[credential]
-  helper = store
-[merge]
-  tool = meld
-[push]
-  default = current
-[init]
-	defaultBranch = main
