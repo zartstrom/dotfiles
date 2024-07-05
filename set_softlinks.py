@@ -193,6 +193,14 @@ display_header("wezterm")
 mkdir_p_from_home(".config/wezterm")
 softlink_dotfiles_home("wezterm/wezterm.lua", ".config/wezterm/wezterm.lua")
 
+# xdg-desktop-portals
+display_header("xdg-desktop-portal")
+mkdir_p_from_home(".config/xdg-desktop-portal")
+softlink_dotfiles_home("xdg-desktop-portal/portals.conf", ".config/xdg-desktop-portal/portals.conf")
+softlink_dotfiles_home(
+    "xdg-desktop-portal/sway-portals.conf", ".config/xdg-desktop-portal/sway-portals.conf"
+)
+
 # xdg-user-dirs
 display_header("xdg-user-dirs")
 softlink_dotfiles_home("xdg-user-dirs/user-dirs.dirs", ".config/user-dirs.dirs")
