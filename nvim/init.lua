@@ -84,7 +84,8 @@ require("lazy").setup(
                 options = {
                     icons_enabled = false,
                     -- theme = "nightfly",
-                    theme = "catppuccin",
+                    -- theme = "catppuccin",
+                    theme = "tokyonight",
                     -- theme = "cobalt2",
                     -- theme = "oxocarbon",
                     component_separators = "|",
@@ -195,9 +196,12 @@ vim.o.completeopt = "menuone,noselect"
 vim.o.termguicolors = true
 -- vim.cmd.colorscheme "github_dark_dimmed"
 -- vim.cmd.colorscheme "catppuccin-latte"
-vim.cmd.colorscheme "catppuccin-frappe"
+-- vim.cmd.colorscheme "catppuccin-frappe"
 -- vim.cmd.colorscheme "cobalt2"
 -- vim.cmd.colorscheme "oxocarbon"
+vim.cmd.colorscheme "tokyonight"
+
+vim.diagnostic.config({virtual_text = false})
 
 -- [[ Basic Keymaps ]]
 
