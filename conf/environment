@@ -13,6 +13,12 @@ MOZ_ENABLE_WAYLAND=1
 # from https://wiki.archlinux.org/title/PipeWire
 XDG_CURRENT_DESKTOP=sway
 
+
+XDG_CONFIG_HOME=~/.config
+
+# GTK 
+GTK_USE_PORTAL=1
+
 # https://github.com/flameshot-org/flameshot/issues/2872
 QT_QPA_PLATFORM=wayland
 
