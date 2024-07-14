@@ -201,6 +201,8 @@ vim.o.termguicolors = true
 -- vim.cmd.colorscheme "oxocarbon"
 vim.cmd.colorscheme "tokyonight"
 
+vim.o.title = true
+
 vim.diagnostic.config({virtual_text = false})
 
 -- [[ Basic Keymaps ]]
