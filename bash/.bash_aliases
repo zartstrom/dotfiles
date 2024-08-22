@@ -1,5 +1,9 @@
 # AWS
 alias profile="source $HOME/scripts/set_aws_profile.sh"
+alias ap="source $HOME/scripts/export-aws-profile-fzf.sh"
+
+# Git
+alias gb="$HOME/scripts/git-fzf-branch.sh"
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then

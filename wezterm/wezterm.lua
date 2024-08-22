@@ -16,7 +16,7 @@ config.window_padding = {
     top = 0,
     bottom = 0
 }
-config.window_background_opacity = 0.75
+-- config.window_background_opacity = 0.75
 
 config.line_height = 0.9
 

@@ -2,6 +2,7 @@
 return {
     "sbdchd/neoformat", -- Format buffer
     config = function()
+        -- NOTE: for scalafmt to work provide a .scalafmt.conf file.
         vim.api.nvim_exec2(
             [[
 		augroup fmt
@@ -9,12 +10,7 @@ return {
 		autocmd BufWritePre *.py,*.lua,*.go,*.scala undojoin | Neoformat
 		augroup END
 		let g:neoformat_enabled_scala = ['scalafmt']
-		let g:neoformat_enabled_python = ['black']
-		let g:neoformat_python_black = {
-		    \ 'exe': 'black',
-		    \ 'stdin': 1,
-		    \ 'args': ['--line-length', '108', '-q', '-'],
-		    \ }
+		let g:neoformat_enabled_python = ['ruff']
 	    ]],
             {}
         )

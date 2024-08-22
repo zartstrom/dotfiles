@@ -29,12 +29,6 @@ vim.opt.rtp:prepend(lazypath)
 --    as they will be available in your neovim runtime.
 require("lazy").setup(
     {
-        -- NOTE: First, some plugins that don't require any configuration
-        -- Git related plugins
-        -- "tpope/vim-fugitive", -- colored text isn't rendered correctly
-        "tpope/vim-rhubarb",
-        -- Detect tabstop and shiftwidth automatically
-        "tpope/vim-sleuth",
         -- NOTE: This is where your plugins related to LSP can be installed.
         --  The configuration is done below. Search for lspconfig to find it below.
         {
@@ -192,6 +186,10 @@ vim.o.timeoutlen = 300
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = "menuone,noselect"
 
+-- Remove padding around neovim instance (2024-08-01)
+-- https://www.reddit.com/r/neovim/comments/1ehidxy/you_can_remove_padding_around_neovim_instance/
+require("mini.misc").setup_termbg_sync()
+
 -- NOTE: You should make sure your terminal supports this
 vim.o.termguicolors = true
 -- vim.cmd.colorscheme "github_dark_dimmed"
@@ -214,6 +212,9 @@ vim.keymap.set({"n", "v"}, "<Space>", "<Nop>", {silent = true})
 -- Remap for dealing with word wrap
 vim.keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", {expr = true, silent = true})
 vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", {expr = true, silent = true})
+
+-- Markview
+vim.keymap.set("n", "<leader>mt", ":Markview toggle<CR>", {desc = "Toggle markdown preview"})
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
@@ -273,7 +274,20 @@ vim.keymap.set("n", "<leader>sd", require("telescope.builtin").diagnostics, {des
 -- See `:help nvim-treesitter`
 require("nvim-treesitter.configs").setup {
     -- Add languages to be installed here that you want installed for treesitter
-    ensure_installed = {"c", "cpp", "dart", "go", "hcl", "lua", "python", "rust", "scala", "typescript", "help", "vim"},
+    ensure_installed = {
+        "dart",
+        "go",
+        "hcl",
+        "html",
+        "java",
+        "lua",
+        "python",
+        "rust",
+        "scala",
+        "typescript",
+        "help",
+        "vim"
+    },
     -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
     auto_install = false,
     highlight = {enable = true},
@@ -281,10 +295,10 @@ require("nvim-treesitter.configs").setup {
     incremental_selection = {
         enable = true,
         keymaps = {
-            init_selection = "<c-space>",
-            node_incremental = "<c-space>",
-            scope_incremental = "<c-s>",
-            node_decremental = "<M-space>"
+            init_selection = "gnn",
+            node_incremental = "grn",
+            scope_incremental = "grc",
+            node_decremental = "grm"
         }
     },
     textobjects = {
@@ -357,6 +371,8 @@ local on_attach = function(_, bufnr)
     end
 
     nmap("<leader>rn", vim.lsp.buf.rename, "[R]e[n]ame")
+    nmap("<leader>lr", require("live-rename").rename, "[L]ive [R]ename")
+
     nmap("<leader>ca", vim.lsp.buf.code_action, "[C]ode [A]ction")
 
     nmap("gd", vim.lsp.buf.definition, "[G]oto [D]efinition")

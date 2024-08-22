@@ -1,3 +1,4 @@
 *site.retry
 .ropeproject/
 .metals
+.venv/
