@@ -6,7 +6,7 @@ return {
         -- tnoremap <Esc> <C-\><C-n>
         require("toggleterm").setup()
         vim.keymap.set("t", "<ESC>", "<C-\\><C-n>")
-        vim.keymap.set("n", "<leader>t", "<cmd>ToggleTerm<CR>")
+        vim.keymap.set("n", "<leader>tt", "<cmd>ToggleTerm<CR>", {desc = "Toggle terminal"})
         function _G.set_terminal_keymaps()
             local opts = {buffer = 0}
             vim.keymap.set("t", "<esc>", [[<C-\><C-n>]], opts)

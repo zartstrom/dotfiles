@@ -1,0 +1,25 @@
+
+{
+	"snip1": {
+		"prefix": "ifname",
+		"body": [
+			"def main():",
+			"    pass",
+			"",
+			"",
+			"if __name__ == '__name__':",
+			"    main()"
+		]
+	},
+	"snip2": {
+		"prefix": "parser",
+		"body": [
+			"parser = argparse.ArgumentParser()",
+			"parser.add_argument('--name', '-n')",
+			"",
+			"args = parser.parse_args()"
+		]
+	}
+}
+
+

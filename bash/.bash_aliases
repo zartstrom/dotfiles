@@ -1,6 +1,7 @@
 # AWS
 alias profile="source $HOME/scripts/set_aws_profile.sh"
 alias ap="source $HOME/scripts/export-aws-profile-fzf.sh"
+alias as="aws-sso-util login --force"
 
 # Git
 alias gb="$HOME/scripts/git-fzf-branch.sh"

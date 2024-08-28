@@ -196,9 +196,12 @@ softlink_dotfiles_home("wezterm/wezterm.lua", ".config/wezterm/wezterm.lua")
 # xdg-desktop-portals
 display_header("xdg-desktop-portal")
 mkdir_p_from_home(".config/xdg-desktop-portal")
-softlink_dotfiles_home("xdg-desktop-portal/portals.conf", ".config/xdg-desktop-portal/portals.conf")
 softlink_dotfiles_home(
-    "xdg-desktop-portal/sway-portals.conf", ".config/xdg-desktop-portal/sway-portals.conf"
+    "xdg-desktop-portal/portals.conf", ".config/xdg-desktop-portal/portals.conf"
+)
+softlink_dotfiles_home(
+    "xdg-desktop-portal/sway-portals.conf",
+    ".config/xdg-desktop-portal/sway-portals.conf",
 )
 
 # xdg-user-dirs
@@ -209,4 +212,6 @@ softlink_dotfiles_home("xdg-user-dirs/user-dirs.dirs", ".config/user-dirs.dirs")
 display_header("zsh")
 mkdir_p_from_home(".oh-my-zsh/themes")
 softlink_dotfiles_home("zsh/.zshrc", ".zshrc")
-softlink_dotfiles_home("zsh/af-magic-light.zsh-theme", ".oh-my-zsh/themes/af-magic-light.zsh-theme")
+softlink_dotfiles_home(
+    "zsh/af-magic-light.zsh-theme", ".oh-my-zsh/themes/af-magic-light.zsh-theme"
+)

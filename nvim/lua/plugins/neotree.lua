@@ -9,7 +9,7 @@ return {
         "nvim-neo-tree/neo-tree.nvim",
         branch = "v2.x",
         keys = {
-            {"<leader>ft", "<cmd>Neotree toggle<cr>", desc = "NeoTree"}
+            {"<leader>tf", "<cmd>Neotree toggle<cr>", desc = "NeoTree"}
         },
         config = function()
             require("neo-tree").setup()
