@@ -9,6 +9,7 @@ local config = wezterm.config_builder()
 
 -- For example, changing the color scheme:
 config.color_scheme = "AdventureTime"
+-- config.color_scheme = "Tokyo Night"
 
 config.window_padding = {
     left = 2,

@@ -1,7 +1,6 @@
 return {
     "ptdewey/yankbank-nvim",
-    vim.keymap.set("n", "<leader>yy", "<cmd>YankBank<CR>", {noremap = true, desc = "YankBank"}),
-    dependencies = "kkharji/sqlite.lua",
+    vim.keymap.set("n", "<leader>yb", "<cmd>YankBank<CR>", {noremap = true, desc = "YankBank"}),
     config = function()
         require("yankbank").setup(
             {
@@ -9,7 +8,6 @@ return {
                 sep = "-----",
                 num_behavior = "jump",
                 focus_gain_poll = true,
-                persist_type = "sqlite",
                 keymaps = {
                     paste = "<CR>",
                     paste_back = "P"

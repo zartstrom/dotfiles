@@ -1,6 +1,7 @@
 # AWS
 alias profile="source $HOME/scripts/set_aws_profile.sh"
-alias ap="source $HOME/scripts/export-aws-profile-fzf.sh"
+# alias ap="source $HOME/scripts/export-aws-profile-fzf.sh"
+alias ap='eval $(python3 $HOME/scripts/aws_profile_picker.py)'
 alias as="aws-sso-util login --force"
 
 # Git
