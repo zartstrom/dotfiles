@@ -3,7 +3,7 @@ return {
     config = function()
         vim.keymap.set(
             "i",
-            "<c-j>",
+            "<c-i>",
             'copilot#Accept("\\<CR>")',
             {
                 expr = true,
@@ -11,5 +11,11 @@ return {
             }
         )
         vim.g.copilot_no_tab_map = true
+        vim.keymap.set(
+            "i",
+            "<M-Right>",
+            "<Plug>(copilot-accept-word)",
+            {desc = "Accept the next word of the current suggestion."}
+        )
     end
 }

@@ -4,7 +4,8 @@ return {
     dependencies = {
         "nvim-treesitter/nvim-treesitter-textobjects"
     },
-    setup = function()
+    config = function()
+        pcall(require("nvim-treesitter.install").update {with_sync = true})
         require("nvim-treesitter.configs").setup {
             -- Add languages to be installed here that you want installed for treesitter
             ensure_installed = {
@@ -28,7 +29,8 @@ return {
             ignore_install = {},
             sync_install = false,
             highlight = {enable = true},
-            indent = {enable = true, disable = {"python"}},
+            -- indent = {enable = true, disable = {"python"}},
+            indent = {enable = true},
             modules = {},
             incremental_selection = {
                 enable = true,
@@ -64,8 +66,5 @@ return {
                 }
             }
         }
-    end,
-    config = function()
-        pcall(require("nvim-treesitter.install").update {with_sync = true})
     end
 }

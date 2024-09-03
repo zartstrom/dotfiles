@@ -10,5 +10,8 @@ return {
             topdelete = {text = "‾"},
             changedelete = {text = "~"}
         }
-    }
+    },
+    setup = function()
+        require("gitsigns").setup()
+    end
 }
