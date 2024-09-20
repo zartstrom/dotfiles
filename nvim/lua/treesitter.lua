@@ -15,6 +15,7 @@ return {
                 "hcl",
                 "html",
                 "java",
+                "latex",
                 "lua",
                 "python",
                 "rust",

@@ -59,3 +59,6 @@ vim.opt.showmode = false
 --  and `:help 'listchars'`
 vim.opt.list = true
 vim.opt.listchars = {tab = "» ", trail = "·", nbsp = "␣"}
+
+vim.opt.spelllang = "en_us"
+vim.opt.spell = false

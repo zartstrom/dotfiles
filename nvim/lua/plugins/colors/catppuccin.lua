@@ -1,7 +1,7 @@
 return {
     "catppuccin/nvim",
     name = "catppuccin",
-    lazy = true,
+    lazy = false,
     config = function()
         require("catppuccin").setup {
             -- https://github.com/catppuccin/nvim/blob/main/lua/catppuccin/groups/editor.lua

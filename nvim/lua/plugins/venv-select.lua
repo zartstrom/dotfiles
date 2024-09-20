@@ -10,6 +10,6 @@ return {
     branch = "regexp", -- This is the regexp branch, use this for the new version
     config = function()
         require("venv-selector").setup()
-        vim.keymap.set("n", "<leader>tv", "<cmd>VenvSelect<cr>", {desc = "Pick Python venv"})
+        -- vim.keymap.set("n", "<leader>tv", "<cmd>VenvSelect<cr>", {desc = "[P]ick [v]env"}) -- set in keymap.lua
     end
 }

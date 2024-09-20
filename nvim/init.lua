@@ -16,7 +16,15 @@ require("opts")
 local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
     local lazyrepo = "https://github.com/folke/lazy.nvim.git"
-    local out = vim.fn.system {"git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath}
+    local out =
+        vim.fn.system {
+        "git",
+        "clone",
+        "--filter=blob:none",
+        "--branch=stable",
+        lazyrepo,
+        lazypath
+    }
     if vim.v.shell_error ~= 0 then
         error("Error cloning lazy.nvim:\n" .. out)
     end
@@ -25,7 +33,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup(
     {
-        -- Useful plugin to show you pending keybinds.
+        -- Useful plugin to show you pending key bindings.
         {
             "folke/which-key.nvim",
             event = "VimEnter",
@@ -33,17 +41,22 @@ require("lazy").setup(
                 spec = {
                     {"<leader>c", group = "[C]ode", mode = {"n", "x"}},
                     {"<leader>d", group = "[D]ocument"},
+                    {"<leader>g", group = "[G]oTo"},
+                    {"<leader>p", group = "[P]ick"},
                     {"<leader>r", group = "[R]ename"},
                     {"<leader>s", group = "[S]earch"},
                     {"<leader>w", group = "[W]orkspace"},
-                    {"<leader>t", group = "[T]oggle"},
-                    {"<leader>h", group = "Git [H]unk", mode = {"n", "v"}}
+                    {"<leader>t", group = "[T]oggle"}
+                    -- {"<leader>h", group = "Git [H]unk", mode = {"n", "v"}}
+                },
+                triggers = {
+                    {"<leader>", mode = {"n", "v"}},
+                    {"s", mode = {"n", "x"}},
+                    {"g", mode = {"n", "x"}}
                 }
             }
-        },
-        -- "gc" to comment visual regions/lines
-        {"numToStr/Comment.nvim", opts = {}},
-        -- Fuzzy Finder (files, lsp, etc)
+        }, -- "gc" to comment visual regions/lines
+        {"numToStr/Comment.nvim", opts = {}}, -- Fuzzy Finder (files, lsp, etc)
         --
         -- Import big plugin groups
         {import = "lsp"},

@@ -1,6 +1,6 @@
 return {
     "ptdewey/yankbank-nvim",
-    vim.keymap.set("n", "<leader>yb", "<cmd>YankBank<CR>", {noremap = true, desc = "YankBank"}),
+    vim.keymap.set("n", "<leader>py", "<cmd>YankBank<CR>", {noremap = true, desc = "[P]ick [Y]ank"}),
     config = function()
         require("yankbank").setup(
             {

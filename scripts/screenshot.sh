@@ -12,5 +12,6 @@ if [ "$1" == "focused_output" ]; then
     grim -o "$(python $HOME/scripts/focused_output.py)" $target_file
 else
     # grim -g "$(slurp)" $target_file
+    pkill -9 flameshot
     XDG_CURRENT_DESKTOP=sway QT_QPA_PLATFORM=wayland flameshot gui -p $target_file
 fi

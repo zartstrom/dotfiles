@@ -196,7 +196,7 @@ return {
                 rust_analyzer = {},
                 terraformls = {},
                 tflint = {},
-                tsserver = {},
+                ts_ls = {},
                 lua_ls = {
                     Lua = {
                         workspace = {checkThirdParty = false},
