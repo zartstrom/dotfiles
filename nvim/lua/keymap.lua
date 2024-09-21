@@ -22,6 +22,13 @@ wk.add(
             mode = "n",
             desc = "[t]oggle [s]pell checking",
             icon = "🔤"
+        },
+        {
+            "<leader>rg",
+            "<cmd>GrugFar<cr>",
+            mode = "n",
+            desc = "[r]eplace with [g]rug-far",
+            icon = "🔧"
         }
     }
 )

@@ -7,7 +7,7 @@ return {
             [[
 		augroup fmt
 		autocmd!
-		autocmd BufWritePre *.py,*.lua,*.go,*.scala undojoin | Neoformat
+		autocmd BufWritePre *.py,*.lua,*.go,*.rs,*.scala,*.ts,*.html undojoin | Neoformat
 		augroup END
 		let g:neoformat_enabled_scala = ['scalafmt']
 		let g:neoformat_enabled_python = ['ruff']
