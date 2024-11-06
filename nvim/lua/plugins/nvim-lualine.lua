@@ -7,7 +7,7 @@ return {
             icons_enabled = false,
             -- theme = "nightfly",
             -- theme = "catppuccin",
-            theme = "tokyonight",
+            theme = "dracula-nvim",
             -- theme = "cobalt2",
             -- theme = "oxocarbon",
             component_separators = "|",

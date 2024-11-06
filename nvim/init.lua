@@ -4,9 +4,6 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
--- TODO: maybe not needed
-vim.g.have_nerd_font = false
-
 -- Get options from `./lua/opts.lua`
 require("opts")
 
@@ -39,14 +36,14 @@ require("lazy").setup(
             event = "VimEnter",
             opts = {
                 spec = {
-                    {"<leader>c", group = "[C]ode", mode = {"n", "x"}},
-                    {"<leader>d", group = "[D]ocument"},
-                    {"<leader>g", group = "[G]oTo"},
-                    {"<leader>p", group = "[P]ick"},
-                    {"<leader>r", group = "[R]ename"},
-                    {"<leader>s", group = "[S]earch"},
-                    {"<leader>w", group = "[W]orkspace"},
-                    {"<leader>t", group = "[T]oggle"}
+                    {"<leader>c", group = "[c]ode", mode = {"n", "x"}},
+                    {"<leader>d", group = "[d]ocument"},
+                    {"<leader>g", group = "[g]oTo"},
+                    {"<leader>p", group = "[p]ick"},
+                    {"<leader>r", group = "[r]ename"},
+                    {"<leader>s", group = "[s]earch"},
+                    {"<leader>w", group = "[w]orkspace"},
+                    {"<leader>t", group = "[t]oggle"}
                     -- {"<leader>h", group = "Git [H]unk", mode = {"n", "v"}}
                 },
                 triggers = {
@@ -82,6 +79,8 @@ vim.keymap.set("n", "<C-h>", "<C-w><C-h>", {desc = "Move focus to the left windo
 vim.keymap.set("n", "<C-l>", "<C-w><C-l>", {desc = "Move focus to the right window"})
 vim.keymap.set("n", "<C-j>", "<C-w><C-j>", {desc = "Move focus to the lower window"})
 vim.keymap.set("n", "<C-k>", "<C-w><C-k>", {desc = "Move focus to the upper window"})
+
+-- vim.cmd.colorscheme "dracula"
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
