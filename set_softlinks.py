@@ -178,16 +178,6 @@ display_header("rofi")
 mkdir_p_from_home(".config/rofi")
 softlink_dotfiles_home("rofi/sway_theme.rasi", ".config/rofi/sway_theme.rasi")
 
-# X11
-display_header("X11")
-softlink_dotfiles_home("X11/.xinitrc", ".xinitrc")
-softlink_dotfiles_home("X11/.xprofile", ".xprofile")
-softlink_dotfiles_home("X11/.Xresources", ".Xresources")
-softlink_dotfiles_home("X11/.Xdefaults", ".Xdefaults")
-softlink_dotfiles_home("X11/.Xmodmap", ".Xmodmap")
-# mouse config:
-softlink_dotfiles_home("X11/.imwheelrc", ".imwheelrc")
-
 # wezterm
 display_header("wezterm")
 mkdir_p_from_home(".config/wezterm")

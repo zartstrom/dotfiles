@@ -6,35 +6,27 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
+ZSH=/usr/share/oh-my-zsh/
 
-# export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python2
+ZSH_CUSTOM="$HOME/dotfiles/zsh"
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="af-magic-light"
-# ZSH_THEME="powerlevel10k/powerlevel10k"
 
-# pyenv
-# Need to put this configuration before the plugin is loaded.
-# export PYENV_ROOT="$HOME/.pyenv"
-# export PATH="$PYENV_ROOT/bin:$PATH"
-# eval "$(pyenv init --path)"
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
 plugins=(gitfast virtualenv virtualenvwrapper pylint rsync python history ssh-agent pip per-directory-history)
+
+ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
+if [[ ! -d $ZSH_CACHE_DIR ]]; then
+  mkdir $ZSH_CACHE_DIR
+fi
+
+source $ZSH/oh-my-zsh.sh
 
 # User configuration
 setopt interactivecomments
 
 export PATH=$HOME/bin:$HOME/scripts:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
-source $ZSH/oh-my-zsh.sh
 export WORDCHARS='*?_-.[]~=/&;!#$%^(){}<>"'
 
 source $HOME/.bash_aliases
@@ -60,16 +52,6 @@ export JAVA_HOME=/usr/lib/jvm/default
 
 # kubernetes
 export PATH="${PATH}:${HOME}/.krew/bin"
-
-
-# ruby
-export PATH=$PATH:~/.gem/ruby/2.3.0/bin
-export PATH=$PATH:~/.gem/ruby/2.4.0/bin
-
-# scala
-# >>> coursier install directory >>>
-export PATH="$PATH:/home/phil/.local/share/coursier/bin"
-# <<< coursier install directory <<<
 
 # spark
 export PATH=$PATH:/home/phil/spark/bin
@@ -125,8 +107,6 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
   --color=spinner:#ff007c \
 "
 
-autoload -U +X bashcompinit && bashcompinit
-
 # kubectl autocomplete
 if [ $commands[kubectl] ]; then source <(kubectl completion zsh); fi
 alias k=kubectl
@@ -137,33 +117,12 @@ alias hubble-ui='kubectl port-forward -n kube-system svc/hubble-ui --address 0.0
 alias .j='just --justfile ~/.justfile --working-directory .'
 alias open='xdg-open'
 
-source ~/devel/recalc-service/.complete.zsh
-
-# Created by `pipx` on 2021-11-12 12:16:40
 export PATH="$PATH:/home/phil/.local/bin"
 
 export AWS_DEFAULT_SSO_START_URL="https://idealo-login.awsapps.com/start#/"
 export AWS_DEFAULT_SSO_REGION="eu-central-1"
-# export AWS_PROFILE="pro"
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-# Created by `pipx` on 2021-11-17 15:22:26
 export PATH="$PATH:/home/phil/.local/bin"
-# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-# START: Added by Updated Airflow Breeze autocomplete setup
-source /home/phil/devel/airflow/dev/breeze/autocomplete/breeze-complete-zsh.sh
-# END: Added by Updated Airflow Breeze autocomplete setup
-# eval "$(pyenv virtualenv-init -)"
 
-# McFly https://github.com/cantino/mcfly
-eval "$(mcfly init zsh)"
 
-# Vi Mode
-# https://github.com/jeffreytse/zsh-vi-mode
-# source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
-
-source /home/phil/.config/broot/launcher/bash/br
-
-# poetry
-alias poetry_env='source $(poetry env info --path)/bin/activate'
 

@@ -12,15 +12,11 @@ local config = wezterm.config_builder()
 config.color_scheme = "AdventureTime"
 -- config.color_scheme = "Tokyo Night"
 
-config.window_padding = {
-    left = 2,
-    right = 5,
-    top = 0,
-    bottom = 0
-}
+config.window_padding = {left = 2, right = 5, top = 0, bottom = 0}
 -- config.window_background_opacity = 0.75
 
 config.line_height = 0.9
+config.font_size = 13.0
 
 -- Spawn a zsh shell
 config.default_prog = {"/usr/bin/zsh"}
@@ -37,9 +33,7 @@ config.visual_bell = {
     fade_out_function = "EaseOut",
     fade_out_duration_ms = 150
 }
-config.colors = {
-    visual_bell = "#202020"
-}
+config.colors = {visual_bell = "#202020"}
 
 -- wezterm.on(
 --     "format-window-title",

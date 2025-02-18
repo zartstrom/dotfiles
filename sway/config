@@ -14,10 +14,16 @@ exec ~/scripts/share-desktop.sh
 
 # Work setup
 # TODO: use proper name for laptop monitor
-output eDP-1 res 1920x1080 position 2760 1440
+# saki
+output eDP-1 res 2560x1600 position 2440 1440
+
+# airi
+#output eDP-1 res 1920x1080 position 2760 1440
+
 # 34" work monitor
 output DP-1 res 3440x1440 position 2000 0
 output DP-2 res 3440x1440 position 2000 0
+output DP-3 res 3440x1440 position 2000 0
 
 # output "Goldstar Company Ltd   0x0000332B" res 1280x1080 position 2680 1440
 
@@ -26,8 +32,8 @@ output DP-2 res 3440x1440 position 2000 0
 # output "Eizo Nanao Corporation EV2336W 61488064" resolution 1920x1080 position 1600 0
 
 # output eDP-1 res 1920x1080 position 0 0
-output "Eizo Nanao Corporation EV2785 0x0556C6ED" resolution 2560x1440 position 4680 1440
-output "Eizo Nanao Corporation EV2785 0x0000D7ED" resolution 2560x1440 position 4680 1440
+output "Eizo Nanao Corporation EV2785 0x0556C6ED" resolution 2560x1440 position 5000 1440
+output "Eizo Nanao Corporation EV2785 0x0000D7ED" resolution 2560x1440 position 5000 1440
 # 1680 = 760 (x value from eDP-1 above) + 1920 (resolution x value for eDP-1)
 
 # Schergenbreite
@@ -106,7 +112,7 @@ focus_follows_mouse always
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 # see as well https://wiki.archlinux.org/index.php/i3#Iconic_fonts_in_the_status_bar
-font Monoid, pango:Hack, FontAwesome 10, UBraille 10
+font Monoid, pango:Hack, FontAwesome 12, UBraille 12
 #-----------------------appearance-------------------------
 ## Base16 Material
 # Author: Nate Peterson
@@ -194,7 +200,7 @@ bindsym $mod+t exec $term
 
 # bindsym $mod+b exec --no-startup-id $HOME/scripts/from_here.sh
 
-bindsym $mod+g exec $term -e ytop
+bindsym $mod+g exec $term -e gotop
 
 # toggle touchpad # TODO: do it correctly in sway
 #bindsym $mod+t exec --no-startup-id $HOME/scripts/touchpad_toggle.sh
@@ -355,7 +361,7 @@ bindsym $mod+Shift+c reload
 # restart sway in place
 bindsym $mod+Shift+r restart
 
-bindsym $mod+Shift+b exec swaylock-blur
+bindsym $mod+Shift+b exec swaylock --screenshots --effect-blur 7x5  --fade-in 2.0 --clock --indicator
 
 # use full path $HOME/scripts/swayexit.sh, seems to be more reliable.
 # Look at i3 $PATH: `tr '\0' '\n' </proc/$(pidof i3)/environ | grep PATH`

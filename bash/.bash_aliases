@@ -54,8 +54,6 @@ alias ipinfo="$HOME/scripts/what_is_my_ip.sh"
 
 alias cat="bat -p"
 
-source "$HOME/.bash_aliases_local"
-
 alias cat="bat -p"
 alias token="/usr/bin/cat $HOME/.github/token_work"
 
@@ -71,3 +69,6 @@ alias graward='export POD_NAME=$(kubectl get pods --namespace grafana -l "app.ku
     kubectl port-forward --namespace grafana $POD_NAME 3000'
 alias promward='export POD_NAME=$(kubectl get pods --namespace kubernetes-dashboard -l "component=server,app=prometheus" -o jsonpath="{.items[0].metadata.name}") && \
     kubectl port-forward --namespace kubernetes-dashboard $POD_NAME 9090:9090'
+
+alias ttp="$HOME/scripts/touchpad_toggle.sh"
+

@@ -5,14 +5,13 @@ return {
         -- You will not need this if you installed the
         -- parsers manually
         -- Or if the parsers are in your $RUNTIMEPATH
-        "nvim-treesitter/nvim-treesitter",
-        "nvim-tree/nvim-web-devicons"
+        "nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons"
     },
     config = function()
         local markview = require("markview")
 
-        markview.setup(
-            {
+        markview.setup({
+            preview = {
                 modes = {"n", "i", "no", "c"},
                 hybrid_modes = {"i"},
                 -- This is nice to have
@@ -23,7 +22,7 @@ return {
                     end
                 }
             }
-        )
-        vim.cmd("Markview enableAll")
+        })
+        vim.cmd("Markview Enable")
     end
 }
